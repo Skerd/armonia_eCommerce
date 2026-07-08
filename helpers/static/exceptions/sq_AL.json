@@ -1,0 +1,78 @@
+{
+  "admin_only": {
+    "message": "Ky veprim është i kufizuar vetëm për administratorët.",
+    "error_code": "admin_only"
+  },
+  "delivery_already_processed": {
+    "message": "Kjo dorëzim është përpunuar tashmë.",
+    "error_code": "delivery_already_processed"
+  },
+  "delivery_already_submitted": {
+    "message": "Një dorëzim është dorëzuar tashmë për këtë porosi.",
+    "error_code": "delivery_already_submitted"
+  },
+  "delivery_not_found": {
+    "message": "Dorëzimi nuk u gjet.",
+    "error_code": "delivery_not_found"
+  },
+  "max_revisions_reached": {
+    "message": "Është arritur numri maksimal i rishikimeve për këtë porosi.",
+    "error_code": "max_revisions_reached"
+  },
+  "milestone_already_released": {
+    "message": "Ky milestone është lëshuar tashmë.",
+    "error_code": "milestone_already_released"
+  },
+  "milestone_not_found": {
+    "message": "Milestone nuk u gjet.",
+    "error_code": "milestone_not_found"
+  },
+  "milestone_total_exceeds_order_amount": {
+    "message": "Shumat totale të milestone-ve tejkalojnë shumën e porosisë.",
+    "error_code": "milestone_total_exceeds_order_amount"
+  },
+  "only_customer_can_accept": {
+    "message": "Vetëm klienti mund ta pranojë këtë dorëzim.",
+    "error_code": "only_customer_can_accept"
+  },
+  "only_customer_can_release_milestone": {
+    "message": "Vetëm klienti mund ta lëshojë këtë milestone.",
+    "error_code": "only_customer_can_release_milestone"
+  },
+  "only_customer_can_request_revision": {
+    "message": "Vetëm klienti mund të kërkojë një rishikim.",
+    "error_code": "only_customer_can_request_revision"
+  },
+  "only_order_parties_can_access_chat": {
+    "message": "Vetëm palët e porosisë mund të hyjnë në këtë bisedë.",
+    "error_code": "only_order_parties_can_access_chat"
+  },
+  "only_order_parties_can_view_escrow": {
+    "message": "Vetëm palët e porosisë mund të shohin detajet e escrow.",
+    "error_code": "only_order_parties_can_view_escrow"
+  },
+  "only_order_parties_can_view_revisions": {
+    "message": "Vetëm palët e porosisë mund të shohin rishikimet.",
+    "error_code": "only_order_parties_can_view_revisions"
+  },
+  "only_provider_can_deliver": {
+    "message": "Vetëm ofruesi mund të dorëzojë një dorëzim.",
+    "error_code": "only_provider_can_deliver"
+  },
+  "order_must_be_in_progress_to_release": {
+    "message": "Porosia duhet të jetë në progres për të lëshuar një milestone.",
+    "error_code": "order_must_be_in_progress_to_release"
+  },
+  "order_not_found": {
+    "message": "Porosia nuk u gjet.",
+    "error_code": "order_not_found"
+  },
+  "order_not_in_progress": {
+    "message": "Porosia nuk është në progres.",
+    "error_code": "order_not_in_progress"
+  },
+  "saved_search_not_found": {
+    "message": "Kërkimi i ruajtur nuk u gjet.",
+    "error_code": "saved_search_not_found"
+  }
+}
