@@ -74,5 +74,52 @@
   "saved_search_not_found": {
     "message": "Saved search not found.",
     "error_code": "saved_search_not_found"
+  },
+  "fiscal_error": {
+    "message": "Fiscalization failed: {}",
+    "error_code": "fiscal_error",
+    "extra_messages": {
+      "posOrderId": {"message": "POS order"}
+    }
+  },
+  "fiscal_einvoice_error": {
+    "message": "E-invoice registration failed: {}",
+    "error_code": "fiscal_einvoice_error",
+    "extra_messages": {
+      "posOrderId": {"message": "POS order"}
+    }
+  },
+  "fiscal_tcr_error": {
+    "message": "TCR registration failed: {}",
+    "error_code": "fiscal_tcr_error",
+    "extra_messages": {
+      "fiscalConfigId": {"message": "Fiscal config"}
+    }
+  },
+  "fiscal_taxpayer_error": {
+    "message": "Taxpayer lookup failed: {}",
+    "error_code": "fiscal_taxpayer_error",
+    "extra_messages": {
+      "tin": {"message": "TIN"}
+    }
+  },
+  "fiscal_config_missing": {
+    "message": "Active fiscal config with certificate not found.",
+    "error_code": "fiscal_config_missing",
+    "extra_messages": {
+      "fiscalConfigId": {"message": "Fiscal config"}
+    }
+  },
+  "pos_order_not_found": {
+    "message": "POS order not found.",
+    "error_code": "pos_order_not_found",
+    "extra_messages": {
+      "posOrderId": {"message": "POS order"},
+      "_id": {"message": "POS order"}
+    }
+  },
+  "payment_gateway_not_configured": {
+    "message": "Payment gateway is not configured. Set STRIPE_ENABLED=true and STRIPE_SECRET_KEY in maestro .env, then restart the API.",
+    "error_code": "payment_gateway_not_configured"
   }
 }

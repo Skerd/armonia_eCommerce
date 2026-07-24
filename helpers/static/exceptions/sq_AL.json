@@ -74,5 +74,52 @@
   "saved_search_not_found": {
     "message": "Kërkimi i ruajtur nuk u gjet.",
     "error_code": "saved_search_not_found"
+  },
+  "fiscal_error": {
+    "message": "Fiskalizimi dështoi: {}",
+    "error_code": "fiscal_error",
+    "extra_messages": {
+      "posOrderId": {"message": "Porosia POS"}
+    }
+  },
+  "fiscal_einvoice_error": {
+    "message": "Regjistrimi i faturës elektronike dështoi: {}",
+    "error_code": "fiscal_einvoice_error",
+    "extra_messages": {
+      "posOrderId": {"message": "Porosia POS"}
+    }
+  },
+  "fiscal_tcr_error": {
+    "message": "Regjistrimi i TCR dështoi: {}",
+    "error_code": "fiscal_tcr_error",
+    "extra_messages": {
+      "fiscalConfigId": {"message": "Konfigurimi fiskal"}
+    }
+  },
+  "fiscal_taxpayer_error": {
+    "message": "Kërkimi i tatimpaguesit dështoi: {}",
+    "error_code": "fiscal_taxpayer_error",
+    "extra_messages": {
+      "tin": {"message": "NIPT"}
+    }
+  },
+  "fiscal_config_missing": {
+    "message": "Nuk u gjet konfigurim fiskal aktiv me certifikatë.",
+    "error_code": "fiscal_config_missing",
+    "extra_messages": {
+      "fiscalConfigId": {"message": "Konfigurimi fiskal"}
+    }
+  },
+  "pos_order_not_found": {
+    "message": "Porosia POS nuk u gjet.",
+    "error_code": "pos_order_not_found",
+    "extra_messages": {
+      "posOrderId": {"message": "Porosia POS"},
+      "_id": {"message": "Porosia POS"}
+    }
+  },
+  "payment_gateway_not_configured": {
+    "message": "Porta e pagesave nuk është e konfiguruar. Vendosni STRIPE_ENABLED=true dhe STRIPE_SECRET_KEY në maestro .env, pastaj rindizni API-në.",
+    "error_code": "payment_gateway_not_configured"
   }
 }

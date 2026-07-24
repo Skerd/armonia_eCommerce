@@ -27,6 +27,11 @@ const ProductDimensionsDef = {
     height: {type: "number", required: false, min: 0},
 } as const;
 
+const ProductBundleComponentDef = {
+    product: {type: "objectId", required: true},
+    quantity: {type: "number", required: true, min: 1},
+} as const;
+
 const ProductAttributeItemDef = {
     name: {type: "string", required: true},
     values: {type: "stringArray", required: false},
@@ -132,6 +137,11 @@ export const ProductSchemaDef = {
     // Publishing
     status: {type: "enum", required: false, options: productStatuses},
     publishedAt: {type: "date", required: false},
+    // Bundles (type "bundle"): components exploded for inventory reservation
+    bundleComponents: {type: "embeddedArray", required: false, items: ProductBundleComponentDef},
+    // Digital delivery (type "digital"): per-purchase download policy
+    downloadLimit: {type: "number", required: false, min: 1},
+    downloadExpiryDays: {type: "number", required: false, min: 1},
     // Structured content (embedded / embeddedArray)
     attributes: {type: "embeddedArray", required: false, items: ProductAttributeItemDef},
     specifications: {type: "embeddedArray", required: false, items: ProductSpecificationItemDef},
