@@ -2,9 +2,15 @@ import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types
 
 export type PosOrderState = "draft" | "paid" | "cancel" | "refunded";
 
+export type PosOrderLineProduct = {
+    _id: string;
+    title?: string;
+    sku?: string;
+};
+
 export type PosOrderLine = {
     _id?: string;
-    product: string;
+    product: PosOrderLineProduct | string;
     variant?: string;
     quantity: number;
     /** Cumulative qty already refunded (remaining = quantity - quantityRefunded). */
@@ -21,7 +27,7 @@ export type PosOrderLine = {
 };
 
 export type PosOrderPayment = {
-    paymentMethod: string;
+    paymentMethod: {_id: string; name?: string; type?: string} | string;
     paymentMethodLabel?: {_id: string; name: string; type?: string};
     paymentMethodName?: string;
     paymentMethodType?: string;
@@ -45,6 +51,8 @@ export type PosOrder = DeletedData &
     customer?: {_id: string; name?: string; surname?: string};
     customerName?: string;
     lines: PosOrderLine[];
+    /** Distinct products from lines — sheet ReferencesRender. */
+    lineProducts?: PosOrderLineProduct[];
     payments: PosOrderPayment[];
     amountTax: number;
     amountTotal: number;
@@ -57,7 +65,9 @@ export type PosOrder = DeletedData &
     orderDiscountPercent?: number;
     clientRequestId?: string;
     productOrder?: string;
+    productOrderLabel?: {_id: string; orderNumber?: string};
     refundOf?: string;
+    refundOfLabel?: {_id: string; name?: string};
     isRefund: boolean;
     /** CIS IIC / NSLF */
     nslf?: string;
@@ -75,4 +85,5 @@ export type PosOrder = DeletedData &
     fiscalError?: string;
     company?: {_id: string; name: string};
     createdAt?: string;
+    updatedAt?: string;
 };

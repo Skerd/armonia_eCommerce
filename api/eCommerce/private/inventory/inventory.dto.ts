@@ -1,3 +1,5 @@
+import type {InventoryMovement} from "../inventoryMovement/inventoryMovement.dto";
+
 export type Inventory = {
     _id: string;
     product: {_id: string; title: string; sku?: string};
@@ -10,6 +12,8 @@ export type Inventory = {
     reorderQuantity?: number;
     lowStockAlertSent?: boolean;
     company?: {_id: string; name: string};
+    /** Present on /single when enrichSingle loads recent movements. */
+    movements?: InventoryMovement[];
 };
 
 export type InventoryAdjustmentForm = {
@@ -17,6 +21,6 @@ export type InventoryAdjustmentForm = {
     variantId?: string;
     warehouseId: string;
     quantity: number;
-    reason: "restock" | "sale" | "return" | "adjustment" | "damage" | "transfer";
+    reason: "restock" | "sale" | "return" | "adjustment" | "damage" | "transfer_in" | "transfer_out" | "write_off";
     note?: string;
 };

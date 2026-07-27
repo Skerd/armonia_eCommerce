@@ -31,6 +31,8 @@ export type PayPosOrderFormType = {
     clientRequestId?: string;
     /** Required when config.pinForDiscount and any discount is applied. */
     managerPin?: string;
+    /** Selected approving manager — PIN is verified only for this user. */
+    managerId?: string;
 };
 
 export function payPosOrderFormSchema(languageCode: string, form: any = null) {
@@ -43,6 +45,7 @@ export function payPosOrderFormSchema(languageCode: string, form: any = null) {
         heldOrderId: isObjectIdZod(form?.["heldOrderIdLabel"] ?? "heldOrderId", languageCode).optional(),
         clientRequestId: z.string().trim().min(8).max(80).optional(),
         managerPin: z.string().min(1).max(64).optional(),
+        managerId: isObjectIdZod(form?.["managerIdLabel"] ?? "managerId", languageCode).optional(),
         lines: z
             .array(
                 z.object({

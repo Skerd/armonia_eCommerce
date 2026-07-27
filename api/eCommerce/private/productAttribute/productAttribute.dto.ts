@@ -1,7 +1,8 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
 export type ProductAttribute = DeletedData &
-    OwnershipData & {
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     name: string;
     values?: string[];
@@ -10,5 +11,4 @@ export type ProductAttribute = DeletedData &
     position?: number;
     valueCount?: number;
     company?: {_id: string; name: string};
-    createdAt?: string;
 };

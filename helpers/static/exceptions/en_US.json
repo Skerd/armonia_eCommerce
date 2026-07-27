@@ -118,8 +118,304 @@
       "_id": {"message": "POS order"}
     }
   },
+  "pos_config_not_found": {
+    "message": "POS config not found.",
+    "error_code": "pos_config_not_found",
+    "extra_messages": {
+      "configId": {"message": "POS config"},
+      "config": {"message": "POS config"},
+      "sessionId": {"message": "Session"},
+      "_id": {"message": "POS config"}
+    }
+  },
+  "pos_session_not_found": {
+    "message": "POS session not found.",
+    "error_code": "pos_session_not_found",
+    "extra_messages": {
+      "sessionId": {"message": "Session"},
+      "_id": {"message": "Session"}
+    }
+  },
+  "pos_session_not_opened": {
+    "message": "POS session is not open.",
+    "error_code": "pos_session_not_opened",
+    "extra_messages": {
+      "sessionId": {"message": "Session"},
+      "session": {"message": "Session"},
+      "_id": {"message": "Session"}
+    }
+  },
+  "pos_session_already_open": {
+    "message": "A POS session is already open for this config.",
+    "error_code": "pos_session_already_open",
+    "extra_messages": {
+      "configId": {"message": "POS config"}
+    }
+  },
+  "pos_session_already_closed": {
+    "message": "This POS session is already closed.",
+    "error_code": "pos_session_already_closed",
+    "extra_messages": {
+      "_id": {"message": "Session"}
+    }
+  },
+  "pos_product_not_found": {
+    "message": "Product not found for this till.",
+    "error_code": "pos_product_not_found",
+    "extra_messages": {
+      "productId": {"message": "Product"}
+    }
+  },
+  "pos_held_not_found": {
+    "message": "Held order not found.",
+    "error_code": "pos_held_not_found",
+    "extra_messages": {
+      "_id": {"message": "Held order"},
+      "heldOrderId": {"message": "Held order"}
+    }
+  },
+  "pos_insufficient_stock": {
+    "message": "Not enough stock for this quantity.",
+    "error_code": "pos_insufficient_stock",
+    "extra_messages": {
+      "quantity": {"message": "Quantity"}
+    }
+  },
+  "pos_config_warehouse_required": {
+    "message": "This POS config must have at least one warehouse.",
+    "error_code": "pos_config_warehouse_required",
+    "extra_messages": {
+      "warehouses": {"message": "Warehouses"}
+    }
+  },
+  "pos_config_warehouse_inactive": {
+    "message": "Only active warehouses can be assigned to a POS config.",
+    "error_code": "pos_config_warehouse_inactive",
+    "extra_messages": {
+      "warehouses": {"message": "Warehouses"}
+    }
+  },
+  "warehouse_in_use_by_pos_config": {
+    "message": "This warehouse is the only warehouse on a POS config and cannot be deactivated or deleted. Add another warehouse to that POS config first.",
+    "error_code": "warehouse_in_use_by_pos_config"
+  },
+  "pos_insufficient_cash": {
+    "message": "Not enough cash in the drawer for this move.",
+    "error_code": "pos_insufficient_cash",
+    "extra_messages": {
+      "amount": {"message": "Amount"}
+    }
+  },
+  "pos_close_difference_reason_required": {
+    "message": "Explain the cash difference before closing the session.",
+    "error_code": "pos_close_difference_reason_required",
+    "extra_messages": {
+      "differenceReason": {"message": "Difference reason"}
+    }
+  },
+  "pos_close_held_orders_open": {
+    "message": "Resume or discard held orders before closing the session.",
+    "error_code": "pos_close_held_orders_open",
+    "extra_messages": {
+      "_id": {"message": "Session"}
+    }
+  },
+  "pos_payment_method_invalid": {
+    "message": "One or more payment methods are invalid for this till.",
+    "error_code": "pos_payment_method_invalid",
+    "extra_messages": {
+      "payments": {"message": "Payments"},
+      "paymentMethodId": {"message": "Payment method"}
+    }
+  },
+  "pos_payment_method_last_on_config": {
+    "message": "Cannot remove this payment method because it is the last method on a POS config.",
+    "error_code": "pos_payment_method_last_on_config",
+    "extra_messages": {
+      "paymentMethods": {"message": "Payment methods"}
+    }
+  },
+  "pos_payment_insufficient": {
+    "message": "Payment total is less than the order total.",
+    "error_code": "pos_payment_insufficient",
+    "extra_messages": {
+      "payments": {"message": "Payments"}
+    }
+  },
+  "pos_currency_required": {
+    "message": "Currency is required for this till.",
+    "error_code": "pos_currency_required",
+    "extra_messages": {
+      "currency": {"message": "Currency"}
+    }
+  },
+  "pos_order_not_refundable": {
+    "message": "This order cannot be refunded.",
+    "error_code": "pos_order_not_refundable",
+    "extra_messages": {
+      "_id": {"message": "Order"}
+    }
+  },
+  "pos_order_is_refund": {
+    "message": "This document is already a refund.",
+    "error_code": "pos_order_is_refund",
+    "extra_messages": {
+      "_id": {"message": "Order"}
+    }
+  },
+  "pos_refund_line_invalid": {
+    "message": "One or more refund lines are invalid.",
+    "error_code": "pos_refund_line_invalid",
+    "extra_messages": {
+      "lines": {"message": "Lines"}
+    }
+  },
+  "pos_refund_qty_invalid": {
+    "message": "Refund quantity is invalid for one or more lines.",
+    "error_code": "pos_refund_qty_invalid",
+    "extra_messages": {
+      "lines": {"message": "Lines"}
+    }
+  },
+  "pos_refund_amount_invalid": {
+    "message": "Refund amount is invalid.",
+    "error_code": "pos_refund_amount_invalid",
+    "extra_messages": {
+      "amount": {"message": "Amount"}
+    }
+  },
+  "pos_refund_lines_required": {
+    "message": "Select at least one line to refund.",
+    "error_code": "pos_refund_lines_required",
+    "extra_messages": {
+      "lines": {"message": "Lines"}
+    }
+  },
+  "pos_terminal_not_for_method": {
+    "message": "This payment method is not linked to a bank terminal.",
+    "error_code": "pos_terminal_not_for_method",
+    "extra_messages": {
+      "paymentMethodId": {"message": "Payment method"}
+    }
+  },
+  "pos_terminal_disabled": {
+    "message": "Bank terminal is disabled for this payment method.",
+    "error_code": "pos_terminal_disabled",
+    "extra_messages": {
+      "paymentMethodId": {"message": "Payment method"}
+    }
+  },
+  "pos_terminal_amount_invalid": {
+    "message": "Terminal charge amount must be greater than zero.",
+    "error_code": "pos_terminal_amount_invalid",
+    "extra_messages": {
+      "amount": {"message": "Amount"}
+    }
+  },
+  "pos_terminal_not_configured": {
+    "message": "Bank terminal host is not configured.",
+    "error_code": "pos_terminal_not_configured",
+    "extra_messages": {
+      "terminalHost": {"message": "Terminal host"}
+    }
+  },
+  "pos_terminal_declined": {
+    "message": "Bank terminal declined the payment.",
+    "error_code": "pos_terminal_declined",
+    "extra_messages": {
+      "amount": {"message": "Amount"}
+    }
+  },
+  "pos_terminal_timeout": {
+    "message": "Bank terminal timed out.",
+    "error_code": "pos_terminal_timeout",
+    "extra_messages": {
+      "amount": {"message": "Amount"}
+    }
+  },
+  "pos_terminal_unreachable": {
+    "message": "Could not reach the bank terminal.",
+    "error_code": "pos_terminal_unreachable",
+    "extra_messages": {
+      "terminalHost": {"message": "Terminal host"}
+    }
+  },
+  "pos_manager_pin_invalid": {
+    "message": "Invalid manager PIN.",
+    "error_code": "pos_manager_pin_invalid",
+    "extra_messages": {
+      "pin": {"message": "PIN"},
+      "currentPin": {"message": "Current PIN"},
+      "managerPin": {"message": "Manager PIN"}
+    }
+  },
+  "pos_manager_pin_not_set": {
+    "message": "Manager PIN is not set.",
+    "error_code": "pos_manager_pin_not_set",
+    "extra_messages": {
+      "pin": {"message": "PIN"},
+      "currentPin": {"message": "Current PIN"}
+    }
+  },
+  "pos_manager_pin_already_set": {
+    "message": "Your manager PIN is already set. Use change PIN instead.",
+    "error_code": "pos_manager_pin_already_set",
+    "extra_messages": {
+      "pin": {"message": "PIN"}
+    }
+  },
+  "pos_manager_not_assigned": {
+    "message": "You are not assigned as a manager on this till.",
+    "error_code": "pos_manager_not_assigned",
+    "extra_messages": {
+      "resetCode": {"message": "Reset code"}
+    }
+  },
+  "pos_manager_pin_reset_invalid": {
+    "message": "This manager PIN reset link is invalid.",
+    "error_code": "pos_manager_pin_reset_invalid",
+    "extra_messages": {
+      "resetCode": {"message": "Reset code"}
+    }
+  },
+  "pos_manager_pin_reset_expired": {
+    "message": "This manager PIN reset link has expired.",
+    "error_code": "pos_manager_pin_reset_expired",
+    "extra_messages": {
+      "resetCode": {"message": "Reset code"}
+    }
+  },
+  "pos_manager_pin_reset_already_used": {
+    "message": "This manager PIN reset link has already been used.",
+    "error_code": "pos_manager_pin_reset_already_used",
+    "extra_messages": {
+      "resetCode": {"message": "Reset code"}
+    }
+  },
+  "pos_manager_pin_reset_no_email": {
+    "message": "Your account has no email address to send the PIN reset link to.",
+    "error_code": "pos_manager_pin_reset_no_email"
+  },
   "payment_gateway_not_configured": {
     "message": "Payment gateway is not configured. Set STRIPE_ENABLED=true and STRIPE_SECRET_KEY in maestro .env, then restart the API.",
     "error_code": "payment_gateway_not_configured"
+  },
+  "insufficient_stock": {
+    "message": "Not enough stock on hand for this deduction.",
+    "error_code": "insufficient_stock",
+    "extra_messages": {
+      "quantity": {"message": "Quantity"}
+    }
+  },
+  "invalid_quantity": {
+    "message": "Quantity must be a positive number.",
+    "error_code": "invalid_quantity",
+    "extra_messages": {
+      "quantity": {"message": "Quantity"}
+    }
+  },
+  "inventory_not_found": {
+    "message": "Inventory record was not found.",
+    "error_code": "inventory_not_found"
   }
 }

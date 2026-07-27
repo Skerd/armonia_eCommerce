@@ -26,6 +26,8 @@ export type ProductOrder = DeletedData &
     _id: string;
     orderNumber: string;
     customer: {_id: string; name: string; surname: string};
+    email?: string;
+    phone?: string;
     company: {_id: string; name: string};
     items: ProductOrderItem[];
     subtotal: number;
@@ -40,13 +42,35 @@ export type ProductOrder = DeletedData &
     fulfillmentStatus: "unfulfilled" | "partially_fulfilled" | "fulfilled" | "returned";
     status: "pending" | "confirmed" | "processing" | "shipped" | "delivered" | "cancelled" | "refunded";
     appliedDiscounts?: {discount: {_id: string; title: string; code?: string}; amount: number}[];
+    /** Flattened product stubs from line items for sheet `#ReferencesRender` cards. */
+    itemProducts?: {_id: string; title: string; slug: string; sku?: string}[];
+    /** Flattened discount stubs for sheet `#ReferencesRender` cards (`amount` is order-applied). */
+    appliedDiscountRefs?: {_id: string; title: string; code?: string; amount?: number}[];
     taxBreakdown?: {name: string; rate: number; amount: number}[];
     shippingRate?: {name: string; carrier?: string; price: number};
     notes?: string;
     internalNotes?: string;
-    timeline?: {event: string; timestamp: string; userId?: string}[];
+    timeline?: {
+        event: string;
+        timestamp: string;
+        user?: {_id: string; name: string; surname: string};
+        note?: string;
+    }[];
     stripePaymentIntentId?: string;
     idempotencyKey: string;
+    giftCard?: {giftCard: {_id: string; code?: string}; code?: string; amount: number};
+    paymentTransactions?: {
+        _id: string;
+        gateway: string;
+        type: string;
+        status: string;
+        amount: number;
+        amountDisplay?: string;
+        refundedAmount?: number;
+        refundedAmountDisplay?: string;
+        gatewayTransactionId?: string;
+        currency?: {_id: string; name?: string; symbol?: string; abbreviation?: string; code?: string};
+    }[];
     createdAt?: string;
     updatedAt?: string;
 };

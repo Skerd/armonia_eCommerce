@@ -1,16 +1,16 @@
-import type {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
 export type CustomerGroupMemberUser = {
     _id: string;
     name: string;
     surname: string;
-    email?: string;
+    photo?: string;
 };
 
 export type CustomerGroupMember = DeletedData &
-    OwnershipData & {
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     user: CustomerGroupMemberUser;
     customerGroup: {_id: string; name: string};
-    createdAt?: string;
 };

@@ -11,7 +11,7 @@ export type Collection = DeletedData &
     mainImage?: Media;
     isVisible?: boolean;
     position?: number;
-    products?: {_id: string; title: string; slug: string}[];
+    products?: {_id: string; title: string; slug: string; sku?: string}[];
     productCount?: number;
     ruleCondition?: "all" | "any";
     rules?: {field: string; operator: string; value: string}[];

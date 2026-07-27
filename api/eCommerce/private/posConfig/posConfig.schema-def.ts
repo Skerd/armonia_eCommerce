@@ -3,7 +3,8 @@ import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/s
 export const PosConfigSchemaDef = {
     name: {type: "string", required: true},
     paymentMethods: {type: "objectIdArray", required: false},
-    warehouse: {type: "objectId", required: true},
+    managers: {type: "objectIdArray", required: false},
+    warehouses: {type: "objectIdArray", required: true},
     currency: {type: "objectId", required: false},
     receiptHeader: {type: "string", required: false},
     receiptFooter: {type: "string", required: false},
@@ -15,8 +16,6 @@ export const PosConfigSchemaDef = {
     pinForDiscount: {type: "boolean", required: false},
     pinForCashOut: {type: "boolean", required: false},
     pinForRefund: {type: "boolean", required: false},
-    managerPin: {type: "string", required: false},
-    clearManagerPin: {type: "boolean", required: false},
     isActive: {type: "boolean", required: false},
 } as const;
 

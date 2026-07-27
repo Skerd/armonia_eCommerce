@@ -1,8 +1,9 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {CustomerGroupMemberUser} from "../customerGroupMember/customerGroupMember.dto";
 
 export type CustomerGroup = DeletedData &
-    OwnershipData & {
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     name: string;
     description?: string;
@@ -10,5 +11,4 @@ export type CustomerGroup = DeletedData &
     isDefault: boolean;
     members?: CustomerGroupMemberUser[];
     company?: {_id: string; name: string};
-    createdAt?: string;
 };

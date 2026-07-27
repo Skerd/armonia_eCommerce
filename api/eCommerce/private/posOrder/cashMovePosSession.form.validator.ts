@@ -9,6 +9,8 @@ export type CashMovePosSessionFormType = {
     amount: number;
     reason?: string;
     managerPin?: string;
+    /** Selected approving manager — PIN is verified only for this user. */
+    managerId?: string;
 };
 
 export function cashMovePosSessionFormSchema(languageCode: string, form: any = null) {
@@ -18,5 +20,6 @@ export function cashMovePosSessionFormSchema(languageCode: string, form: any = n
         amount: greaterThanOrEqualZod(form?.["amountLabel"] ?? "amount", 0.01, languageCode),
         reason: z.string().max(2000).optional(),
         managerPin: z.string().min(1).max(64).optional(),
+        managerId: isObjectIdZod(form?.["managerIdLabel"] ?? "managerId", languageCode).optional(),
     });
 }

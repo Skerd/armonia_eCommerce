@@ -1,7 +1,18 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+
+export type PosConfigManager = {
+    _id: string;
+    name?: string;
+    surname?: string;
+    /** Fallback display when name/surname are empty. */
+    username?: string;
+    /** True when this manager has a PIN configured (hash never exposed). */
+    hasPin: boolean;
+};
 
 export type PosConfig = DeletedData &
-    OwnershipData & {
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     name: string;
     paymentMethods?: string[];
@@ -17,10 +28,9 @@ export type PosConfig = DeletedData &
         terminalId?: string;
         terminalPath?: string;
     }[];
-    warehouse: string;
-    warehouseLabel?: {_id: string; name: string};
-    currency?: string;
-    currencyLabel?: {_id: string; name: string; symbol?: string; abbreviation?: string};
+    managers?: PosConfigManager[];
+    warehouses: {_id: string; name: string; code?: string}[];
+    currency?: {_id: string; name: string; symbol: string; abbreviation: string};
     receiptHeader?: string;
     receiptFooter?: string;
     ifaceBarcodeScanner: boolean;
@@ -31,9 +41,12 @@ export type PosConfig = DeletedData &
     pinForDiscount?: boolean;
     pinForCashOut?: boolean;
     pinForRefund?: boolean;
-    /** True when a manager PIN is configured (hash never exposed). */
+    /** True when at least one manager has a PIN (for till pinFor* gating). */
     hasManagerPin?: boolean;
+    /** True when the requesting user is assigned as a manager on this till. */
+    currentUserIsManager?: boolean;
+    /** True when the requesting user has their own PIN set on this till. */
+    currentUserHasManagerPin?: boolean;
     isActive: boolean;
     company?: {_id: string; name: string};
-    createdAt?: string;
 };

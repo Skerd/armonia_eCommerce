@@ -6,6 +6,8 @@ const WarehouseAddressDef = {
     city: {type: "objectId", required: false},
     street: {type: "string", required: false},
     postalCode: {type: "string", required: false},
+    latitude: {type: "number", required: false},
+    longitude: {type: "number", required: false},
 } as const;
 
 export const WarehouseSchemaDef = {

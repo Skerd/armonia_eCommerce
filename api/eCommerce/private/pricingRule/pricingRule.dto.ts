@@ -1,16 +1,26 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+
+export type PricingRuleRef = {_id: string; name: string; title?: string};
 
 export type PricingRule = DeletedData &
-    OwnershipData & {
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     name: string;
     type: string;
     value: number;
     appliesTo: string;
     targetIds?: string[];
-    targetLabels?: {_id: string; name: string}[];
+    /** Resolved targets for forms/chips. */
+    targets?: PricingRuleRef[];
+    /** Sheet reference cards when appliesTo === product. */
+    productTargets?: PricingRuleRef[];
+    /** Sheet reference cards when appliesTo === collection. */
+    collectionTargets?: PricingRuleRef[];
+    /** Sheet reference cards when appliesTo === category. */
+    categoryTargets?: PricingRuleRef[];
     customerGroups?: string[];
-    customerGroupLabels?: {_id: string; name: string}[];
+    customerGroupRefs?: PricingRuleRef[];
     minimumOrderAmount?: number;
     minimumQuantity?: number;
     priority: number;
@@ -18,5 +28,4 @@ export type PricingRule = DeletedData &
     startsAt?: string;
     endsAt?: string;
     company?: {_id: string; name: string};
-    createdAt?: string;
 };

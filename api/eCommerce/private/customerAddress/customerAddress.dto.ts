@@ -1,5 +1,6 @@
 export type CustomerAddress = {
     _id: string;
+    user?: {_id: string; name?: string; surname?: string};
     firstName: string;
     lastName: string;
     phone?: string;
@@ -8,9 +9,14 @@ export type CustomerAddress = {
     state?: string;
     postalCode?: string;
     country?: {_id: string; name?: string; code?: string};
+    latitude: number;
+    longitude: number;
     isDefault: boolean;
     label?: string;
     company?: {_id: string; name: string};
+    createdBy?: {_id: string; name: string; surname: string};
     createdAt?: string;
+    updatedAt?: string;
     deletedAt?: string;
+    deletedBy?: {_id: string; name: string; surname: string};
 };

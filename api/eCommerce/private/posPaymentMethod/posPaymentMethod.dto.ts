@@ -1,8 +1,9 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {PosPaymentMethodType, PosTerminalProvider} from "./posPaymentMethod.schema-def";
 
 export type PosPaymentMethod = DeletedData &
-    OwnershipData & {
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     name: string;
     type: PosPaymentMethodType;
@@ -16,5 +17,11 @@ export type PosPaymentMethod = DeletedData &
     terminalId?: string;
     terminalPath?: string;
     company?: {_id: string; name: string};
-    createdAt?: string;
+};
+
+export type TestPosTerminalConnectionResponse = {
+    ok: boolean;
+    message: string;
+    provider: string;
+    terminalId?: string;
 };

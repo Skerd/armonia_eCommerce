@@ -15,6 +15,8 @@ export type RefundPosOrderFormType = {
     /** Line-level partial refund — restocks only selected qtys. */
     lines?: RefundPosOrderLineFormType[];
     managerPin?: string;
+    /** Selected approving manager — PIN is verified only for this user. */
+    managerId?: string;
 };
 
 export function refundPosOrderFormSchema(languageCode: string, form: any = null) {
@@ -23,6 +25,7 @@ export function refundPosOrderFormSchema(languageCode: string, form: any = null)
         reason: z.string().max(2000).optional(),
         amount: greaterThanOrEqualZod(form?.["amountLabel"] ?? "amount", 0.01, languageCode).optional(),
         managerPin: z.string().min(1).max(64).optional(),
+        managerId: isObjectIdZod(form?.["managerIdLabel"] ?? "managerId", languageCode).optional(),
         lines: z
             .array(
                 z.object({

@@ -1,7 +1,8 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
 export type Warehouse = DeletedData &
-    OwnershipData & {
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     name: string;
     code: string;
@@ -11,9 +12,10 @@ export type Warehouse = DeletedData &
         city?: {_id: string; name: string};
         street?: string;
         postalCode?: string;
+        latitude?: number;
+        longitude?: number;
     };
     isDefault?: boolean;
     isActive?: boolean;
     company?: {_id: string; name: string};
-    createdAt?: string;
 };

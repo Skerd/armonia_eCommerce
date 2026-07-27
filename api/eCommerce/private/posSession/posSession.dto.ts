@@ -1,4 +1,4 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
 export type PosSessionState = "opening_control" | "opened" | "closing_control" | "closed";
 export type PosCashMoveType = "in" | "out";
@@ -12,7 +12,8 @@ export type PosCashMove = {
 };
 
 export type PosSession = DeletedData &
-    OwnershipData & {
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     name: string;
     config: string;
@@ -33,5 +34,4 @@ export type PosSession = DeletedData &
     totalCard: number;
     notes?: string;
     company?: {_id: string; name: string};
-    createdAt?: string;
 };

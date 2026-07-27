@@ -30,4 +30,5 @@ export type FiscalConfig = DeletedData &
     isActive: boolean;
     company?: {_id: string; name: string};
     createdAt?: string;
+    updatedAt?: string;
 };

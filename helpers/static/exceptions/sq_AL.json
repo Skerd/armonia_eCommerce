@@ -118,8 +118,304 @@
       "_id": {"message": "Porosia POS"}
     }
   },
+  "pos_config_not_found": {
+    "message": "Konfigurimi POS nuk u gjet.",
+    "error_code": "pos_config_not_found",
+    "extra_messages": {
+      "configId": {"message": "Konfigurimi POS"},
+      "config": {"message": "Konfigurimi POS"},
+      "sessionId": {"message": "Seanca"},
+      "_id": {"message": "Konfigurimi POS"}
+    }
+  },
+  "pos_session_not_found": {
+    "message": "Seanca POS nuk u gjet.",
+    "error_code": "pos_session_not_found",
+    "extra_messages": {
+      "sessionId": {"message": "Seanca"},
+      "_id": {"message": "Seanca"}
+    }
+  },
+  "pos_session_not_opened": {
+    "message": "Seanca POS nuk është e hapur.",
+    "error_code": "pos_session_not_opened",
+    "extra_messages": {
+      "sessionId": {"message": "Seanca"},
+      "session": {"message": "Seanca"},
+      "_id": {"message": "Seanca"}
+    }
+  },
+  "pos_session_already_open": {
+    "message": "Ka tashmë një seancë POS të hapur për këtë konfigurim.",
+    "error_code": "pos_session_already_open",
+    "extra_messages": {
+      "configId": {"message": "Konfigurimi POS"}
+    }
+  },
+  "pos_session_already_closed": {
+    "message": "Kjo seancë POS është tashmë e mbyllur.",
+    "error_code": "pos_session_already_closed",
+    "extra_messages": {
+      "_id": {"message": "Seanca"}
+    }
+  },
+  "pos_product_not_found": {
+    "message": "Produkti nuk u gjet për këtë arke.",
+    "error_code": "pos_product_not_found",
+    "extra_messages": {
+      "productId": {"message": "Produkti"}
+    }
+  },
+  "pos_held_not_found": {
+    "message": "Porosia e mbajtur nuk u gjet.",
+    "error_code": "pos_held_not_found",
+    "extra_messages": {
+      "_id": {"message": "Porosia e mbajtur"},
+      "heldOrderId": {"message": "Porosia e mbajtur"}
+    }
+  },
+  "pos_insufficient_stock": {
+    "message": "Nuk ka stok të mjaftueshëm për këtë sasi.",
+    "error_code": "pos_insufficient_stock",
+    "extra_messages": {
+      "quantity": {"message": "Sasia"}
+    }
+  },
+  "pos_config_warehouse_required": {
+    "message": "Ky konfigurim POS duhet të ketë të paktën një magazinë.",
+    "error_code": "pos_config_warehouse_required",
+    "extra_messages": {
+      "warehouses": {"message": "Magazinat"}
+    }
+  },
+  "pos_config_warehouse_inactive": {
+    "message": "Vetëm magazinat aktive mund të caktohen në një konfigurim POS.",
+    "error_code": "pos_config_warehouse_inactive",
+    "extra_messages": {
+      "warehouses": {"message": "Magazinat"}
+    }
+  },
+  "warehouse_in_use_by_pos_config": {
+    "message": "Kjo magazinë është e vetmja magazinë në një konfigurim POS dhe nuk mund të çaktivizohet ose fshihet. Shtoni një magazinë tjetër në atë konfigurim POS fillimisht.",
+    "error_code": "warehouse_in_use_by_pos_config"
+  },
+  "pos_insufficient_cash": {
+    "message": "Nuk ka cash të mjaftueshëm në arkë për këtë lëvizje.",
+    "error_code": "pos_insufficient_cash",
+    "extra_messages": {
+      "amount": {"message": "Shuma"}
+    }
+  },
+  "pos_close_difference_reason_required": {
+    "message": "Shpjegoni diferencën e cash para mbylljes së seancës.",
+    "error_code": "pos_close_difference_reason_required",
+    "extra_messages": {
+      "differenceReason": {"message": "Arsyeja e diferencës"}
+    }
+  },
+  "pos_close_held_orders_open": {
+    "message": "Rifilloni ose hiqni porositë e mbajtura para mbylljes së seancës.",
+    "error_code": "pos_close_held_orders_open",
+    "extra_messages": {
+      "_id": {"message": "Seanca"}
+    }
+  },
+  "pos_payment_method_invalid": {
+    "message": "Një ose më shumë metoda pagese janë të pavlefshme për këtë arke.",
+    "error_code": "pos_payment_method_invalid",
+    "extra_messages": {
+      "payments": {"message": "Pagesat"},
+      "paymentMethodId": {"message": "Metoda e pagesës"}
+    }
+  },
+  "pos_payment_method_last_on_config": {
+    "message": "Nuk mund të hiqet kjo metodë pagese sepse është e fundit në një konfigurim POS.",
+    "error_code": "pos_payment_method_last_on_config",
+    "extra_messages": {
+      "paymentMethods": {"message": "Metodat e pagesës"}
+    }
+  },
+  "pos_payment_insufficient": {
+    "message": "Totali i pagesës është më i vogël se totali i porosisë.",
+    "error_code": "pos_payment_insufficient",
+    "extra_messages": {
+      "payments": {"message": "Pagesat"}
+    }
+  },
+  "pos_currency_required": {
+    "message": "Monedha është e detyrueshme për këtë arke.",
+    "error_code": "pos_currency_required",
+    "extra_messages": {
+      "currency": {"message": "Monedha"}
+    }
+  },
+  "pos_order_not_refundable": {
+    "message": "Kjo porosi nuk mund të rimbursohet.",
+    "error_code": "pos_order_not_refundable",
+    "extra_messages": {
+      "_id": {"message": "Porosia"}
+    }
+  },
+  "pos_order_is_refund": {
+    "message": "Ky dokument është tashmë një rimbursim.",
+    "error_code": "pos_order_is_refund",
+    "extra_messages": {
+      "_id": {"message": "Porosia"}
+    }
+  },
+  "pos_refund_line_invalid": {
+    "message": "Një ose më shumë rreshta rimbursimi janë të pavlefshëm.",
+    "error_code": "pos_refund_line_invalid",
+    "extra_messages": {
+      "lines": {"message": "Rreshtat"}
+    }
+  },
+  "pos_refund_qty_invalid": {
+    "message": "Sasia e rimbursimit është e pavlefshme për një ose më shumë rreshta.",
+    "error_code": "pos_refund_qty_invalid",
+    "extra_messages": {
+      "lines": {"message": "Rreshtat"}
+    }
+  },
+  "pos_refund_amount_invalid": {
+    "message": "Shuma e rimbursimit është e pavlefshme.",
+    "error_code": "pos_refund_amount_invalid",
+    "extra_messages": {
+      "amount": {"message": "Shuma"}
+    }
+  },
+  "pos_refund_lines_required": {
+    "message": "Zgjidhni të paktën një rresht për rimbursim.",
+    "error_code": "pos_refund_lines_required",
+    "extra_messages": {
+      "lines": {"message": "Rreshtat"}
+    }
+  },
+  "pos_terminal_not_for_method": {
+    "message": "Kjo metodë pagese nuk është e lidhur me një terminal bankar.",
+    "error_code": "pos_terminal_not_for_method",
+    "extra_messages": {
+      "paymentMethodId": {"message": "Metoda e pagesës"}
+    }
+  },
+  "pos_terminal_disabled": {
+    "message": "Terminali bankar është i çaktivizuar për këtë metodë pagese.",
+    "error_code": "pos_terminal_disabled",
+    "extra_messages": {
+      "paymentMethodId": {"message": "Metoda e pagesës"}
+    }
+  },
+  "pos_terminal_amount_invalid": {
+    "message": "Shuma e terminalit duhet të jetë më e madhe se zero.",
+    "error_code": "pos_terminal_amount_invalid",
+    "extra_messages": {
+      "amount": {"message": "Shuma"}
+    }
+  },
+  "pos_terminal_not_configured": {
+    "message": "Hosti i terminalit bankar nuk është i konfiguruar.",
+    "error_code": "pos_terminal_not_configured",
+    "extra_messages": {
+      "terminalHost": {"message": "Hosti i terminalit"}
+    }
+  },
+  "pos_terminal_declined": {
+    "message": "Terminali bankar refuzoi pagesën.",
+    "error_code": "pos_terminal_declined",
+    "extra_messages": {
+      "amount": {"message": "Shuma"}
+    }
+  },
+  "pos_terminal_timeout": {
+    "message": "Terminali bankar skadoi (timeout).",
+    "error_code": "pos_terminal_timeout",
+    "extra_messages": {
+      "amount": {"message": "Shuma"}
+    }
+  },
+  "pos_terminal_unreachable": {
+    "message": "Terminali bankar nuk u arrit.",
+    "error_code": "pos_terminal_unreachable",
+    "extra_messages": {
+      "terminalHost": {"message": "Hosti i terminalit"}
+    }
+  },
+  "pos_manager_pin_invalid": {
+    "message": "PIN i menaxherit është i pavlefshëm.",
+    "error_code": "pos_manager_pin_invalid",
+    "extra_messages": {
+      "pin": {"message": "PIN"},
+      "currentPin": {"message": "PIN aktual"},
+      "managerPin": {"message": "PIN i menaxherit"}
+    }
+  },
+  "pos_manager_pin_not_set": {
+    "message": "PIN i menaxherit nuk është vendosur.",
+    "error_code": "pos_manager_pin_not_set",
+    "extra_messages": {
+      "pin": {"message": "PIN"},
+      "currentPin": {"message": "PIN aktual"}
+    }
+  },
+  "pos_manager_pin_already_set": {
+    "message": "PIN i menaxherit tuaj është tashmë i konfiguruar. Përdorni ndryshimin e PIN-it.",
+    "error_code": "pos_manager_pin_already_set",
+    "extra_messages": {
+      "pin": {"message": "PIN"}
+    }
+  },
+  "pos_manager_not_assigned": {
+    "message": "Ju nuk jeni caktuar si menaxher në këtë arke.",
+    "error_code": "pos_manager_not_assigned",
+    "extra_messages": {
+      "resetCode": {"message": "Kodi i rivendosjes"}
+    }
+  },
+  "pos_manager_pin_reset_invalid": {
+    "message": "Lidhja e rivendosjes së PIN-it të menaxherit është e pavlefshme.",
+    "error_code": "pos_manager_pin_reset_invalid",
+    "extra_messages": {
+      "resetCode": {"message": "Kodi i rivendosjes"}
+    }
+  },
+  "pos_manager_pin_reset_expired": {
+    "message": "Lidhja e rivendosjes së PIN-it të menaxherit ka skaduar.",
+    "error_code": "pos_manager_pin_reset_expired",
+    "extra_messages": {
+      "resetCode": {"message": "Kodi i rivendosjes"}
+    }
+  },
+  "pos_manager_pin_reset_already_used": {
+    "message": "Lidhja e rivendosjes së PIN-it të menaxherit është përdorur tashmë.",
+    "error_code": "pos_manager_pin_reset_already_used",
+    "extra_messages": {
+      "resetCode": {"message": "Kodi i rivendosjes"}
+    }
+  },
+  "pos_manager_pin_reset_no_email": {
+    "message": "Llogaria juaj nuk ka email për të dërguar lidhjen e rivendosjes së PIN-it.",
+    "error_code": "pos_manager_pin_reset_no_email"
+  },
   "payment_gateway_not_configured": {
     "message": "Porta e pagesave nuk është e konfiguruar. Vendosni STRIPE_ENABLED=true dhe STRIPE_SECRET_KEY në maestro .env, pastaj rindizni API-në.",
     "error_code": "payment_gateway_not_configured"
+  },
+  "insufficient_stock": {
+    "message": "Nuk ka mjaftueshëm stok për këtë zbritje.",
+    "error_code": "insufficient_stock",
+    "extra_messages": {
+      "quantity": {"message": "Sasia"}
+    }
+  },
+  "invalid_quantity": {
+    "message": "Sasia duhet të jetë një numër pozitiv.",
+    "error_code": "invalid_quantity",
+    "extra_messages": {
+      "quantity": {"message": "Sasia"}
+    }
+  },
+  "inventory_not_found": {
+    "message": "Regjistrimi i inventarit nuk u gjet.",
+    "error_code": "inventory_not_found"
   }
 }

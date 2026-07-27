@@ -9,6 +9,10 @@ export type ReturnRequest = {
     adminNote?: string;
     resolvedBy?: {_id: string; name: string};
     resolvedAt?: string;
+    company?: {_id: string; name: string};
+    createdBy?: {_id: string; name: string; surname: string};
     createdAt?: string;
+    updatedAt?: string;
     deletedAt?: string;
+    deletedBy?: {_id: string; name: string; surname: string};
 };

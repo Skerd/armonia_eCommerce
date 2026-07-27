@@ -8,6 +8,8 @@ export type CmsBlock = DeletedData &
     isActive: boolean;
     position: number;
     config: Record<string, unknown>;
+    /** Pretty-printed JSON for sheet display (not persisted). */
+    configText?: string;
     startsAt?: string;
     endsAt?: string;
     visibility?: {devices?: string[]; regions?: string[]};

@@ -10,6 +10,10 @@ export type Fulfillment = {
     deliveredAt?: string;
     status: string;
     notes?: string;
+    company?: {_id: string; name: string};
+    createdBy?: {_id: string; name: string; surname: string};
     createdAt?: string;
+    updatedAt?: string;
     deletedAt?: string;
+    deletedBy?: {_id: string; name: string; surname: string};
 };

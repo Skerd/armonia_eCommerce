@@ -1,11 +1,11 @@
 import type {Media} from "../../../../../core/types";
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {ProductTwitterCard} from "./product.schema-def";
 
 export type ProductSimpleRef = {_id: string; title: string; slug: string};
 
 export type Product = DeletedData &
-    OwnershipData & {
+    OwnershipData & LifeCycleData & {
         _id: string;
         type: "physical" | "digital" | "service" | "variable" | "bundle" | "gift_card";
         title: string;
