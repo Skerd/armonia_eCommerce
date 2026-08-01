@@ -37,7 +37,6 @@ export const FiscalConfigSchemaDef = {
     /** Certificate password — write-only. */
     certificatePassword: {type: "string", required: false},
     clearCertificate: {type: "boolean", required: false},
-    isActive: {type: "boolean", required: false},
 } as const;
 
 export type CreateFiscalConfigFormType = InferCreateForm<typeof FiscalConfigSchemaDef>;

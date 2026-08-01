@@ -16,7 +16,6 @@ const CmsBlockVisibilityDef = {
 export const CmsBlockSchemaDef = {
     type: {type: "enum", required: true, options: cmsBlockTypes},
     title: {type: "string", required: true},
-    isActive: {type: "boolean", required: false},
     position: {type: "number", required: false, min: 0},
     startsAt: {type: "date", required: false},
     endsAt: {type: "date", required: false},

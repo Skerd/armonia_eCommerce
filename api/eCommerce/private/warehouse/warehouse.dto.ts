@@ -17,5 +17,4 @@ export type Warehouse = DeletedData &
     };
     isDefault?: boolean;
     isActive?: boolean;
-    company?: {_id: string; name: string};
 };

@@ -1,3 +1,5 @@
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+
 export type SavedSearchFilters = {
     title?: string;
     categoryId?: string;
@@ -8,13 +10,9 @@ export type SavedSearchFilters = {
     geoMaxKm?: number;
 };
 
-export type SavedSearch = {
+export type SavedSearch = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
+    user?: {_id: string; name?: string; surname?: string};
     name: string;
     filters: SavedSearchFilters;
-};
-
-export type SavedSearchFormResponseType = {
-    data: SavedSearch[];
-    total: number;
 };

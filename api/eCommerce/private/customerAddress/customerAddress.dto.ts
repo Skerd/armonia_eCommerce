@@ -1,22 +1,31 @@
-export type CustomerAddress = {
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+
+export type CustomerAddress = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
-    user?: {_id: string; name?: string; surname?: string};
+    customer?: {
+        _id: string;
+        name?: string;
+        surname?: string
+    };
     firstName: string;
     lastName: string;
     phone?: string;
     street: string;
-    city: string;
-    state?: string;
+    city?: {
+        _id: string;
+        name: string
+    };
+    state?: {
+        _id: string;
+        name: string
+    };
     postalCode?: string;
-    country?: {_id: string; name?: string; code?: string};
+    country?: {
+        _id: string;
+        name: string
+    };
     latitude: number;
     longitude: number;
     isDefault: boolean;
     label?: string;
-    company?: {_id: string; name: string};
-    createdBy?: {_id: string; name: string; surname: string};
-    createdAt?: string;
-    updatedAt?: string;
-    deletedAt?: string;
-    deletedBy?: {_id: string; name: string; surname: string};
 };

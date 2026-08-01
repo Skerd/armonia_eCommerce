@@ -1,6 +1,8 @@
-import type {InventoryMovement} from "../inventoryMovement/inventoryMovement.dto";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
-export type Inventory = {
+export type Inventory = DeletedData &
+    OwnershipData &
+    LifeCycleData & {
     _id: string;
     product: {_id: string; title: string; sku?: string};
     variant?: {_id: string; sku?: string; attributeCombination?: {attribute: {name: string}; value: string}[]};
@@ -12,8 +14,6 @@ export type Inventory = {
     reorderQuantity?: number;
     lowStockAlertSent?: boolean;
     company?: {_id: string; name: string};
-    /** Present on /single when enrichSingle loads recent movements. */
-    movements?: InventoryMovement[];
 };
 
 export type InventoryAdjustmentForm = {

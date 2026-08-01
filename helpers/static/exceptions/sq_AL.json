@@ -159,6 +159,43 @@
       "_id": {"message": "Seanca"}
     }
   },
+  "customer_group_already_default": {
+    "message": "Ky grup klientësh është tashmë i parazgjedhur.",
+    "error_code": "customer_group_already_default",
+    "extra_messages": {
+      "_id": {"message": "Grupi i klientëve"}
+    }
+  },
+  "warehouse_already_default": {
+    "message": "Kjo magazinë është tashmë e parazgjedhur.",
+    "error_code": "warehouse_already_default",
+    "extra_messages": {
+      "_id": {"message": "Magazina"}
+    }
+  },
+  "customer_address_already_default": {
+    "message": "Kjo adresë klienti është tashmë e parazgjedhur.",
+    "error_code": "customer_address_already_default",
+    "extra_messages": {
+      "_id": {"message": "Adresa e klientit"}
+    }
+  },
+  "customer_group_member_already_exists": {
+    "message": "Ky përdorues është tashmë anëtar i grupit të klientëve.",
+    "error_code": "customer_group_member_already_exists",
+    "extra_messages": {
+      "userId": {"message": "Përdoruesi"},
+      "customerGroup": {"message": "Grupi i klientëve"}
+    }
+  },
+  "customer_group_member_not_found": {
+    "message": "Ky përdorues nuk është anëtar i grupit të klientëve.",
+    "error_code": "customer_group_member_not_found",
+    "extra_messages": {
+      "userId": {"message": "Përdoruesi"},
+      "customerGroup": {"message": "Grupi i klientëve"}
+    }
+  },
   "pos_product_not_found": {
     "message": "Produkti nuk u gjet për këtë arke.",
     "error_code": "pos_product_not_found",
@@ -193,6 +230,20 @@
     "error_code": "pos_config_warehouse_inactive",
     "extra_messages": {
       "warehouses": {"message": "Magazinat"}
+    }
+  },
+  "pos_config_paused": {
+    "message": "Ky arkë POS është në pauzë. Shitjet bllokohen derisa një admin ta rifillojë.",
+    "error_code": "pos_config_paused",
+    "extra_messages": {
+      "configId": {"message": "Konfigurimi POS"}
+    }
+  },
+  "pos_config_inactive": {
+    "message": "Ky arkë POS është joaktiv dhe nuk mund të përdoret.",
+    "error_code": "pos_config_inactive",
+    "extra_messages": {
+      "configId": {"message": "Konfigurimi POS"}
     }
   },
   "warehouse_in_use_by_pos_config": {
@@ -417,5 +468,29 @@
   "inventory_not_found": {
     "message": "Regjistrimi i inventarit nuk u gjet.",
     "error_code": "inventory_not_found"
+  },
+  "product_already_reviewed_for_order": {
+    "message": "Ky produkt është vlerësuar tashmë për këtë porosi.",
+    "error_code": "product_already_reviewed_for_order"
+  },
+  "cannot_restore_product_review_active_exists": {
+    "message": "Nuk mund të rivendoset ky vlerësim sepse ekziston tashmë një vlerësim aktiv për të njëjtën porosi dhe produkt.",
+    "error_code": "cannot_restore_product_review_active_exists"
+  },
+  "only_customer_can_review": {
+    "message": "Vetëm klienti që bëri porosinë mund të lërë një vlerësim.",
+    "error_code": "only_customer_can_review"
+  },
+  "order_must_be_paid_to_review": {
+    "message": "Porosia duhet të jetë e paguar para se të mund të vlerësohet.",
+    "error_code": "order_must_be_paid_to_review"
+  },
+  "product_not_in_order": {
+    "message": "Ky produkt nuk është pjesë e kësaj porosie.",
+    "error_code": "product_not_in_order"
+  },
+  "only_admin_can_delete_review": {
+    "message": "Vetëm një administrator mund të fshijë një vlerësim produkti.",
+    "error_code": "only_admin_can_delete_review"
   }
 }

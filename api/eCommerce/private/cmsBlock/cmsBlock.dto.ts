@@ -1,7 +1,6 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
-export type CmsBlock = DeletedData &
-    OwnershipData & {
+export type CmsBlock = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     type: string;
     title: string;
@@ -14,6 +13,4 @@ export type CmsBlock = DeletedData &
     endsAt?: string;
     visibility?: {devices?: string[]; regions?: string[]};
     abTestVariant?: string;
-    company?: {_id: string; name: string};
-    createdAt?: string;
 };

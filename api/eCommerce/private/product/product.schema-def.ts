@@ -1,14 +1,5 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 
-// SchemaDef is the single source of truth: it drives both the create/edit Zod validators
-// (buildCreate/EditZodSchema) and the create/update data builders (buildCreate/UpdateDataFromSchemaDef),
-// covering scalar/enum/date/objectId(-array)/media(-array)/embedded/embeddedArray fields — including
-// attributes / specifications / faqs (embeddedArray) and seo (embedded).
-// The embeddedArray + seo fields are written wholesale via pass-through transforms in the router
-// (see product.ts) so array-item write-permission recursion cannot strip sub-fields.
-// System-computed (not user-editable, omitted from the def):
-//   - ratingAverage / ratingCount / reviewCount / variantCount
-
 export const productTypes = ["physical", "digital", "service", "variable", "bundle", "gift_card"] as const;
 export const productStatuses = ["draft", "active", "archived"] as const;
 export const productWeightUnits = ["kg", "lb", "g", "oz"] as const;

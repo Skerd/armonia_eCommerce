@@ -19,13 +19,13 @@ const ShippingRateItemDef = {
     conditions: {type: "embedded", required: false, items: ShippingRateConditionDef},
 } as const;
 
+/** Form fields only — `isActive` is managed via activate / deactivate actions. */
 export const ShippingZoneSchemaDef = {
     name: {type: "string", required: true},
     countries: {type: "objectIdArray", required: false},
     states: {type: "objectIdArray", required: false},
     postalCodePatterns: {type: "stringArray", required: false},
     rates: {type: "embeddedArray", required: true, items: ShippingRateItemDef, minItems: 1},
-    isActive: {type: "boolean", required: false},
 } as const;
 
 export type CreateShippingZoneFormType = InferCreateForm<typeof ShippingZoneSchemaDef>;

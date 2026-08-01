@@ -10,24 +10,25 @@ export type PosConfigManager = {
     hasPin: boolean;
 };
 
-export type PosConfig = DeletedData &
-    OwnershipData &
-    LifeCycleData & {
+export type PosConfigPaymentMethod = {
     _id: string;
     name: string;
-    paymentMethods?: string[];
-    paymentMethodLabels?: {
-        _id: string;
-        name: string;
-        type?: string;
-        cashQuickAmounts?: string;
-        terminalEnabled?: boolean;
-        terminalProvider?: string;
-        terminalHost?: string;
-        terminalPort?: number;
-        terminalId?: string;
-        terminalPath?: string;
-    }[];
+    type?: string;
+    isActive?: boolean;
+    cashQuickAmounts?: string;
+    terminalEnabled?: boolean;
+    terminalProvider?: string;
+    terminalProtocol?: string;
+    terminalHost?: string;
+    terminalPort?: number;
+    terminalId?: string;
+    terminalPath?: string;
+};
+
+export type PosConfig = DeletedData & OwnershipData & LifeCycleData & {
+    _id: string;
+    name: string;
+    paymentMethods?: PosConfigPaymentMethod[];
     managers?: PosConfigManager[];
     warehouses: {_id: string; name: string; code?: string}[];
     currency?: {_id: string; name: string; symbol: string; abbreviation: string};
@@ -48,5 +49,14 @@ export type PosConfig = DeletedData &
     /** True when the requesting user has their own PIN set on this till. */
     currentUserHasManagerPin?: boolean;
     isActive: boolean;
-    company?: {_id: string; name: string};
+    /** True when this config is paused or the company-wide POS lock is active. */
+    isPaused?: boolean;
+    /** True when the company-wide POS lock is active (distinct from a single-till pause). */
+    isCompanyPaused?: boolean;
+    /** Reason from the company lock when `isCompanyPaused` is true. */
+    companyPauseReason?: string | null;
+    pausedAt?: string | null;
+    pausedBy?: {_id: string; name?: string; surname?: string} | null;
+    /** This till's own pause reason (not the company lock reason). */
+    pauseReason?: string | null;
 };

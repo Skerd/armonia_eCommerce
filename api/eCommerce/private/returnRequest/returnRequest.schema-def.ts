@@ -21,11 +21,5 @@ export const ReturnRequestSchemaDef = {
     adminNote: {type: "string", required: false},
 } as const;
 
-export type CreateReturnRequestFormType = InferCreateForm<typeof ReturnRequestSchemaDef> & {
-    notes?: string;
-};
-
-export type EditReturnRequestFormType = InferEditForm<typeof ReturnRequestSchemaDef> & {
-    _id: string;
-    notes?: string;
-};
+export type CreateReturnRequestFormType = InferCreateForm<typeof ReturnRequestSchemaDef>;
+export type EditReturnRequestFormType = InferEditForm<typeof ReturnRequestSchemaDef>;

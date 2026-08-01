@@ -17,7 +17,6 @@ export const TaxZoneSchemaDef = {
     postalCodePatterns: {type: "stringArray", required: false},
     rates: {type: "embeddedArray", required: true, items: TaxRateItemDef, minItems: 1},
     priority: {type: "number", required: false, min: 0},
-    isActive: {type: "boolean", required: false},
 } as const;
 
 export type CreateTaxZoneFormType = InferCreateForm<typeof TaxZoneSchemaDef>;

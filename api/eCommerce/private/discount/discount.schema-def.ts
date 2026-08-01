@@ -9,7 +9,7 @@ export type DiscountAppliesTo = (typeof discountAppliesTo)[number];
 const BuyXGetYDef = {
     buyQuantity: {type: "number", required: true, min: 1},
     getQuantity: {type: "number", required: true, min: 1},
-    getProductIds: {type: "objectIdArray", required: false},
+    getProductIds: {type: "objectIdArray", required: true, minItems: 1},
 } as const;
 
 export const DiscountSchemaDef = {
@@ -24,7 +24,6 @@ export const DiscountSchemaDef = {
     usageLimit: {type: "number", required: false, min: 0},
     usageLimitPerCustomer: {type: "number", required: false, min: 0},
     customerGroups: {type: "objectIdArray", required: false},
-    isActive: {type: "boolean", required: false},
     startsAt: {type: "date", required: true},
     endsAt: {type: "date", required: false},
     buyXGetY: {type: "embedded", required: false, items: BuyXGetYDef},

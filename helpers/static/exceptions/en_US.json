@@ -159,6 +159,43 @@
       "_id": {"message": "Session"}
     }
   },
+  "customer_group_already_default": {
+    "message": "This customer group is already the default.",
+    "error_code": "customer_group_already_default",
+    "extra_messages": {
+      "_id": {"message": "Customer group"}
+    }
+  },
+  "warehouse_already_default": {
+    "message": "This warehouse is already the default.",
+    "error_code": "warehouse_already_default",
+    "extra_messages": {
+      "_id": {"message": "Warehouse"}
+    }
+  },
+  "customer_address_already_default": {
+    "message": "This customer address is already the default.",
+    "error_code": "customer_address_already_default",
+    "extra_messages": {
+      "_id": {"message": "Customer address"}
+    }
+  },
+  "customer_group_member_already_exists": {
+    "message": "This user is already a member of the customer group.",
+    "error_code": "customer_group_member_already_exists",
+    "extra_messages": {
+      "userId": {"message": "User"},
+      "customerGroup": {"message": "Customer group"}
+    }
+  },
+  "customer_group_member_not_found": {
+    "message": "This user is not a member of the customer group.",
+    "error_code": "customer_group_member_not_found",
+    "extra_messages": {
+      "userId": {"message": "User"},
+      "customerGroup": {"message": "Customer group"}
+    }
+  },
   "pos_product_not_found": {
     "message": "Product not found for this till.",
     "error_code": "pos_product_not_found",
@@ -193,6 +230,20 @@
     "error_code": "pos_config_warehouse_inactive",
     "extra_messages": {
       "warehouses": {"message": "Warehouses"}
+    }
+  },
+  "pos_config_paused": {
+    "message": "This POS till is paused. Selling is blocked until an admin resumes it.",
+    "error_code": "pos_config_paused",
+    "extra_messages": {
+      "configId": {"message": "POS config"}
+    }
+  },
+  "pos_config_inactive": {
+    "message": "This POS till is inactive and cannot be used.",
+    "error_code": "pos_config_inactive",
+    "extra_messages": {
+      "configId": {"message": "POS config"}
     }
   },
   "warehouse_in_use_by_pos_config": {
@@ -417,5 +468,29 @@
   "inventory_not_found": {
     "message": "Inventory record was not found.",
     "error_code": "inventory_not_found"
+  },
+  "product_already_reviewed_for_order": {
+    "message": "This product has already been reviewed for this order.",
+    "error_code": "product_already_reviewed_for_order"
+  },
+  "cannot_restore_product_review_active_exists": {
+    "message": "Cannot restore this review because an active review already exists for the same order and product.",
+    "error_code": "cannot_restore_product_review_active_exists"
+  },
+  "only_customer_can_review": {
+    "message": "Only the customer who placed the order can leave a review.",
+    "error_code": "only_customer_can_review"
+  },
+  "order_must_be_paid_to_review": {
+    "message": "The order must be paid before it can be reviewed.",
+    "error_code": "order_must_be_paid_to_review"
+  },
+  "product_not_in_order": {
+    "message": "That product is not part of this order.",
+    "error_code": "product_not_in_order"
+  },
+  "only_admin_can_delete_review": {
+    "message": "Only an administrator can delete a product review.",
+    "error_code": "only_admin_can_delete_review"
   }
 }

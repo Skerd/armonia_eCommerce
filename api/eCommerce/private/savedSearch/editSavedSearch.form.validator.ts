@@ -1,11 +1,11 @@
 import {buildEditZodSchema} from "../../../../../core/helpers/schemaDefBuilder";
-import {ReturnRequestSchemaDef} from "./returnRequest.schema-def";
+import {SavedSearchSchemaDef} from "./savedSearch.schema-def";
 
-export function editReturnRequestFormSchema(
+export function editSavedSearchFormSchema(
     languageCode: string,
     form: any = null,
     permissions: Record<string, unknown> = {},
     readPermissions: Record<string, unknown> = {},
 ) {
-    return buildEditZodSchema(ReturnRequestSchemaDef, languageCode, form, permissions, readPermissions);
+    return buildEditZodSchema(SavedSearchSchemaDef, languageCode, form, permissions, readPermissions);
 }

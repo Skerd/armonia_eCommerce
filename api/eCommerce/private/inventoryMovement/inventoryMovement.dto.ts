@@ -1,4 +1,5 @@
 import type {Media} from "../../../../../core/types";
+import {LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
 export type InventoryMovementReason =
     | "restock"
@@ -11,7 +12,7 @@ export type InventoryMovementReason =
     | "initial"
     | "write_off";
 
-export type InventoryMovement = {
+export type InventoryMovement = OwnershipData & LifeCycleData & {
     _id: string;
     inventory?: {_id: string};
     product: {_id: string; title: string; sku?: string};
@@ -32,6 +33,4 @@ export type InventoryMovement = {
     performedBy?: {_id: string; name: string; surname: string};
     referenceType?: string;
     referenceId?: string;
-    company?: {_id: string; name: string};
-    createdAt?: string;
 };

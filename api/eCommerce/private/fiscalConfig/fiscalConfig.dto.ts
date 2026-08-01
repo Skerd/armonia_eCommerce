@@ -1,8 +1,7 @@
-import {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {FiscalEnvironment, FiscalTcrType} from "./fiscalConfig.schema-def";
 
-export type FiscalConfig = DeletedData &
-    OwnershipData & {
+export type FiscalConfig = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     name: string;
     nipt?: string;
@@ -28,7 +27,4 @@ export type FiscalConfig = DeletedData &
     /** True when a PKCS#12 certificate is stored (blob never exposed). */
     hasCertificate: boolean;
     isActive: boolean;
-    company?: {_id: string; name: string};
-    createdAt?: string;
-    updatedAt?: string;
 };

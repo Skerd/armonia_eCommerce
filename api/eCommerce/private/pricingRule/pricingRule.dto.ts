@@ -2,9 +2,7 @@ import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../cor
 
 export type PricingRuleRef = {_id: string; name: string; title?: string};
 
-export type PricingRule = DeletedData &
-    OwnershipData &
-    LifeCycleData & {
+export type PricingRule = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     name: string;
     type: string;
@@ -27,5 +25,4 @@ export type PricingRule = DeletedData &
     isActive: boolean;
     startsAt?: string;
     endsAt?: string;
-    company?: {_id: string; name: string};
 };

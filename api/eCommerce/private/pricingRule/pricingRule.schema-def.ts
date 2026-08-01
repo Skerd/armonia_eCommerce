@@ -15,7 +15,6 @@ export const PricingRuleSchemaDef = {
     minimumOrderAmount: {type: "number", required: false, min: 0},
     minimumQuantity: {type: "number", required: false, min: 0},
     priority: {type: "number", required: false, min: 0},
-    isActive: {type: "boolean", required: false},
     startsAt: {type: "date", required: false},
     endsAt: {type: "date", required: false},
 } as const;

@@ -1,19 +1,28 @@
-import type {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
-export type ProductReview = DeletedData &
-    OwnershipData & {
+export type ProductReview = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
-    order?: {_id: string; orderNumber?: string; status?: string; paymentStatus?: string};
-    product?: {_id: string; title?: string; slug?: string; sku?: string};
+    order?: {
+        _id: string; 
+        orderNumber?: string; 
+        status?: string; 
+        paymentStatus?: string
+    };
+    product?: {
+        _id: string; 
+        title?: string; 
+        slug?: string; 
+        sku?: string
+    };
     rating: number;
     title?: string;
     comment?: string;
-    /** Sheet/card title: review title, product title, or id. */
-    displayTitle?: string;
-    reviewer?: {_id: string; name?: string; surname?: string; photo?: string};
-    company?: {_id: string; name: string};
-    createdAt?: string;
-    updatedAt?: string;
+    reviewer?: {
+        _id: string; 
+        name?: string; 
+        surname?: string; 
+        photo?: string
+    };
 };
 
 /** Public storefront shape — reviewer reduced to a display name. */

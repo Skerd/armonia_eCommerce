@@ -2,9 +2,7 @@ import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../cor
 import type {Media} from "../../../../../core/types";
 import type {ProductSimpleRef} from "../product/product.dto";
 
-export type ProductVariant = DeletedData &
-    OwnershipData &
-    LifeCycleData & {
+export type ProductVariant = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     product: ProductSimpleRef;
     sku?: string;
@@ -21,5 +19,4 @@ export type ProductVariant = DeletedData &
     status: "active" | "inactive";
     trackInventory?: boolean;
     inventoryQuantity?: number;
-    company?: {_id: string; name: string};
 };

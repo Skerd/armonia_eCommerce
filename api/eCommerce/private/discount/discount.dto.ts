@@ -2,9 +2,7 @@ import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../cor
 
 export type DiscountRef = {_id: string; name: string; title?: string};
 
-export type Discount = DeletedData &
-    OwnershipData &
-    LifeCycleData & {
+export type Discount = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     type: "percentage" | "fixed" | "free_shipping" | "buy_x_get_y";
     title: string;
@@ -36,5 +34,6 @@ export type Discount = DeletedData &
         getProductIds: string[];
         getProducts?: DiscountRef[];
     };
-    company?: {_id: string; name: string};
+    /** Sheet: true when appliesTo/value offer cards should show (not BXGY). */
+    hasOfferScoping?: boolean;
 };

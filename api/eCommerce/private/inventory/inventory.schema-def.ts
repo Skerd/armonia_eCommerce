@@ -3,7 +3,7 @@ import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/s
 // SchemaDef drives validators and create/update builders for user-editable fields.
 // System-managed fields excluded from SchemaDef (and excludePaths on validateSchemaDefAgainstMongoose):
 //   quantityReserved, lowStockAlertSent
-// List filters (productId, warehouseId, belowReorderPoint) use a custom listSchema on the router.
+// product/warehouse list filters use the standard DSL filter body.
 
 export const InventorySchemaDef = {
     product: {type: "objectId", required: true},

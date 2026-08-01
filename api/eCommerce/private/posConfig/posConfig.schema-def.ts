@@ -4,7 +4,7 @@ export const PosConfigSchemaDef = {
     name: {type: "string", required: true},
     paymentMethods: {type: "objectIdArray", required: false},
     managers: {type: "objectIdArray", required: false},
-    warehouses: {type: "objectIdArray", required: true},
+    warehouses: {type: "objectIdArray", required: true, minItems: 1},
     currency: {type: "objectId", required: false},
     receiptHeader: {type: "string", required: false},
     receiptFooter: {type: "string", required: false},
@@ -16,7 +16,6 @@ export const PosConfigSchemaDef = {
     pinForDiscount: {type: "boolean", required: false},
     pinForCashOut: {type: "boolean", required: false},
     pinForRefund: {type: "boolean", required: false},
-    isActive: {type: "boolean", required: false},
 } as const;
 
 export type CreatePosConfigFormType = InferCreateForm<typeof PosConfigSchemaDef>;

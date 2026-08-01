@@ -1,4 +1,6 @@
-export type ReturnRequest = {
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+
+export type ReturnRequest = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     order: {_id: string; orderNumber: string};
     type: string;
@@ -9,10 +11,4 @@ export type ReturnRequest = {
     adminNote?: string;
     resolvedBy?: {_id: string; name: string};
     resolvedAt?: string;
-    company?: {_id: string; name: string};
-    createdBy?: {_id: string; name: string; surname: string};
-    createdAt?: string;
-    updatedAt?: string;
-    deletedAt?: string;
-    deletedBy?: {_id: string; name: string; surname: string};
 };

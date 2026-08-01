@@ -1,25 +1,31 @@
-import type {Media} from "../../../../../core/types";
+export type CartItemSnapshot = {
+    title: string;
+    sku?: string;
+    imageUrl?: string;
+};
 
 export type CartItem = {
-    _id: string;
-    product: {_id: string; title: string; slug: string; sku?: string};
-    variant?: {_id: string; sku?: string; attributeCombination?: {attribute: {name: string}; value: string}[]};
+    _id?: string;
+    product: {_id: string; title?: string};
+    variant?: {_id: string} | null;
     quantity: number;
     unitPrice: number;
     totalPrice: number;
-    snapshot: {title: string; sku?: string; image?: Media};
+    snapshot?: CartItemSnapshot;
+};
+
+export type CartAppliedDiscount = {
+    discount: string;
+    code?: string;
+    amount: number;
 };
 
 export type Cart = {
     _id: string;
-    sessionId?: string;
-    user?: {_id: string; name: string; surname: string};
     items: CartItem[];
-    currency?: {_id: string; name: string; symbol: string; abbreviation: string};
-    appliedDiscounts?: {discount: {_id: string; title: string; code?: string}; amount: number}[];
     subtotal: number;
     discountTotal: number;
-    estimatedTotal: number;
-    itemCount: number;
-    expiresAt: string;
+    appliedDiscounts?: CartAppliedDiscount[];
+    appliedGiftCard?: {code: string; amount: number};
+    expiresAt?: string;
 };

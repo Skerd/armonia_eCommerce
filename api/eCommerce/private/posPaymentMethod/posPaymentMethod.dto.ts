@@ -1,9 +1,11 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
-import type {PosPaymentMethodType, PosTerminalProvider} from "./posPaymentMethod.schema-def";
+import type {
+    PosPaymentMethodType,
+    PosTerminalProtocol,
+    PosTerminalProvider,
+} from "./posPaymentMethod.schema-def";
 
-export type PosPaymentMethod = DeletedData &
-    OwnershipData &
-    LifeCycleData & {
+export type PosPaymentMethod = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     name: string;
     type: PosPaymentMethodType;
@@ -12,11 +14,11 @@ export type PosPaymentMethod = DeletedData &
     cashQuickAmounts?: string;
     terminalEnabled?: boolean;
     terminalProvider?: PosTerminalProvider;
+    terminalProtocol?: PosTerminalProtocol;
     terminalHost?: string;
     terminalPort?: number;
     terminalId?: string;
     terminalPath?: string;
-    company?: {_id: string; name: string};
 };
 
 export type TestPosTerminalConnectionResponse = {

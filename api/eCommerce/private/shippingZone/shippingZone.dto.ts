@@ -1,12 +1,16 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
-export type ShippingZone = DeletedData &
-    OwnershipData &
-    LifeCycleData & {
+export type ShippingZone = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     name: string;
-    countries?: {_id: string; name: string}[];
-    states?: {_id: string; name: string}[];
+    countries?: {
+        _id: string;
+        name: string
+    }[];
+    states?: {
+        _id: string;
+        name: string
+    }[];
     postalCodePatterns?: string[];
     rates: {
         name: string;
@@ -22,5 +26,4 @@ export type ShippingZone = DeletedData &
         };
     }[];
     isActive: boolean;
-    company?: {_id: string; name: string};
 };

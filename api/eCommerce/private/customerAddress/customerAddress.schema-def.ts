@@ -1,18 +1,17 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 
 export const CustomerAddressSchemaDef = {
-    user: {type: "objectId", required: true},
+    customer: {type: "objectId", required: true},
     firstName: {type: "string", required: true},
     lastName: {type: "string", required: true},
     phone: {type: "string", required: false},
     street: {type: "string", required: true},
-    city: {type: "string", required: true},
-    state: {type: "string", required: false},
+    city: {type: "objectId", required: true},
+    state: {type: "objectId", required: false},
     postalCode: {type: "string", required: false},
     country: {type: "objectId", required: true},
     latitude: {type: "number", required: true},
     longitude: {type: "number", required: true},
-    isDefault: {type: "boolean", required: false},
     label: {type: "string", required: false},
 } as const;
 

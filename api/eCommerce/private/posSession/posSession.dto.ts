@@ -11,13 +11,10 @@ export type PosCashMove = {
     by?: {_id: string; name?: string; surname?: string};
 };
 
-export type PosSession = DeletedData &
-    OwnershipData &
-    LifeCycleData & {
+export type PosSession = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     name: string;
-    config: string;
-    configLabel?: {_id: string; name: string};
+    config: {_id: string; name: string};
     state: PosSessionState;
     openedBy?: {_id: string; name?: string; surname?: string};
     closedBy?: {_id: string; name?: string; surname?: string};
@@ -33,5 +30,4 @@ export type PosSession = DeletedData &
     totalCash: number;
     totalCard: number;
     notes?: string;
-    company?: {_id: string; name: string};
 };
