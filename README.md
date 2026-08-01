@@ -27,9 +27,7 @@ eCommerce/
 | `inventory` / `warehouse` | Stock levels and warehouse management |
 | `cart` | Shopping cart |
 | `productOrder` | Customer orders |
-| `orderChannel` | Order channels |
 | `fulfillment` | Fulfillment workflows |
-| `escrowTransaction` | Escrow (see finance for payment transactions) |
 | `pricingRule` / `discount` | Pricing and promotions |
 | `taxZone` / `shippingZone` | Tax and shipping configuration |
 | `customerGroup` / `customerGroupMember` / `customerAddress` | Customer segmentation and addresses |
