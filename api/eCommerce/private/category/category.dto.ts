@@ -1,6 +1,6 @@
-import type {DeletedData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
-export type Category = OwnershipData & DeletedData & {
+export type Category = OwnershipData & DeletedData & LifeCycleData & {
     _id: string;
     name: string;
     slug: string;
