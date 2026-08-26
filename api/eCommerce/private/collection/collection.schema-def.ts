@@ -21,7 +21,7 @@ export const CollectionSchemaDef = {
     name: {type: "string", required: true},
     slug: {type: "string", required: false, format: "slug"},
     description: {type: "string", required: false},
-    mainImage: {type: "mediaId", required: false},
+    mainImage: {type: "mediaId", required: false, publicAccess: true},
     isVisible: {type: "boolean", required: false},
     position: {type: "number", required: false, min: 0},
     products: {type: "objectIdArray", required: false},

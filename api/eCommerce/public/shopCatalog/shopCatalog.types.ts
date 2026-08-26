@@ -1,7 +1,7 @@
 /**
  * Public storefront catalog DTOs — lean, buyer-facing shapes (no cost fields,
  * no internal flags). Media fields are Media ids; the client resolves them to
- * `/api/auxiliary/media/{id}`.
+ * `/api/auxiliary/public/media/{id}`.
  */
 
 export type ShopProductCard = {

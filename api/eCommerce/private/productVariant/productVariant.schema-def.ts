@@ -25,7 +25,7 @@ export const ProductVariantSchemaDef = {
     currency: {type: "objectId", required: false},
     weight: {type: "number", required: false, min: 0},
     dimensions: {type: "embedded", required: false, items: ProductVariantDimensionsDef},
-    mainImage: {type: "mediaId", required: false},
+    mainImage: {type: "mediaId", required: false, publicAccess: true},
     position: {type: "number", required: false, min: 0},
     status: {type: "enum", required: false, options: productVariantStatuses},
     trackInventory: {type: "boolean", required: false},

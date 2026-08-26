@@ -45,7 +45,7 @@ const ProductSeoDef = {
     canonicalUrl: {type: "string", required: false, format: "url"},
     openGraphTitle: {type: "string", required: false, max: 160},
     openGraphDescription: {type: "string", required: false, max: 320},
-    openGraphImage: {type: "mediaId", required: false},
+    openGraphImage: {type: "mediaId", required: false, publicAccess: true},
     twitterCard: {type: "enum", required: false, options: productTwitterCards},
     structuredDataType: {type: "string", required: false},
     sitemapInclude: {type: "boolean", required: false},
@@ -110,8 +110,8 @@ export const ProductSchemaDef = {
     preorderAvailableAt: {type: "date", required: false},
     availableForSale: {type: "boolean", required: false},
     // Media
-    mainImage: {type: "mediaId", required: false},
-    gallery: {type: "mediaIdArray", required: false},
+    mainImage: {type: "mediaId", required: false, publicAccess: true},
+    gallery: {type: "mediaIdArray", required: false, publicAccess: true},
     videoUrls: {type: "stringArray", required: false},
     documents: {type: "mediaIdArray", required: false},
     // Variants / options
