@@ -1,0 +1,628 @@
+{
+  "admin_only": {
+    "message": "Diese Aktion ist Administratoren vorbehalten.",
+    "error_code": "admin_only"
+  },
+  "delivery_already_processed": {
+    "message": "Diese Lieferung wurde bereits verarbeitet.",
+    "error_code": "delivery_already_processed"
+  },
+  "delivery_already_submitted": {
+    "message": "Für diesen Auftrag wurde bereits eine Lieferung übermittelt.",
+    "error_code": "delivery_already_submitted"
+  },
+  "delivery_not_found": {
+    "message": "Lieferung nicht gefunden.",
+    "error_code": "delivery_not_found"
+  },
+  "max_revisions_reached": {
+    "message": "Die maximale Anzahl Revisionen für diesen Auftrag wurde erreicht.",
+    "error_code": "max_revisions_reached"
+  },
+  "milestone_already_released": {
+    "message": "Dieser Meilenstein wurde bereits freigegeben.",
+    "error_code": "milestone_already_released"
+  },
+  "milestone_not_found": {
+    "message": "Meilenstein nicht gefunden.",
+    "error_code": "milestone_not_found"
+  },
+  "milestone_total_exceeds_order_amount": {
+    "message": "Die Summe der Meilensteinbeträge überschreitet den Auftragsbetrag.",
+    "error_code": "milestone_total_exceeds_order_amount"
+  },
+  "only_customer_can_accept": {
+    "message": "Nur der Kunde kann diese Lieferung annehmen.",
+    "error_code": "only_customer_can_accept"
+  },
+  "only_customer_can_release_milestone": {
+    "message": "Nur der Kunde kann diesen Meilenstein freigeben.",
+    "error_code": "only_customer_can_release_milestone"
+  },
+  "only_customer_can_request_revision": {
+    "message": "Nur der Kunde kann eine Revision anfordern.",
+    "error_code": "only_customer_can_request_revision"
+  },
+  "only_order_parties_can_access_chat": {
+    "message": "Nur die Auftragsparteien können auf diesen Chat zugreifen.",
+    "error_code": "only_order_parties_can_access_chat"
+  },
+  "only_order_parties_can_view_escrow": {
+    "message": "Nur die Auftragsparteien können Treuhanddetails einsehen.",
+    "error_code": "only_order_parties_can_view_escrow"
+  },
+  "only_order_parties_can_view_revisions": {
+    "message": "Nur die Auftragsparteien können Revisionen einsehen.",
+    "error_code": "only_order_parties_can_view_revisions"
+  },
+  "only_provider_can_deliver": {
+    "message": "Nur der Anbieter kann eine Lieferung übermitteln.",
+    "error_code": "only_provider_can_deliver"
+  },
+  "order_must_be_in_progress_to_release": {
+    "message": "Der Auftrag muss in Bearbeitung sein, um einen Meilenstein freizugeben.",
+    "error_code": "order_must_be_in_progress_to_release"
+  },
+  "order_not_found": {
+    "message": "Auftrag nicht gefunden.",
+    "error_code": "order_not_found"
+  },
+  "order_not_in_progress": {
+    "message": "Der Auftrag ist nicht in Bearbeitung.",
+    "error_code": "order_not_in_progress"
+  },
+  "saved_search_not_found": {
+    "message": "Gespeicherte Suche nicht gefunden.",
+    "error_code": "saved_search_not_found"
+  },
+  "fiscal_error": {
+    "message": "Fiskalisierung fehlgeschlagen: {}",
+    "error_code": "fiscal_error",
+    "extra_messages": {
+      "posOrderId": {
+        "message": "POS-Auftrag"
+      }
+    }
+  },
+  "fiscal_einvoice_error": {
+    "message": "E-Rechnungsregistrierung fehlgeschlagen: {}",
+    "error_code": "fiscal_einvoice_error",
+    "extra_messages": {
+      "posOrderId": {
+        "message": "POS-Auftrag"
+      }
+    }
+  },
+  "fiscal_tcr_error": {
+    "message": "TCR-Registrierung fehlgeschlagen: {}",
+    "error_code": "fiscal_tcr_error",
+    "extra_messages": {
+      "fiscalConfigId": {
+        "message": "Steuerkonfiguration"
+      }
+    }
+  },
+  "fiscal_taxpayer_error": {
+    "message": "Steuerpflichtigen-Abfrage fehlgeschlagen: {}",
+    "error_code": "fiscal_taxpayer_error",
+    "extra_messages": {
+      "tin": {
+        "message": "TIN"
+      }
+    }
+  },
+  "fiscal_config_missing": {
+    "message": "Aktive Steuerkonfiguration mit Zertifikat nicht gefunden.",
+    "error_code": "fiscal_config_missing",
+    "extra_messages": {
+      "fiscalConfigId": {
+        "message": "Steuerkonfiguration"
+      }
+    }
+  },
+  "pos_order_not_found": {
+    "message": "POS-Auftrag nicht gefunden.",
+    "error_code": "pos_order_not_found",
+    "extra_messages": {
+      "posOrderId": {
+        "message": "POS-Auftrag"
+      },
+      "_id": {
+        "message": "POS-Auftrag"
+      }
+    }
+  },
+  "pos_config_not_found": {
+    "message": "POS-Konfiguration nicht gefunden.",
+    "error_code": "pos_config_not_found",
+    "extra_messages": {
+      "configId": {
+        "message": "POS-Konfiguration"
+      },
+      "config": {
+        "message": "POS-Konfiguration"
+      },
+      "sessionId": {
+        "message": "Sitzung"
+      },
+      "_id": {
+        "message": "POS-Konfiguration"
+      }
+    }
+  },
+  "pos_session_not_found": {
+    "message": "POS-Sitzung nicht gefunden.",
+    "error_code": "pos_session_not_found",
+    "extra_messages": {
+      "sessionId": {
+        "message": "Sitzung"
+      },
+      "_id": {
+        "message": "Sitzung"
+      }
+    }
+  },
+  "pos_session_not_opened": {
+    "message": "Die POS-Sitzung ist nicht geöffnet.",
+    "error_code": "pos_session_not_opened",
+    "extra_messages": {
+      "sessionId": {
+        "message": "Sitzung"
+      },
+      "session": {
+        "message": "Sitzung"
+      },
+      "_id": {
+        "message": "Sitzung"
+      }
+    }
+  },
+  "pos_session_already_open": {
+    "message": "Für diese Konfiguration ist bereits eine POS-Sitzung geöffnet.",
+    "error_code": "pos_session_already_open",
+    "extra_messages": {
+      "configId": {
+        "message": "POS-Konfiguration"
+      }
+    }
+  },
+  "pos_session_already_closed": {
+    "message": "Diese POS-Sitzung ist bereits geschlossen.",
+    "error_code": "pos_session_already_closed",
+    "extra_messages": {
+      "_id": {
+        "message": "Sitzung"
+      }
+    }
+  },
+  "customer_group_already_default": {
+    "message": "Diese Kundengruppe ist bereits die Standardgruppe.",
+    "error_code": "customer_group_already_default",
+    "extra_messages": {
+      "_id": {
+        "message": "Kundengruppe"
+      }
+    }
+  },
+  "warehouse_already_default": {
+    "message": "Dieses Lager ist bereits das Standardlager.",
+    "error_code": "warehouse_already_default",
+    "extra_messages": {
+      "_id": {
+        "message": "Lager"
+      }
+    }
+  },
+  "customer_address_already_default": {
+    "message": "Diese Kundenadresse ist bereits die Standardadresse.",
+    "error_code": "customer_address_already_default",
+    "extra_messages": {
+      "_id": {
+        "message": "Kundenadresse"
+      }
+    }
+  },
+  "customer_group_member_already_exists": {
+    "message": "Dieser Benutzer ist bereits Mitglied der Kundengruppe.",
+    "error_code": "customer_group_member_already_exists",
+    "extra_messages": {
+      "userId": {
+        "message": "Benutzer"
+      },
+      "customerGroup": {
+        "message": "Kundengruppe"
+      }
+    }
+  },
+  "customer_group_member_not_found": {
+    "message": "Dieser Benutzer ist kein Mitglied der Kundengruppe.",
+    "error_code": "customer_group_member_not_found",
+    "extra_messages": {
+      "userId": {
+        "message": "Benutzer"
+      },
+      "customerGroup": {
+        "message": "Kundengruppe"
+      }
+    }
+  },
+  "pos_product_not_found": {
+    "message": "Produkt für diese Kasse nicht gefunden.",
+    "error_code": "pos_product_not_found",
+    "extra_messages": {
+      "productId": {
+        "message": "Produkt"
+      }
+    }
+  },
+  "pos_held_not_found": {
+    "message": "Zurückgestellte Bestellung nicht gefunden.",
+    "error_code": "pos_held_not_found",
+    "extra_messages": {
+      "_id": {
+        "message": "Zurückgestellte Bestellung"
+      },
+      "heldOrderId": {
+        "message": "Zurückgestellte Bestellung"
+      }
+    }
+  },
+  "pos_insufficient_stock": {
+    "message": "Nicht genug Bestand für diese Menge.",
+    "error_code": "pos_insufficient_stock",
+    "extra_messages": {
+      "quantity": {
+        "message": "Menge"
+      }
+    }
+  },
+  "pos_config_warehouse_required": {
+    "message": "Diese POS-Konfiguration muss mindestens ein Lager haben.",
+    "error_code": "pos_config_warehouse_required",
+    "extra_messages": {
+      "warehouses": {
+        "message": "Lager"
+      }
+    }
+  },
+  "pos_config_warehouse_inactive": {
+    "message": "Nur aktive Lager können einer POS-Konfiguration zugewiesen werden.",
+    "error_code": "pos_config_warehouse_inactive",
+    "extra_messages": {
+      "warehouses": {
+        "message": "Lager"
+      }
+    }
+  },
+  "pos_config_paused": {
+    "message": "Diese POS-Kasse ist pausiert. Der Verkauf ist gesperrt, bis ein Administrator sie fortsetzt.",
+    "error_code": "pos_config_paused",
+    "extra_messages": {
+      "configId": {
+        "message": "POS-Konfiguration"
+      }
+    }
+  },
+  "pos_config_inactive": {
+    "message": "Diese POS-Kasse ist inaktiv und kann nicht verwendet werden.",
+    "error_code": "pos_config_inactive",
+    "extra_messages": {
+      "configId": {
+        "message": "POS-Konfiguration"
+      }
+    }
+  },
+  "warehouse_in_use_by_pos_config": {
+    "message": "Dieses Lager ist das einzige Lager einer POS-Konfiguration und kann nicht deaktiviert oder gelöscht werden. Fügen Sie dieser POS-Konfiguration zuerst ein weiteres Lager hinzu.",
+    "error_code": "warehouse_in_use_by_pos_config"
+  },
+  "pos_insufficient_cash": {
+    "message": "Nicht genug Bargeld in der Schublade für diese Bewegung.",
+    "error_code": "pos_insufficient_cash",
+    "extra_messages": {
+      "amount": {
+        "message": "Betrag"
+      }
+    }
+  },
+  "pos_close_difference_reason_required": {
+    "message": "Erklären Sie die Kassendifferenz vor dem Schliessen der Sitzung.",
+    "error_code": "pos_close_difference_reason_required",
+    "extra_messages": {
+      "differenceReason": {
+        "message": "Differenzgrund"
+      }
+    }
+  },
+  "pos_close_held_orders_open": {
+    "message": "Nehmen Sie zurückgestellte Bestellungen wieder auf oder verwerfen Sie sie, bevor Sie die Sitzung schliessen.",
+    "error_code": "pos_close_held_orders_open",
+    "extra_messages": {
+      "_id": {
+        "message": "Sitzung"
+      }
+    }
+  },
+  "pos_payment_method_invalid": {
+    "message": "Eine oder mehrere Zahlungsmethoden sind für diese Kasse ungültig.",
+    "error_code": "pos_payment_method_invalid",
+    "extra_messages": {
+      "payments": {
+        "message": "Zahlungen"
+      },
+      "paymentMethodId": {
+        "message": "Zahlungsmethode"
+      }
+    }
+  },
+  "pos_payment_method_last_on_config": {
+    "message": "Diese Zahlungsmethode kann nicht entfernt werden, weil sie die letzte Methode einer POS-Konfiguration ist.",
+    "error_code": "pos_payment_method_last_on_config",
+    "extra_messages": {
+      "paymentMethods": {
+        "message": "Zahlungsmethoden"
+      }
+    }
+  },
+  "pos_payment_insufficient": {
+    "message": "Die Zahlungssumme ist kleiner als die Auftragssumme.",
+    "error_code": "pos_payment_insufficient",
+    "extra_messages": {
+      "payments": {
+        "message": "Zahlungen"
+      }
+    }
+  },
+  "pos_currency_required": {
+    "message": "Für diese Kasse ist eine Währung erforderlich.",
+    "error_code": "pos_currency_required",
+    "extra_messages": {
+      "currency": {
+        "message": "Währung"
+      }
+    }
+  },
+  "pos_order_not_refundable": {
+    "message": "Dieser Auftrag kann nicht rückerstattet werden.",
+    "error_code": "pos_order_not_refundable",
+    "extra_messages": {
+      "_id": {
+        "message": "Auftrag"
+      }
+    }
+  },
+  "pos_order_is_refund": {
+    "message": "Dieses Dokument ist bereits eine Rückerstattung.",
+    "error_code": "pos_order_is_refund",
+    "extra_messages": {
+      "_id": {
+        "message": "Auftrag"
+      }
+    }
+  },
+  "pos_refund_line_invalid": {
+    "message": "Eine oder mehrere Rückerstattungspositionen sind ungültig.",
+    "error_code": "pos_refund_line_invalid",
+    "extra_messages": {
+      "lines": {
+        "message": "Positionen"
+      }
+    }
+  },
+  "pos_refund_qty_invalid": {
+    "message": "Die Rückerstattungsmenge ist für eine oder mehrere Positionen ungültig.",
+    "error_code": "pos_refund_qty_invalid",
+    "extra_messages": {
+      "lines": {
+        "message": "Positionen"
+      }
+    }
+  },
+  "pos_refund_amount_invalid": {
+    "message": "Der Rückerstattungsbetrag ist ungültig.",
+    "error_code": "pos_refund_amount_invalid",
+    "extra_messages": {
+      "amount": {
+        "message": "Betrag"
+      }
+    }
+  },
+  "pos_refund_lines_required": {
+    "message": "Wählen Sie mindestens eine Position für die Rückerstattung.",
+    "error_code": "pos_refund_lines_required",
+    "extra_messages": {
+      "lines": {
+        "message": "Positionen"
+      }
+    }
+  },
+  "pos_terminal_not_for_method": {
+    "message": "Diese Zahlungsmethode ist nicht mit einem Bankterminal verknüpft.",
+    "error_code": "pos_terminal_not_for_method",
+    "extra_messages": {
+      "paymentMethodId": {
+        "message": "Zahlungsmethode"
+      }
+    }
+  },
+  "pos_terminal_disabled": {
+    "message": "Das Bankterminal ist für diese Zahlungsmethode deaktiviert.",
+    "error_code": "pos_terminal_disabled",
+    "extra_messages": {
+      "paymentMethodId": {
+        "message": "Zahlungsmethode"
+      }
+    }
+  },
+  "pos_terminal_amount_invalid": {
+    "message": "Der Terminal-Belastungsbetrag muss grösser als null sein.",
+    "error_code": "pos_terminal_amount_invalid",
+    "extra_messages": {
+      "amount": {
+        "message": "Betrag"
+      }
+    }
+  },
+  "pos_terminal_not_configured": {
+    "message": "Der Bankterminal-Host ist nicht konfiguriert.",
+    "error_code": "pos_terminal_not_configured",
+    "extra_messages": {
+      "terminalHost": {
+        "message": "Terminal-Host"
+      }
+    }
+  },
+  "pos_terminal_declined": {
+    "message": "Das Bankterminal hat die Zahlung abgelehnt.",
+    "error_code": "pos_terminal_declined",
+    "extra_messages": {
+      "amount": {
+        "message": "Betrag"
+      }
+    }
+  },
+  "pos_terminal_timeout": {
+    "message": "Zeitüberschreitung beim Bankterminal.",
+    "error_code": "pos_terminal_timeout",
+    "extra_messages": {
+      "amount": {
+        "message": "Betrag"
+      }
+    }
+  },
+  "pos_terminal_unreachable": {
+    "message": "Das Bankterminal konnte nicht erreicht werden.",
+    "error_code": "pos_terminal_unreachable",
+    "extra_messages": {
+      "terminalHost": {
+        "message": "Terminal-Host"
+      }
+    }
+  },
+  "pos_manager_pin_invalid": {
+    "message": "Ungültiger Manager-PIN.",
+    "error_code": "pos_manager_pin_invalid",
+    "extra_messages": {
+      "pin": {
+        "message": "PIN"
+      },
+      "currentPin": {
+        "message": "Aktueller PIN"
+      },
+      "managerPin": {
+        "message": "Manager-PIN"
+      }
+    }
+  },
+  "pos_manager_pin_not_set": {
+    "message": "Manager-PIN ist nicht gesetzt.",
+    "error_code": "pos_manager_pin_not_set",
+    "extra_messages": {
+      "pin": {
+        "message": "PIN"
+      },
+      "currentPin": {
+        "message": "Aktueller PIN"
+      }
+    }
+  },
+  "pos_manager_pin_already_set": {
+    "message": "Ihr Manager-PIN ist bereits gesetzt. Verwenden Sie stattdessen PIN ändern.",
+    "error_code": "pos_manager_pin_already_set",
+    "extra_messages": {
+      "pin": {
+        "message": "PIN"
+      }
+    }
+  },
+  "pos_manager_not_assigned": {
+    "message": "Sie sind auf dieser Kasse nicht als Manager zugewiesen.",
+    "error_code": "pos_manager_not_assigned",
+    "extra_messages": {
+      "resetCode": {
+        "message": "Reset-Code"
+      }
+    }
+  },
+  "pos_manager_pin_reset_invalid": {
+    "message": "Dieser Manager-PIN-Reset-Link ist ungültig.",
+    "error_code": "pos_manager_pin_reset_invalid",
+    "extra_messages": {
+      "resetCode": {
+        "message": "Reset-Code"
+      }
+    }
+  },
+  "pos_manager_pin_reset_expired": {
+    "message": "Dieser Manager-PIN-Reset-Link ist abgelaufen.",
+    "error_code": "pos_manager_pin_reset_expired",
+    "extra_messages": {
+      "resetCode": {
+        "message": "Reset-Code"
+      }
+    }
+  },
+  "pos_manager_pin_reset_already_used": {
+    "message": "Dieser Manager-PIN-Reset-Link wurde bereits verwendet.",
+    "error_code": "pos_manager_pin_reset_already_used",
+    "extra_messages": {
+      "resetCode": {
+        "message": "Reset-Code"
+      }
+    }
+  },
+  "pos_manager_pin_reset_no_email": {
+    "message": "Ihr Konto hat keine E-Mail-Adresse, an die der PIN-Reset-Link gesendet werden kann.",
+    "error_code": "pos_manager_pin_reset_no_email"
+  },
+  "payment_gateway_not_configured": {
+    "message": "Das Zahlungsgateway ist nicht konfiguriert. Setzen Sie STRIPE_ENABLED=true und STRIPE_SECRET_KEY in der maestro-.env und starten Sie die API neu.",
+    "error_code": "payment_gateway_not_configured"
+  },
+  "insufficient_stock": {
+    "message": "Nicht genug verfügbarer Bestand für diesen Abzug.",
+    "error_code": "insufficient_stock",
+    "extra_messages": {
+      "quantity": {
+        "message": "Menge"
+      }
+    }
+  },
+  "invalid_quantity": {
+    "message": "Die Menge muss eine positive Zahl sein.",
+    "error_code": "invalid_quantity",
+    "extra_messages": {
+      "quantity": {
+        "message": "Menge"
+      }
+    }
+  },
+  "inventory_not_found": {
+    "message": "Inventardatensatz nicht gefunden.",
+    "error_code": "inventory_not_found"
+  },
+  "product_already_reviewed_for_order": {
+    "message": "Dieses Produkt wurde für diesen Auftrag bereits bewertet.",
+    "error_code": "product_already_reviewed_for_order"
+  },
+  "cannot_restore_product_review_active_exists": {
+    "message": "Diese Bewertung kann nicht wiederhergestellt werden, weil bereits eine aktive Bewertung für denselben Auftrag und dasselbe Produkt existiert.",
+    "error_code": "cannot_restore_product_review_active_exists"
+  },
+  "only_customer_can_review": {
+    "message": "Nur der Kunde, der den Auftrag erteilt hat, kann eine Bewertung hinterlassen.",
+    "error_code": "only_customer_can_review"
+  },
+  "order_must_be_paid_to_review": {
+    "message": "Der Auftrag muss bezahlt sein, bevor er bewertet werden kann.",
+    "error_code": "order_must_be_paid_to_review"
+  },
+  "product_not_in_order": {
+    "message": "Dieses Produkt ist nicht Teil dieses Auftrags.",
+    "error_code": "product_not_in_order"
+  },
+  "only_admin_can_delete_review": {
+    "message": "Nur ein Administrator kann eine Produktbewertung löschen.",
+    "error_code": "only_admin_can_delete_review"
+  }
+}
