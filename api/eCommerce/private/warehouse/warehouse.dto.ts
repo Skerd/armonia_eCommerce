@@ -1,4 +1,7 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {CountrySimple} from "../../../../../core/dto/country.dto";
+import type {StateSimple} from "../../../../../core/dto/state.dto";
+import type {CitySimple} from "../../../../../core/dto/city.dto";
 
 export type Warehouse = DeletedData &
     OwnershipData &
@@ -7,9 +10,9 @@ export type Warehouse = DeletedData &
     name: string;
     code: string;
     address?: {
-        country?: {_id: string; name: string};
-        state?: {_id: string; name: string};
-        city?: {_id: string; name: string};
+        country?: CountrySimple;
+        state?: StateSimple;
+        city?: CitySimple;
         street?: string;
         postalCode?: string;
         latitude?: number;

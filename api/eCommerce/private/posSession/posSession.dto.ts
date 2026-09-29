@@ -1,4 +1,6 @@
 import {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
+import type {PosConfigSimple} from "../../../../dto/posConfig.dto";
 
 export type PosSessionState = "opening_control" | "opened" | "closing_control" | "closed";
 export type PosCashMoveType = "in" | "out";
@@ -8,16 +10,16 @@ export type PosCashMove = {
     amount: number;
     reason?: string;
     at: string;
-    by?: {_id: string; name?: string; surname?: string};
+    by?: SimpleBlankUser;
 };
 
 export type PosSession = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     name: string;
-    config: {_id: string; name: string};
+    config: PosConfigSimple;
     state: PosSessionState;
-    openedBy?: {_id: string; name?: string; surname?: string};
-    closedBy?: {_id: string; name?: string; surname?: string};
+    openedBy?: SimpleBlankUser;
+    closedBy?: SimpleBlankUser;
     openedAt?: string;
     closedAt?: string;
     openingBalance: number;

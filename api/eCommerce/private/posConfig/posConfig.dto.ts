@@ -1,4 +1,7 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
+import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
+import type {WarehouseSimple} from "../../../../dto/warehouse.dto";
 
 export type PosConfigManager = {
     _id: string;
@@ -30,8 +33,8 @@ export type PosConfig = DeletedData & OwnershipData & LifeCycleData & {
     name: string;
     paymentMethods?: PosConfigPaymentMethod[];
     managers?: PosConfigManager[];
-    warehouses: {_id: string; name: string; code?: string}[];
-    currency?: {_id: string; name: string; symbol: string; abbreviation: string};
+    warehouses: WarehouseSimple[];
+    currency?: CurrencySimple;
     receiptHeader?: string;
     receiptFooter?: string;
     ifaceBarcodeScanner: boolean;
@@ -56,7 +59,7 @@ export type PosConfig = DeletedData & OwnershipData & LifeCycleData & {
     /** Reason from the company lock when `isCompanyPaused` is true. */
     companyPauseReason?: string | null;
     pausedAt?: string | null;
-    pausedBy?: {_id: string; name?: string; surname?: string} | null;
+    pausedBy?: SimpleBlankUser | null;
     /** This till's own pause reason (not the company lock reason). */
     pauseReason?: string | null;
 };

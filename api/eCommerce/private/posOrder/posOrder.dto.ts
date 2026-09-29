@@ -1,16 +1,18 @@
 import {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
+import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
+import type {PosConfigSimple} from "../../../../dto/posConfig.dto";
+import type {PosSessionSimple} from "../../../../dto/posSession.dto";
+import type {PosOrderSimple} from "../../../../dto/posOrder.dto";
+import type {PosPaymentMethodSimple} from "../../../../dto/posPaymentMethod.dto";
+import type {ProductSimple} from "../../../../dto/product.dto";
+import type {ProductOrderSimple} from "../../../../dto/productOrder.dto";
 
 export type PosOrderState = "draft" | "paid" | "cancel" | "refunded";
 
-export type PosOrderLineProduct = {
-    _id: string;
-    title?: string;
-    sku?: string;
-};
-
 export type PosOrderLine = {
     _id?: string;
-    product: PosOrderLineProduct | string;
+    product: ProductSimple | string;
     variant?: string;
     quantity: number;
     /** Cumulative qty already refunded (remaining = quantity - quantityRefunded). */
@@ -24,15 +26,15 @@ export type PosOrderLine = {
     productName: string;
     productSku?: string;
     barcode?: string;
-    currency?: {_id: string; name: string; symbol: string; abbreviation: string};
+    currency?: CurrencySimple;
 };
 
 export type PosOrderPayment = {
-    paymentMethod: {_id: string; name?: string; type?: string} | string;
+    paymentMethod: PosPaymentMethodSimple | string;
     paymentMethodName?: string;
     paymentMethodType?: string;
     amount: number;
-    currency?: {_id: string; name: string; symbol: string; abbreviation: string};
+    currency?: CurrencySimple;
     paymentDate: string;
     terminalAuthCode?: string;
     terminalReference?: string;
@@ -42,11 +44,11 @@ export type PosOrderPayment = {
 export type PosOrder = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     name: string;
-    session: {_id: string; name: string};
-    config: {_id: string; name: string};
+    session: PosSessionSimple;
+    config: PosConfigSimple;
     state: PosOrderState;
-    cashier: {_id: string; name: string; surname: string};
-    customer?: {_id: string; name: string; surname: string};
+    cashier: SimpleBlankUser;
+    customer?: SimpleBlankUser;
     customerName?: string;
     lines: PosOrderLine[];
     payments: PosOrderPayment[];
@@ -60,8 +62,8 @@ export type PosOrder = DeletedData & OwnershipData & LifeCycleData & {
     note?: string;
     orderDiscountPercent?: number;
     clientRequestId?: string;
-    productOrder?: {_id: string; orderNumber?: string};
-    refundOf?: {_id: string; name?: string};
+    productOrder?: ProductOrderSimple;
+    refundOf?: PosOrderSimple;
     isRefund: boolean;
     /** CIS IIC / NSLF */
     nslf?: string;

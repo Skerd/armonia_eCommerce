@@ -1,5 +1,10 @@
 import type {Media} from "../../../../../core/types";
 import {LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
+import type {InventorySimple} from "../../../../dto/inventory.dto";
+import type {ProductSimple} from "../../../../dto/product.dto";
+import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
+import type {WarehouseSimple} from "../../../../dto/warehouse.dto";
 
 export type InventoryMovementReason =
     | "restock"
@@ -14,10 +19,10 @@ export type InventoryMovementReason =
 
 export type InventoryMovement = OwnershipData & LifeCycleData & {
     _id: string;
-    inventory?: {_id: string};
-    product: {_id: string; title: string; sku?: string};
-    variant?: {_id: string; sku?: string; attributeCombination?: {attribute: {name: string}; value: string}[]};
-    warehouse: {_id: string; name: string; code: string};
+    inventory?: InventorySimple;
+    product: ProductSimple;
+    variant?: ProductVariantSimple;
+    warehouse: WarehouseSimple;
     quantity: number;
     reason: InventoryMovementReason;
     note?: string;
@@ -30,7 +35,7 @@ export type InventoryMovement = OwnershipData & LifeCycleData & {
     unitCost?: number;
     batchLot?: string;
     expiryDate?: string;
-    performedBy?: {_id: string; name: string; surname: string};
+    performedBy?: SimpleBlankUser;
     referenceType?: string;
     referenceId?: string;
 };

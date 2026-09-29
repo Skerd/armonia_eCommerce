@@ -1,23 +1,15 @@
 import {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
+import type {CountrySimple} from "../../../../../core/dto/country.dto";
+import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
+import type {ProductSimple} from "../../../../dto/product.dto";
+import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
+import type {DiscountSimple} from "../../../../dto/discount.dto";
 
 export type ProductOrderItem = {
     _id: string;
-    product: {
-        _id: string;
-        title: string;
-        slug: string;
-        sku?: string
-    };
-    variant?: {
-        _id: string;
-        sku?: string;
-        attributeCombination?: {
-            attribute: {
-                name: string
-            };
-            value: string
-        }[]
-    };
+    product: ProductSimple;
+    variant?: ProductVariantSimple;
     quantity: number;
     unitPrice: number;
     totalPrice: number;
@@ -26,7 +18,7 @@ export type ProductOrderItem = {
         sku?: string;
         imageUrl?: string
     };
-    currency?: {_id: string; name: string; symbol: string; abbreviation: string};
+    currency?: CurrencySimple;
 };
 
 export type ProductOrderAddress = {
@@ -37,21 +29,13 @@ export type ProductOrderAddress = {
     city: string;
     state?: string;
     postalCode?: string;
-    country?: {
-        _id: string;
-        name: string;
-        code: string
-    };
+    country?: CountrySimple;
 };
 
 export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     orderNumber: string;
-    customer: {
-        _id: string;
-        name: string;
-        surname: string
-    };
+    customer: SimpleBlankUser;
     email?: string;
     phone?: string;
     items?: ProductOrderItem[];
@@ -60,23 +44,14 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
     shippingTotal: number;
     taxTotal: number;
     grandTotal: number;
-    currency: {
-        _id: string;
-        name: string;
-        symbol: string;
-        abbreviation: string
-    };
+    currency: CurrencySimple;
     shippingAddress: ProductOrderAddress;
     billingAddress?: ProductOrderAddress;
     paymentStatus: "unpaid" | "authorized" | "paid" | "partially_refunded" | "refunded" | "voided";
     fulfillmentStatus: "unfulfilled" | "partially_fulfilled" | "fulfilled" | "returned";
     status: "pending" | "confirmed" | "processing" | "shipped" | "delivered" | "cancelled" | "refunded";
     appliedDiscounts?: {
-        discount: {
-            _id: string;
-            title: string;
-            code?: string
-        };
+        discount: DiscountSimple;
         amount: number
     }[];
     taxBreakdown?: {
@@ -94,11 +69,7 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
     timeline?: {
         event: string;
         timestamp: string;
-        user?: {
-            _id: string;
-            name: string;
-            surname: string
-        };
+        user?: SimpleBlankUser;
         note?: string;
     }[];
     stripePaymentIntentId?: string;
@@ -121,12 +92,6 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
         amount: number;
         refundedAmount?: number;
         gatewayTransactionId?: string;
-        currency?: {
-            _id: string;
-            name?: string;
-            symbol?: string;
-            abbreviation?: string;
-            code?: string
-        };
+        currency?: CurrencySimple;
     }[];
 };

@@ -1,12 +1,12 @@
 import type {Media} from "../../../../../core/types";
 import {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
 import type {ProductTwitterCard} from "./product.schema-def";
-
-export type ProductSimpleRef = {
-    _id: string;
-    title: string;
-    slug: string
-};
+import type {CategorySimple} from "../../../../dto/category.dto";
+import type {CollectionSimple} from "../../../../dto/collection.dto";
+import type {ProductAttributeSimple} from "../../../../dto/productAttribute.dto";
+import type {ProductSimple} from "../../../../dto/product.dto";
+import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
 
 export type Product = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
@@ -36,16 +36,8 @@ export type Product = DeletedData & OwnershipData & LifeCycleData & {
     brand?: string;
     vendor?: string;
     tags?: string[];
-    categories?: {
-        _id: string;
-        name: string;
-        slug: string
-    }[];
-    collections?: {
-        _id: string;
-        name: string;
-        slug: string
-    }[];
+    categories?: CategorySimple[];
+    collections?: CollectionSimple[];
     // Pricing
     price?: number;
     compareAtPrice?: number;
@@ -58,12 +50,7 @@ export type Product = DeletedData & OwnershipData & LifeCycleData & {
     minOrderQty?: number;
     maxOrderQty?: number;
     stepQty?: number;
-    currency?: {
-        _id: string;
-        name: string;
-        symbol: string;
-        abbreviation: string
-    };
+    currency?: CurrencySimple;
     // Shipping / physical
     weight?: number;
     weightUnit?: string;
@@ -92,21 +79,15 @@ export type Product = DeletedData & OwnershipData & LifeCycleData & {
     videoUrls?: string[];
     documents?: Media[];
     // Variants / options
-    variantOptions?: {
-        _id: string;
-        name: string
-    }[];
+    variantOptions?: ProductAttributeSimple[];
     hasVariants?: boolean;
-    defaultVariant?: {
-        _id: string;
-        sku?: string
-    };
+    defaultVariant?: ProductVariantSimple;
     variantCount?: number;
     // Merchandising
-    relatedProducts?: ProductSimpleRef[];
-    upsells?: ProductSimpleRef[];
-    crossSells?: ProductSimpleRef[];
-    frequentlyBoughtTogether?: ProductSimpleRef[];
+    relatedProducts?: ProductSimple[];
+    upsells?: ProductSimple[];
+    crossSells?: ProductSimple[];
+    frequentlyBoughtTogether?: ProductSimple[];
     featured?: boolean;
     badges?: string[];
     // Ratings

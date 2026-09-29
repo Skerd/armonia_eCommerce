@@ -1,4 +1,5 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
 
 export type SavedSearchFilters = {
     title?: string;
@@ -12,7 +13,7 @@ export type SavedSearchFilters = {
 
 export type SavedSearch = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
-    user?: {_id: string; name?: string; surname?: string};
+    user?: SimpleBlankUser;
     name: string;
     filters: SavedSearchFilters;
 };
