@@ -28,4 +28,15 @@ export type Cart = {
     appliedDiscounts?: CartAppliedDiscount[];
     appliedGiftCard?: {code: string; amount: number};
     expiresAt?: string;
+    /** Changes the server made while re-pricing (shown to the buyer once). */
+    notices?: CartNotices;
+};
+
+export type CartNotices = {
+    /** Titles of lines dropped because the product/variant is no longer sold. */
+    removedItems?: string[];
+    /** Reason code when the applied discount stopped qualifying and was removed. */
+    discountRemoved?: string;
+    /** Gift card no longer redeemable and was removed. */
+    giftCardRemoved?: boolean;
 };

@@ -27,6 +27,8 @@ export type ShopProductVariant = {
     compareAtPrice?: number;
     options?: {name: string; value: string}[];
     mainImage?: string;
+    /** False when the variant tracks stock and none is available. */
+    inStock?: boolean;
 };
 
 export type ShopProductDetail = ShopProductCard & {
@@ -42,6 +44,8 @@ export type ShopProductDetail = ShopProductCard & {
     related: ShopProductCard[];
     categories?: {_id: string; name: string; slug: string}[];
     seo?: {metaTitle?: string; metaDescription?: string};
+    /** False when the product (no variants) tracks stock and none is available. */
+    inStock?: boolean;
 };
 
 export type ShopCategory = {
