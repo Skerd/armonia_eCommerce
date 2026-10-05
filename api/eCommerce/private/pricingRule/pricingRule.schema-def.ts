@@ -1,12 +1,14 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 
+export const PRICING_RULE_NAME_MAX = 128;
+
 export const pricingRuleTypes = ["percentage_discount", "fixed_discount", "fixed_price", "surcharge"] as const;
 export const pricingRuleAppliesTo = ["all", "product", "category", "collection", "customer_group"] as const;
 export type PricingRuleType = (typeof pricingRuleTypes)[number];
 export type PricingRuleAppliesTo = (typeof pricingRuleAppliesTo)[number];
 
 export const PricingRuleSchemaDef = {
-    name: {type: "string", required: true},
+    name: {type: "string", required: true, min: 1, max: PRICING_RULE_NAME_MAX},
     type: {type: "enum", required: true, options: pricingRuleTypes},
     value: {type: "number", required: true, min: 0},
     appliesTo: {type: "enum", required: true, options: pricingRuleAppliesTo},

@@ -25,4 +25,8 @@ export type PricingRule = DeletedData & OwnershipData & LifeCycleData & {
     isActive: boolean;
     startsAt?: string;
     endsAt?: string;
+    /** Sheet: value tile with `%` suffix (type === percentage_discount). */
+    hasPercentageValue?: boolean;
+    /** Sheet: value tile for a money amount (fixed_discount / fixed_price / surcharge). */
+    hasFixedValue?: boolean;
 };

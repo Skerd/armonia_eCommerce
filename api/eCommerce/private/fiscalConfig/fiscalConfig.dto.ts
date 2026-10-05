@@ -1,3 +1,4 @@
+import type {Media} from "../../../../../core/types";
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {FiscalEnvironment, FiscalTcrType} from "./fiscalConfig.schema-def";
 
@@ -21,10 +22,8 @@ export type FiscalConfig = DeletedData & OwnershipData & LifeCycleData & {
     sellerTown?: string;
     sellerCountry?: string;
     isVatRegistered: boolean;
-    autoFiscalizePos: boolean;
-    autoEinvoice: boolean;
     environment: FiscalEnvironment;
-    /** True when a PKCS#12 certificate is stored (blob never exposed). */
-    hasCertificate: boolean;
+    /** Stored PKCS#12 media. Present when the single/read populate includes it. */
+    certificate?: Media[];
     isActive: boolean;
 };

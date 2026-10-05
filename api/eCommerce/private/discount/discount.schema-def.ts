@@ -1,5 +1,8 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 
+export const DISCOUNT_TITLE_MAX = 128;
+export const DISCOUNT_CODE_MAX = 64;
+
 export const discountTypes = ["percentage", "fixed", "free_shipping", "buy_x_get_y"] as const;
 export const discountAppliesTo = ["order", "product", "collection", "category"] as const;
 
@@ -14,8 +17,8 @@ const BuyXGetYDef = {
 
 export const DiscountSchemaDef = {
     type: {type: "enum", required: true, options: discountTypes},
-    title: {type: "string", required: true},
-    code: {type: "string", required: false},
+    title: {type: "string", required: true, min: 1, max: DISCOUNT_TITLE_MAX},
+    code: {type: "string", required: false, max: DISCOUNT_CODE_MAX},
     value: {type: "number", required: true, min: 0},
     appliesTo: {type: "enum", required: true, options: discountAppliesTo},
     targetIds: {type: "objectIdArray", required: false},

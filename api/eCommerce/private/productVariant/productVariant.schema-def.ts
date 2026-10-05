@@ -1,11 +1,15 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 
+export const PRODUCT_VARIANT_SKU_MAX = 128;
+export const PRODUCT_VARIANT_BARCODE_MAX = 64;
+export const PRODUCT_VARIANT_ATTRIBUTE_VALUE_MAX = 128;
+
 export const productVariantStatuses = ["active", "inactive"] as const;
 export type ProductVariantStatus = (typeof productVariantStatuses)[number];
 
 const ProductVariantAttributeItemDef = {
     attribute: {type: "objectId", required: true},
-    value: {type: "string", required: true},
+    value: {type: "string", required: true, min: 1, max: PRODUCT_VARIANT_ATTRIBUTE_VALUE_MAX},
 } as const;
 
 const ProductVariantDimensionsDef = {
@@ -16,8 +20,8 @@ const ProductVariantDimensionsDef = {
 
 export const ProductVariantSchemaDef = {
     product: {type: "objectId", required: true},
-    sku: {type: "string", required: false},
-    barcode: {type: "string", required: false},
+    sku: {type: "string", required: false, max: PRODUCT_VARIANT_SKU_MAX},
+    barcode: {type: "string", required: false, max: PRODUCT_VARIANT_BARCODE_MAX},
     attributeCombination: {type: "embeddedArray", required: false, items: ProductVariantAttributeItemDef},
     price: {type: "number", required: false, min: 0},
     compareAtPrice: {type: "number", required: false, min: 0},
@@ -26,7 +30,7 @@ export const ProductVariantSchemaDef = {
     weight: {type: "number", required: false, min: 0},
     dimensions: {type: "embedded", required: false, items: ProductVariantDimensionsDef},
     mainImage: {type: "mediaId", required: false, publicAccess: true},
-    position: {type: "number", required: false, min: 0},
+    order: {type: "number", required: false, min: 0},
     status: {type: "enum", required: false, options: productVariantStatuses},
     trackInventory: {type: "boolean", required: false},
 } as const;

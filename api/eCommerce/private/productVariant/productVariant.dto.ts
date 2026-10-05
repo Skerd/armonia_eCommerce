@@ -17,7 +17,7 @@ export type ProductVariant = DeletedData & OwnershipData & LifeCycleData & {
     weight?: number;
     dimensions?: {length?: number; width?: number; height?: number};
     mainImage?: Media;
-    position?: number;
+    order?: number;
     status: "active" | "inactive";
     trackInventory?: boolean;
     inventoryQuantity?: number;

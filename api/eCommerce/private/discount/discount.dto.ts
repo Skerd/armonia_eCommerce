@@ -36,4 +36,8 @@ export type Discount = DeletedData & OwnershipData & LifeCycleData & {
     };
     /** Sheet: true when appliesTo/value offer cards should show (not BXGY). */
     hasOfferScoping?: boolean;
+    /** Sheet: value tile with `%` suffix (type === percentage). */
+    hasPercentageValue?: boolean;
+    /** Sheet: value tile for a fixed amount (type === fixed). */
+    hasFixedValue?: boolean;
 };

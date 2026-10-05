@@ -2,13 +2,18 @@ import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../cor
 import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
 import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
 import type {WarehouseSimple} from "../../../../dto/warehouse.dto";
+import type {FiscalConfigSimple} from "../../../../dto/fiscalConfig.dto";
 
-export type PosConfigManager = {
+/** Populated user projection on a POS config manager ref. */
+export type PosConfigManagerUser = {
     _id: string;
     name?: string;
     surname?: string;
     /** Fallback display when name/surname are empty. */
     username?: string;
+};
+
+export type PosConfigManager = PosConfigManagerUser & {
     /** True when this manager has a PIN configured (hash never exposed). */
     hasPin: boolean;
 };
@@ -31,10 +36,12 @@ export type PosConfigPaymentMethod = {
 export type PosConfig = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     name: string;
-    paymentMethods?: PosConfigPaymentMethod[];
+    paymentMethods: PosConfigPaymentMethod[];
     managers?: PosConfigManager[];
     warehouses: WarehouseSimple[];
     currency?: CurrencySimple;
+    /** Fiscal config this till uses for sales. Absent only on rows saved before the field was required. */
+    fiscalConfig?: FiscalConfigSimple;
     receiptHeader?: string;
     receiptFooter?: string;
     ifaceBarcodeScanner: boolean;
