@@ -75,6 +75,10 @@ export type PosOrder = DeletedData & OwnershipData & LifeCycleData & {
     fiscalIssueDateTime?: string;
     fiscalInvNum?: string;
     fiscalInvOrdNum?: string;
+    fiscalTcrCode?: string;
+    fiscalOperatorCode?: string;
+    fiscalBusinessUnitCode?: string;
+    fiscalTypeOfInv?: string;
     fiscalConfig?: string;
     fiscalizedAt?: string;
     einvoiceAt?: string;
