@@ -25,5 +25,7 @@ export type FiscalConfig = DeletedData & OwnershipData & LifeCycleData & {
     environment: FiscalEnvironment;
     /** Stored PKCS#12 media. Present when the single/read populate includes it. */
     certificate?: Media[];
+    /** Whether a certificate password is stored. The plaintext is never returned. */
+    certificatePassword: boolean;
     isActive: boolean;
 };

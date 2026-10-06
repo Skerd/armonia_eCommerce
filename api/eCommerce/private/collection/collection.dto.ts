@@ -25,5 +25,4 @@ export type Collection = DeletedData & OwnershipData & LifeCycleData & {
     }[];
     seoTitle?: string;
     seoDescription?: string;
-    publishedAt?: string;
 };
