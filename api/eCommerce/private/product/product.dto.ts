@@ -6,7 +6,9 @@ import type {CategorySimple} from "../../../../dto/category.dto";
 import type {CollectionSimple} from "../../../../dto/collection.dto";
 import type {ProductAttributeSimple} from "../../../../dto/productAttribute.dto";
 import type {ProductSimple} from "../../../../dto/product.dto";
-import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
+import type {ProductVariant} from "../productVariant/productVariant.dto";
+import type {Inventory} from "../inventory/inventory.dto";
+import type {ProductReview} from "../productReview/productReview.dto";
 
 export type Product = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
@@ -120,4 +122,7 @@ export type Product = DeletedData & OwnershipData & LifeCycleData & {
         sitemapPriority?: number;
         noIndex?: boolean;
     };
+    variants?: ProductVariant[];
+    inventories?: Inventory[];
+    reviews?: ProductReview[];
 };

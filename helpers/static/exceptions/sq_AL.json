@@ -813,6 +813,26 @@
         "message": "Vetëm kërkesat për kthim në pritje mund të zgjidhen.",
         "error_code": "return_request_not_pending"
     },
+    "return_request_not_approved": {
+        "message": "Vetëm kërkesat e aprovuara mund të shënohen si të pranuara.",
+        "error_code": "return_request_not_approved"
+    },
+    "return_request_not_received": {
+        "message": "Vetëm kërkesat e pranuara mund të përfundohen.",
+        "error_code": "return_request_not_received"
+    },
+    "product_not_draft": {
+        "message": "Vetëm produktet në draft mund të publikohen.",
+        "error_code": "product_not_draft"
+    },
+    "product_cannot_archive": {
+        "message": "Vetëm produktet në draft ose aktive mund të arkivohen.",
+        "error_code": "product_cannot_archive"
+    },
+    "product_not_archived": {
+        "message": "Vetëm produktet e arkivuara mund të kthehen në draft.",
+        "error_code": "product_not_archived"
+    },
     "shipping_address_required": {
         "message": "Ju lutemi vendosni një adresë dërgese.",
         "error_code": "shipping_address_required"

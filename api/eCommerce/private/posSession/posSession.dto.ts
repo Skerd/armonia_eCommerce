@@ -1,6 +1,7 @@
 import {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
 import type {PosConfigSimple} from "../../../../dto/posConfig.dto";
+import type {PosOrder} from "../posOrder/posOrder.dto";
 
 export type PosSessionState = "opening_control" | "opened" | "closing_control" | "closed";
 export type PosCashMoveType = "in" | "out";
@@ -32,4 +33,5 @@ export type PosSession = DeletedData & OwnershipData & LifeCycleData & {
     totalCash: number;
     totalCard: number;
     notes?: string;
+    posOrders?: PosOrder[];
 };

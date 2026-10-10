@@ -1,5 +1,14 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 
+export const PRODUCT_TITLE_MAX = 128;
+export const PRODUCT_SLUG_MAX = 128;
+export const PRODUCT_DESCRIPTION_MAX = 2000;
+export const PRODUCT_SKU_MAX = 128;
+export const PRODUCT_CODE_MAX = 64;
+export const PRODUCT_URL_MAX = 1024;
+export const PRODUCT_META_TITLE_MAX = 160;
+export const PRODUCT_META_DESCRIPTION_MAX = 320;
+
 export const productTypes = ["physical", "digital", "service", "variable", "bundle", "gift_card"] as const;
 export const productStatuses = ["draft", "active", "archived"] as const;
 export const productWeightUnits = ["kg", "lb", "g", "oz"] as const;
@@ -24,30 +33,30 @@ const ProductBundleComponentDef = {
 } as const;
 
 const ProductAttributeItemDef = {
-    name: {type: "string", required: true},
-    values: {type: "stringArray", required: false},
+    name: {type: "string", required: true, min: 1, max: PRODUCT_TITLE_MAX},
+    values: {type: "stringArray", required: false, itemMax: PRODUCT_TITLE_MAX},
 } as const;
 
 const ProductSpecificationItemDef = {
-    label: {type: "string", required: true},
-    value: {type: "string", required: true},
+    label: {type: "string", required: true, min: 1, max: PRODUCT_TITLE_MAX},
+    value: {type: "string", required: true, min: 1, max: PRODUCT_TITLE_MAX},
 } as const;
 
 const ProductFaqItemDef = {
-    question: {type: "string", required: true},
-    answer: {type: "string", required: true},
+    question: {type: "string", required: true, min: 1, max: PRODUCT_TITLE_MAX},
+    answer: {type: "string", required: true, min: 1, max: PRODUCT_DESCRIPTION_MAX},
 } as const;
 
 const ProductSeoDef = {
-    metaTitle: {type: "string", required: false, max: 160},
-    metaDescription: {type: "string", required: false, max: 320},
-    metaKeywords: {type: "stringArray", required: false},
-    canonicalUrl: {type: "string", required: false, format: "url"},
-    openGraphTitle: {type: "string", required: false, max: 160},
-    openGraphDescription: {type: "string", required: false, max: 320},
+    metaTitle: {type: "string", required: false, max: PRODUCT_META_TITLE_MAX},
+    metaDescription: {type: "string", required: false, max: PRODUCT_META_DESCRIPTION_MAX},
+    metaKeywords: {type: "stringArray", required: false, itemMax: PRODUCT_TITLE_MAX},
+    canonicalUrl: {type: "string", required: false, format: "url", max: PRODUCT_URL_MAX},
+    openGraphTitle: {type: "string", required: false, max: PRODUCT_META_TITLE_MAX},
+    openGraphDescription: {type: "string", required: false, max: PRODUCT_META_DESCRIPTION_MAX},
     openGraphImage: {type: "mediaId", required: false, publicAccess: true},
     twitterCard: {type: "enum", required: false, options: productTwitterCards},
-    structuredDataType: {type: "string", required: false},
+    structuredDataType: {type: "string", required: false, max: PRODUCT_CODE_MAX},
     sitemapInclude: {type: "boolean", required: false},
     sitemapPriority: {type: "number", required: false, min: 0, max: 1},
     noIndex: {type: "boolean", required: false},
@@ -55,27 +64,27 @@ const ProductSeoDef = {
 
 export const ProductSchemaDef = {
     type: {type: "enum", required: true, options: productTypes},
-    title: {type: "string", required: true},
-    slug: {type: "string", required: false, format: "slug"},
-    description: {type: "string", required: false},
-    shortDescription: {type: "string", required: false},
-    highlights: {type: "stringArray", required: false},
-    careInstructions: {type: "string", required: false},
-    warranty: {type: "string", required: false},
+    title: {type: "string", required: true, min: 1, max: PRODUCT_TITLE_MAX},
+    slug: {type: "string", required: false, format: "slug", max: PRODUCT_SLUG_MAX},
+    description: {type: "string", required: false, max: PRODUCT_DESCRIPTION_MAX},
+    shortDescription: {type: "string", required: false, max: PRODUCT_DESCRIPTION_MAX},
+    highlights: {type: "stringArray", required: false, itemMax: PRODUCT_TITLE_MAX},
+    careInstructions: {type: "string", required: false, max: PRODUCT_DESCRIPTION_MAX},
+    warranty: {type: "string", required: false, max: PRODUCT_DESCRIPTION_MAX},
     // Identifiers
-    sku: {type: "string", required: false},
-    barcode: {type: "string", required: false},
-    gtin: {type: "string", required: false},
-    upc: {type: "string", required: false},
-    ean: {type: "string", required: false},
-    isbn: {type: "string", required: false},
-    mpn: {type: "string", required: false},
-    hsCode: {type: "string", required: false},
-    countryOfOrigin: {type: "string", required: false},
+    sku: {type: "string", required: false, max: PRODUCT_SKU_MAX},
+    barcode: {type: "string", required: false, max: PRODUCT_CODE_MAX},
+    gtin: {type: "string", required: false, max: PRODUCT_CODE_MAX},
+    upc: {type: "string", required: false, max: PRODUCT_CODE_MAX},
+    ean: {type: "string", required: false, max: PRODUCT_CODE_MAX},
+    isbn: {type: "string", required: false, max: PRODUCT_CODE_MAX},
+    mpn: {type: "string", required: false, max: PRODUCT_CODE_MAX},
+    hsCode: {type: "string", required: false, max: PRODUCT_CODE_MAX},
+    countryOfOrigin: {type: "string", required: false, max: PRODUCT_TITLE_MAX},
     // Organization
-    brand: {type: "string", required: false},
-    vendor: {type: "string", required: false},
-    tags: {type: "stringArray", required: false},
+    brand: {type: "string", required: false, max: PRODUCT_TITLE_MAX},
+    vendor: {type: "string", required: false, max: PRODUCT_TITLE_MAX},
+    tags: {type: "stringArray", required: false, itemMax: PRODUCT_TITLE_MAX},
     categories: {type: "objectIdArray", required: false},
     collections: {type: "objectIdArray", required: false},
     // Pricing
@@ -86,7 +95,7 @@ export const ProductSchemaDef = {
     saleStartsAt: {type: "date", required: false},
     saleEndsAt: {type: "date", required: false},
     taxable: {type: "boolean", required: false},
-    taxClass: {type: "string", required: false},
+    taxClass: {type: "string", required: false, max: PRODUCT_CODE_MAX},
     minOrderQty: {type: "number", required: false, min: 0},
     maxOrderQty: {type: "number", required: false, min: 0},
     stepQty: {type: "number", required: false, min: 0},
@@ -97,7 +106,7 @@ export const ProductSchemaDef = {
     dimensions: {type: "embedded", required: false, items: ProductDimensionsDef},
     dimensionUnit: {type: "enum", required: false, options: productDimensionUnits},
     volumetricWeight: {type: "number", required: false, min: 0},
-    shippingClass: {type: "string", required: false},
+    shippingClass: {type: "string", required: false, max: PRODUCT_CODE_MAX},
     isHazmat: {type: "boolean", required: false},
     requiresShipping: {type: "boolean", required: false},
     // Inventory hints
@@ -112,7 +121,7 @@ export const ProductSchemaDef = {
     // Media
     mainImage: {type: "mediaId", required: false, publicAccess: true},
     gallery: {type: "mediaIdArray", required: false, publicAccess: true},
-    videoUrls: {type: "stringArray", required: false},
+    videoUrls: {type: "stringArray", required: false, itemMax: PRODUCT_URL_MAX},
     documents: {type: "mediaIdArray", required: false},
     // Variants / options
     variantOptions: {type: "objectIdArray", required: false},
@@ -124,7 +133,7 @@ export const ProductSchemaDef = {
     crossSells: {type: "objectIdArray", required: false},
     frequentlyBoughtTogether: {type: "objectIdArray", required: false},
     featured: {type: "boolean", required: false},
-    badges: {type: "stringArray", required: false},
+    badges: {type: "stringArray", required: false, itemMax: PRODUCT_CODE_MAX},
     // Publishing
     status: {type: "enum", required: false, options: productStatuses},
     publishedAt: {type: "date", required: false},

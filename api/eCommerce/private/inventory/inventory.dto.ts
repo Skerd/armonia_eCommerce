@@ -1,4 +1,5 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {InventoryMovement} from "../inventoryMovement/inventoryMovement.dto";
 
 export type Inventory = DeletedData &
     OwnershipData &
@@ -14,6 +15,7 @@ export type Inventory = DeletedData &
     reorderQuantity?: number;
     lowStockAlertSent?: boolean;
     company?: {_id: string; name: string};
+    movements?: InventoryMovement[];
 };
 
 export type InventoryAdjustmentForm = {

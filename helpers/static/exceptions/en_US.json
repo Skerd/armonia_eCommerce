@@ -813,6 +813,26 @@
         "message": "Only pending return requests can be resolved.",
         "error_code": "return_request_not_pending"
     },
+    "return_request_not_approved": {
+        "message": "Only approved return requests can be marked received.",
+        "error_code": "return_request_not_approved"
+    },
+    "return_request_not_received": {
+        "message": "Only received return requests can be completed.",
+        "error_code": "return_request_not_received"
+    },
+    "product_not_draft": {
+        "message": "Only draft products can be published.",
+        "error_code": "product_not_draft"
+    },
+    "product_cannot_archive": {
+        "message": "Only draft or active products can be archived.",
+        "error_code": "product_cannot_archive"
+    },
+    "product_not_archived": {
+        "message": "Only archived products can be reverted to draft.",
+        "error_code": "product_not_archived"
+    },
     "shipping_address_required": {
         "message": "Please enter a shipping address.",
         "error_code": "shipping_address_required"

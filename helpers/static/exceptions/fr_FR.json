@@ -813,6 +813,26 @@
         "message": "Seules les demandes de retour en attente peuvent être traitées.",
         "error_code": "return_request_not_pending"
     },
+    "return_request_not_approved": {
+        "message": "Seules les demandes de retour approuvées peuvent être marquées comme reçues.",
+        "error_code": "return_request_not_approved"
+    },
+    "return_request_not_received": {
+        "message": "Seules les demandes de retour reçues peuvent être clôturées.",
+        "error_code": "return_request_not_received"
+    },
+    "product_not_draft": {
+        "message": "Seuls les produits en brouillon peuvent être publiés.",
+        "error_code": "product_not_draft"
+    },
+    "product_cannot_archive": {
+        "message": "Seuls les produits en brouillon ou actifs peuvent être archivés.",
+        "error_code": "product_cannot_archive"
+    },
+    "product_not_archived": {
+        "message": "Seuls les produits archivés peuvent revenir en brouillon.",
+        "error_code": "product_not_archived"
+    },
     "shipping_address_required": {
         "message": "Veuillez saisir une adresse de livraison.",
         "error_code": "shipping_address_required"

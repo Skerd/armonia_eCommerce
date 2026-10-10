@@ -5,6 +5,8 @@ import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
 import type {ProductSimple} from "../../../../dto/product.dto";
 import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
 import type {DiscountSimple} from "../../../../dto/discount.dto";
+import type {Fulfillment} from "../fulfillment/fulfillment.dto";
+import type {ReturnRequest} from "../returnRequest/returnRequest.dto";
 
 export type ProductOrderItem = {
     _id: string;
@@ -94,4 +96,6 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
         gatewayTransactionId?: string;
         currency?: CurrencySimple;
     }[];
+    fulfillments?: Fulfillment[];
+    returnRequests?: ReturnRequest[];
 };

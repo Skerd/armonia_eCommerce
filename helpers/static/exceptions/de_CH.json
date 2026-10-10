@@ -813,6 +813,26 @@
         "message": "Nur ausstehende Rücksendeanfragen können bearbeitet werden.",
         "error_code": "return_request_not_pending"
     },
+    "return_request_not_approved": {
+        "message": "Nur genehmigte Rücksendeanfragen können als erhalten markiert werden.",
+        "error_code": "return_request_not_approved"
+    },
+    "return_request_not_received": {
+        "message": "Nur erhaltene Rücksendeanfragen können abgeschlossen werden.",
+        "error_code": "return_request_not_received"
+    },
+    "product_not_draft": {
+        "message": "Nur Entwurfsprodukte können veröffentlicht werden.",
+        "error_code": "product_not_draft"
+    },
+    "product_cannot_archive": {
+        "message": "Nur Entwurfs- oder aktive Produkte können archiviert werden.",
+        "error_code": "product_cannot_archive"
+    },
+    "product_not_archived": {
+        "message": "Nur archivierte Produkte können in den Entwurf zurückgesetzt werden.",
+        "error_code": "product_not_archived"
+    },
     "shipping_address_required": {
         "message": "Bitte geben Sie eine Lieferadresse ein.",
         "error_code": "shipping_address_required"

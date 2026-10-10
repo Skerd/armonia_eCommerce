@@ -813,6 +813,26 @@
         "message": "Solo le richieste di reso in sospeso possono essere gestite.",
         "error_code": "return_request_not_pending"
     },
+    "return_request_not_approved": {
+        "message": "Solo le richieste di reso approvate possono essere contrassegnate come ricevute.",
+        "error_code": "return_request_not_approved"
+    },
+    "return_request_not_received": {
+        "message": "Solo le richieste di reso ricevute possono essere completate.",
+        "error_code": "return_request_not_received"
+    },
+    "product_not_draft": {
+        "message": "Solo i prodotti in bozza possono essere pubblicati.",
+        "error_code": "product_not_draft"
+    },
+    "product_cannot_archive": {
+        "message": "Solo i prodotti in bozza o attivi possono essere archiviati.",
+        "error_code": "product_cannot_archive"
+    },
+    "product_not_archived": {
+        "message": "Solo i prodotti archiviati possono tornare in bozza.",
+        "error_code": "product_not_archived"
+    },
     "shipping_address_required": {
         "message": "Inserisci un indirizzo di spedizione.",
         "error_code": "shipping_address_required"
