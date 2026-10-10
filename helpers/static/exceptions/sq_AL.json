@@ -605,6 +605,14 @@
         "message": "Kërkohet një kompani për të gjeneruar slug-un e kategorisë.",
         "error_code": "product_category_company_required"
     },
+    "product_title_required_for_slug": {
+        "message": "Kërkohet një titull për të gjeneruar slug-un e produktit.",
+        "error_code": "product_title_required_for_slug"
+    },
+    "product_company_required_for_slug": {
+        "message": "Kërkohet një kompani për të gjeneruar slug-un e produktit.",
+        "error_code": "product_company_required_for_slug"
+    },
     "product_already_reviewed_for_order": {
         "message": "Ky produkt është vlerësuar tashmë për këtë porosi.",
         "error_code": "product_already_reviewed_for_order"

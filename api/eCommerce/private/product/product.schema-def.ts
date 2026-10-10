@@ -65,7 +65,6 @@ const ProductSeoDef = {
 export const ProductSchemaDef = {
     type: {type: "enum", required: true, options: productTypes},
     title: {type: "string", required: true, min: 1, max: PRODUCT_TITLE_MAX},
-    slug: {type: "string", required: false, format: "slug", max: PRODUCT_SLUG_MAX},
     description: {type: "string", required: false, max: PRODUCT_DESCRIPTION_MAX},
     shortDescription: {type: "string", required: false, max: PRODUCT_DESCRIPTION_MAX},
     highlights: {type: "stringArray", required: false, itemMax: PRODUCT_TITLE_MAX},

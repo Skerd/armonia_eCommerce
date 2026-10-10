@@ -605,6 +605,14 @@
         "message": "È richiesta un'azienda per generare lo slug della categoria.",
         "error_code": "product_category_company_required"
     },
+    "product_title_required_for_slug": {
+        "message": "È richiesto un titolo per generare lo slug del prodotto.",
+        "error_code": "product_title_required_for_slug"
+    },
+    "product_company_required_for_slug": {
+        "message": "È richiesta un'azienda per generare lo slug del prodotto.",
+        "error_code": "product_company_required_for_slug"
+    },
     "product_already_reviewed_for_order": {
         "message": "Questo prodotto è già stato recensito per questo ordine.",
         "error_code": "product_already_reviewed_for_order"

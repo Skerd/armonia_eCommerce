@@ -605,6 +605,14 @@
         "message": "Für die Generierung des Kategorie-Slugs ist ein Unternehmen erforderlich.",
         "error_code": "product_category_company_required"
     },
+    "product_title_required_for_slug": {
+        "message": "Für die Generierung des Produkt-Slugs ist ein Titel erforderlich.",
+        "error_code": "product_title_required_for_slug"
+    },
+    "product_company_required_for_slug": {
+        "message": "Für die Generierung des Produkt-Slugs ist ein Unternehmen erforderlich.",
+        "error_code": "product_company_required_for_slug"
+    },
     "product_already_reviewed_for_order": {
         "message": "Dieses Produkt wurde für diesen Auftrag bereits bewertet.",
         "error_code": "product_already_reviewed_for_order"

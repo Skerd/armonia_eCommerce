@@ -605,6 +605,14 @@
         "message": "A company is required to generate the category slug.",
         "error_code": "product_category_company_required"
     },
+    "product_title_required_for_slug": {
+        "message": "A title is required to generate the product slug.",
+        "error_code": "product_title_required_for_slug"
+    },
+    "product_company_required_for_slug": {
+        "message": "A company is required to generate the product slug.",
+        "error_code": "product_company_required_for_slug"
+    },
     "product_already_reviewed_for_order": {
         "message": "This product has already been reviewed for this order.",
         "error_code": "product_already_reviewed_for_order"
