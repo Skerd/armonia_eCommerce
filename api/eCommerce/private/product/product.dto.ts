@@ -6,10 +6,9 @@ import type {CategorySimple} from "../../../../dto/category.dto";
 import type {CollectionSimple} from "../../../../dto/collection.dto";
 import type {ProductAttributeSimple} from "../../../../dto/productAttribute.dto";
 import type {ProductSimple} from "../../../../dto/product.dto";
-import type {ProductVariant} from "../productVariant/productVariant.dto";
-import type {Inventory} from "../inventory/inventory.dto";
-import type {ProductReview} from "../productReview/productReview.dto";
-import {ProductVariantSimple} from "../../../../dto/productVariant.dto";
+import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
+import type {InventorySimple} from "../../../../dto/inventory.dto";
+import type {ProductReviewSimple} from "../../../../dto/productReview.dto";
 
 export type Product = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
@@ -85,6 +84,9 @@ export type Product = DeletedData & OwnershipData & LifeCycleData & {
     variantOptions?: ProductAttributeSimple[];
     hasVariants?: boolean;
     defaultVariant?: ProductVariantSimple;
+    variants: ProductVariantSimple[];
+    inventories: InventorySimple[];
+    reviews: ProductReviewSimple[];
     variantCount?: number;
     // Merchandising
     relatedProducts?: ProductSimple[];
@@ -123,7 +125,4 @@ export type Product = DeletedData & OwnershipData & LifeCycleData & {
         sitemapPriority?: number;
         noIndex?: boolean;
     };
-    variants?: ProductVariant[];
-    inventories?: Inventory[];
-    reviews?: ProductReview[];
 };
