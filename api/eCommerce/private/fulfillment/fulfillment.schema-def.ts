@@ -19,10 +19,7 @@ export const FulfillmentSchemaDef = {
     carrier: {type: "string", required: false, max: FULFILLMENT_CARRIER_MAX},
     trackingNumber: {type: "string", required: false, max: FULFILLMENT_TRACKING_NUMBER_MAX},
     trackingUrl: {type: "string", required: false, max: FULFILLMENT_TRACKING_URL_MAX},
-    status: {type: "enum", required: false, options: fulfillmentStatuses},
-    shippedAt: {type: "date", required: false},
     estimatedDeliveryAt: {type: "date", required: false},
-    deliveredAt: {type: "date", required: false},
     notes: {type: "string", required: false, max: FULFILLMENT_NOTES_MAX},
 } as const;
 

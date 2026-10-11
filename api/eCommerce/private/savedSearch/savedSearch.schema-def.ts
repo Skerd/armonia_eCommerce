@@ -1,18 +1,16 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
+import {SHOP_PRODUCT_SORTS} from "../../public/shopCatalog/shopProducts.form.validator";
 
-const SavedSearchFiltersDef = {
-    title: {type: "string", required: false},
-    categoryId: {type: "string", required: false},
-    location: {type: "string", required: false},
-    tags: {type: "stringArray", required: false},
-    geoLat: {type: "number", required: false},
-    geoLng: {type: "number", required: false},
-    geoMaxKm: {type: "number", required: false},
-} as const;
+export const SAVED_SEARCH_NAME_MAX = 100;
 
 export const SavedSearchSchemaDef = {
-    name: {type: "string", required: true, max: 100},
-    filters: {type: "embedded", required: false, items: SavedSearchFiltersDef},
+    customer: {type: "objectId", required: true},
+    name: {type: "string", required: true, max: SAVED_SEARCH_NAME_MAX},
+    categoryIds: {type: "objectIdArray", required: false},
+    collectionId: {type: "objectId", required: false},
+    priceMin: {type: "number", required: false, min: 0},
+    priceMax: {type: "number", required: false, min: 0},
+    sort: {type: "enum", required: false, options: SHOP_PRODUCT_SORTS},
 } as const;
 
 export type CreateSavedSearchFormType = InferCreateForm<typeof SavedSearchSchemaDef>;

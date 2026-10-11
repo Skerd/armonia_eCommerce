@@ -4,6 +4,7 @@ import {
     isObjectIdZod,
     stringMaxLengthZod,
 } from "../../../../../core/helpers/zodBuilder";
+import {RETURN_REQUEST_NOTE_MAX} from "./returnRequest.schema-def";
 
 export type ApproveReturnRequestFormType = {
     _id: string;
@@ -15,6 +16,6 @@ export function approveReturnRequestFormSchema(languageCode: string, form: any =
     return z.object({
         _id: isObjectIdZod(form?.["_idLabel"] ?? "_id", languageCode),
         refundAmount: greaterThanOrEqualZod(form?.["refundAmountLabel"] ?? "refundAmount", 0, languageCode).optional(),
-        notes: stringMaxLengthZod(form?.["notesLabel"] ?? "notes", 2000, languageCode).optional(),
+        notes: stringMaxLengthZod(form?.["notesLabel"] ?? "notes", RETURN_REQUEST_NOTE_MAX, languageCode).optional(),
     });
 }

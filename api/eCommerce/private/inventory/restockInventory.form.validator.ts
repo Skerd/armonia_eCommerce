@@ -1,5 +1,10 @@
 import {z} from "zod";
-import {isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {isArrayOfObjectIdsZod, isObjectIdZod, stringMaxLengthZod} from "../../../../../core/helpers/zodBuilder";
+import {
+    INVENTORY_MOVEMENT_NOTE_MAX,
+    INVENTORY_MOVEMENT_RECEIPT_MAX,
+    INVENTORY_MOVEMENT_TEXT_MAX,
+} from "../inventoryMovement/inventoryMovement.schema-def";
 
 export type RestockInventoryFormType = {
     _id: string;
@@ -18,13 +23,13 @@ export function restockInventoryFormSchema(languageCode: string, form: any = nul
     return z.object({
         _id: isObjectIdZod(form?.["_idLabel"] ?? "_id", languageCode),
         quantity: z.coerce.number().positive(),
-        manufacturer: z.string().max(200).optional(),
-        receiptNumber: z.string().max(200).optional(),
-        receipts: z.array(isObjectIdZod(form?.["receiptsLabel"] ?? "receipts", languageCode)).max(20).optional(),
+        manufacturer: stringMaxLengthZod(form?.["manufacturerLabel"] ?? "manufacturer", INVENTORY_MOVEMENT_TEXT_MAX, languageCode).optional(),
+        receiptNumber: stringMaxLengthZod(form?.["receiptNumberLabel"] ?? "receiptNumber", INVENTORY_MOVEMENT_TEXT_MAX, languageCode).optional(),
+        receipts: isArrayOfObjectIdsZod(form?.["receiptsLabel"] ?? "receipts", languageCode, {max: INVENTORY_MOVEMENT_RECEIPT_MAX}).optional(),
         occurredAt: z.string().optional(),
         unitCost: z.coerce.number().min(0).optional(),
-        batchLot: z.string().max(200).optional(),
+        batchLot: stringMaxLengthZod(form?.["batchLotLabel"] ?? "batchLot", INVENTORY_MOVEMENT_TEXT_MAX, languageCode).optional(),
         expiryDate: z.string().optional(),
-        note: z.string().max(2000).optional(),
+        note: stringMaxLengthZod(form?.["noteLabel"] ?? "note", INVENTORY_MOVEMENT_NOTE_MAX, languageCode).optional(),
     });
 }

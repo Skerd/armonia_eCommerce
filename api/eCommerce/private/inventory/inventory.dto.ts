@@ -1,28 +1,21 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
+import type {ProductSimple} from "../../../../dto/product.dto";
+import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
+import type {WarehouseSimple} from "../../../../dto/warehouse.dto";
 import type {InventoryMovement} from "../inventoryMovement/inventoryMovement.dto";
 
 export type Inventory = DeletedData &
     OwnershipData &
     LifeCycleData & {
     _id: string;
-    product: {_id: string; title: string; sku?: string};
-    variant?: {_id: string; sku?: string; attributeCombination?: {attribute: {name: string}; value: string}[]};
-    warehouse: {_id: string; name: string; code: string};
+    product: ProductSimple;
+    variant?: ProductVariantSimple;
+    warehouse: WarehouseSimple;
     quantityOnHand: number;
     quantityReserved: number;
     quantityAvailable: number;
     reorderPoint?: number;
     reorderQuantity?: number;
     lowStockAlertSent?: boolean;
-    company?: {_id: string; name: string};
     movements?: InventoryMovement[];
-};
-
-export type InventoryAdjustmentForm = {
-    productId: string;
-    variantId?: string;
-    warehouseId: string;
-    quantity: number;
-    reason: "restock" | "sale" | "return" | "adjustment" | "damage" | "transfer_in" | "transfer_out" | "write_off";
-    note?: string;
 };

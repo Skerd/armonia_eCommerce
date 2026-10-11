@@ -19,7 +19,6 @@ export const ReturnRequestSchemaDef = {
     type: {type: "enum", required: true, options: returnRequestTypes},
     items: {type: "embeddedArray", required: true, items: ReturnRequestItemDef, minItems: 1},
     customerNote: {type: "string", required: false, max: RETURN_REQUEST_NOTE_MAX},
-    status: {type: "enum", required: false, options: returnRequestStatuses},
     refundAmount: {type: "number", required: false, min: 0},
     adminNote: {type: "string", required: false, max: RETURN_REQUEST_NOTE_MAX},
 } as const;

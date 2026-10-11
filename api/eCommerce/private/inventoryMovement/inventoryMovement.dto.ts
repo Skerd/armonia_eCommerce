@@ -5,17 +5,9 @@ import type {InventorySimple} from "../../../../dto/inventory.dto";
 import type {ProductSimple} from "../../../../dto/product.dto";
 import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
 import type {WarehouseSimple} from "../../../../dto/warehouse.dto";
+import type {InventoryMovementReason} from "./inventoryMovement.schema-def";
 
-export type InventoryMovementReason =
-    | "restock"
-    | "sale"
-    | "return"
-    | "adjustment"
-    | "damage"
-    | "transfer_in"
-    | "transfer_out"
-    | "initial"
-    | "write_off";
+export type {InventoryMovementReason};
 
 export type InventoryMovement = OwnershipData & LifeCycleData & {
     _id: string;

@@ -1,19 +1,16 @@
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
-
-export type SavedSearchFilters = {
-    title?: string;
-    categoryId?: string;
-    location?: string;
-    tags?: string[];
-    geoLat?: number;
-    geoLng?: number;
-    geoMaxKm?: number;
-};
+import type {CategorySimple} from "../../../../dto/category.dto";
+import type {CollectionSimple} from "../../../../dto/collection.dto";
+import type {ShopProductSort} from "../../public/shopCatalog/shopProducts.form.validator";
 
 export type SavedSearch = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
-    user?: SimpleBlankUser;
+    customer?: SimpleBlankUser;
     name: string;
-    filters: SavedSearchFilters;
+    categoryIds?: CategorySimple[];
+    collectionId?: CollectionSimple;
+    priceMin?: number;
+    priceMax?: number;
+    sort?: ShopProductSort;
 };
