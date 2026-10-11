@@ -1,9 +1,14 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 
+export const customerAddressTypes = ["billing", "shipping"] as const;
+export type CustomerAddressType = (typeof customerAddressTypes)[number];
+
 export const CustomerAddressSchemaDef = {
     customer: {type: "objectId", required: true},
+    type: {type: "enum", required: true, options: customerAddressTypes},
     firstName: {type: "string", required: true},
     lastName: {type: "string", required: true},
+    email: {type: "string", required: false, format: "email"},
     phone: {type: "string", required: false},
     street: {type: "string", required: true},
     city: {type: "objectId", required: true},

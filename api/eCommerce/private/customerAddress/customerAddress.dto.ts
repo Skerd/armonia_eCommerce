@@ -3,12 +3,15 @@ import type {CountrySimple} from "../../../../../core/dto/country.dto";
 import type {StateSimple} from "../../../../../core/dto/state.dto";
 import type {CitySimple} from "../../../../../core/dto/city.dto";
 import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
+import type {CustomerAddressType} from "./customerAddress.schema-def";
 
 export type CustomerAddress = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
     customer?: SimpleBlankUser;
+    type: CustomerAddressType;
     firstName: string;
     lastName: string;
+    email?: string;
     phone?: string;
     street: string;
     city?: CitySimple;
