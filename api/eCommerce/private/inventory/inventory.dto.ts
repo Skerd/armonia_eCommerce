@@ -2,7 +2,6 @@ import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../cor
 import type {ProductSimple} from "../../../../dto/product.dto";
 import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
 import type {WarehouseSimple} from "../../../../dto/warehouse.dto";
-import type {InventoryMovement} from "../inventoryMovement/inventoryMovement.dto";
 
 export type Inventory = DeletedData &
     OwnershipData &
@@ -17,5 +16,4 @@ export type Inventory = DeletedData &
     reorderPoint?: number;
     reorderQuantity?: number;
     lowStockAlertSent?: boolean;
-    movements?: InventoryMovement[];
 };
