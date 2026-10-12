@@ -11,4 +11,14 @@ export type AnalyticsRevenueResponse = {
     totalTax: number;
     totalShipping: number;
     daily: AnalyticsRevenueDaily[];
+    /** The currency every figure above is in (never summed across currencies). */
+    currency: AnalyticsCurrency | null;
+    /** Currencies with paid orders in the period, most orders first; pass `?currency=<_id>` to switch. */
+    currencies: AnalyticsCurrency[];
+};
+
+export type AnalyticsCurrency = {
+    _id: string;
+    abbreviation?: string;
+    orderCount: number;
 };

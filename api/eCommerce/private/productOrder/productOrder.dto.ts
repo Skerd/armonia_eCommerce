@@ -18,7 +18,11 @@ export type ProductOrderItem = {
     snapshot: {
         title: string;
         sku?: string;
-        imageUrl?: string
+        imageUrl?: string;
+        /** Selected option values at purchase, e.g. "Red / XL". */
+        variantLabel?: string;
+        /** Product type at purchase (gift_card / digital decide what payment issues). */
+        productType?: string
     };
     currency?: CurrencySimple;
 };
@@ -47,6 +51,8 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
     taxTotal: number;
     grandTotal: number;
     currency: CurrencySimple;
+    /** ISO code frozen at placement (orders placed before it existed have none). */
+    currencyCode?: string;
     shippingAddress: ProductOrderAddress;
     billingAddress?: ProductOrderAddress;
     paymentStatus: "unpaid" | "authorized" | "paid" | "partially_refunded" | "refunded" | "voided";

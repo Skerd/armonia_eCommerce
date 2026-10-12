@@ -26,7 +26,8 @@ const ProductOrderAddressDef = {
 const ProductOrderItemDef = {
     product: {type: "objectId", required: true},
     variant: {type: "objectId", required: false},
-    quantity: {type: "number", required: true, min: 1},
+    // POS sells weighed goods: fractional quantities match the POS line validator
+    quantity: {type: "number", required: true, min: 0.0001},
     unitPrice: {type: "number", required: true, min: 0},
     totalPrice: {type: "number", required: true, min: 0},
     snapshot: {
@@ -36,6 +37,8 @@ const ProductOrderItemDef = {
             title: {type: "string", required: false},
             sku: {type: "string", required: false},
             imageUrl: {type: "string", required: false},
+            variantLabel: {type: "string", required: false},
+            productType: {type: "string", required: false},
         },
     },
 } as const;
@@ -52,6 +55,8 @@ export const ProductOrderSchemaDef = {
     taxTotal: {type: "number", required: false, min: 0},
     grandTotal: {type: "number", required: false, min: 0},
     currency: {type: "objectId", required: true},
+    /** ISO code of `currency` when the order was placed. */
+    currencyCode: {type: "string", required: false},
     shippingAddress: {type: "embedded", required: true, items: ProductOrderAddressDef},
     billingAddress: {type: "embedded", required: false, items: ProductOrderAddressDef},
     paymentStatus: {type: "enum", required: false, options: productOrderPaymentStatuses},

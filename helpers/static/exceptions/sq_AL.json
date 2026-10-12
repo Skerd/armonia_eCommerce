@@ -860,6 +860,125 @@
     "product_attribute_in_use_by_variants": {
         "message": "Ky atribut produkti përdoret nga variante dhe nuk mund të fshihet.",
         "error_code": "product_attribute_in_use_by_variants"
+    },
+    "inventory_already_exists": {
+        "message": "Ekziston tashmë një rresht stoku për këtë produkt, variant dhe magazinë.",
+        "error_code": "inventory_already_exists"
+    },
+    "inventory_has_stock": {
+        "message": "Ky rresht stoku ka ende stok ose rezervime. Fshijeni ose zhvendoseni stokun më parë.",
+        "error_code": "inventory_has_stock"
+    },
+    "warehouse_has_stock": {
+        "message": "Kjo magazinë ka ende stok ose rezervime dhe nuk mund të fshihet.",
+        "error_code": "warehouse_has_stock"
+    },
+    "order_must_be_cancelled_first": {
+        "message": "Kjo porosi mban ende stok ose kredi. Anulojeni para se ta fshini.",
+        "error_code": "order_must_be_cancelled_first"
+    },
+    "refund_via_pos": {
+        "message": "Kjo porosi është shitje në arkë. Rimbursojeni nga arka.",
+        "error_code": "refund_via_pos"
+    },
+    "pos_product_not_sellable": {
+        "message": "Kartat dhuratë dhe produktet dixhitale nuk mund të shiten në arkë.",
+        "error_code": "pos_product_not_sellable"
+    },
+    "pos_customer_not_found": {
+        "message": "Klienti nuk u gjet.",
+        "error_code": "pos_customer_not_found"
+    },
+    "product_price_required": {
+        "message": "Një produkt aktiv duhet të ketë çmim.",
+        "error_code": "product_price_required"
+    },
+    "fulfillment_quantity_exceeds_order": {
+        "message": "Sasia është më e madhe se sa ka mbetur për t'u përmbushur në këtë rresht porosie.",
+        "error_code": "fulfillment_quantity_exceeds_order"
+    },
+    "order_already_fulfilled": {
+        "message": "Të gjithë artikujt e kësaj porosie janë përmbushur tashmë.",
+        "error_code": "order_already_fulfilled"
+    },
+    "variant_combination_exists": {
+        "message": "Një variant tjetër i këtij produkti ka tashmë këto opsione.",
+        "error_code": "variant_combination_exists"
+    },
+    "bundle_component_invalid": {
+        "message": "Përbërësit e paketës duhet të jenë produkte të tjera aktive të këtij dyqani që nuk janë vetë paketa.",
+        "error_code": "bundle_component_invalid"
+    },
+    "category_parent_cycle": {
+        "message": "Një kategori nuk mund të vendoset nën veten ose nën një nga nënkategoritë e saj.",
+        "error_code": "category_parent_cycle"
+    },
+    "inventory_reference_invalid": {
+        "message": "Produkti, varianti ose magazina nuk i përket këtij dyqani.",
+        "error_code": "inventory_reference_invalid"
+    },
+    "return_quantity_exceeds_shipped": {
+        "message": "Sasia është më e madhe se sa është dërguar dhe ende nuk është kthyer.",
+        "error_code": "return_quantity_exceeds_shipped"
+    },
+    "return_refund_exceeds_items": {
+        "message": "Rimbursimi është më i madh se çmimi me të cilin u shitën artikujt e kthyer.",
+        "error_code": "return_refund_exceeds_items"
+    },
+    "cart_currency_mismatch": {
+        "message": "Ky produkt ka monedhë tjetër nga artikujt që janë tashmë në shportë.",
+        "error_code": "cart_currency_mismatch"
+    },
+    "gift_card_revoked_by_refund": {
+        "message": "Kjo kartë dhuratë u çaktivizua sepse porosia e saj u rimbursua, prandaj nuk mund të riaktivizohet.",
+        "error_code": "gift_card_revoked_by_refund"
+    },
+    "product_already_exists": {
+        "message": "Një produkt tjetër e përdor tashmë këtë kod (slug, GTIN, UPC ose EAN).",
+        "error_code": "product_already_exists"
+    },
+    "warehouse_already_exists": {
+        "message": "Një magazinë tjetër e përdor tashmë këtë kod.",
+        "error_code": "warehouse_already_exists"
+    },
+    "discount_already_exists": {
+        "message": "Një zbritje tjetër e përdor tashmë këtë kod.",
+        "error_code": "discount_already_exists"
+    },
+    "productAttribute_already_exists": {
+        "message": "Ekziston tashmë një atribut me këtë emër.",
+        "error_code": "productAttribute_already_exists"
+    },
+    "customerGroup_already_exists": {
+        "message": "Ekziston tashmë një grup klientësh me këtë emër.",
+        "error_code": "customerGroup_already_exists"
+    },
+    "productCategory_already_exists": {
+        "message": "Ekziston tashmë një kategori me këtë slug.",
+        "error_code": "productCategory_already_exists"
+    },
+    "productCollection_already_exists": {
+        "message": "Ekziston tashmë një koleksion me këtë slug.",
+        "error_code": "productCollection_already_exists"
+    },
+    "stock_transfer_same_warehouse": {
+        "message": "Një transferim kërkon dy magazina të ndryshme.",
+        "error_code": "stock_transfer_same_warehouse"
+    },
+    "stock_document_not_draft": {
+        "message": "Vetëm një draft mund të ndryshohet, përfundohet ose anulohet.",
+        "error_code": "stock_document_not_draft"
+    },
+    "stock_document_done": {
+        "message": "Një transferim i përfunduar ose një numërim i aplikuar është pjesë e historikut të stokut dhe nuk mund të fshihet.",
+        "error_code": "stock_document_done"
+    },
+    "stock_line_duplicate": {
+        "message": "Çdo artikull mund të shfaqet vetëm një herë.",
+        "error_code": "stock_line_duplicate"
+    },
+    "stock_line_not_tracked": {
+        "message": "Vetëm produktet me stok të ndjekur mund të transferohen ose numërohen (një paketë lëviz përmes përbërësve të saj).",
+        "error_code": "stock_line_not_tracked"
     }
 }
-

@@ -860,6 +860,125 @@
     "product_attribute_in_use_by_variants": {
         "message": "This product attribute is used by product variants and cannot be deleted.",
         "error_code": "product_attribute_in_use_by_variants"
+    },
+    "inventory_already_exists": {
+        "message": "A stock row for this product, variant and warehouse already exists.",
+        "error_code": "inventory_already_exists"
+    },
+    "inventory_has_stock": {
+        "message": "This stock row still holds stock or reservations. Write the stock off or move it first.",
+        "error_code": "inventory_has_stock"
+    },
+    "warehouse_has_stock": {
+        "message": "This warehouse still holds stock or reservations and cannot be deleted.",
+        "error_code": "warehouse_has_stock"
+    },
+    "order_must_be_cancelled_first": {
+        "message": "This order still holds stock or store credit. Cancel it before deleting it.",
+        "error_code": "order_must_be_cancelled_first"
+    },
+    "refund_via_pos": {
+        "message": "This order is a till sale. Refund it from the POS.",
+        "error_code": "refund_via_pos"
+    },
+    "pos_product_not_sellable": {
+        "message": "Gift cards and digital products can't be sold at the till.",
+        "error_code": "pos_product_not_sellable"
+    },
+    "pos_customer_not_found": {
+        "message": "Customer not found.",
+        "error_code": "pos_customer_not_found"
+    },
+    "product_price_required": {
+        "message": "An active product needs a price.",
+        "error_code": "product_price_required"
+    },
+    "fulfillment_quantity_exceeds_order": {
+        "message": "The quantity is more than what is left to fulfil on this order line.",
+        "error_code": "fulfillment_quantity_exceeds_order"
+    },
+    "order_already_fulfilled": {
+        "message": "Every item on this order has already been fulfilled.",
+        "error_code": "order_already_fulfilled"
+    },
+    "variant_combination_exists": {
+        "message": "Another variant of this product already has these options.",
+        "error_code": "variant_combination_exists"
+    },
+    "bundle_component_invalid": {
+        "message": "Bundle components must be other active products of this store that are not bundles themselves.",
+        "error_code": "bundle_component_invalid"
+    },
+    "category_parent_cycle": {
+        "message": "A category can't be placed under itself or one of its subcategories.",
+        "error_code": "category_parent_cycle"
+    },
+    "inventory_reference_invalid": {
+        "message": "The product, variant or warehouse doesn't belong to this store.",
+        "error_code": "inventory_reference_invalid"
+    },
+    "return_quantity_exceeds_shipped": {
+        "message": "The quantity is more than what was shipped and not yet returned.",
+        "error_code": "return_quantity_exceeds_shipped"
+    },
+    "return_refund_exceeds_items": {
+        "message": "The refund is more than the returned items were sold for.",
+        "error_code": "return_refund_exceeds_items"
+    },
+    "cart_currency_mismatch": {
+        "message": "This product is priced in a different currency than the items already in your cart.",
+        "error_code": "cart_currency_mismatch"
+    },
+    "gift_card_revoked_by_refund": {
+        "message": "This gift card was disabled because its order was refunded, so it can't be re-enabled.",
+        "error_code": "gift_card_revoked_by_refund"
+    },
+    "product_already_exists": {
+        "message": "Another product already uses this code (slug, GTIN, UPC or EAN).",
+        "error_code": "product_already_exists"
+    },
+    "warehouse_already_exists": {
+        "message": "Another warehouse already uses this code.",
+        "error_code": "warehouse_already_exists"
+    },
+    "discount_already_exists": {
+        "message": "Another discount already uses this code.",
+        "error_code": "discount_already_exists"
+    },
+    "productAttribute_already_exists": {
+        "message": "An attribute with this name already exists.",
+        "error_code": "productAttribute_already_exists"
+    },
+    "customerGroup_already_exists": {
+        "message": "A customer group with this name already exists.",
+        "error_code": "customerGroup_already_exists"
+    },
+    "productCategory_already_exists": {
+        "message": "A category with this slug already exists.",
+        "error_code": "productCategory_already_exists"
+    },
+    "productCollection_already_exists": {
+        "message": "A collection with this slug already exists.",
+        "error_code": "productCollection_already_exists"
+    },
+    "stock_transfer_same_warehouse": {
+        "message": "A transfer needs two different warehouses.",
+        "error_code": "stock_transfer_same_warehouse"
+    },
+    "stock_document_not_draft": {
+        "message": "Only a draft can be changed, completed or cancelled.",
+        "error_code": "stock_document_not_draft"
+    },
+    "stock_document_done": {
+        "message": "A completed transfer or applied count is part of the stock history and can't be deleted.",
+        "error_code": "stock_document_done"
+    },
+    "stock_line_duplicate": {
+        "message": "Each item can appear only once.",
+        "error_code": "stock_line_duplicate"
+    },
+    "stock_line_not_tracked": {
+        "message": "Only stock-tracked products can be transferred or counted (a bundle moves as its components).",
+        "error_code": "stock_line_not_tracked"
     }
 }
-

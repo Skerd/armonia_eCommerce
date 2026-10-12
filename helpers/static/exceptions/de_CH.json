@@ -860,6 +860,125 @@
     "product_attribute_in_use_by_variants": {
         "message": "Dieses Produktattribut wird von Produktvarianten verwendet und kann nicht gelöscht werden.",
         "error_code": "product_attribute_in_use_by_variants"
+    },
+    "inventory_already_exists": {
+        "message": "Für dieses Produkt, diese Variante und dieses Lager gibt es bereits einen Lagerbestand.",
+        "error_code": "inventory_already_exists"
+    },
+    "inventory_has_stock": {
+        "message": "Dieser Lagerbestand enthält noch Ware oder Reservierungen. Buchen Sie den Bestand zuerst aus oder verschieben Sie ihn.",
+        "error_code": "inventory_has_stock"
+    },
+    "warehouse_has_stock": {
+        "message": "Dieses Lager enthält noch Bestand oder Reservierungen und kann nicht gelöscht werden.",
+        "error_code": "warehouse_has_stock"
+    },
+    "order_must_be_cancelled_first": {
+        "message": "Diese Bestellung hält noch Bestand oder Guthaben. Stornieren Sie sie vor dem Löschen.",
+        "error_code": "order_must_be_cancelled_first"
+    },
+    "refund_via_pos": {
+        "message": "Diese Bestellung ist ein Kassenverkauf. Erstatten Sie sie über die Kasse.",
+        "error_code": "refund_via_pos"
+    },
+    "pos_product_not_sellable": {
+        "message": "Geschenkkarten und digitale Produkte können nicht an der Kasse verkauft werden.",
+        "error_code": "pos_product_not_sellable"
+    },
+    "pos_customer_not_found": {
+        "message": "Kunde nicht gefunden.",
+        "error_code": "pos_customer_not_found"
+    },
+    "product_price_required": {
+        "message": "Ein aktives Produkt braucht einen Preis.",
+        "error_code": "product_price_required"
+    },
+    "fulfillment_quantity_exceeds_order": {
+        "message": "Die Menge übersteigt die noch offene Menge dieser Bestellposition.",
+        "error_code": "fulfillment_quantity_exceeds_order"
+    },
+    "order_already_fulfilled": {
+        "message": "Alle Artikel dieser Bestellung wurden bereits ausgeliefert.",
+        "error_code": "order_already_fulfilled"
+    },
+    "variant_combination_exists": {
+        "message": "Eine andere Variante dieses Produkts hat bereits diese Optionen.",
+        "error_code": "variant_combination_exists"
+    },
+    "bundle_component_invalid": {
+        "message": "Bundle-Bestandteile müssen andere aktive Produkte dieses Shops sein, die selbst keine Bundles sind.",
+        "error_code": "bundle_component_invalid"
+    },
+    "category_parent_cycle": {
+        "message": "Eine Kategorie kann nicht unter sich selbst oder eine ihrer Unterkategorien gesetzt werden.",
+        "error_code": "category_parent_cycle"
+    },
+    "inventory_reference_invalid": {
+        "message": "Produkt, Variante oder Lager gehören nicht zu diesem Shop.",
+        "error_code": "inventory_reference_invalid"
+    },
+    "return_quantity_exceeds_shipped": {
+        "message": "Die Menge übersteigt die versandte und noch nicht retournierte Menge.",
+        "error_code": "return_quantity_exceeds_shipped"
+    },
+    "return_refund_exceeds_items": {
+        "message": "Die Rückerstattung übersteigt den Verkaufspreis der retournierten Artikel.",
+        "error_code": "return_refund_exceeds_items"
+    },
+    "cart_currency_mismatch": {
+        "message": "Dieses Produkt hat eine andere Währung als die Artikel in Ihrem Warenkorb.",
+        "error_code": "cart_currency_mismatch"
+    },
+    "gift_card_revoked_by_refund": {
+        "message": "Diese Geschenkkarte wurde deaktiviert, weil ihre Bestellung erstattet wurde, und kann nicht wieder aktiviert werden.",
+        "error_code": "gift_card_revoked_by_refund"
+    },
+    "product_already_exists": {
+        "message": "Ein anderes Produkt verwendet diesen Code bereits (Slug, GTIN, UPC oder EAN).",
+        "error_code": "product_already_exists"
+    },
+    "warehouse_already_exists": {
+        "message": "Ein anderes Lager verwendet diesen Code bereits.",
+        "error_code": "warehouse_already_exists"
+    },
+    "discount_already_exists": {
+        "message": "Ein anderer Rabatt verwendet diesen Code bereits.",
+        "error_code": "discount_already_exists"
+    },
+    "productAttribute_already_exists": {
+        "message": "Ein Attribut mit diesem Namen existiert bereits.",
+        "error_code": "productAttribute_already_exists"
+    },
+    "customerGroup_already_exists": {
+        "message": "Eine Kundengruppe mit diesem Namen existiert bereits.",
+        "error_code": "customerGroup_already_exists"
+    },
+    "productCategory_already_exists": {
+        "message": "Eine Kategorie mit diesem Slug existiert bereits.",
+        "error_code": "productCategory_already_exists"
+    },
+    "productCollection_already_exists": {
+        "message": "Eine Kollektion mit diesem Slug existiert bereits.",
+        "error_code": "productCollection_already_exists"
+    },
+    "stock_transfer_same_warehouse": {
+        "message": "Eine Umlagerung braucht zwei verschiedene Lager.",
+        "error_code": "stock_transfer_same_warehouse"
+    },
+    "stock_document_not_draft": {
+        "message": "Nur ein Entwurf kann geändert, abgeschlossen oder storniert werden.",
+        "error_code": "stock_document_not_draft"
+    },
+    "stock_document_done": {
+        "message": "Eine abgeschlossene Umlagerung oder gebuchte Inventur gehört zur Bestandshistorie und kann nicht gelöscht werden.",
+        "error_code": "stock_document_done"
+    },
+    "stock_line_duplicate": {
+        "message": "Jeder Artikel darf nur einmal vorkommen.",
+        "error_code": "stock_line_duplicate"
+    },
+    "stock_line_not_tracked": {
+        "message": "Nur bestandsgeführte Produkte können umgelagert oder gezählt werden (ein Bundle zählt über seine Bestandteile).",
+        "error_code": "stock_line_not_tracked"
     }
 }
-

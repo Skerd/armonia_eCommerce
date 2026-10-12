@@ -1,3 +1,5 @@
+import type {AnalyticsCurrency} from "./analytics.revenue.response.type";
+
 export type AnalyticsTopProduct = {
     _id: string;
     title?: string;
@@ -8,4 +10,6 @@ export type AnalyticsTopProduct = {
 export type AnalyticsProductsResponse = {
     topProducts: AnalyticsTopProduct[];
     byStatus: Record<string, number>;
+    /** The currency `topProducts` revenue is in. */
+    currency: AnalyticsCurrency | null;
 };
