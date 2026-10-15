@@ -67,6 +67,10 @@
         "message": "Order not found.",
         "error_code": "order_not_found"
     },
+    "customer_address_not_found": {
+        "message": "Address not found.",
+        "error_code": "customer_address_not_found"
+    },
     "order_not_in_progress": {
         "message": "The order is not in progress.",
         "error_code": "order_not_in_progress"

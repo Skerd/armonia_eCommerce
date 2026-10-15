@@ -105,3 +105,8 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
     fulfillments?: Fulfillment[];
     returnRequests?: ReturnRequest[];
 };
+
+/** A buyer's view of their own order: no staff notes, gateway ids or idempotency key, and a timeline of events only. */
+export type BuyerProductOrder = Omit<ProductOrder, "internalNotes" | "stripePaymentIntentId" | "idempotencyKey" | "paymentTransactions" | "timeline"> & {
+    timeline?: {event: string; timestamp: string}[];
+};

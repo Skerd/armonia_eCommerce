@@ -79,10 +79,28 @@ export type ShopTaxonomyResponse = {
     };
 };
 
+export type ShopCompanyAddress = {
+    label: string;
+};
+
+export type ShopCompany = {
+    name?: string;
+    logo?: string;
+    email?: string;
+    phoneNumber?: string;
+    vat?: string;
+    addresses?: ShopCompanyAddress[];
+    website?: string;
+    linkedin?: string;
+    instagram?: string;
+    facebook?: string;
+};
+
 export type ShopConfigResponse = {
     data: {
         stripePublishableKey?: string;
         currency?: {_id: string; symbol?: string; abbreviation?: string; decimalPlaces?: number};
         companyName?: string;
+        company?: ShopCompany;
     };
 };

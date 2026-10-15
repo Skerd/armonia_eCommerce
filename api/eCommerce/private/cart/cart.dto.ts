@@ -6,12 +6,15 @@ export type CartItemSnapshot = {
 
 export type CartItem = {
     _id?: string;
-    product: {_id: string; title?: string};
+    /** `slug` is filled on storefront cart responses, for linking the line to its product page. */
+    product: {_id: string; title?: string; slug?: string};
     variant?: {_id: string} | null;
     quantity: number;
     unitPrice: number;
     totalPrice: number;
     snapshot?: CartItemSnapshot;
+    /** The product's order-quantity rules (storefront cart responses); the API rejects other quantities. */
+    quantityRules?: {min: number; max?: number; step: number};
 };
 
 export type CartAppliedDiscount = {
