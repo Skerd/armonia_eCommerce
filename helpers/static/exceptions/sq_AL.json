@@ -984,5 +984,41 @@
     "stock_line_not_tracked": {
         "message": "Vetëm produktet me stok të ndjekur mund të transferohen ose numërohen (një paketë lëviz përmes përbërësve të saj).",
         "error_code": "stock_line_not_tracked"
+    },
+    "odoo_connection_missing": {
+        "message": "Ruaj një lidhje me serverin Odoo para importimit.",
+        "error_code": "odoo_connection_missing"
+    },
+    "odoo_connection_url_invalid": {
+        "message": "URL-ja e Odoo duhet të jetë http ose https dhe nuk duhet të përmbajë emër përdoruesi ose fjalëkalim.",
+        "error_code": "odoo_connection_url_invalid"
+    },
+    "odoo_connection_auth_failed": {
+        "message": "Odoo refuzoi bazën e të dhënave, hyrjen, çelësin API ose fjalëkalimin.",
+        "error_code": "odoo_connection_auth_failed"
+    },
+    "odoo_rpc_failed": {
+        "message": "Thirrja JSON-RPC e Odoo dështoi.",
+        "error_code": "odoo_rpc_failed"
+    },
+    "odoo_api_key_required": {
+        "message": "Kërkohet një çelës API ose fjalëkalim llogarie për të ruajtur këtë lidhje Odoo.",
+        "error_code": "odoo_api_key_required"
+    },
+    "odoo_dataset_not_permitted": {
+        "message": "Nuk mund ta importosh atë grup të dhënash me lejet e tua aktuale.",
+        "error_code": "odoo_dataset_not_permitted"
+    },
+    "odoo_signup_role_missing": {
+        "message": "Kjo kompani nuk ka rol të paracaktuar për regjistrim, prandaj përdoruesit e Odoo nuk mund të ftohen.",
+        "error_code": "odoo_signup_role_missing"
+    },
+    "odoo_redirect_blocked": {
+        "message": "Serveri Odoo ridrejtoi te një host tjetër.",
+        "error_code": "odoo_redirect_blocked"
+    },
+    "odoo_import_empty_selection": {
+        "message": "Zgjidh të paktën një grup të dhënash për import.",
+        "error_code": "odoo_import_empty_selection"
     }
 }

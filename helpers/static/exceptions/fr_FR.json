@@ -984,5 +984,41 @@
     "stock_line_not_tracked": {
         "message": "Seuls les produits suivis en stock peuvent être transférés ou comptés (un lot passe par ses composants).",
         "error_code": "stock_line_not_tracked"
+    },
+    "odoo_connection_missing": {
+        "message": "Enregistrez une connexion au serveur Odoo avant d'importer.",
+        "error_code": "odoo_connection_missing"
+    },
+    "odoo_connection_url_invalid": {
+        "message": "L'URL Odoo doit être http ou https et ne doit pas contenir de nom d'utilisateur ni de mot de passe.",
+        "error_code": "odoo_connection_url_invalid"
+    },
+    "odoo_connection_auth_failed": {
+        "message": "Odoo a rejeté la base de données, l'identifiant, la clé API ou le mot de passe.",
+        "error_code": "odoo_connection_auth_failed"
+    },
+    "odoo_rpc_failed": {
+        "message": "L'appel JSON-RPC Odoo a échoué.",
+        "error_code": "odoo_rpc_failed"
+    },
+    "odoo_api_key_required": {
+        "message": "Une clé API ou un mot de passe de compte est requis pour enregistrer cette connexion Odoo.",
+        "error_code": "odoo_api_key_required"
+    },
+    "odoo_dataset_not_permitted": {
+        "message": "Vous ne pouvez pas importer ce jeu de données avec vos autorisations actuelles.",
+        "error_code": "odoo_dataset_not_permitted"
+    },
+    "odoo_signup_role_missing": {
+        "message": "Cette société n'a pas de rôle par défaut d'inscription, les utilisateurs Odoo ne peuvent donc pas être invités.",
+        "error_code": "odoo_signup_role_missing"
+    },
+    "odoo_redirect_blocked": {
+        "message": "Le serveur Odoo a redirigé vers un autre hôte.",
+        "error_code": "odoo_redirect_blocked"
+    },
+    "odoo_import_empty_selection": {
+        "message": "Choisissez au moins un jeu de données à importer.",
+        "error_code": "odoo_import_empty_selection"
     }
 }

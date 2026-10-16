@@ -984,5 +984,41 @@
     "stock_line_not_tracked": {
         "message": "Only stock-tracked products can be transferred or counted (a bundle moves as its components).",
         "error_code": "stock_line_not_tracked"
+    },
+    "odoo_connection_missing": {
+        "message": "Save an Odoo server connection before importing.",
+        "error_code": "odoo_connection_missing"
+    },
+    "odoo_connection_url_invalid": {
+        "message": "The Odoo URL must be http or https and must not include a username or password.",
+        "error_code": "odoo_connection_url_invalid"
+    },
+    "odoo_connection_auth_failed": {
+        "message": "Odoo rejected the database, login, API key, or password.",
+        "error_code": "odoo_connection_auth_failed"
+    },
+    "odoo_rpc_failed": {
+        "message": "The Odoo JSON-RPC call failed.",
+        "error_code": "odoo_rpc_failed"
+    },
+    "odoo_api_key_required": {
+        "message": "An API key or account password is required to save this Odoo connection.",
+        "error_code": "odoo_api_key_required"
+    },
+    "odoo_dataset_not_permitted": {
+        "message": "You cannot import that dataset with your current permissions.",
+        "error_code": "odoo_dataset_not_permitted"
+    },
+    "odoo_signup_role_missing": {
+        "message": "This company has no signup-default role, so Odoo users cannot be invited.",
+        "error_code": "odoo_signup_role_missing"
+    },
+    "odoo_redirect_blocked": {
+        "message": "The Odoo server redirected to a different host.",
+        "error_code": "odoo_redirect_blocked"
+    },
+    "odoo_import_empty_selection": {
+        "message": "Choose at least one dataset to import.",
+        "error_code": "odoo_import_empty_selection"
     }
 }

@@ -984,5 +984,41 @@
     "stock_line_not_tracked": {
         "message": "Nur bestandsgeführte Produkte können umgelagert oder gezählt werden (ein Bundle zählt über seine Bestandteile).",
         "error_code": "stock_line_not_tracked"
+    },
+    "odoo_connection_missing": {
+        "message": "Speichern Sie eine Odoo-Serververbindung, bevor Sie importieren.",
+        "error_code": "odoo_connection_missing"
+    },
+    "odoo_connection_url_invalid": {
+        "message": "Die Odoo-URL muss http oder https sein und darf keinen Benutzernamen oder ein Passwort enthalten.",
+        "error_code": "odoo_connection_url_invalid"
+    },
+    "odoo_connection_auth_failed": {
+        "message": "Odoo hat die Datenbank, den Login, den API-Schlüssel oder das Passwort abgelehnt.",
+        "error_code": "odoo_connection_auth_failed"
+    },
+    "odoo_rpc_failed": {
+        "message": "Der Odoo-JSON-RPC-Aufruf ist fehlgeschlagen.",
+        "error_code": "odoo_rpc_failed"
+    },
+    "odoo_api_key_required": {
+        "message": "Zum Speichern dieser Odoo-Verbindung ist ein API-Schlüssel oder ein Kontopasswort erforderlich.",
+        "error_code": "odoo_api_key_required"
+    },
+    "odoo_dataset_not_permitted": {
+        "message": "Sie dürfen diesen Datensatz mit Ihren aktuellen Berechtigungen nicht importieren.",
+        "error_code": "odoo_dataset_not_permitted"
+    },
+    "odoo_signup_role_missing": {
+        "message": "Diese Firma hat keine Standardrolle für die Registrierung, daher können Odoo-Benutzer nicht eingeladen werden.",
+        "error_code": "odoo_signup_role_missing"
+    },
+    "odoo_redirect_blocked": {
+        "message": "Der Odoo-Server hat auf einen anderen Host umgeleitet.",
+        "error_code": "odoo_redirect_blocked"
+    },
+    "odoo_import_empty_selection": {
+        "message": "Wählen Sie mindestens einen Datensatz zum Importieren.",
+        "error_code": "odoo_import_empty_selection"
     }
 }
