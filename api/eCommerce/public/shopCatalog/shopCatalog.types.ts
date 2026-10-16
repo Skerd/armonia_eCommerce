@@ -68,6 +68,33 @@ export type ShopProductsResponse = {
     limit: number;
 };
 
+export type ShopFacetOption = {
+    value: string;
+    count: number;
+};
+
+export type ShopFacetGroup = {
+    name: string;
+    values: ShopFacetOption[];
+};
+
+/** Options available inside the current search / category / collection. */
+export type ShopFacets = {
+    total: number;
+    priceMin?: number;
+    priceMax?: number;
+    brands: ShopFacetOption[];
+    types: ShopFacetOption[];
+    attributes: ShopFacetGroup[];
+    inStock: number;
+    onSale: number;
+    rated: number;
+};
+
+export type ShopFacetsResponse = {
+    data: ShopFacets;
+};
+
 export type ShopProductResponse = {
     data: ShopProductDetail;
 };
