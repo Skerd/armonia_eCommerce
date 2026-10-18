@@ -1,5 +1,3 @@
-import type {InferCreateForm} from "../../../../../core/helpers/schemaDefBuilder";
-
 export const orderRevisionStatuses = ["pending", "completed"] as const;
 export type OrderRevisionStatus = (typeof orderRevisionStatuses)[number];
 
@@ -12,5 +10,3 @@ export const OrderRevisionSchemaDef = {
     delivery: {type: "objectId", required: true},
     reason: {type: "string", required: true},
 } as const;
-
-export type CreateOrderRevisionFormType = InferCreateForm<typeof OrderRevisionSchemaDef>;

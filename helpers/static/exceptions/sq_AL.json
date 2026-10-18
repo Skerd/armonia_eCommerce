@@ -1240,5 +1240,73 @@
     "validation_required": {
         "message": "Mungon një fushë e detyrueshme.",
         "error_code": "validation_required"
+    },
+    "add_on_currency_mismatch": {
+        "message": "Të gjitha shtesat duhet të kenë të njëjtën monedhë si shpallja ose paketa.",
+        "error_code": "add_on_currency_mismatch"
+    },
+    "bid_already_submitted": {
+        "message": "Ju keni tashmë një ofertë në pritje për këtë kërkesë.",
+        "error_code": "bid_already_submitted"
+    },
+    "bid_not_pending": {
+        "message": "Vetëm një ofertë në pritje mund të fshihet.",
+        "error_code": "bid_not_pending"
+    },
+    "booking_order_not_active": {
+        "message": "Një rezervim mund të bëhet vetëm për një porosi të pranuar ose në vazhdim.",
+        "error_code": "booking_order_not_active"
+    },
+    "cannot_bid_on_own_task_request": {
+        "message": "Nuk mund të bëni ofertë për kërkesën tuaj.",
+        "error_code": "cannot_bid_on_own_task_request"
+    },
+    "cannot_cancel_with_open_dispute": {
+        "message": "Kjo porosi ka një mosmarrëveshje të hapur. Ajo zgjidhet përmes mosmarrëveshjes, jo me anulim.",
+        "error_code": "cannot_cancel_with_open_dispute"
+    },
+    "cannot_release_with_open_dispute": {
+        "message": "Një fazë nuk mund të lirohet ndërsa porosia ka një mosmarrëveshje të hapur.",
+        "error_code": "cannot_release_with_open_dispute"
+    },
+    "customer_cannot_cancel_started_order": {
+        "message": "Puna për këtë porosi ka filluar. Hapni një mosmarrëveshje nëse nuk jeni dakord me dorëzimin.",
+        "error_code": "customer_cannot_cancel_started_order"
+    },
+    "delivery_attachment_not_found": {
+        "message": "Një ose më shumë bashkëngjitje të dorëzimit nuk u gjetën.",
+        "error_code": "delivery_attachment_not_found"
+    },
+    "listing_add_on_not_found": {
+        "message": "Një ose më shumë shtesa të zgjedhura nuk i përkasin kësaj shpalljeje.",
+        "error_code": "listing_add_on_not_found"
+    },
+    "listing_category_parent_cycle": {
+        "message": "Një kategori nuk mund të vendoset nën vetveten ose nën një nga nënkategoritë e saj.",
+        "error_code": "listing_category_parent_cycle"
+    },
+    "listing_price_required": {
+        "message": "Vendosni çmimin dhe monedhën para se të aktivizoni shpalljen.",
+        "error_code": "listing_price_required"
+    },
+    "milestone_exceeds_escrow_balance": {
+        "message": "Kjo fazë është më e madhe se shuma që mbahet ende për porosinë.",
+        "error_code": "milestone_exceeds_escrow_balance"
+    },
+    "milestone_order_not_active": {
+        "message": "Fazat mund t'i shtohen vetëm një porosie të pranuar ose në vazhdim.",
+        "error_code": "milestone_order_not_active"
+    },
+    "only_customer_can_create_milestone": {
+        "message": "Vetëm klienti mund t'i shtojë faza kësaj porosie.",
+        "error_code": "only_customer_can_create_milestone"
+    },
+    "order_not_final": {
+        "message": "Vetëm një porosi e përfunduar ose e anuluar mund të fshihet.",
+        "error_code": "order_not_final"
+    },
+    "provider_profile_already_exists": {
+        "message": "Ju keni tashmë një profil ofruesi.",
+        "error_code": "provider_profile_already_exists"
     }
 }

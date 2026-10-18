@@ -5,6 +5,9 @@ import type {ListingSimple} from "../../../../dto/listing.dto";
 import type {TaskRequestSimple} from "../../../../dto/taskRequest.dto";
 import type {BidSimple} from "../../../../dto/bid.dto";
 import type {OrderStatus} from "./order.schema-def";
+import type {OrderDelivery} from "../orderDelivery/orderDelivery.dto";
+import type {OrderMilestone} from "../orderMilestone/orderMilestone.dto";
+import type {OrderRevision} from "../orderRevision/orderRevision.dto";
 
 export type Order = OwnershipData & DeletedData & LifeCycleData & {
     _id: string;
@@ -22,6 +25,13 @@ export type Order = OwnershipData & DeletedData & LifeCycleData & {
     deliverySubmitted?: boolean;
     /** True when an open dispute exists on this order (blocks delivery acceptance etc.). */
     hasActiveDispute?: boolean;
+    note?: string;
+    /** Sheet only (single route): the order's deliveries, newest first, when the caller may read them. */
+    deliveries?: OrderDelivery[];
+    /** Sheet only (single route): the order's milestones in release order. */
+    milestones?: OrderMilestone[];
+    /** Sheet only (single route): the customer's revision requests, newest first. */
+    revisions?: OrderRevision[];
 };
 
 export type OrderListResponse = TableResponse<Order>;

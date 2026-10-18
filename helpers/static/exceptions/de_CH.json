@@ -1240,5 +1240,73 @@
     "validation_required": {
         "message": "Ein Pflichtfeld fehlt.",
         "error_code": "validation_required"
+    },
+    "add_on_currency_mismatch": {
+        "message": "Alle Zusatzleistungen müssen in derselben Währung wie das Angebot oder Paket bepreist sein.",
+        "error_code": "add_on_currency_mismatch"
+    },
+    "bid_already_submitted": {
+        "message": "Sie haben bereits ein offenes Angebot für diese Anfrage abgegeben.",
+        "error_code": "bid_already_submitted"
+    },
+    "bid_not_pending": {
+        "message": "Nur ein offenes Angebot kann gelöscht werden.",
+        "error_code": "bid_not_pending"
+    },
+    "booking_order_not_active": {
+        "message": "Ein Termin kann nur für einen angenommenen oder laufenden Auftrag gebucht werden.",
+        "error_code": "booking_order_not_active"
+    },
+    "cannot_bid_on_own_task_request": {
+        "message": "Sie können kein Angebot für Ihre eigene Anfrage abgeben.",
+        "error_code": "cannot_bid_on_own_task_request"
+    },
+    "cannot_cancel_with_open_dispute": {
+        "message": "Zu diesem Auftrag ist ein Streitfall offen. Er wird über den Streitfall geklärt, nicht durch Stornierung.",
+        "error_code": "cannot_cancel_with_open_dispute"
+    },
+    "cannot_release_with_open_dispute": {
+        "message": "Ein Meilenstein kann nicht freigegeben werden, solange zum Auftrag ein Streitfall offen ist.",
+        "error_code": "cannot_release_with_open_dispute"
+    },
+    "customer_cannot_cancel_started_order": {
+        "message": "Die Arbeit an diesem Auftrag hat begonnen. Eröffnen Sie einen Streitfall, wenn Sie mit der Lieferung nicht einverstanden sind.",
+        "error_code": "customer_cannot_cancel_started_order"
+    },
+    "delivery_attachment_not_found": {
+        "message": "Mindestens ein Anhang der Lieferung wurde nicht gefunden.",
+        "error_code": "delivery_attachment_not_found"
+    },
+    "listing_add_on_not_found": {
+        "message": "Mindestens eine gewählte Zusatzleistung gehört nicht zu diesem Angebot.",
+        "error_code": "listing_add_on_not_found"
+    },
+    "listing_category_parent_cycle": {
+        "message": "Eine Kategorie kann nicht sich selbst oder einer ihrer Unterkategorien untergeordnet werden.",
+        "error_code": "listing_category_parent_cycle"
+    },
+    "listing_price_required": {
+        "message": "Legen Sie Preis und Währung fest, bevor Sie das Angebot aktivieren.",
+        "error_code": "listing_price_required"
+    },
+    "milestone_exceeds_escrow_balance": {
+        "message": "Dieser Meilenstein übersteigt den für den Auftrag noch hinterlegten Betrag.",
+        "error_code": "milestone_exceeds_escrow_balance"
+    },
+    "milestone_order_not_active": {
+        "message": "Meilensteine können nur zu einem angenommenen oder laufenden Auftrag hinzugefügt werden.",
+        "error_code": "milestone_order_not_active"
+    },
+    "only_customer_can_create_milestone": {
+        "message": "Nur der Kunde kann diesem Auftrag Meilensteine hinzufügen.",
+        "error_code": "only_customer_can_create_milestone"
+    },
+    "order_not_final": {
+        "message": "Nur ein abgeschlossener oder stornierter Auftrag kann gelöscht werden.",
+        "error_code": "order_not_final"
+    },
+    "provider_profile_already_exists": {
+        "message": "Sie haben bereits ein Anbieterprofil.",
+        "error_code": "provider_profile_already_exists"
     }
 }

@@ -1,4 +1,4 @@
-import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
+import type {InferCreateForm} from "../../../../../core/helpers/schemaDefBuilder";
 
 export const promotionTypes = ["featured", "sponsored"] as const;
 export type PromotionType = (typeof promotionTypes)[number];
@@ -13,5 +13,9 @@ export const PromotionSchemaDef = {
     endAt: {type: "date", required: true, afterField: "startAt"},
 } as const;
 
+export const StopPromotionSchemaDef = {
+    stopReason: {type: "string", required: true, max: 2000},
+} as const;
+
 export type CreatePromotionFormType = InferCreateForm<typeof PromotionSchemaDef>;
-export type EditPromotionFormType = InferEditForm<typeof PromotionSchemaDef>;
+export type StopPromotionFormType = InferCreateForm<typeof StopPromotionSchemaDef> & {_id: string};

@@ -16,3 +16,4 @@ export const ResolveDisputeSchemaDef = {
 } as const;
 
 export type CreateDisputeFormType = InferCreateForm<typeof DisputeSchemaDef>;
+export type ResolveDisputeFormType = InferCreateForm<typeof ResolveDisputeSchemaDef> & {_id: string};

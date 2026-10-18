@@ -30,3 +30,4 @@ export const ResolveListingFlagSchemaDef = {
 
 export type CreateListingFlagFormType = InferCreateForm<typeof ListingFlagSchemaDef>;
 export type EditListingFlagFormType = InferEditForm<typeof EditListingFlagSchemaDef>;
+export type ResolveListingFlagFormType = InferCreateForm<typeof ResolveListingFlagSchemaDef> & {_id: string};

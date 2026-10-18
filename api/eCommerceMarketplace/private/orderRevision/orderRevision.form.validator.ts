@@ -1,8 +1,9 @@
-import { z } from "zod";
-import { withTableFormValidator } from "../../../../../core/utilities/zod/shared.validator";
+import {isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {withTableFormValidator} from "../../../../../core/utilities/zod/shared.validator";
 
-export function orderRevisionFormSchema(languageCode: string | undefined, form: any = null) {
+/** List filtered to one order (`orderId`), as shown on the order sheet. */
+export function orderRevisionFormSchema(languageCode: string, form: any = null) {
     return withTableFormValidator(languageCode, form, {
-        orderId: z.string().optional(),
+        orderId: isObjectIdZod(form?.["orderIdLabel"] ?? "orderId", languageCode).optional(),
     });
 }

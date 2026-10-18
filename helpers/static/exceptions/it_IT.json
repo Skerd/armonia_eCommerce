@@ -1240,5 +1240,73 @@
     "validation_required": {
         "message": "Manca un campo obbligatorio.",
         "error_code": "validation_required"
+    },
+    "add_on_currency_mismatch": {
+        "message": "Tutti i servizi aggiuntivi devono avere la stessa valuta dell'annuncio o del pacchetto.",
+        "error_code": "add_on_currency_mismatch"
+    },
+    "bid_already_submitted": {
+        "message": "Hai già un'offerta in attesa per questa richiesta.",
+        "error_code": "bid_already_submitted"
+    },
+    "bid_not_pending": {
+        "message": "Solo un'offerta in attesa può essere eliminata.",
+        "error_code": "bid_not_pending"
+    },
+    "booking_order_not_active": {
+        "message": "Una prenotazione è possibile solo per un ordine accettato o in corso.",
+        "error_code": "booking_order_not_active"
+    },
+    "cannot_bid_on_own_task_request": {
+        "message": "Non puoi fare un'offerta sulla tua stessa richiesta.",
+        "error_code": "cannot_bid_on_own_task_request"
+    },
+    "cannot_cancel_with_open_dispute": {
+        "message": "Questo ordine ha una contestazione aperta. Si risolve tramite la contestazione, non annullando.",
+        "error_code": "cannot_cancel_with_open_dispute"
+    },
+    "cannot_release_with_open_dispute": {
+        "message": "Una milestone non può essere rilasciata finché l'ordine ha una contestazione aperta.",
+        "error_code": "cannot_release_with_open_dispute"
+    },
+    "customer_cannot_cancel_started_order": {
+        "message": "Il lavoro su questo ordine è iniziato. Apri una contestazione se non sei d'accordo con la consegna.",
+        "error_code": "customer_cannot_cancel_started_order"
+    },
+    "delivery_attachment_not_found": {
+        "message": "Uno o più allegati della consegna non sono stati trovati.",
+        "error_code": "delivery_attachment_not_found"
+    },
+    "listing_add_on_not_found": {
+        "message": "Uno o più servizi aggiuntivi selezionati non appartengono a questo annuncio.",
+        "error_code": "listing_add_on_not_found"
+    },
+    "listing_category_parent_cycle": {
+        "message": "Una categoria non può essere collocata sotto se stessa o sotto una sua sottocategoria.",
+        "error_code": "listing_category_parent_cycle"
+    },
+    "listing_price_required": {
+        "message": "Imposta prezzo e valuta prima di attivare l'annuncio.",
+        "error_code": "listing_price_required"
+    },
+    "milestone_exceeds_escrow_balance": {
+        "message": "Questa milestone supera l'importo ancora trattenuto per l'ordine.",
+        "error_code": "milestone_exceeds_escrow_balance"
+    },
+    "milestone_order_not_active": {
+        "message": "Le milestone possono essere aggiunte solo a un ordine accettato o in corso.",
+        "error_code": "milestone_order_not_active"
+    },
+    "only_customer_can_create_milestone": {
+        "message": "Solo il cliente può aggiungere milestone a questo ordine.",
+        "error_code": "only_customer_can_create_milestone"
+    },
+    "order_not_final": {
+        "message": "Solo un ordine completato o annullato può essere eliminato.",
+        "error_code": "order_not_final"
+    },
+    "provider_profile_already_exists": {
+        "message": "Hai già un profilo fornitore.",
+        "error_code": "provider_profile_already_exists"
     }
 }

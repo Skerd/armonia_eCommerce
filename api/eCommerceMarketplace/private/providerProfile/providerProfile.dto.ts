@@ -1,4 +1,4 @@
-import type {LifeCycleData} from "../../../../../core/types/shared.types";
+import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {Media} from "../../../../../core/types";
 import type {SimpleUser} from "../../../../../core/dto/user.dto";
 
@@ -8,7 +8,7 @@ export type ProviderAvailabilitySlot = {
     endTime: string;
 };
 
-export type ProviderProfile = LifeCycleData & {
+export type ProviderProfile = OwnershipData & DeletedData & LifeCycleData & {
     _id: string;
     user?: SimpleUser;
     skills?: string[];

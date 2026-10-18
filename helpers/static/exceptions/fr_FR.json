@@ -1240,5 +1240,73 @@
     "validation_required": {
         "message": "Un champ obligatoire est manquant.",
         "error_code": "validation_required"
+    },
+    "add_on_currency_mismatch": {
+        "message": "Toutes les options doivent être dans la même devise que l'annonce ou le forfait.",
+        "error_code": "add_on_currency_mismatch"
+    },
+    "bid_already_submitted": {
+        "message": "Vous avez déjà une offre en attente pour cette demande.",
+        "error_code": "bid_already_submitted"
+    },
+    "bid_not_pending": {
+        "message": "Seule une offre en attente peut être supprimée.",
+        "error_code": "bid_not_pending"
+    },
+    "booking_order_not_active": {
+        "message": "Une réservation n'est possible que pour une commande acceptée ou en cours.",
+        "error_code": "booking_order_not_active"
+    },
+    "cannot_bid_on_own_task_request": {
+        "message": "Vous ne pouvez pas faire d'offre sur votre propre demande.",
+        "error_code": "cannot_bid_on_own_task_request"
+    },
+    "cannot_cancel_with_open_dispute": {
+        "message": "Cette commande a un litige ouvert. Elle se règle par le litige, pas par une annulation.",
+        "error_code": "cannot_cancel_with_open_dispute"
+    },
+    "cannot_release_with_open_dispute": {
+        "message": "Une étape ne peut pas être libérée tant que la commande a un litige ouvert.",
+        "error_code": "cannot_release_with_open_dispute"
+    },
+    "customer_cannot_cancel_started_order": {
+        "message": "Le travail sur cette commande a commencé. Ouvrez un litige si vous contestez la livraison.",
+        "error_code": "customer_cannot_cancel_started_order"
+    },
+    "delivery_attachment_not_found": {
+        "message": "Une ou plusieurs pièces jointes de la livraison sont introuvables.",
+        "error_code": "delivery_attachment_not_found"
+    },
+    "listing_add_on_not_found": {
+        "message": "Une ou plusieurs options choisies n'appartiennent pas à cette annonce.",
+        "error_code": "listing_add_on_not_found"
+    },
+    "listing_category_parent_cycle": {
+        "message": "Une catégorie ne peut pas être placée sous elle-même ou sous l'une de ses sous-catégories.",
+        "error_code": "listing_category_parent_cycle"
+    },
+    "listing_price_required": {
+        "message": "Définissez un prix et une devise avant d'activer l'annonce.",
+        "error_code": "listing_price_required"
+    },
+    "milestone_exceeds_escrow_balance": {
+        "message": "Cette étape dépasse le montant encore détenu pour la commande.",
+        "error_code": "milestone_exceeds_escrow_balance"
+    },
+    "milestone_order_not_active": {
+        "message": "Les étapes ne peuvent être ajoutées qu'à une commande acceptée ou en cours.",
+        "error_code": "milestone_order_not_active"
+    },
+    "only_customer_can_create_milestone": {
+        "message": "Seul le client peut ajouter des étapes à cette commande.",
+        "error_code": "only_customer_can_create_milestone"
+    },
+    "order_not_final": {
+        "message": "Seule une commande terminée ou annulée peut être supprimée.",
+        "error_code": "order_not_final"
+    },
+    "provider_profile_already_exists": {
+        "message": "Vous avez déjà un profil de prestataire.",
+        "error_code": "provider_profile_already_exists"
     }
 }

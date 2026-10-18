@@ -1,7 +1,7 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
 
 export const ProviderAvailabilitySlotDef = {
-    dayOfWeek: {type: "number", required: true, min: 0},
+    dayOfWeek: {type: "number", required: true, min: 0, max: 6},
     startTime: {type: "string", required: true},
     endTime: {type: "string", required: true},
 } as const;

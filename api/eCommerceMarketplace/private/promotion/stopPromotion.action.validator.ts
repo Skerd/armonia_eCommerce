@@ -1,9 +1,6 @@
 import {buildCreateZodSchema} from "../../../../../core/helpers/schemaDefBuilder";
 import {validateSingleForm} from "../../../../../core/utilities/zod/shared.validator";
-
-const StopPromotionSchemaDef = {
-    stopReason: {type: "string", required: true, max: 2000},
-} as const;
+import {StopPromotionSchemaDef} from "./promotion.schema-def";
 
 /** Body for POST /api/eCommerceMarketplace/promotion/stop */
 export function validatePromotionStopForm(languageCode: string, form: any = null) {

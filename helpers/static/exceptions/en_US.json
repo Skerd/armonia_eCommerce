@@ -1240,5 +1240,73 @@
     "validation_required": {
         "message": "A required field is missing.",
         "error_code": "validation_required"
+    },
+    "add_on_currency_mismatch": {
+        "message": "All add-ons must be priced in the same currency as the listing or package.",
+        "error_code": "add_on_currency_mismatch"
+    },
+    "bid_already_submitted": {
+        "message": "You already have a pending bid on this task request.",
+        "error_code": "bid_already_submitted"
+    },
+    "bid_not_pending": {
+        "message": "Only a pending bid can be deleted.",
+        "error_code": "bid_not_pending"
+    },
+    "booking_order_not_active": {
+        "message": "A booking can only be made for an accepted or in-progress order.",
+        "error_code": "booking_order_not_active"
+    },
+    "cannot_bid_on_own_task_request": {
+        "message": "You cannot bid on your own task request.",
+        "error_code": "cannot_bid_on_own_task_request"
+    },
+    "cannot_cancel_with_open_dispute": {
+        "message": "This order has an open dispute. It is settled through the dispute, not by cancelling.",
+        "error_code": "cannot_cancel_with_open_dispute"
+    },
+    "cannot_release_with_open_dispute": {
+        "message": "A milestone cannot be released while the order has an open dispute.",
+        "error_code": "cannot_release_with_open_dispute"
+    },
+    "customer_cannot_cancel_started_order": {
+        "message": "Work on this order has started. Raise a dispute if you disagree with the delivery.",
+        "error_code": "customer_cannot_cancel_started_order"
+    },
+    "delivery_attachment_not_found": {
+        "message": "One or more delivery attachments could not be found.",
+        "error_code": "delivery_attachment_not_found"
+    },
+    "listing_add_on_not_found": {
+        "message": "One or more selected add-ons do not belong to this listing.",
+        "error_code": "listing_add_on_not_found"
+    },
+    "listing_category_parent_cycle": {
+        "message": "A category cannot be placed under itself or one of its subcategories.",
+        "error_code": "listing_category_parent_cycle"
+    },
+    "listing_price_required": {
+        "message": "Set a price and currency before activating the listing.",
+        "error_code": "listing_price_required"
+    },
+    "milestone_exceeds_escrow_balance": {
+        "message": "This milestone is larger than the amount still held for the order.",
+        "error_code": "milestone_exceeds_escrow_balance"
+    },
+    "milestone_order_not_active": {
+        "message": "Milestones can only be added to an accepted or in-progress order.",
+        "error_code": "milestone_order_not_active"
+    },
+    "only_customer_can_create_milestone": {
+        "message": "Only the customer can add milestones to this order.",
+        "error_code": "only_customer_can_create_milestone"
+    },
+    "order_not_final": {
+        "message": "Only a completed or cancelled order can be deleted.",
+        "error_code": "order_not_final"
+    },
+    "provider_profile_already_exists": {
+        "message": "You already have a provider profile.",
+        "error_code": "provider_profile_already_exists"
     }
 }
