@@ -6,11 +6,11 @@ export const ProviderAvailabilitySlotDef = {
     endTime: {type: "string", required: true},
 } as const;
 
-/** `user` is set server-side from the authenticated user — excluded from forms. */
+/** `user` is not a schema field: the server sets it (see `CreateProviderProfileFormType`). */
 export const ProviderProfileSchemaDef = {
     skills: {type: "stringArray", required: false},
     bio: {type: "string", required: false},
-    portfolio: {type: "objectIdArray", required: false},
+    portfolio: {type: "mediaIdArray", required: false},
     availability: {
         type: "embeddedArray",
         required: false,
@@ -18,5 +18,6 @@ export const ProviderProfileSchemaDef = {
     },
 } as const;
 
-export type CreateProviderProfileFormType = InferCreateForm<typeof ProviderProfileSchemaDef>;
+/** `userId` names the profile's user; it defaults to the caller. */
+export type CreateProviderProfileFormType = InferCreateForm<typeof ProviderProfileSchemaDef> & {userId?: string};
 export type EditProviderProfileFormType = InferEditForm<typeof ProviderProfileSchemaDef>;
