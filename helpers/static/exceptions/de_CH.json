@@ -1020,5 +1020,225 @@
     "odoo_import_empty_selection": {
         "message": "Wählen Sie mindestens einen Datensatz zum Importieren.",
         "error_code": "odoo_import_empty_selection"
+    },
+    "already_flagged": {
+        "message": "Dieses Inserat wurde bereits gemeldet.",
+        "error_code": "already_flagged"
+    },
+    "listing_flag_cannot_dismiss_in_current_status": {
+        "message": "Nur hängige Inserat-Meldungen können verworfen werden.",
+        "error_code": "listing_flag_cannot_dismiss_in_current_status"
+    },
+    "listing_flag_cannot_edit_in_current_status": {
+        "message": "Nur hängige Inserat-Meldungen können bearbeitet werden.",
+        "error_code": "listing_flag_cannot_edit_in_current_status"
+    },
+    "listing_flag_cannot_resolve_in_current_status": {
+        "message": "Nur hängige Inserat-Meldungen können gelöst werden.",
+        "error_code": "listing_flag_cannot_resolve_in_current_status"
+    },
+    "listing_flag_deleted": {
+        "message": "Diese Inserat-Meldung wurde gelöscht.",
+        "error_code": "listing_flag_deleted"
+    },
+    "bid_not_found_or_already_processed": {
+        "message": "Angebot nicht gefunden oder bereits verarbeitet.",
+        "error_code": "bid_not_found_or_already_processed"
+    },
+    "cannot_accept_delivery_with_open_dispute": {
+        "message": "Lieferung kann nicht angenommen werden, solange ein offener Streitfall besteht.",
+        "error_code": "cannot_accept_delivery_with_open_dispute"
+    },
+    "cannot_dispute_final_order": {
+        "message": "Für einen abgeschlossenen Auftrag kann kein Streitfall eröffnet werden.",
+        "error_code": "cannot_dispute_final_order"
+    },
+    "cannot_extend_final_order": {
+        "message": "Ein abgeschlossener Auftrag kann nicht verlängert werden.",
+        "error_code": "cannot_extend_final_order"
+    },
+    "dispute_already_exists_for_order": {
+        "message": "Für diesen Auftrag besteht bereits ein Streitfall.",
+        "error_code": "dispute_already_exists_for_order"
+    },
+    "dispute_cannot_close_in_current_status": {
+        "message": "Der Streitfall kann im aktuellen Status nicht geschlossen werden.",
+        "error_code": "dispute_cannot_close_in_current_status"
+    },
+    "dispute_cannot_resolve_in_current_status": {
+        "message": "Der Streitfall kann im aktuellen Status nicht gelöst werden.",
+        "error_code": "dispute_cannot_resolve_in_current_status"
+    },
+    "dispute_deleted": {
+        "message": "Dieser Streitfall wurde gelöscht.",
+        "error_code": "dispute_deleted"
+    },
+    "dispute_start_review_requires_open_status": {
+        "message": "Der Streitfall muss offen sein, um die Prüfung zu starten.",
+        "error_code": "dispute_start_review_requires_open_status"
+    },
+    "invalid_booking_times": {
+        "message": "Die Buchungsstart- und -endzeiten sind ungültig.",
+        "error_code": "invalid_booking_times"
+    },
+    "invalid_end_date": {
+        "message": "Das Buchungsendedatum ist ungültig.",
+        "error_code": "invalid_end_date"
+    },
+    "invalid_start_date": {
+        "message": "Das Buchungsstartdatum ist ungültig.",
+        "error_code": "invalid_start_date"
+    },
+    "listing_has_no_currency": {
+        "message": "Für das Inserat ist keine Währung konfiguriert.",
+        "error_code": "listing_has_no_currency"
+    },
+    "listing_not_found": {
+        "message": "Inserat nicht gefunden.",
+        "error_code": "listing_not_found"
+    },
+    "no_pending_delivery": {
+        "message": "Für diesen Auftrag gibt es keine hängige Lieferung.",
+        "error_code": "no_pending_delivery"
+    },
+    "only_admin_can_update_dispute": {
+        "message": "Nur ein Administrator kann einen Streitfall aktualisieren.",
+        "error_code": "only_admin_can_update_dispute"
+    },
+    "only_customer_can_accept_delivery": {
+        "message": "Nur der Kunde kann die Lieferung annehmen.",
+        "error_code": "only_customer_can_accept_delivery"
+    },
+    "only_listing_provider_can_create_add_on": {
+        "message": "Nur der Inseratanbieter kann ein Add-on für dieses Inserat erstellen.",
+        "error_code": "only_listing_provider_can_create_add_on"
+    },
+    "only_listing_provider_can_create_package": {
+        "message": "Nur der Inseratanbieter kann ein Paket für dieses Inserat erstellen.",
+        "error_code": "only_listing_provider_can_create_package"
+    },
+    "only_listing_provider_can_delete_add_on": {
+        "message": "Nur der Inseratanbieter kann dieses Add-on löschen.",
+        "error_code": "only_listing_provider_can_delete_add_on"
+    },
+    "only_listing_provider_can_delete_package": {
+        "message": "Nur der Inseratanbieter kann dieses Paket löschen.",
+        "error_code": "only_listing_provider_can_delete_package"
+    },
+    "only_order_parties_can_create_booking": {
+        "message": "Nur die Auftragsparteien können eine Buchung erstellen.",
+        "error_code": "only_order_parties_can_create_booking"
+    },
+    "only_order_parties_can_raise_dispute": {
+        "message": "Nur die Auftragsparteien können einen Streitfall eröffnen.",
+        "error_code": "only_order_parties_can_raise_dispute"
+    },
+    "only_order_parties_can_view_booking": {
+        "message": "Nur die Auftragsparteien können diese Buchung einsehen.",
+        "error_code": "only_order_parties_can_view_booking"
+    },
+    "only_order_parties_can_view_disputes": {
+        "message": "Nur die Auftragsparteien können Streitfälle einsehen.",
+        "error_code": "only_order_parties_can_view_disputes"
+    },
+    "only_parties_can_cancel": {
+        "message": "Nur die Auftragsparteien können diesen Auftrag stornieren.",
+        "error_code": "only_parties_can_cancel"
+    },
+    "only_provider_can_accept": {
+        "message": "Nur der Anbieter kann diesen Auftrag annehmen.",
+        "error_code": "only_provider_can_accept"
+    },
+    "only_provider_can_extend": {
+        "message": "Nur der Anbieter kann diesen Auftrag verlängern.",
+        "error_code": "only_provider_can_extend"
+    },
+    "only_provider_can_start": {
+        "message": "Nur der Anbieter kann diesen Auftrag starten.",
+        "error_code": "only_provider_can_start"
+    },
+    "only_provider_or_admin_can_cancel_booking": {
+        "message": "Nur der Anbieter oder ein Administrator kann diese Buchung stornieren.",
+        "error_code": "only_provider_or_admin_can_cancel_booking"
+    },
+    "only_provider_or_admin_can_reschedule_booking": {
+        "message": "Nur der Anbieter oder ein Administrator kann diese Buchung verschieben.",
+        "error_code": "only_provider_or_admin_can_reschedule_booking"
+    },
+    "only_requester_can_accept": {
+        "message": "Nur der Aufgabenantragsteller kann dieses Angebot annehmen.",
+        "error_code": "only_requester_can_accept"
+    },
+    "only_requester_or_bidder_can_reject": {
+        "message": "Nur der Antragsteller oder der Bieter kann dieses Angebot ablehnen.",
+        "error_code": "only_requester_or_bidder_can_reject"
+    },
+    "order_already_final": {
+        "message": "Dieser Auftrag ist bereits abgeschlossen.",
+        "error_code": "order_already_final"
+    },
+    "order_already_has_booking": {
+        "message": "Dieser Auftrag hat bereits eine Buchung.",
+        "error_code": "order_already_has_booking"
+    },
+    "order_already_reviewed": {
+        "message": "Dieser Auftrag wurde bereits bewertet.",
+        "error_code": "order_already_reviewed"
+    },
+    "order_must_be_accepted_first": {
+        "message": "Der Auftrag muss angenommen werden, bevor er gestartet werden kann.",
+        "error_code": "order_must_be_accepted_first"
+    },
+    "order_must_be_completed_to_review": {
+        "message": "Der Auftrag muss abgeschlossen sein, bevor eine Bewertung abgegeben werden kann.",
+        "error_code": "order_must_be_completed_to_review"
+    },
+    "promotion_already_stopped": {
+        "message": "Diese Promotion wurde bereits gestoppt.",
+        "error_code": "promotion_already_stopped"
+    },
+    "promotion_deleted": {
+        "message": "Diese Promotion wurde gelöscht.",
+        "error_code": "promotion_deleted"
+    },
+    "promotion_not_pausable": {
+        "message": "Diese Promotion kann im aktuellen Status nicht pausiert werden.",
+        "error_code": "promotion_not_pausable"
+    },
+    "promotion_not_resumable": {
+        "message": "Diese Promotion kann im aktuellen Status nicht fortgesetzt werden.",
+        "error_code": "promotion_not_resumable"
+    },
+    "connect_account_not_created": {
+        "message": "Für diesen Anbieter existiert noch kein Stripe-Connect-Konto. Starten Sie zuerst das Connect-Onboarding.",
+        "error_code": "connect_account_not_created"
+    },
+    "connect_redirect_urls_not_configured": {
+        "message": "Stripe-Connect-Return/Refresh-URLs sind nicht konfiguriert. Setzen Sie STRIPE_CONNECT_RETURN_URL und STRIPE_CONNECT_REFRESH_URL oder CLIENT_HOST.",
+        "error_code": "connect_redirect_urls_not_configured"
+    },
+    "provider_cannot_order_own_listing": {
+        "message": "Ein Anbieter kann das eigene Inserat nicht bestellen.",
+        "error_code": "provider_cannot_order_own_listing"
+    },
+    "provider_id_required": {
+        "message": "Eine Anbieter-ID ist erforderlich.",
+        "error_code": "provider_id_required"
+    },
+    "task_already_awarded_or_closed": {
+        "message": "Diese Aufgabe wurde bereits vergeben oder geschlossen.",
+        "error_code": "task_already_awarded_or_closed"
+    },
+    "task_request_not_open": {
+        "message": "Diese Aufgabenanfrage ist nicht für Angebote offen.",
+        "error_code": "task_request_not_open"
+    },
+    "unauthorized": {
+        "message": "Sie sind nicht berechtigt, diese Aktion auszuführen.",
+        "error_code": "unauthorized"
+    },
+    "validation_required": {
+        "message": "Ein Pflichtfeld fehlt.",
+        "error_code": "validation_required"
     }
 }

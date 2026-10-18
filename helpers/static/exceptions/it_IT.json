@@ -1020,5 +1020,225 @@
     "odoo_import_empty_selection": {
         "message": "Scegli almeno un set di dati da importare.",
         "error_code": "odoo_import_empty_selection"
+    },
+    "already_flagged": {
+        "message": "Questa inserzione è già stata segnalata.",
+        "error_code": "already_flagged"
+    },
+    "listing_flag_cannot_dismiss_in_current_status": {
+        "message": "Solo le segnalazioni di inserzione in sospeso possono essere ignorate.",
+        "error_code": "listing_flag_cannot_dismiss_in_current_status"
+    },
+    "listing_flag_cannot_edit_in_current_status": {
+        "message": "Solo le segnalazioni di inserzione in sospeso possono essere modificate.",
+        "error_code": "listing_flag_cannot_edit_in_current_status"
+    },
+    "listing_flag_cannot_resolve_in_current_status": {
+        "message": "Solo le segnalazioni di inserzione in sospeso possono essere risolte.",
+        "error_code": "listing_flag_cannot_resolve_in_current_status"
+    },
+    "listing_flag_deleted": {
+        "message": "Questa segnalazione di inserzione è stata eliminata.",
+        "error_code": "listing_flag_deleted"
+    },
+    "bid_not_found_or_already_processed": {
+        "message": "Offerta non trovata o già elaborata.",
+        "error_code": "bid_not_found_or_already_processed"
+    },
+    "cannot_accept_delivery_with_open_dispute": {
+        "message": "Impossibile accettare la consegna mentre esiste una controversia aperta.",
+        "error_code": "cannot_accept_delivery_with_open_dispute"
+    },
+    "cannot_dispute_final_order": {
+        "message": "Impossibile aprire una controversia su un ordine finalizzato.",
+        "error_code": "cannot_dispute_final_order"
+    },
+    "cannot_extend_final_order": {
+        "message": "Impossibile prorogare un ordine finalizzato.",
+        "error_code": "cannot_extend_final_order"
+    },
+    "dispute_already_exists_for_order": {
+        "message": "Esiste già una controversia per questo ordine.",
+        "error_code": "dispute_already_exists_for_order"
+    },
+    "dispute_cannot_close_in_current_status": {
+        "message": "La controversia non può essere chiusa nello stato attuale.",
+        "error_code": "dispute_cannot_close_in_current_status"
+    },
+    "dispute_cannot_resolve_in_current_status": {
+        "message": "La controversia non può essere risolta nello stato attuale.",
+        "error_code": "dispute_cannot_resolve_in_current_status"
+    },
+    "dispute_deleted": {
+        "message": "Questa controversia è stata eliminata.",
+        "error_code": "dispute_deleted"
+    },
+    "dispute_start_review_requires_open_status": {
+        "message": "La controversia deve essere aperta per avviare la revisione.",
+        "error_code": "dispute_start_review_requires_open_status"
+    },
+    "invalid_booking_times": {
+        "message": "Gli orari di inizio e fine prenotazione non sono validi.",
+        "error_code": "invalid_booking_times"
+    },
+    "invalid_end_date": {
+        "message": "La data di fine prenotazione non è valida.",
+        "error_code": "invalid_end_date"
+    },
+    "invalid_start_date": {
+        "message": "La data di inizio prenotazione non è valida.",
+        "error_code": "invalid_start_date"
+    },
+    "listing_has_no_currency": {
+        "message": "L'inserzione non ha una valuta configurata.",
+        "error_code": "listing_has_no_currency"
+    },
+    "listing_not_found": {
+        "message": "Inserzione non trovata.",
+        "error_code": "listing_not_found"
+    },
+    "no_pending_delivery": {
+        "message": "Non esiste una consegna in sospeso per questo ordine.",
+        "error_code": "no_pending_delivery"
+    },
+    "only_admin_can_update_dispute": {
+        "message": "Solo un amministratore può aggiornare una controversia.",
+        "error_code": "only_admin_can_update_dispute"
+    },
+    "only_customer_can_accept_delivery": {
+        "message": "Solo il cliente può accettare la consegna.",
+        "error_code": "only_customer_can_accept_delivery"
+    },
+    "only_listing_provider_can_create_add_on": {
+        "message": "Solo il fornitore dell'inserzione può creare un extra per questa inserzione.",
+        "error_code": "only_listing_provider_can_create_add_on"
+    },
+    "only_listing_provider_can_create_package": {
+        "message": "Solo il fornitore dell'inserzione può creare un pacchetto per questa inserzione.",
+        "error_code": "only_listing_provider_can_create_package"
+    },
+    "only_listing_provider_can_delete_add_on": {
+        "message": "Solo il fornitore dell'inserzione può eliminare questo extra.",
+        "error_code": "only_listing_provider_can_delete_add_on"
+    },
+    "only_listing_provider_can_delete_package": {
+        "message": "Solo il fornitore dell'inserzione può eliminare questo pacchetto.",
+        "error_code": "only_listing_provider_can_delete_package"
+    },
+    "only_order_parties_can_create_booking": {
+        "message": "Solo le parti dell'ordine possono creare una prenotazione.",
+        "error_code": "only_order_parties_can_create_booking"
+    },
+    "only_order_parties_can_raise_dispute": {
+        "message": "Solo le parti dell'ordine possono aprire una controversia.",
+        "error_code": "only_order_parties_can_raise_dispute"
+    },
+    "only_order_parties_can_view_booking": {
+        "message": "Solo le parti dell'ordine possono visualizzare questa prenotazione.",
+        "error_code": "only_order_parties_can_view_booking"
+    },
+    "only_order_parties_can_view_disputes": {
+        "message": "Solo le parti dell'ordine possono visualizzare le controversie.",
+        "error_code": "only_order_parties_can_view_disputes"
+    },
+    "only_parties_can_cancel": {
+        "message": "Solo le parti dell'ordine possono annullare questo ordine.",
+        "error_code": "only_parties_can_cancel"
+    },
+    "only_provider_can_accept": {
+        "message": "Solo il fornitore può accettare questo ordine.",
+        "error_code": "only_provider_can_accept"
+    },
+    "only_provider_can_extend": {
+        "message": "Solo il fornitore può prorogare questo ordine.",
+        "error_code": "only_provider_can_extend"
+    },
+    "only_provider_can_start": {
+        "message": "Solo il fornitore può avviare questo ordine.",
+        "error_code": "only_provider_can_start"
+    },
+    "only_provider_or_admin_can_cancel_booking": {
+        "message": "Solo il fornitore o un amministratore può annullare questa prenotazione.",
+        "error_code": "only_provider_or_admin_can_cancel_booking"
+    },
+    "only_provider_or_admin_can_reschedule_booking": {
+        "message": "Solo il fornitore o un amministratore può riprogrammare questa prenotazione.",
+        "error_code": "only_provider_or_admin_can_reschedule_booking"
+    },
+    "only_requester_can_accept": {
+        "message": "Solo il richiedente dell'attività può accettare questa offerta.",
+        "error_code": "only_requester_can_accept"
+    },
+    "only_requester_or_bidder_can_reject": {
+        "message": "Solo il richiedente o l'offerente può rifiutare questa offerta.",
+        "error_code": "only_requester_or_bidder_can_reject"
+    },
+    "order_already_final": {
+        "message": "Questo ordine è già finalizzato.",
+        "error_code": "order_already_final"
+    },
+    "order_already_has_booking": {
+        "message": "Questo ordine ha già una prenotazione.",
+        "error_code": "order_already_has_booking"
+    },
+    "order_already_reviewed": {
+        "message": "Questo ordine è già stato recensito.",
+        "error_code": "order_already_reviewed"
+    },
+    "order_must_be_accepted_first": {
+        "message": "L'ordine deve essere accettato prima di poterlo avviare.",
+        "error_code": "order_must_be_accepted_first"
+    },
+    "order_must_be_completed_to_review": {
+        "message": "L'ordine deve essere completato prima di inviare una recensione.",
+        "error_code": "order_must_be_completed_to_review"
+    },
+    "promotion_already_stopped": {
+        "message": "Questa promozione è già stata interrotta.",
+        "error_code": "promotion_already_stopped"
+    },
+    "promotion_deleted": {
+        "message": "Questa promozione è stata eliminata.",
+        "error_code": "promotion_deleted"
+    },
+    "promotion_not_pausable": {
+        "message": "Questa promozione non può essere messa in pausa nello stato attuale.",
+        "error_code": "promotion_not_pausable"
+    },
+    "promotion_not_resumable": {
+        "message": "Questa promozione non può essere ripresa nello stato attuale.",
+        "error_code": "promotion_not_resumable"
+    },
+    "connect_account_not_created": {
+        "message": "Non esiste ancora un account Stripe Connect per questo fornitore. Avviare prima l'onboarding Connect.",
+        "error_code": "connect_account_not_created"
+    },
+    "connect_redirect_urls_not_configured": {
+        "message": "Gli URL di return/refresh di Stripe Connect non sono configurati. Impostare STRIPE_CONNECT_RETURN_URL e STRIPE_CONNECT_REFRESH_URL, oppure CLIENT_HOST.",
+        "error_code": "connect_redirect_urls_not_configured"
+    },
+    "provider_cannot_order_own_listing": {
+        "message": "Un fornitore non può ordinare la propria inserzione.",
+        "error_code": "provider_cannot_order_own_listing"
+    },
+    "provider_id_required": {
+        "message": "È richiesto un ID fornitore.",
+        "error_code": "provider_id_required"
+    },
+    "task_already_awarded_or_closed": {
+        "message": "Questa attività è già stata assegnata o chiusa.",
+        "error_code": "task_already_awarded_or_closed"
+    },
+    "task_request_not_open": {
+        "message": "Questa richiesta di attività non è aperta alle offerte.",
+        "error_code": "task_request_not_open"
+    },
+    "unauthorized": {
+        "message": "Non si è autorizzati a eseguire questa azione.",
+        "error_code": "unauthorized"
+    },
+    "validation_required": {
+        "message": "Manca un campo obbligatorio.",
+        "error_code": "validation_required"
     }
 }

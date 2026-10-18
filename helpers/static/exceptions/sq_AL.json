@@ -1020,5 +1020,225 @@
     "odoo_import_empty_selection": {
         "message": "Zgjidh të paktën një grup të dhënash për import.",
         "error_code": "odoo_import_empty_selection"
+    },
+    "already_flagged": {
+        "message": "Ky listim është raportuar tashmë.",
+        "error_code": "already_flagged"
+    },
+    "listing_flag_cannot_dismiss_in_current_status": {
+        "message": "Vetëm raportimet në pritje mund të hidhen poshtë.",
+        "error_code": "listing_flag_cannot_dismiss_in_current_status"
+    },
+    "listing_flag_cannot_edit_in_current_status": {
+        "message": "Vetëm raportimet në pritje mund të ndryshohen.",
+        "error_code": "listing_flag_cannot_edit_in_current_status"
+    },
+    "listing_flag_cannot_resolve_in_current_status": {
+        "message": "Vetëm raportimet në pritje mund të zgjidhen.",
+        "error_code": "listing_flag_cannot_resolve_in_current_status"
+    },
+    "listing_flag_deleted": {
+        "message": "Ky raportim listimi është fshirë.",
+        "error_code": "listing_flag_deleted"
+    },
+    "bid_not_found_or_already_processed": {
+        "message": "Oferta nuk u gjet ose është përpunuar tashmë.",
+        "error_code": "bid_not_found_or_already_processed"
+    },
+    "cannot_accept_delivery_with_open_dispute": {
+        "message": "Nuk mund të pranohet dorëzimi kur ekziston një mosmarrëveshje e hapur.",
+        "error_code": "cannot_accept_delivery_with_open_dispute"
+    },
+    "cannot_dispute_final_order": {
+        "message": "Nuk mund të hapet mosmarrëveshje për një porosi të përfunduar.",
+        "error_code": "cannot_dispute_final_order"
+    },
+    "cannot_extend_final_order": {
+        "message": "Nuk mund të zgjatet një porosi e përfunduar.",
+        "error_code": "cannot_extend_final_order"
+    },
+    "dispute_already_exists_for_order": {
+        "message": "Ekziston tashmë një mosmarrëveshje për këtë porosi.",
+        "error_code": "dispute_already_exists_for_order"
+    },
+    "dispute_cannot_close_in_current_status": {
+        "message": "Mosmarrëveshja nuk mund të mbyllet në statusin aktual.",
+        "error_code": "dispute_cannot_close_in_current_status"
+    },
+    "dispute_cannot_resolve_in_current_status": {
+        "message": "Mosmarrëveshja nuk mund të zgjidhet në statusin aktual.",
+        "error_code": "dispute_cannot_resolve_in_current_status"
+    },
+    "dispute_deleted": {
+        "message": "Kjo mosmarrëveshje është fshirë.",
+        "error_code": "dispute_deleted"
+    },
+    "dispute_start_review_requires_open_status": {
+        "message": "Mosmarrëveshja duhet të jetë e hapur për të filluar shqyrtimin.",
+        "error_code": "dispute_start_review_requires_open_status"
+    },
+    "invalid_booking_times": {
+        "message": "Kohët e fillimit dhe mbarimit të rezervimit janë të pavlefshme.",
+        "error_code": "invalid_booking_times"
+    },
+    "invalid_end_date": {
+        "message": "Data e mbarimit të rezervimit është e pavlefshme.",
+        "error_code": "invalid_end_date"
+    },
+    "invalid_start_date": {
+        "message": "Data e fillimit të rezervimit është e pavlefshme.",
+        "error_code": "invalid_start_date"
+    },
+    "listing_has_no_currency": {
+        "message": "Listimi nuk ka monedhë të konfiguruar.",
+        "error_code": "listing_has_no_currency"
+    },
+    "listing_not_found": {
+        "message": "Listimi nuk u gjet.",
+        "error_code": "listing_not_found"
+    },
+    "no_pending_delivery": {
+        "message": "Nuk ka dorëzim në pritje për këtë porosi.",
+        "error_code": "no_pending_delivery"
+    },
+    "only_admin_can_update_dispute": {
+        "message": "Vetëm një administrator mund të përditësojë një mosmarrëveshje.",
+        "error_code": "only_admin_can_update_dispute"
+    },
+    "only_customer_can_accept_delivery": {
+        "message": "Vetëm klienti mund ta pranojë dorëzimin.",
+        "error_code": "only_customer_can_accept_delivery"
+    },
+    "only_listing_provider_can_create_add_on": {
+        "message": "Vetëm ofruesi i listimit mund të krijojë një shtesë për këtë listim.",
+        "error_code": "only_listing_provider_can_create_add_on"
+    },
+    "only_listing_provider_can_create_package": {
+        "message": "Vetëm ofruesi i listimit mund të krijojë një paketë për këtë listim.",
+        "error_code": "only_listing_provider_can_create_package"
+    },
+    "only_listing_provider_can_delete_add_on": {
+        "message": "Vetëm ofruesi i listimit mund ta fshijë këtë shtesë.",
+        "error_code": "only_listing_provider_can_delete_add_on"
+    },
+    "only_listing_provider_can_delete_package": {
+        "message": "Vetëm ofruesi i listimit mund ta fshijë këtë paketë.",
+        "error_code": "only_listing_provider_can_delete_package"
+    },
+    "only_order_parties_can_create_booking": {
+        "message": "Vetëm palët e porosisë mund të krijojnë një rezervim.",
+        "error_code": "only_order_parties_can_create_booking"
+    },
+    "only_order_parties_can_raise_dispute": {
+        "message": "Vetëm palët e porosisë mund të hapin një mosmarrëveshje.",
+        "error_code": "only_order_parties_can_raise_dispute"
+    },
+    "only_order_parties_can_view_booking": {
+        "message": "Vetëm palët e porosisë mund ta shohin këtë rezervim.",
+        "error_code": "only_order_parties_can_view_booking"
+    },
+    "only_order_parties_can_view_disputes": {
+        "message": "Vetëm palët e porosisë mund të shohin mosmarrëveshjet.",
+        "error_code": "only_order_parties_can_view_disputes"
+    },
+    "only_parties_can_cancel": {
+        "message": "Vetëm palët e porosisë mund ta anulojnë këtë porosi.",
+        "error_code": "only_parties_can_cancel"
+    },
+    "only_provider_can_accept": {
+        "message": "Vetëm ofruesi mund ta pranojë këtë porosi.",
+        "error_code": "only_provider_can_accept"
+    },
+    "only_provider_can_extend": {
+        "message": "Vetëm ofruesi mund ta zgjasë këtë porosi.",
+        "error_code": "only_provider_can_extend"
+    },
+    "only_provider_can_start": {
+        "message": "Vetëm ofruesi mund ta fillojë këtë porosi.",
+        "error_code": "only_provider_can_start"
+    },
+    "only_provider_or_admin_can_cancel_booking": {
+        "message": "Vetëm ofruesi ose një administrator mund ta anulojë këtë rezervim.",
+        "error_code": "only_provider_or_admin_can_cancel_booking"
+    },
+    "only_provider_or_admin_can_reschedule_booking": {
+        "message": "Vetëm ofruesi ose një administrator mund ta riplanifikojë këtë rezervim.",
+        "error_code": "only_provider_or_admin_can_reschedule_booking"
+    },
+    "only_requester_can_accept": {
+        "message": "Vetëm kërkuesi i detyrës mund ta pranojë këtë ofertë.",
+        "error_code": "only_requester_can_accept"
+    },
+    "only_requester_or_bidder_can_reject": {
+        "message": "Vetëm kërkuesi ose ofertuesi mund ta refuzojë këtë ofertë.",
+        "error_code": "only_requester_or_bidder_can_reject"
+    },
+    "order_already_final": {
+        "message": "Kjo porosi është përfunduar tashmë.",
+        "error_code": "order_already_final"
+    },
+    "order_already_has_booking": {
+        "message": "Kjo porosi ka tashmë një rezervim.",
+        "error_code": "order_already_has_booking"
+    },
+    "order_already_reviewed": {
+        "message": "Kjo porosi është vlerësuar tashmë.",
+        "error_code": "order_already_reviewed"
+    },
+    "order_must_be_accepted_first": {
+        "message": "Porosia duhet të pranohet para se të fillohet.",
+        "error_code": "order_must_be_accepted_first"
+    },
+    "order_must_be_completed_to_review": {
+        "message": "Porosia duhet të përfundojë para se të dorëzohet një vlerësim.",
+        "error_code": "order_must_be_completed_to_review"
+    },
+    "promotion_already_stopped": {
+        "message": "Kjo promovim është ndalur tashmë.",
+        "error_code": "promotion_already_stopped"
+    },
+    "promotion_deleted": {
+        "message": "Kjo promovim është fshirë.",
+        "error_code": "promotion_deleted"
+    },
+    "promotion_not_pausable": {
+        "message": "Kjo promovim nuk mund të pezullohet në gjendjen aktuale.",
+        "error_code": "promotion_not_pausable"
+    },
+    "promotion_not_resumable": {
+        "message": "Kjo promovim nuk mund të rifillojë në gjendjen aktuale.",
+        "error_code": "promotion_not_resumable"
+    },
+    "connect_account_not_created": {
+        "message": "Nuk ekziston ende një llogari Stripe Connect për këtë ofrues. Nisni fillimisht onboarding-un Connect.",
+        "error_code": "connect_account_not_created"
+    },
+    "connect_redirect_urls_not_configured": {
+        "message": "URL-të e kthimit/rifreskimit të Stripe Connect nuk janë të konfiguruara. Vendosni STRIPE_CONNECT_RETURN_URL dhe STRIPE_CONNECT_REFRESH_URL, ose CLIENT_HOST.",
+        "error_code": "connect_redirect_urls_not_configured"
+    },
+    "provider_cannot_order_own_listing": {
+        "message": "Një ofrues nuk mund të porosisë listimin e vet.",
+        "error_code": "provider_cannot_order_own_listing"
+    },
+    "provider_id_required": {
+        "message": "Kërkohet ID e ofruesit.",
+        "error_code": "provider_id_required"
+    },
+    "task_already_awarded_or_closed": {
+        "message": "Kjo detyrë është dhënë ose mbyllur tashmë.",
+        "error_code": "task_already_awarded_or_closed"
+    },
+    "task_request_not_open": {
+        "message": "Kjo kërkesë detyre nuk është e hapur për oferta.",
+        "error_code": "task_request_not_open"
+    },
+    "unauthorized": {
+        "message": "Nuk jeni i autorizuar të kryeni këtë veprim.",
+        "error_code": "unauthorized"
+    },
+    "validation_required": {
+        "message": "Mungon një fushë e detyrueshme.",
+        "error_code": "validation_required"
     }
 }
