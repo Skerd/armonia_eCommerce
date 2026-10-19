@@ -1308,5 +1308,13 @@
     "provider_profile_already_exists": {
         "message": "Ju keni tashmë një profil ofruesi.",
         "error_code": "provider_profile_already_exists"
+    },
+    "provider_not_found": {
+        "message": "Ofruesi nuk u gjet.",
+        "error_code": "provider_not_found"
+    },
+    "task_request_not_found": {
+        "message": "Kërkesa për punë nuk u gjet.",
+        "error_code": "task_request_not_found"
     }
 }

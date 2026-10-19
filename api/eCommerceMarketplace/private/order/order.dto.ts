@@ -8,6 +8,7 @@ import type {OrderStatus} from "./order.schema-def";
 import type {OrderDelivery} from "../orderDelivery/orderDelivery.dto";
 import type {OrderMilestone} from "../orderMilestone/orderMilestone.dto";
 import type {OrderRevision} from "../orderRevision/orderRevision.dto";
+import type {Booking} from "../booking/booking.dto";
 
 export type Order = OwnershipData & DeletedData & LifeCycleData & {
     _id: string;
@@ -35,3 +36,13 @@ export type Order = OwnershipData & DeletedData & LifeCycleData & {
 };
 
 export type OrderListResponse = TableResponse<Order>;
+
+/** Storefront account view of a marketplace order; the caller is its customer. */
+export type BuyerServiceOrder = Order & {
+    /** Media id of the listing's main image (listing orders only). */
+    listingImage?: string;
+    /** True once the customer has reviewed the completed order. */
+    reviewed?: boolean;
+    /** Single route only: the provider's scheduled sessions for the order. */
+    bookings?: Booking[];
+};

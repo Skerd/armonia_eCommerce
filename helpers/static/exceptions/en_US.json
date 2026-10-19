@@ -1308,5 +1308,13 @@
     "provider_profile_already_exists": {
         "message": "You already have a provider profile.",
         "error_code": "provider_profile_already_exists"
+    },
+    "provider_not_found": {
+        "message": "Provider not found.",
+        "error_code": "provider_not_found"
+    },
+    "task_request_not_found": {
+        "message": "Task request not found.",
+        "error_code": "task_request_not_found"
     }
 }

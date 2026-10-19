@@ -10,7 +10,7 @@ export const ProviderAvailabilitySlotDef = {
 export const ProviderProfileSchemaDef = {
     skills: {type: "stringArray", required: false},
     bio: {type: "string", required: false},
-    portfolio: {type: "mediaIdArray", required: false},
+    portfolio: {type: "mediaIdArray", required: false, publicAccess: true},
     availability: {
         type: "embeddedArray",
         required: false,

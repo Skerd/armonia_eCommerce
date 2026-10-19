@@ -17,11 +17,3 @@ export function pauseAllPosConfigsFormSchema(languageCode: string, form: any = n
             .nullable(),
     });
 }
-
-export function resumeAllPosConfigsFormSchema(_languageCode: string, _form: any = null) {
-    return z.object({});
-}
-
-export function companyLockStatusFormSchema(_languageCode: string, _form: any = null) {
-    return z.object({});
-}

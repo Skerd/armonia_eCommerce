@@ -1308,5 +1308,13 @@
     "provider_profile_already_exists": {
         "message": "Vous avez déjà un profil de prestataire.",
         "error_code": "provider_profile_already_exists"
+    },
+    "provider_not_found": {
+        "message": "Prestataire introuvable.",
+        "error_code": "provider_not_found"
+    },
+    "task_request_not_found": {
+        "message": "Demande de travail introuvable.",
+        "error_code": "task_request_not_found"
     }
 }
