@@ -10,7 +10,6 @@ export const ListingSchemaDef = {
     title: {type: "string", required: true},
     description: {type: "string", required: false},
     category: {type: "objectId", required: true},
-    /** Company user who fulfills the listing; may differ from the creator. */
     provider: {type: "objectId", required: true},
     price: {type: "number", required: false, min: 0},
     priceCurrency: {type: "objectId", required: false},
