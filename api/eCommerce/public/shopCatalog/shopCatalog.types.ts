@@ -4,6 +4,16 @@
  * `/api/auxiliary/public/media/{id}`.
  */
 
+/** Seller company shown on platform (apex) catalog cards and detail. */
+export type ShopSeller = {
+    _id: string;
+    name: string;
+    /** Public media id for the company logo. */
+    logo?: string;
+    shopSlug?: string;
+    shopHost?: string;
+};
+
 export type ShopProductCard = {
     _id: string;
     title: string;
@@ -17,6 +27,7 @@ export type ShopProductCard = {
     ratingAverage?: number;
     ratingCount?: number;
     hasVariants?: boolean;
+    seller?: ShopSeller;
 };
 
 export type ShopProductVariant = {
@@ -123,8 +134,11 @@ export type ShopCompany = {
     facebook?: string;
 };
 
+export type ShopConfigMode = "tenant" | "platform";
+
 export type ShopConfigResponse = {
     data: {
+        mode: ShopConfigMode;
         stripePublishableKey?: string;
         currency?: {_id: string; symbol?: string; abbreviation?: string; decimalPlaces?: number};
         companyName?: string;

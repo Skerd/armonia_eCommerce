@@ -45,4 +45,6 @@ export type BuyerServiceOrder = Order & {
     reviewed?: boolean;
     /** Single route only: the provider's scheduled sessions for the order. */
     bookings?: Booking[];
+    /** Stripe PaymentIntent client secret for an unpaid escrow hold (pay after provider accept). */
+    escrowClientSecret?: string;
 };

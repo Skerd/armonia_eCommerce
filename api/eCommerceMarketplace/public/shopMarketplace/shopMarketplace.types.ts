@@ -5,6 +5,9 @@
  */
 
 import type {ListingPricingType} from "../../private/listing/listing.schema-def";
+import type {ShopSeller} from "../../../eCommerce/public/shopCatalog/shopCatalog.types";
+
+export type {ShopSeller};
 
 export type ShopPlace = {
     _id: string;
@@ -60,6 +63,7 @@ export type ShopListingCard = {
     reviewCount?: number;
     promotion?: ShopListingPromotion;
     packageCount?: number;
+    seller?: ShopSeller;
 };
 
 export type ShopListingPackage = {

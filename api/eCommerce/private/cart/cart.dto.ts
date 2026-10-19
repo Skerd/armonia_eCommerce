@@ -4,11 +4,21 @@ export type CartItemSnapshot = {
     imageUrl?: string;
 };
 
+export type CartItemSeller = {
+    _id: string;
+    name: string;
+    shopSlug?: string;
+    shopHost?: string;
+};
+
 export type CartItem = {
     _id?: string;
     /** `slug` is filled on storefront cart responses, for linking the line to its product page. */
     product: {_id: string; title?: string; slug?: string};
     variant?: {_id: string} | null;
+    /** Seller company for platform multi-seller carts. */
+    seller?: CartItemSeller;
+    sellerCompanyId?: string;
     quantity: number;
     unitPrice: number;
     totalPrice: number;

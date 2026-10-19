@@ -933,6 +933,10 @@
         "message": "Questo prodotto ha una valuta diversa dagli articoli già nel carrello.",
         "error_code": "cart_currency_mismatch"
     },
+    "cart_multi_seller_promo": {
+        "message": "Discount codes and gift cards can only be used when every item in your cart is from the same seller.",
+        "error_code": "cart_multi_seller_promo"
+    },
     "gift_card_revoked_by_refund": {
         "message": "Questa carta regalo è stata disattivata perché il suo ordine è stato rimborsato e non può essere riattivata.",
         "error_code": "gift_card_revoked_by_refund"

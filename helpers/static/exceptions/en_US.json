@@ -933,6 +933,10 @@
         "message": "This product is priced in a different currency than the items already in your cart.",
         "error_code": "cart_currency_mismatch"
     },
+    "cart_multi_seller_promo": {
+        "message": "Discount codes and gift cards can only be used when every item in your cart is from the same seller.",
+        "error_code": "cart_multi_seller_promo"
+    },
     "gift_card_revoked_by_refund": {
         "message": "This gift card was disabled because its order was refunded, so it can't be re-enabled.",
         "error_code": "gift_card_revoked_by_refund"

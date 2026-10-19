@@ -69,10 +69,21 @@ export function shopFacetsFormSchema(languageCode: string, form: any = null) {
     });
 }
 
-export type ShopProductFormType = {slug: string};
+export type ShopProductFormType = {
+    /** Preferred on platform apex — unique across tenants. */
+    id?: string;
+    slug?: string;
+    /** Disambiguates slug when several sellers share it. */
+    sellerCompanyId?: string;
+};
 
-export function shopProductFormSchema(_languageCode: string, _form: any = null) {
+export function shopProductFormSchema(languageCode: string, _form: any = null) {
     return z.object({
-        slug: z.string().min(1).max(300),
+        id: isObjectIdZod("id", languageCode).optional(),
+        slug: z.string().min(1).max(300).optional(),
+        sellerCompanyId: isObjectIdZod("sellerCompanyId", languageCode).optional(),
+    }).refine((value) => Boolean(value.id || value.slug), {
+        message: "id_or_slug_required",
+        path: ["slug"],
     });
 }
