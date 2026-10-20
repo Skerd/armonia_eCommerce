@@ -143,5 +143,7 @@ export type ShopConfigResponse = {
         currency?: {_id: string; symbol?: string; abbreviation?: string; decimalPlaces?: number};
         companyName?: string;
         company?: ShopCompany;
+        /** The company has switched on the website chat (tenant shops only). */
+        chatEnabled?: boolean;
     };
 };
