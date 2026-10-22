@@ -14,6 +14,14 @@ export type ShopSeller = {
     shopHost?: string;
 };
 
+/** A price's currency; prices without one are shown as plain numbers. */
+export type ShopCurrency = {
+    _id: string;
+    symbol?: string;
+    abbreviation?: string;
+    decimalPlaces?: number;
+};
+
 export type ShopProductCard = {
     _id: string;
     title: string;
@@ -21,6 +29,8 @@ export type ShopProductCard = {
     type: string;
     price?: number;
     compareAtPrice?: number;
+    /** Currency of price and compareAtPrice (variant prices too). */
+    currency?: ShopCurrency;
     mainImage?: string;
     badges?: string[];
     featured?: boolean;
@@ -140,7 +150,7 @@ export type ShopConfigResponse = {
     data: {
         mode: ShopConfigMode;
         stripePublishableKey?: string;
-        currency?: {_id: string; symbol?: string; abbreviation?: string; decimalPlaces?: number};
+        currency?: ShopCurrency;
         companyName?: string;
         company?: ShopCompany;
         /** The company has switched on the website chat (tenant shops only). */

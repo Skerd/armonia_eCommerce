@@ -1,3 +1,5 @@
+import type {ShopCurrency} from "../../public/shopCatalog/shopCatalog.types";
+
 export type CheckoutStatus = "pending" | "payment_processing" | "confirmed" | "failed" | "expired";
 export type CheckoutPaymentMethod = "stripe" | "paypal" | "cod" | "bank_transfer";
 
@@ -41,6 +43,7 @@ export type Checkout = {
     shippingTotal: number;
     taxTotal: number;
     grandTotal: number;
+    currency?: ShopCurrency;
     giftCard?: {code: string; amount: number};
     paymentMethod?: CheckoutPaymentMethod;
     stripeClientSecret?: string;

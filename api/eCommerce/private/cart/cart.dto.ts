@@ -1,3 +1,5 @@
+import type {ShopCurrency} from "../../public/shopCatalog/shopCatalog.types";
+
 export type CartItemSnapshot = {
     title: string;
     sku?: string;
@@ -36,6 +38,8 @@ export type CartAppliedDiscount = {
 export type Cart = {
     _id: string;
     items: CartItem[];
+    /** The cart's single currency (its first product's); absent when that product has none. */
+    currency?: ShopCurrency;
     subtotal: number;
     discountTotal: number;
     appliedDiscounts?: CartAppliedDiscount[];

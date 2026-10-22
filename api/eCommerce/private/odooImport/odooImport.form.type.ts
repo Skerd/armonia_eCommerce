@@ -1,4 +1,5 @@
 export const odooImportDatasets = [
+    "currencies",
     "categories",
     "products",
     "warehouses",
@@ -11,6 +12,7 @@ export const odooImportDatasets = [
 export type OdooImportDataset = (typeof odooImportDatasets)[number];
 
 export type OdooImportFormType = {
+    currencies?: boolean;
     categories?: boolean;
     products?: boolean;
     warehouses?: boolean;

@@ -5,7 +5,7 @@
  */
 
 import type {ListingPricingType} from "../../private/listing/listing.schema-def";
-import type {ShopSeller} from "../../../eCommerce/public/shopCatalog/shopCatalog.types";
+import type {ShopCurrency, ShopSeller} from "../../../eCommerce/public/shopCatalog/shopCatalog.types";
 
 export type {ShopSeller};
 
@@ -21,12 +21,7 @@ export type ShopListingLocation = {
     city?: ShopPlace;
 };
 
-export type ShopMarketplaceCurrency = {
-    _id: string;
-    symbol?: string;
-    abbreviation?: string;
-    decimalPlaces?: number;
-};
+export type ShopMarketplaceCurrency = ShopCurrency;
 
 export type ShopListingCategory = {
     _id: string;
