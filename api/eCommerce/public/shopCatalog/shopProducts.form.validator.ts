@@ -15,6 +15,7 @@ export type ShopAttributeFilter = {
 
 export type ShopProductsFormType = {
     search?: string;
+    sellerCompanyId?: string;
     categorySlug?: string;
     categoryIds?: string[];
     collectionSlug?: string;
@@ -37,6 +38,7 @@ const priceBound = z.coerce.number().min(0).max(1_000_000_000).optional();
 export function shopProductsFormSchema(languageCode: string, _form: any = null) {
     return z.object({
         search: z.string().max(200).optional(),
+        sellerCompanyId: isObjectIdZod("sellerCompanyId", languageCode).optional(),
         categorySlug: z.string().max(200).optional(),
         categoryIds: isArrayOfObjectIdsZod("categoryIds", languageCode).optional(),
         collectionSlug: z.string().max(200).optional(),
@@ -62,6 +64,7 @@ export function shopProductsFormSchema(languageCode: string, _form: any = null) 
 export function shopFacetsFormSchema(languageCode: string, form: any = null) {
     return shopProductsFormSchema(languageCode, form).pick({
         search: true,
+        sellerCompanyId: true,
         categorySlug: true,
         categoryIds: true,
         collectionSlug: true,
