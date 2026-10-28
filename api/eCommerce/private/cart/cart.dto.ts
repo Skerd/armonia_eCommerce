@@ -9,8 +9,8 @@ export type CartItemSnapshot = {
 export type CartItemSeller = {
     _id: string;
     name: string;
-    shopSlug?: string;
-    shopHost?: string;
+    siteSlug?: string;
+    siteHost?: string;
 };
 
 export type CartItem = {

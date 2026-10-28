@@ -10,8 +10,8 @@ export type ShopSeller = {
     name: string;
     /** Public media id for the company logo. */
     logo?: string;
-    shopSlug?: string;
-    shopHost?: string;
+    siteSlug?: string;
+    siteHost?: string;
 };
 
 /** A price's currency; prices without one are shown as plain numbers. */
@@ -153,7 +153,5 @@ export type ShopConfigResponse = {
         currency?: ShopCurrency;
         companyName?: string;
         company?: ShopCompany;
-        /** The company has switched on the website chat (tenant shops only). */
-        chatEnabled?: boolean;
     };
 };
