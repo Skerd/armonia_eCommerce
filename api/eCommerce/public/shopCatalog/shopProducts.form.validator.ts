@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {isArrayOfObjectIdsZod, isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {getValidationMessage, isArrayOfObjectIdsZod, isObjectIdZod, isBooleanZod, isEnumZod, stringMaxLengthZod, arrayMaxItemsZod, arrayMinMaxItemsZod, inBetweenRangeZod, isIntegerZod, stringMinMaxLengthZod, trimmedZod} from "../../../../../core/helpers/zodBuilder";
 import {productTypes} from "../../private/product/product.schema-def";
 
 export const SHOP_PRODUCT_SORTS = ["newest", "priceAsc", "priceDesc", "featured"] as const;
@@ -33,30 +33,31 @@ export type ShopProductsFormType = {
     minRating?: number;
 };
 
-const priceBound = z.coerce.number().min(0).max(1_000_000_000).optional();
-
-export function shopProductsFormSchema(languageCode: string, _form: any = null) {
+export function shopProductsFormSchema(languageCode: string, form: any = null) {
+    const label = (name: string): string => form?.[`${name}Label`] ?? name;
+    const priceBound = (name: string) => inBetweenRangeZod(label(name), 0, 1_000_000_000, languageCode).optional();
+    const filterText = (name: string) => trimmedZod(stringMinMaxLengthZod(label(name), 1, 200, languageCode));
     return z.object({
-        search: z.string().max(200).optional(),
+        search: stringMaxLengthZod(form?.["searchLabel"] ?? "search", 200, languageCode).optional(),
         sellerCompanyId: isObjectIdZod("sellerCompanyId", languageCode).optional(),
-        categorySlug: z.string().max(200).optional(),
+        categorySlug: stringMaxLengthZod(form?.["categorySlugLabel"] ?? "categorySlug", 200, languageCode).optional(),
         categoryIds: isArrayOfObjectIdsZod("categoryIds", languageCode).optional(),
-        collectionSlug: z.string().max(200).optional(),
+        collectionSlug: stringMaxLengthZod(form?.["collectionSlugLabel"] ?? "collectionSlug", 200, languageCode).optional(),
         collectionId: isObjectIdZod("collectionId", languageCode).optional(),
-        sort: z.enum(SHOP_PRODUCT_SORTS).optional(),
-        page: z.coerce.number().min(1).max(10000).optional(),
-        limit: z.coerce.number().min(1).max(60).optional(),
-        priceMin: priceBound,
-        priceMax: priceBound,
-        inStock: z.boolean().optional(),
-        onSale: z.boolean().optional(),
-        brands: z.array(z.string().trim().min(1).max(200)).max(40).optional(),
-        types: z.array(z.enum(SHOP_PRODUCT_TYPES)).max(SHOP_PRODUCT_TYPES.length).optional(),
-        attributes: z.array(z.object({
-            name: z.string().trim().min(1).max(200),
-            values: z.array(z.string().trim().min(1).max(200)).min(1).max(30),
-        })).max(12).optional(),
-        minRating: z.coerce.number().int().min(1).max(5).optional(),
+        sort: isEnumZod(form?.["sortLabel"] ?? "sort", SHOP_PRODUCT_SORTS, SHOP_PRODUCT_SORTS.join(", "), languageCode).optional(),
+        page: inBetweenRangeZod(label("page"), 1, 10000, languageCode).optional(),
+        limit: inBetweenRangeZod(label("limit"), 1, 60, languageCode).optional(),
+        priceMin: priceBound("priceMin"),
+        priceMax: priceBound("priceMax"),
+        inStock: isBooleanZod(form?.["inStockLabel"] ?? "inStock", languageCode).optional(),
+        onSale: isBooleanZod(form?.["onSaleLabel"] ?? "onSale", languageCode).optional(),
+        brands: arrayMaxItemsZod(label("brands"), 40, languageCode, filterText("brands")).optional(),
+        types: arrayMaxItemsZod(label("types"), SHOP_PRODUCT_TYPES.length, languageCode, isEnumZod(label("types"), SHOP_PRODUCT_TYPES, SHOP_PRODUCT_TYPES.join(", "), languageCode)).optional(),
+        attributes: arrayMaxItemsZod(label("attributes"), 12, languageCode, z.object({
+            name: filterText("name"),
+            values: arrayMinMaxItemsZod(label("values"), 1, 30, languageCode, filterText("values")),
+        })).optional(),
+        minRating: isIntegerZod(label("minRating"), languageCode, {min: 1, max: 5}).optional(),
     });
 }
 
@@ -80,13 +81,13 @@ export type ShopProductFormType = {
     sellerCompanyId?: string;
 };
 
-export function shopProductFormSchema(languageCode: string, _form: any = null) {
+export function shopProductFormSchema(languageCode: string, form: any = null) {
     return z.object({
         id: isObjectIdZod("id", languageCode).optional(),
-        slug: z.string().min(1).max(300).optional(),
+        slug: stringMinMaxLengthZod(form?.["slugLabel"] ?? "slug", 1, 300, languageCode).optional(),
         sellerCompanyId: isObjectIdZod("sellerCompanyId", languageCode).optional(),
     }).refine((value) => Boolean(value.id || value.slug), {
-        message: "id_or_slug_required",
+        message: getValidationMessage("form", "oneOfRequired", [form?.["idLabel"] ?? "id", form?.["slugLabel"] ?? "slug"], languageCode),
         path: ["slug"],
     });
 }

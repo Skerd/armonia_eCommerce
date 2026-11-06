@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {greaterThanOrEqualZod, isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {greaterThanOrEqualZod, isObjectIdZod, stringMaxLengthZod, stringMinMaxLengthZod} from "../../../../../core/helpers/zodBuilder";
 
 export type RefundPosOrderLineFormType = {
     /** Pos order line _id */
@@ -22,9 +22,9 @@ export type RefundPosOrderFormType = {
 export function refundPosOrderFormSchema(languageCode: string, form: any = null) {
     return z.object({
         _id: isObjectIdZod(form?.["_idLabel"] ?? "_id", languageCode),
-        reason: z.string().max(2000).optional(),
+        reason: stringMaxLengthZod(form?.["reasonLabel"] ?? "reason", 2000, languageCode).optional(),
         amount: greaterThanOrEqualZod(form?.["amountLabel"] ?? "amount", 0.01, languageCode).optional(),
-        managerPin: z.string().min(1).max(64).optional(),
+        managerPin: stringMinMaxLengthZod(form?.["managerPinLabel"] ?? "managerPin", 1, 64, languageCode).optional(),
         managerId: isObjectIdZod(form?.["managerIdLabel"] ?? "managerId", languageCode).optional(),
         lines: z
             .array(

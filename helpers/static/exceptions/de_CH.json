@@ -1320,5 +1320,62 @@
     "task_request_not_found": {
         "message": "Auftragsanfrage nicht gefunden.",
         "error_code": "task_request_not_found"
+    },
+    "fiscal_nipt_missing": {
+        "message": "Eine Steuernummer (NIPT/NUIS) ist erforderlich: Erfassen Sie sie in der Steuerkonfiguration oder als MWST-Nummer der Firma.",
+        "error_code": "fiscal_nipt_missing"
+    },
+    "fiscal_tcr_not_registered": {
+        "message": "Die Kasse (TCR) ist noch nicht registriert. Registrieren Sie sie zuerst.",
+        "error_code": "fiscal_tcr_not_registered"
+    },
+    "fiscal_codes_missing": {
+        "message": "Die Steuerkonfiguration braucht den Geschäftseinheits-, Software- und Operatorcode.",
+        "error_code": "fiscal_codes_missing"
+    },
+    "fiscal_urls_missing": {
+        "message": "Die Steuerkonfiguration braucht die URLs des Fiskalisierungs- und des Self-Care-Dienstes.",
+        "error_code": "fiscal_urls_missing"
+    },
+    "fiscal_already_fiscalized": {
+        "message": "Diese Bestellung ist bereits fiskalisiert.",
+        "error_code": "fiscal_already_fiscalized"
+    },
+    "fiscal_tcr_fields_missing": {
+        "message": "Für die Registrierung der Kasse sind die interne TCR-ID und der Wartungscode erforderlich.",
+        "error_code": "fiscal_tcr_fields_missing"
+    },
+    "fiscal_tcr_valid_to_required": {
+        "message": "Für die Aktualisierung einer registrierten Kasse ist ein Enddatum (gültig bis) erforderlich.",
+        "error_code": "fiscal_tcr_valid_to_required"
+    },
+    "fiscal_einvoice_not_fiscalized": {
+        "message": "Fiskalisieren Sie die Bestellung, bevor Sie ihre E-Rechnung registrieren.",
+        "error_code": "fiscal_einvoice_not_fiscalized"
+    },
+    "fiscal_einvoice_too_late": {
+        "message": "Eine E-Rechnung kann nur innerhalb von 48 Stunden nach der Fiskalisierung erstellt werden.",
+        "error_code": "fiscal_einvoice_too_late"
+    },
+    "fiscal_einvoice_exists": {
+        "message": "Diese Bestellung hat bereits eine E-Rechnung (EIC).",
+        "error_code": "fiscal_einvoice_exists"
+    },
+    "fiscal_order_state_invalid": {
+        "message": "Nur bezahlte oder erstattete Bestellungen können fiskalisiert werden.",
+        "error_code": "fiscal_order_state_invalid"
+    },
+    "fiscal_pos_config_missing": {
+        "message": "Die Kasse hat keine Steuerkonfiguration.",
+        "error_code": "fiscal_pos_config_missing"
+    },
+    "fiscal_certificate_invalid": {
+        "message": "Das Steuerzertifikat kann nicht gelesen werden: Prüfen Sie die Zertifikatsdatei und ihr Passwort.",
+        "error_code": "fiscal_certificate_invalid",
+        "extra_messages": {
+            "certificate": {
+                "message": "Zertifikat"
+            }
+        }
     }
 }

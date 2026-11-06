@@ -1320,5 +1320,62 @@
     "task_request_not_found": {
         "message": "Kërkesa për punë nuk u gjet.",
         "error_code": "task_request_not_found"
+    },
+    "fiscal_nipt_missing": {
+        "message": "Kërkohet NIPT/NUIS fiskal: vendoseni te konfigurimi fiskal ose si numër TVSH i kompanisë.",
+        "error_code": "fiscal_nipt_missing"
+    },
+    "fiscal_tcr_not_registered": {
+        "message": "Arka (TCR) nuk është regjistruar ende. Regjistrojeni fillimisht.",
+        "error_code": "fiscal_tcr_not_registered"
+    },
+    "fiscal_codes_missing": {
+        "message": "Konfigurimi fiskal kërkon kodet e njësisë së biznesit, të softuerit dhe të operatorit.",
+        "error_code": "fiscal_codes_missing"
+    },
+    "fiscal_urls_missing": {
+        "message": "Konfigurimi fiskal kërkon URL-të e shërbimit të fiskalizimit dhe të self-care.",
+        "error_code": "fiscal_urls_missing"
+    },
+    "fiscal_already_fiscalized": {
+        "message": "Kjo porosi është fiskalizuar tashmë.",
+        "error_code": "fiscal_already_fiscalized"
+    },
+    "fiscal_tcr_fields_missing": {
+        "message": "Për regjistrimin e arkës kërkohen ID-ja e brendshme TCR dhe kodi i mirëmbajtësit.",
+        "error_code": "fiscal_tcr_fields_missing"
+    },
+    "fiscal_tcr_valid_to_required": {
+        "message": "Për përditësimin e një arke të regjistruar kërkohet data e mbarimit (e vlefshme deri më).",
+        "error_code": "fiscal_tcr_valid_to_required"
+    },
+    "fiscal_einvoice_not_fiscalized": {
+        "message": "Fiskalizoni porosinë para se të regjistroni faturën elektronike të saj.",
+        "error_code": "fiscal_einvoice_not_fiscalized"
+    },
+    "fiscal_einvoice_too_late": {
+        "message": "Fatura elektronike mund të krijohet vetëm brenda 48 orëve nga fiskalizimi.",
+        "error_code": "fiscal_einvoice_too_late"
+    },
+    "fiscal_einvoice_exists": {
+        "message": "Kjo porosi ka tashmë një faturë elektronike (EIC).",
+        "error_code": "fiscal_einvoice_exists"
+    },
+    "fiscal_order_state_invalid": {
+        "message": "Vetëm porositë e paguara ose të rimbursuara mund të fiskalizohen.",
+        "error_code": "fiscal_order_state_invalid"
+    },
+    "fiscal_pos_config_missing": {
+        "message": "Arka nuk ka konfigurim fiskal.",
+        "error_code": "fiscal_pos_config_missing"
+    },
+    "fiscal_certificate_invalid": {
+        "message": "Certifikata fiskale nuk mund të lexohet: kontrolloni skedarin e certifikatës dhe fjalëkalimin e saj.",
+        "error_code": "fiscal_certificate_invalid",
+        "extra_messages": {
+            "certificate": {
+                "message": "Certifikata"
+            }
+        }
     }
 }

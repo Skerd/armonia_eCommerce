@@ -4,6 +4,7 @@ import {
     isArrayOfObjectIdsZod,
     isObjectIdZod,
     stringMinMaxLengthZod,
+    arrayMaxItemsZod,
 } from "../../../../../core/helpers/zodBuilder";
 import {DISCOUNT_CODE_MAX} from "./discount.schema-def";
 
@@ -36,6 +37,6 @@ export function validateDiscountFormSchema(languageCode: string, form: any = nul
     return z.object({
         code: stringMinMaxLengthZod(form?.["codeLabel"] ?? "code", 1, DISCOUNT_CODE_MAX, languageCode),
         subtotal: inBetweenRangeZod(form?.["subtotalLabel"] ?? "subtotal", 0, Number.MAX_SAFE_INTEGER, languageCode).optional(),
-        items: z.array(itemSchema).max(200).optional(),
+        items: arrayMaxItemsZod(form?.["itemsLabel"] ?? "items", 200, languageCode, itemSchema).optional(),
     });
 }

@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {greaterThanOrEqualZod, isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {greaterThanOrEqualZod, isObjectIdZod, stringMaxLengthZod, stringMinMaxLengthZod, trimmedZod, arrayMinItemsZod} from "../../../../../core/helpers/zodBuilder";
 
 export type PayPosOrderLineFormType = {
     productId: string;
@@ -39,34 +39,26 @@ export function payPosOrderFormSchema(languageCode: string, form: any = null) {
     return z.object({
         sessionId: isObjectIdZod(form?.["sessionIdLabel"] ?? "sessionId", languageCode),
         customerId: isObjectIdZod(form?.["customerIdLabel"] ?? "customerId", languageCode).optional(),
-        customerName: z.string().max(500).optional(),
-        note: z.string().max(2000).optional(),
+        customerName: stringMaxLengthZod(form?.["customerNameLabel"] ?? "customerName", 500, languageCode).optional(),
+        note: stringMaxLengthZod(form?.["noteLabel"] ?? "note", 2000, languageCode).optional(),
         discountPercent: greaterThanOrEqualZod(form?.["discountPercentLabel"] ?? "discountPercent", 0, languageCode).optional(),
         heldOrderId: isObjectIdZod(form?.["heldOrderIdLabel"] ?? "heldOrderId", languageCode).optional(),
-        clientRequestId: z.string().trim().min(8).max(80).optional(),
-        managerPin: z.string().min(1).max(64).optional(),
+        clientRequestId: trimmedZod(stringMinMaxLengthZod(form?.["clientRequestIdLabel"] ?? "clientRequestId", 8, 80, languageCode)).optional(),
+        managerPin: stringMinMaxLengthZod(form?.["managerPinLabel"] ?? "managerPin", 1, 64, languageCode).optional(),
         managerId: isObjectIdZod(form?.["managerIdLabel"] ?? "managerId", languageCode).optional(),
-        lines: z
-            .array(
-                z.object({
-                    productId: isObjectIdZod(form?.["productIdLabel"] ?? "productId", languageCode),
-                    variantId: isObjectIdZod(form?.["variantIdLabel"] ?? "variantId", languageCode).optional(),
-                    quantity: greaterThanOrEqualZod(form?.["quantityLabel"] ?? "quantity", 0.0001, languageCode),
-                    unitPrice: greaterThanOrEqualZod(form?.["unitPriceLabel"] ?? "unitPrice", 0, languageCode).optional(),
-                    discountPercent: greaterThanOrEqualZod(form?.["lineDiscountPercentLabel"] ?? "discountPercent", 0, languageCode).optional(),
-                }),
-            )
-            .min(1),
-        payments: z
-            .array(
-                z.object({
-                    paymentMethodId: isObjectIdZod(form?.["paymentMethodIdLabel"] ?? "paymentMethodId", languageCode),
-                    amount: greaterThanOrEqualZod(form?.["amountLabel"] ?? "amount", 0.01, languageCode),
-                    terminalAuthCode: z.string().max(120).optional(),
-                    terminalReference: z.string().max(120).optional(),
-                    terminalId: z.string().max(120).optional(),
-                }),
-            )
-            .min(1),
+        lines: arrayMinItemsZod(form?.["linesLabel"] ?? "lines", 1, languageCode, z.object({
+            productId: isObjectIdZod(form?.["productIdLabel"] ?? "productId", languageCode),
+            variantId: isObjectIdZod(form?.["variantIdLabel"] ?? "variantId", languageCode).optional(),
+            quantity: greaterThanOrEqualZod(form?.["quantityLabel"] ?? "quantity", 0.0001, languageCode),
+            unitPrice: greaterThanOrEqualZod(form?.["unitPriceLabel"] ?? "unitPrice", 0, languageCode).optional(),
+            discountPercent: greaterThanOrEqualZod(form?.["lineDiscountPercentLabel"] ?? "discountPercent", 0, languageCode).optional(),
+        })),
+        payments: arrayMinItemsZod(form?.["paymentsLabel"] ?? "payments", 1, languageCode, z.object({
+            paymentMethodId: isObjectIdZod(form?.["paymentMethodIdLabel"] ?? "paymentMethodId", languageCode),
+            amount: greaterThanOrEqualZod(form?.["amountLabel"] ?? "amount", 0.01, languageCode),
+            terminalAuthCode: stringMaxLengthZod(form?.["terminalAuthCodeLabel"] ?? "terminalAuthCode", 120, languageCode).optional(),
+            terminalReference: stringMaxLengthZod(form?.["terminalReferenceLabel"] ?? "terminalReference", 120, languageCode).optional(),
+            terminalId: stringMaxLengthZod(form?.["terminalIdLabel"] ?? "terminalId", 120, languageCode).optional(),
+        })),
     });
 }

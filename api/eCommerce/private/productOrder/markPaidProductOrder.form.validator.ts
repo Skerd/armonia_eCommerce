@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {isObjectIdZod, stringMaxLengthZod} from "../../../../../core/helpers/zodBuilder";
 
 /** Records an offline (cash on delivery / bank transfer) payment as received. */
 export type MarkPaidProductOrderFormType = {
@@ -11,6 +11,6 @@ export type MarkPaidProductOrderFormType = {
 export function markPaidProductOrderFormSchema(languageCode: string, form: any = null) {
     return z.object({
         _id: isObjectIdZod(form?.["_idLabel"] ?? "_id", languageCode),
-        reference: z.string().max(200).optional(),
+        reference: stringMaxLengthZod(form?.["referenceLabel"] ?? "reference", 200, languageCode).optional(),
     });
 }

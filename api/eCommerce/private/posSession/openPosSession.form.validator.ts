@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {greaterThanOrEqualZod, isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {greaterThanOrEqualZod, isObjectIdZod, stringMaxLengthZod} from "../../../../../core/helpers/zodBuilder";
 
 export type OpenPosSessionFormType = {
     configId: string;
@@ -11,6 +11,6 @@ export function openPosSessionFormSchema(languageCode: string, form: any = null)
     return z.object({
         configId: isObjectIdZod(form?.["configIdLabel"] ?? "configId", languageCode),
         openingBalance: greaterThanOrEqualZod(form?.["openingBalanceLabel"] ?? "openingBalance", 0, languageCode).optional(),
-        notes: z.string().max(2000).optional(),
+        notes: stringMaxLengthZod(form?.["notesLabel"] ?? "notes", 2000, languageCode).optional(),
     });
 }

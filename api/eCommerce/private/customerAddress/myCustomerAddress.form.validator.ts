@@ -6,6 +6,7 @@ import {
     isObjectIdZod,
     mustBeZod,
     notEmptyZod,
+    isStringZod,
 } from "../../../../../core/helpers/zodBuilder";
 import {customerAddressTypes} from "./customerAddress.schema-def";
 
@@ -35,15 +36,15 @@ export function myCustomerAddressCreateFormSchema(languageCode: string, form: an
         firstName: notEmptyZod(form?.["firstNameLabel"] ?? "firstName", lc),
         lastName: notEmptyZod(form?.["lastNameLabel"] ?? "lastName", lc),
         email: isEmailZod(form?.["emailLabel"] ?? "email", lc).optional(),
-        phone: z.string().optional(),
+        phone: isStringZod(form?.["phoneLabel"] ?? "phone", languageCode).optional(),
         street: notEmptyZod(form?.["streetLabel"] ?? "street", lc),
         city: isObjectIdZod(form?.["cityLabel"] ?? "city", lc),
         state: isObjectIdZod(form?.["stateLabel"] ?? "state", lc).optional(),
-        postalCode: z.string().optional(),
+        postalCode: isStringZod(form?.["postalCodeLabel"] ?? "postalCode", languageCode).optional(),
         country: isObjectIdZod(form?.["countryLabel"] ?? "country", lc),
         latitude: isNumberZod(form?.["latitudeLabel"] ?? "latitude", lc).optional(),
         longitude: isNumberZod(form?.["longitudeLabel"] ?? "longitude", lc).optional(),
-        label: z.string().optional(),
+        label: isStringZod(form?.["labelLabel"] ?? "label", languageCode).optional(),
         isDefault: isBooleanZod(form?.["isDefaultLabel"] ?? "isDefault", lc).optional(),
     });
 }

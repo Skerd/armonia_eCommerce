@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {getValidationMessage, isObjectIdZod, isEnumZod, stringMaxLengthZod, inBetweenRangeZod, isIntegerZod} from "../../../../../core/helpers/zodBuilder";
 import {listingPricingTypes, type ListingPricingType} from "../../private/listing/listing.schema-def";
 
 export const SHOP_LISTING_SORTS = ["recommended", "newest", "priceAsc", "priceDesc", "rating"] as const;
@@ -20,29 +20,28 @@ export type ShopListingsFormType = {
     limit?: number;
 };
 
-const priceBound = z.coerce.number().min(0).max(1_000_000_000).optional();
-
-export function shopListingsFormSchema(languageCode: string, _form: any = null) {
+export function shopListingsFormSchema(languageCode: string, form: any = null) {
+    const priceBound = (name: string) => inBetweenRangeZod(form?.[`${name}Label`] ?? name, 0, 1_000_000_000, languageCode).optional();
     return z.object({
-        search: z.string().max(200).optional(),
-        categorySlug: z.string().max(200).optional(),
+        search: stringMaxLengthZod(form?.["searchLabel"] ?? "search", 200, languageCode).optional(),
+        categorySlug: stringMaxLengthZod(form?.["categorySlugLabel"] ?? "categorySlug", 200, languageCode).optional(),
         countryId: isObjectIdZod("countryId", languageCode).optional(),
         stateId: isObjectIdZod("stateId", languageCode).optional(),
         cityId: isObjectIdZod("cityId", languageCode).optional(),
-        pricingType: z.enum(listingPricingTypes).optional(),
-        priceMin: priceBound,
-        priceMax: priceBound,
-        minRating: z.coerce.number().int().min(1).max(5).optional(),
-        sort: z.enum(SHOP_LISTING_SORTS).optional(),
-        page: z.coerce.number().min(1).max(10000).optional(),
-        limit: z.coerce.number().min(1).max(60).optional(),
+        pricingType: isEnumZod(form?.["pricingTypeLabel"] ?? "pricingType", listingPricingTypes, listingPricingTypes.join(", "), languageCode).optional(),
+        priceMin: priceBound("priceMin"),
+        priceMax: priceBound("priceMax"),
+        minRating: isIntegerZod(form?.["minRatingLabel"] ?? "minRating", languageCode, {min: 1, max: 5}).optional(),
+        sort: isEnumZod(form?.["sortLabel"] ?? "sort", SHOP_LISTING_SORTS, SHOP_LISTING_SORTS.join(", "), languageCode).optional(),
+        page: inBetweenRangeZod(form?.["pageLabel"] ?? "page", 1, 10000, languageCode).optional(),
+        limit: inBetweenRangeZod(form?.["limitLabel"] ?? "limit", 1, 60, languageCode).optional(),
     });
 }
 
 export type ShopMarketplaceIdFormType = {id: string};
 
 /** One listing (`shopListing`) or one provider (`shopProvider`, the provider's user id). */
-export function shopMarketplaceIdFormSchema(languageCode: string, _form: any = null) {
+export function shopMarketplaceIdFormSchema(languageCode: string, form: any = null) {
     return z.object({
         id: isObjectIdZod("id", languageCode),
     });
@@ -56,14 +55,14 @@ export type ShopMarketplaceReviewsFormType = {
 };
 
 /** Reviews of one listing, or of every order a provider delivered. */
-export function shopMarketplaceReviewsFormSchema(languageCode: string, _form: any = null) {
+export function shopMarketplaceReviewsFormSchema(languageCode: string, form: any = null) {
     return z.object({
         listingId: isObjectIdZod("listingId", languageCode).optional(),
         providerId: isObjectIdZod("providerId", languageCode).optional(),
-        page: z.coerce.number().min(1).max(1000).optional(),
-        limit: z.coerce.number().min(1).max(50).optional(),
-    }).refine((form) => Boolean(form.listingId) !== Boolean(form.providerId), {
-        message: "listingId or providerId",
+        page: inBetweenRangeZod(form?.["pageLabel"] ?? "page", 1, 1000, languageCode).optional(),
+        limit: inBetweenRangeZod(form?.["limitLabel"] ?? "limit", 1, 50, languageCode).optional(),
+    }).refine((value) => Boolean(value.listingId) !== Boolean(value.providerId), {
+        message: getValidationMessage("form", "exactlyOneOf", [form?.["listingIdLabel"] ?? "listingId", form?.["providerIdLabel"] ?? "providerId"], languageCode),
         path: ["listingId"],
     });
 }

@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {isObjectIdZod, stringMaxLengthZod} from "../../../../../core/helpers/zodBuilder";
 
 export type CancelProductOrderFormType = {
     _id: string;
@@ -9,6 +9,6 @@ export type CancelProductOrderFormType = {
 export function cancelProductOrderFormSchema(languageCode: string, form: any = null) {
     return z.object({
         _id: isObjectIdZod(form?.["_idLabel"] ?? "_id", languageCode),
-        reason: z.string().max(2000).optional(),
+        reason: stringMaxLengthZod(form?.["reasonLabel"] ?? "reason", 2000, languageCode).optional(),
     });
 }

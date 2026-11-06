@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {greaterThanOrEqualZod, isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {greaterThanOrEqualZod, isObjectIdZod, stringMaxLengthZod, stringMinMaxLengthZod, trimmedZod} from "../../../../../core/helpers/zodBuilder";
 
 export type ClosePosSessionFormType = {
     _id: string;
@@ -13,7 +13,7 @@ export function closePosSessionFormSchema(languageCode: string, form: any = null
     return z.object({
         _id: isObjectIdZod(form?.["_idLabel"] ?? "_id", languageCode),
         closingBalance: greaterThanOrEqualZod(form?.["closingBalanceLabel"] ?? "closingBalance", 0, languageCode),
-        notes: z.string().max(2000).optional(),
-        differenceReason: z.string().trim().min(1).max(2000).optional(),
+        notes: stringMaxLengthZod(form?.["notesLabel"] ?? "notes", 2000, languageCode).optional(),
+        differenceReason: trimmedZod(stringMinMaxLengthZod(form?.["differenceReasonLabel"] ?? "differenceReason", 1, 2000, languageCode)).optional(),
     });
 }

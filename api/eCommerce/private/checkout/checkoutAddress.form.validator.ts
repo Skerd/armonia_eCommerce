@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {isObjectIdZod, notEmptyZod} from "../../../../../core/helpers/zodBuilder";
+import {isObjectIdZod, notEmptyZod, isStringZod} from "../../../../../core/helpers/zodBuilder";
 
 export type CheckoutAddressType = {
     firstName: string;
@@ -22,11 +22,11 @@ export function checkoutAddressZod(languageCode: string, form: any = null) {
     return z.object({
         firstName: notEmptyZod(form?.["firstNameLabel"] ?? "firstName", languageCode),
         lastName: notEmptyZod(form?.["lastNameLabel"] ?? "lastName", languageCode),
-        phone: z.string().optional(),
+        phone: isStringZod(form?.["phoneLabel"] ?? "phone", languageCode).optional(),
         street: notEmptyZod(form?.["streetLabel"] ?? "street", languageCode),
         city: notEmptyZod(form?.["cityLabel"] ?? "city", languageCode),
-        state: z.string().optional(),
-        postalCode: z.string().optional(),
+        state: isStringZod(form?.["stateLabel"] ?? "state", languageCode).optional(),
+        postalCode: isStringZod(form?.["postalCodeLabel"] ?? "postalCode", languageCode).optional(),
         country: isObjectIdZod(form?.["countryLabel"] ?? "country", languageCode).optional(),
     });
 }

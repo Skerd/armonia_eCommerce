@@ -1,5 +1,5 @@
 import {z} from "zod";
-import {isObjectIdZod} from "../../../../../core/helpers/zodBuilder";
+import {isObjectIdZod, isEnumZod, stringMaxLengthZod, isIntegerZod, stringMinMaxLengthZod} from "../../../../../core/helpers/zodBuilder";
 
 export type PosCatalogFormType = {
     search?: string;
@@ -13,11 +13,11 @@ export type PosCatalogFormType = {
 
 export function posCatalogFormSchema(languageCode: string, form: any = null) {
     return z.object({
-        search: z.string().max(200).optional(),
+        search: stringMaxLengthZod(form?.["searchLabel"] ?? "search", 200, languageCode).optional(),
         categoryId: isObjectIdZod(form?.["categoryIdLabel"] ?? "categoryId", languageCode).optional(),
-        barcode: z.string().max(80).optional(),
-        page: z.number().int().min(1).optional(),
-        limit: z.number().int().min(1).max(100).optional(),
+        barcode: stringMaxLengthZod(form?.["barcodeLabel"] ?? "barcode", 80, languageCode).optional(),
+        page: isIntegerZod(form?.["pageLabel"] ?? "page", languageCode, {min: 1}).optional(),
+        limit: isIntegerZod(form?.["limitLabel"] ?? "limit", languageCode, {min: 1, max: 100}).optional(),
         warehouseId: isObjectIdZod(form?.["warehouseIdLabel"] ?? "warehouseId", languageCode).optional(),
         configId: isObjectIdZod(form?.["configIdLabel"] ?? "configId", languageCode).optional(),
     });
@@ -50,8 +50,8 @@ export type PosSessionOrdersFormType = PosSessionIdFormType & {
 
 export function posSessionOrdersFormSchema(languageCode: string, form: any = null) {
     return posSessionIdFormSchema(languageCode, form).extend({
-        state: z.enum(["paid", "draft", "refunded"]).optional(),
-        limit: z.number().int().min(1).max(100).optional(),
+        state: isEnumZod(form?.["stateLabel"] ?? "state", ["paid", "draft", "refunded"], "paid, draft, refunded", languageCode).optional(),
+        limit: isIntegerZod(form?.["limitLabel"] ?? "limit", languageCode, {min: 1, max: 100}).optional(),
     });
 }
 
@@ -60,10 +60,10 @@ export type PosCustomerSearchFormType = {
     search?: string;
 };
 
-export function posCustomerSearchFormSchema(_languageCode: string, _form: any = null) {
+export function posCustomerSearchFormSchema(languageCode: string, form: any = null) {
     return z.object({
-        query: z.string().max(200).optional(),
-        search: z.string().max(200).optional(),
+        query: stringMaxLengthZod(form?.["queryLabel"] ?? "query", 200, languageCode).optional(),
+        search: stringMaxLengthZod(form?.["searchLabel"] ?? "search", 200, languageCode).optional(),
     });
 }
 
@@ -76,7 +76,7 @@ export type VerifyPosManagerPinFormType = {
 export function verifyPosManagerPinFormSchema(languageCode: string, form: any = null) {
     return z.object({
         configId: isObjectIdZod(form?.["configIdLabel"] ?? "configId", languageCode),
-        pin: z.string().min(1).max(64),
+        pin: stringMinMaxLengthZod(form?.["pinLabel"] ?? "pin", 1, 64, languageCode),
         managerId: isObjectIdZod(form?.["managerIdLabel"] ?? "managerId", languageCode),
     });
 }

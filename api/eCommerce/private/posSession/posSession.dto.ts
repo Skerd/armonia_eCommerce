@@ -21,6 +21,8 @@ export type PosSession = DeletedData & OwnershipData & LifeCycleData & {
     name: string;
     config: PosConfigSimple;
     currency?: CurrencySimple;
+    /** The till currency's `decimalPlaces`, where the panel rounds amounts (GLB-08); absent when not loaded. */
+    decimalPlaces?: number;
     state: PosSessionState;
     openedBy?: SimpleBlankUser;
     closedBy?: SimpleBlankUser;

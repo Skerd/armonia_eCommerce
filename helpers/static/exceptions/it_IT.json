@@ -1320,5 +1320,62 @@
     "task_request_not_found": {
         "message": "Richiesta di lavoro non trovata.",
         "error_code": "task_request_not_found"
+    },
+    "fiscal_nipt_missing": {
+        "message": "È richiesto un NIPT/NUIS fiscale: impostalo nella configurazione fiscale o come partita IVA dell'azienda.",
+        "error_code": "fiscal_nipt_missing"
+    },
+    "fiscal_tcr_not_registered": {
+        "message": "La cassa (TCR) non è ancora registrata. Registrala prima.",
+        "error_code": "fiscal_tcr_not_registered"
+    },
+    "fiscal_codes_missing": {
+        "message": "La configurazione fiscale richiede i codici di unità commerciale, software e operatore.",
+        "error_code": "fiscal_codes_missing"
+    },
+    "fiscal_urls_missing": {
+        "message": "La configurazione fiscale richiede gli URL dei servizi di fiscalizzazione e self-care.",
+        "error_code": "fiscal_urls_missing"
+    },
+    "fiscal_already_fiscalized": {
+        "message": "Questo ordine è già fiscalizzato.",
+        "error_code": "fiscal_already_fiscalized"
+    },
+    "fiscal_tcr_fields_missing": {
+        "message": "Per registrare la cassa sono richiesti l'ID interno TCR e il codice del manutentore.",
+        "error_code": "fiscal_tcr_fields_missing"
+    },
+    "fiscal_tcr_valid_to_required": {
+        "message": "Per aggiornare una cassa registrata è richiesta una data di fine (valida fino al).",
+        "error_code": "fiscal_tcr_valid_to_required"
+    },
+    "fiscal_einvoice_not_fiscalized": {
+        "message": "Fiscalizza l'ordine prima di registrarne la fattura elettronica.",
+        "error_code": "fiscal_einvoice_not_fiscalized"
+    },
+    "fiscal_einvoice_too_late": {
+        "message": "Una fattura elettronica può essere creata solo entro 48 ore dalla fiscalizzazione.",
+        "error_code": "fiscal_einvoice_too_late"
+    },
+    "fiscal_einvoice_exists": {
+        "message": "Questo ordine ha già una fattura elettronica (EIC).",
+        "error_code": "fiscal_einvoice_exists"
+    },
+    "fiscal_order_state_invalid": {
+        "message": "Solo gli ordini pagati o rimborsati possono essere fiscalizzati.",
+        "error_code": "fiscal_order_state_invalid"
+    },
+    "fiscal_pos_config_missing": {
+        "message": "La cassa non ha una configurazione fiscale.",
+        "error_code": "fiscal_pos_config_missing"
+    },
+    "fiscal_certificate_invalid": {
+        "message": "Il certificato fiscale non è leggibile: controlla il file del certificato e la sua password.",
+        "error_code": "fiscal_certificate_invalid",
+        "extra_messages": {
+            "certificate": {
+                "message": "Certificato"
+            }
+        }
     }
 }
