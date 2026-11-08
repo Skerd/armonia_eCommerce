@@ -329,6 +329,15 @@
             }
         }
     },
+    "pos_cash_move_amount_invalid": {
+        "message": "Le montant arrondi dans la devise de la caisse est nul.",
+        "error_code": "pos_cash_move_amount_invalid",
+        "extra_messages": {
+            "amount": {
+                "message": "Montant"
+            }
+        }
+    },
     "pos_close_difference_reason_required": {
         "message": "Expliquez l'écart de caisse avant de clôturer la session.",
         "error_code": "pos_close_difference_reason_required",

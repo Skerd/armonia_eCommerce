@@ -329,6 +329,15 @@
             }
         }
     },
+    "pos_cash_move_amount_invalid": {
+        "message": "The amount rounds to zero in the till currency.",
+        "error_code": "pos_cash_move_amount_invalid",
+        "extra_messages": {
+            "amount": {
+                "message": "Amount"
+            }
+        }
+    },
     "pos_close_difference_reason_required": {
         "message": "Explain the cash difference before closing the session.",
         "error_code": "pos_close_difference_reason_required",

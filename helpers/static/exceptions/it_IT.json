@@ -329,6 +329,15 @@
             }
         }
     },
+    "pos_cash_move_amount_invalid": {
+        "message": "L'importo arrotondato nella valuta della cassa è zero.",
+        "error_code": "pos_cash_move_amount_invalid",
+        "extra_messages": {
+            "amount": {
+                "message": "Importo"
+            }
+        }
+    },
     "pos_close_difference_reason_required": {
         "message": "Spiegare la differenza di cassa prima di chiudere la sessione.",
         "error_code": "pos_close_difference_reason_required",

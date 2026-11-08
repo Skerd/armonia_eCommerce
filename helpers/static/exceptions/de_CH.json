@@ -329,6 +329,15 @@
             }
         }
     },
+    "pos_cash_move_amount_invalid": {
+        "message": "Der Betrag ergibt in der Kassenwährung gerundet null.",
+        "error_code": "pos_cash_move_amount_invalid",
+        "extra_messages": {
+            "amount": {
+                "message": "Betrag"
+            }
+        }
+    },
     "pos_close_difference_reason_required": {
         "message": "Erklären Sie die Kassendifferenz vor dem Schliessen der Sitzung.",
         "error_code": "pos_close_difference_reason_required",

@@ -329,6 +329,15 @@
             }
         }
     },
+    "pos_cash_move_amount_invalid": {
+        "message": "Shuma e rrumbullakosur në monedhën e arkës është zero.",
+        "error_code": "pos_cash_move_amount_invalid",
+        "extra_messages": {
+            "amount": {
+                "message": "Shuma"
+            }
+        }
+    },
     "pos_close_difference_reason_required": {
         "message": "Shpjegoni diferencën e cash para mbylljes së seancës.",
         "error_code": "pos_close_difference_reason_required",
