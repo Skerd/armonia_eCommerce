@@ -1350,6 +1350,11 @@
         "message": "Cette commande est déjà fiscalisée.",
         "error_code": "fiscal_already_fiscalized"
     },
+    "fiscal_registration_unconfirmed": {
+        "message": "Cette vente a été envoyée à l'administration fiscale, mais sa réponse n'a pas été enregistrée : elle est peut-être déjà enregistrée. Vérifiez-la sur le portail de l'administration fiscale ; elle n'est pas renvoyée, pour ne pas être enregistrée deux fois.",
+        "error_code": "fiscal_registration_unconfirmed",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "L'identifiant interne TCR et le code du mainteneur sont requis pour enregistrer la caisse.",
         "error_code": "fiscal_tcr_fields_missing"

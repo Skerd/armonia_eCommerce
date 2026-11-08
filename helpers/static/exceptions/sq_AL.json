@@ -1350,6 +1350,11 @@
         "message": "Kjo porosi është fiskalizuar tashmë.",
         "error_code": "fiscal_already_fiscalized"
     },
+    "fiscal_registration_unconfirmed": {
+        "message": "Kjo shitje u dërgua te autoriteti tatimor, por përgjigjja e tij nuk u ruajt, ndaj mund të jetë regjistruar tashmë. Kontrollojeni në portalin e autoritetit tatimor; nuk dërgohet përsëri, që të mos regjistrohet dy herë.",
+        "error_code": "fiscal_registration_unconfirmed",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "Për regjistrimin e arkës kërkohen ID-ja e brendshme TCR dhe kodi i mirëmbajtësit.",
         "error_code": "fiscal_tcr_fields_missing"

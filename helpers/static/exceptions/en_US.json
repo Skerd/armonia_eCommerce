@@ -1350,6 +1350,11 @@
         "message": "This order is already fiscalized.",
         "error_code": "fiscal_already_fiscalized"
     },
+    "fiscal_registration_unconfirmed": {
+        "message": "This sale was sent to the tax authority, but its answer was not saved, so it may already be registered. Check it in the tax authority's portal; it is not sent again, so it can't be registered twice.",
+        "error_code": "fiscal_registration_unconfirmed",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "The TCR internal id and the maintainer code are required to register the cash register.",
         "error_code": "fiscal_tcr_fields_missing"

@@ -1350,6 +1350,11 @@
         "message": "Diese Bestellung ist bereits fiskalisiert.",
         "error_code": "fiscal_already_fiscalized"
     },
+    "fiscal_registration_unconfirmed": {
+        "message": "Dieser Verkauf wurde an die Steuerbehörde gesendet, aber ihre Antwort wurde nicht gespeichert; er ist also womöglich schon registriert. Prüfen Sie ihn im Portal der Steuerbehörde; er wird nicht erneut gesendet, damit er nicht doppelt registriert wird.",
+        "error_code": "fiscal_registration_unconfirmed",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "Für die Registrierung der Kasse sind die interne TCR-ID und der Wartungscode erforderlich.",
         "error_code": "fiscal_tcr_fields_missing"
