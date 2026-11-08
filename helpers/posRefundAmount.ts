@@ -1,4 +1,4 @@
-import {DEFAULT_DECIMAL_PLACES, prorateMoney, subtractMoney, sumMoney, type MoneyInput} from "../../core/helpers/money";
+import {DEFAULT_DECIMAL_PLACES, minorToNumber, prorateMoney, subtractMoney, sumMinor, sumMoney, toMinor, type MoneyInput} from "../../core/helpers/money";
 
 /**
  * What the till refunds for quantities picked from a sale (D35, GLB-08). One implementation for the server, which
@@ -9,8 +9,8 @@ import {DEFAULT_DECIMAL_PLACES, prorateMoney, subtractMoney, sumMoney, type Mone
  * picked lines' share of all line totals. Every step rounds once at the currency's `decimalPlaces`.
  */
 
-/** A sold line: its total after line discounts and the quantity sold. */
-export type PosSoldLine = {priceTotal?: MoneyInput; quantity: number};
+/** A sold line: its total after its line discount, that discount, and the quantity sold. */
+export type PosSoldLine = {priceTotal?: MoneyInput; discountAmount?: MoneyInput; quantity: number};
 
 export type PosRefundPick<L extends PosSoldLine = PosSoldLine> = {line: L; quantity: number};
 
@@ -20,8 +20,9 @@ export function posLineRefundTotal(line: PosSoldLine, quantity: number, decimals
 }
 
 /**
- * The amount refunded for `picks` of an order with these `lines` and order `discountTotal`: the picked lines'
- * prorated totals, less the order discount's share of them, never below zero.
+ * The amount refunded for `picks` of an order with these `lines` and `discountTotal`: the picked lines' prorated
+ * totals, less the order discount's share of them, never below zero. `discountTotal` holds the line discounts too,
+ * which `priceTotal` already has off, so only what is left of it (the order discount) is shared.
  */
 export function posRefundAmount(
     order: {lines: readonly PosSoldLine[]; discountTotal?: MoneyInput},
@@ -30,8 +31,9 @@ export function posRefundAmount(
 ): number {
     const amount = sumMoney(picks.map(({line, quantity}) => posLineRefundTotal(line, quantity, decimals)), decimals);
     const lineSum = sumMoney(order.lines.map((line) => line.priceTotal ?? 0), decimals);
-    const discountTotal = Number(order.discountTotal ?? 0);
-    if (!(discountTotal > 0) || !(lineSum > 0)) return amount;
-    const discountShare = prorateMoney(order.discountTotal, amount, lineSum, decimals);
+    const orderDiscountMinor = toMinor(order.discountTotal ?? 0, decimals)
+        - sumMinor(order.lines.map((line) => toMinor(line.discountAmount ?? 0, decimals)));
+    if (orderDiscountMinor <= 0n || !(lineSum > 0)) return amount;
+    const discountShare = prorateMoney(minorToNumber(orderDiscountMinor, decimals), amount, lineSum, decimals);
     return Math.max(0, subtractMoney(amount, discountShare, decimals));
 }
