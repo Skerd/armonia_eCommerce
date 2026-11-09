@@ -88,6 +88,8 @@ export type ShopProviderProfile = ShopProviderSummary & {
     bio?: string;
     skills?: string[];
     availability?: ShopAvailabilitySlot[];
+    /** IANA zone the `availability` windows are in: the profile's, else the company's (D105). Set with the windows. */
+    availabilityTimeZone?: string;
     portfolio?: string[];
     averageRating?: number;
     reviewCount?: number;
