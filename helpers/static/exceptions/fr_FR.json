@@ -1234,9 +1234,17 @@
         "message": "Un prestataire ne peut pas commander sa propre annonce.",
         "error_code": "provider_cannot_order_own_listing"
     },
+    "provider_availability_end_before_start": {
+        "message": "Chaque plage de disponibilité doit se terminer après son début. Pour une plage qui dépasse minuit, terminez-la à 24:00 et commencez le jour suivant à 00:00.",
+        "error_code": "provider_availability_end_before_start"
+    },
     "provider_id_required": {
         "message": "Un ID prestataire est requis.",
         "error_code": "provider_id_required"
+    },
+    "provider_invalid_timezone": {
+        "message": "'{}' n'est pas un fuseau horaire valide. Utilisez un nom comme Europe/Zurich.",
+        "error_code": "provider_invalid_timezone"
     },
     "task_already_awarded_or_closed": {
         "message": "Cette tâche a déjà été attribuée ou clôturée.",
@@ -1269,6 +1277,10 @@
     "booking_order_not_active": {
         "message": "Une réservation n'est possible que pour une commande acceptée ou en cours.",
         "error_code": "booking_order_not_active"
+    },
+    "booking_outside_provider_availability": {
+        "message": "Le prestataire n'est pas disponible à ce moment-là. Choisissez un créneau entièrement compris dans l'une de ses plages de disponibilité (heure {}).",
+        "error_code": "booking_outside_provider_availability"
     },
     "cannot_bid_on_own_task_request": {
         "message": "Vous ne pouvez pas faire d'offre sur votre propre demande.",

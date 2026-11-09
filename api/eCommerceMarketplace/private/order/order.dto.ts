@@ -9,6 +9,7 @@ import type {OrderDelivery} from "../orderDelivery/orderDelivery.dto";
 import type {OrderMilestone} from "../orderMilestone/orderMilestone.dto";
 import type {OrderRevision} from "../orderRevision/orderRevision.dto";
 import type {Booking} from "../booking/booking.dto";
+import type {ProviderAvailability} from "../providerProfile/providerProfile.dto";
 
 export type Order = OwnershipData & DeletedData & LifeCycleData & {
     _id: string;
@@ -45,6 +46,8 @@ export type BuyerServiceOrder = Order & {
     reviewed?: boolean;
     /** Single route only: the provider's scheduled sessions for the order. */
     bookings?: Booking[];
+    /** Single route only: when the provider can be booked (D105). */
+    providerAvailability?: ProviderAvailability;
     /** Stripe PaymentIntent client secret for an unpaid escrow hold (pay after provider accept). */
     escrowClientSecret?: string;
 };

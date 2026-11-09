@@ -1234,9 +1234,17 @@
         "message": "Ein Anbieter kann das eigene Inserat nicht bestellen.",
         "error_code": "provider_cannot_order_own_listing"
     },
+    "provider_availability_end_before_start": {
+        "message": "Jedes Verfügbarkeitsfenster muss nach seinem Beginn enden. Für ein Fenster über Mitternacht enden Sie um 24:00 und beginnen den nächsten Tag um 00:00.",
+        "error_code": "provider_availability_end_before_start"
+    },
     "provider_id_required": {
         "message": "Eine Anbieter-ID ist erforderlich.",
         "error_code": "provider_id_required"
+    },
+    "provider_invalid_timezone": {
+        "message": "'{}' ist keine gültige Zeitzone. Verwenden Sie einen Namen wie Europe/Zurich.",
+        "error_code": "provider_invalid_timezone"
     },
     "task_already_awarded_or_closed": {
         "message": "Diese Aufgabe wurde bereits vergeben oder geschlossen.",
@@ -1269,6 +1277,10 @@
     "booking_order_not_active": {
         "message": "Ein Termin kann nur für einen angenommenen oder laufenden Auftrag gebucht werden.",
         "error_code": "booking_order_not_active"
+    },
+    "booking_outside_provider_availability": {
+        "message": "Der Anbieter ist zu dieser Zeit nicht verfügbar. Wählen Sie einen Termin, der ganz in einem seiner Verfügbarkeitsfenster liegt (Zeit {}).",
+        "error_code": "booking_outside_provider_availability"
     },
     "cannot_bid_on_own_task_request": {
         "message": "Sie können kein Angebot für Ihre eigene Anfrage abgeben.",
