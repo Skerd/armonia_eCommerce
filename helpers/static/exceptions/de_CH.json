@@ -111,7 +111,7 @@
         "error_code": "fiscal_taxpayer_error",
         "extra_messages": {
             "tin": {
-                "message": "TIN"
+                "message": "Steuernummer"
             }
         }
     },
@@ -943,7 +943,7 @@
         "error_code": "cart_currency_mismatch"
     },
     "cart_multi_seller_promo": {
-        "message": "Discount codes and gift cards can only be used when every item in your cart is from the same seller.",
+        "message": "Rabattcodes und Geschenkkarten können nur verwendet werden, wenn alle Artikel in Ihrem Warenkorb vom selben Verkäufer stammen.",
         "error_code": "cart_multi_seller_promo"
     },
     "gift_card_revoked_by_refund": {
