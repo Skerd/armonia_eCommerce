@@ -1355,6 +1355,11 @@
         "error_code": "fiscal_registration_unconfirmed",
         "status": 409
     },
+    "fiscal_not_awaiting_confirmation": {
+        "message": "Dieser Verkauf wartet nicht auf eine Prüfung im Portal der Steuerbehörde: Er hat seine Fiskalcodes, oder seine Antwort ging nicht verloren. Laden Sie ihn neu, um seinen aktuellen Stand zu sehen.",
+        "error_code": "fiscal_not_awaiting_confirmation",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "Für die Registrierung der Kasse sind die interne TCR-ID und der Wartungscode erforderlich.",
         "error_code": "fiscal_tcr_fields_missing"

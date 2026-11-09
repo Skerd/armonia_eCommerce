@@ -1355,6 +1355,11 @@
         "error_code": "fiscal_registration_unconfirmed",
         "status": 409
     },
+    "fiscal_not_awaiting_confirmation": {
+        "message": "Cette vente n'attend pas de vérification sur le portail de l'administration fiscale : elle a ses codes fiscaux, ou sa réponse n'a pas été perdue. Rechargez-la pour voir son état actuel.",
+        "error_code": "fiscal_not_awaiting_confirmation",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "L'identifiant interne TCR et le code du mainteneur sont requis pour enregistrer la caisse.",
         "error_code": "fiscal_tcr_fields_missing"

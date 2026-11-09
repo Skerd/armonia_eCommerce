@@ -10,6 +10,10 @@ import type {ProductOrderSimple} from "../../../../dto/productOrder.dto";
 
 export type PosOrderState = "draft" | "paid" | "cancel" | "refunded";
 
+/** How staff resolved a sale whose CIS answer was lost (D98): codes found in the CIS portal, or sent again. */
+export const POS_FISCAL_RESOLUTIONS = ["recorded", "resent"] as const;
+export type PosFiscalResolution = typeof POS_FISCAL_RESOLUTIONS[number];
+
 export type PosOrderLine = {
     _id?: string;
     product: ProductSimple | string;
@@ -85,4 +89,10 @@ export type PosOrder = DeletedData & OwnershipData & LifeCycleData & {
     fiscalizedAt?: string;
     einvoiceAt?: string;
     fiscalError?: string;
+    /** Sent to CIS with no answer stored, so it may be registered: staff check the CIS portal and resolve it (D98). */
+    fiscalAwaitingConfirmation: boolean;
+    /** Who resolved an unconfirmed CIS send, when, and how (D98). */
+    fiscalResolution?: PosFiscalResolution;
+    fiscalResolvedBy?: SimpleBlankUser;
+    fiscalResolvedAt?: string;
 };

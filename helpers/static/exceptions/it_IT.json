@@ -1355,6 +1355,11 @@
         "error_code": "fiscal_registration_unconfirmed",
         "status": 409
     },
+    "fiscal_not_awaiting_confirmation": {
+        "message": "Questa vendita non è in attesa di una verifica nel portale dell'autorità fiscale: ha i suoi codici fiscali, oppure la sua risposta non è andata persa. Ricaricala per vederne lo stato attuale.",
+        "error_code": "fiscal_not_awaiting_confirmation",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "Per registrare la cassa sono richiesti l'ID interno TCR e il codice del manutentore.",
         "error_code": "fiscal_tcr_fields_missing"

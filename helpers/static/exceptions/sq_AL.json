@@ -1355,6 +1355,11 @@
         "error_code": "fiscal_registration_unconfirmed",
         "status": 409
     },
+    "fiscal_not_awaiting_confirmation": {
+        "message": "Kjo shitje nuk pret kontroll në portalin e autoritetit tatimor: i ka kodet fiskale, ose përgjigjja e saj nuk humbi. Ringarkojeni për të parë gjendjen e saj aktuale.",
+        "error_code": "fiscal_not_awaiting_confirmation",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "Për regjistrimin e arkës kërkohen ID-ja e brendshme TCR dhe kodi i mirëmbajtësit.",
         "error_code": "fiscal_tcr_fields_missing"

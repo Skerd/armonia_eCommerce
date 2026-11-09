@@ -1355,6 +1355,11 @@
         "error_code": "fiscal_registration_unconfirmed",
         "status": 409
     },
+    "fiscal_not_awaiting_confirmation": {
+        "message": "This sale is not waiting for a check in the tax authority's portal: it has its fiscal codes, or its answer was not lost. Reload it to see its current state.",
+        "error_code": "fiscal_not_awaiting_confirmation",
+        "status": 409
+    },
     "fiscal_tcr_fields_missing": {
         "message": "The TCR internal id and the maintainer code are required to register the cash register.",
         "error_code": "fiscal_tcr_fields_missing"
