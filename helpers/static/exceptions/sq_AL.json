@@ -4,11 +4,11 @@
         "error_code": "admin_only"
     },
     "delivery_already_processed": {
-        "message": "Kjo dorëzim është përpunuar tashmë.",
+        "message": "Ky dorëzim është përpunuar tashmë.",
         "error_code": "delivery_already_processed"
     },
     "delivery_already_submitted": {
-        "message": "Një dorëzim është dorëzuar tashmë për këtë porosi.",
+        "message": "Një dorëzim është dërguar tashmë për këtë porosi.",
         "error_code": "delivery_already_submitted"
     },
     "delivery_not_found": {
@@ -20,15 +20,15 @@
         "error_code": "max_revisions_reached"
     },
     "milestone_already_released": {
-        "message": "Ky milestone është lëshuar tashmë.",
+        "message": "Kjo fazë është liruar tashmë.",
         "error_code": "milestone_already_released"
     },
     "milestone_not_found": {
-        "message": "Milestone nuk u gjet.",
+        "message": "Faza nuk u gjet.",
         "error_code": "milestone_not_found"
     },
     "milestone_total_exceeds_order_amount": {
-        "message": "Shumat totale të milestone-ve tejkalojnë shumën e porosisë.",
+        "message": "Shumat totale të fazave tejkalojnë shumën e porosisë.",
         "error_code": "milestone_total_exceeds_order_amount"
     },
     "only_customer_can_accept": {
@@ -36,7 +36,7 @@
         "error_code": "only_customer_can_accept"
     },
     "only_customer_can_release_milestone": {
-        "message": "Vetëm klienti mund ta lëshojë këtë milestone.",
+        "message": "Vetëm klienti mund ta lirojë këtë fazë.",
         "error_code": "only_customer_can_release_milestone"
     },
     "only_customer_can_request_revision": {
@@ -48,7 +48,7 @@
         "error_code": "only_order_parties_can_access_chat"
     },
     "only_order_parties_can_view_escrow": {
-        "message": "Vetëm palët e porosisë mund të shohin detajet e escrow.",
+        "message": "Vetëm palët e porosisë mund të shohin detajet e depozitës.",
         "error_code": "only_order_parties_can_view_escrow"
     },
     "only_order_parties_can_view_revisions": {
@@ -56,11 +56,11 @@
         "error_code": "only_order_parties_can_view_revisions"
     },
     "only_provider_can_deliver": {
-        "message": "Vetëm ofruesi mund të dorëzojë një dorëzim.",
+        "message": "Vetëm ofruesi mund të dërgojë një dorëzim.",
         "error_code": "only_provider_can_deliver"
     },
     "order_must_be_in_progress_to_release": {
-        "message": "Porosia duhet të jetë në progres për të lëshuar një milestone.",
+        "message": "Porosia duhet të jetë në progres për të liruar një fazë.",
         "error_code": "order_must_be_in_progress_to_release"
     },
     "order_not_found": {
@@ -251,7 +251,7 @@
         }
     },
     "pos_product_not_found": {
-        "message": "Produkti nuk u gjet për këtë arke.",
+        "message": "Produkti nuk u gjet për këtë arkë.",
         "error_code": "pos_product_not_found",
         "extra_messages": {
             "productId": {
@@ -299,7 +299,7 @@
         }
     },
     "pos_config_paused": {
-        "message": "Ky arkë POS është në pauzë. Shitjet bllokohen derisa një admin ta rifillojë.",
+        "message": "Kjo arkë POS është në pauzë. Shitjet bllokohen derisa një admin ta rifillojë.",
         "error_code": "pos_config_paused",
         "extra_messages": {
             "configId": {
@@ -308,7 +308,7 @@
         }
     },
     "pos_config_inactive": {
-        "message": "Ky arkë POS është joaktiv dhe nuk mund të përdoret.",
+        "message": "Kjo arkë POS është joaktive dhe nuk mund të përdoret.",
         "error_code": "pos_config_inactive",
         "extra_messages": {
             "configId": {
@@ -357,7 +357,7 @@
         }
     },
     "pos_payment_method_invalid": {
-        "message": "Një ose më shumë metoda pagese janë të pavlefshme për këtë arke.",
+        "message": "Një ose më shumë metoda pagese janë të pavlefshme për këtë arkë.",
         "error_code": "pos_payment_method_invalid",
         "extra_messages": {
             "payments": {
@@ -387,7 +387,7 @@
         }
     },
     "pos_currency_required": {
-        "message": "Monedha është e detyrueshme për këtë arke.",
+        "message": "Monedha është e detyrueshme për këtë arkë.",
         "error_code": "pos_currency_required",
         "extra_messages": {
             "currency": {
@@ -549,7 +549,7 @@
         }
     },
     "pos_manager_not_assigned": {
-        "message": "Ju nuk jeni caktuar si menaxher në këtë arke.",
+        "message": "Ju nuk jeni caktuar si menaxher në këtë arkë.",
         "error_code": "pos_manager_not_assigned",
         "extra_messages": {
             "resetCode": {
@@ -667,11 +667,11 @@
         "error_code": "checkout_cart_changed"
     },
     "checkout_expired": {
-        "message": "Ky checkout ka skaduar. Ju lutemi filloni përsëri.",
+        "message": "Kjo pagesë ka skaduar. Ju lutemi filloni përsëri.",
         "error_code": "checkout_expired"
     },
     "checkout_not_found": {
-        "message": "Checkout nuk u gjet ose nuk është më i hapur.",
+        "message": "Pagesa nuk u gjet ose nuk është më e hapur.",
         "error_code": "checkout_not_found"
     },
     "code_required": {
@@ -719,7 +719,7 @@
         "error_code": "id_required"
     },
     "idempotency_key_conflict": {
-        "message": "Ky çelës checkout i përket një sesioni tjetër. Ju lutemi filloni një checkout të ri.",
+        "message": "Ky çelës pagese i përket një seance tjetër. Ju lutemi filloni një pagesë të re.",
         "error_code": "idempotency_key_conflict"
     },
     "invalid_amount": {
@@ -803,7 +803,7 @@
         "error_code": "payment_not_completed"
     },
     "payment_not_initiated": {
-        "message": "Nuk është nisur asnjë pagesë për këtë checkout.",
+        "message": "Nuk është nisur asnjë pagesë për këtë porosi.",
         "error_code": "payment_not_initiated"
     },
     "pos_variant_not_found": {
@@ -835,7 +835,7 @@
         "error_code": "return_request_not_pending"
     },
     "return_request_not_approved": {
-        "message": "Vetëm kërkesat e aprovuara mund të shënohen si të pranuara.",
+        "message": "Vetëm kërkesat për kthim të miratuara mund të shënohen si të pranuara.",
         "error_code": "return_request_not_approved"
     },
     "return_request_not_received": {
@@ -843,15 +843,15 @@
         "error_code": "return_request_not_received"
     },
     "product_not_draft": {
-        "message": "Vetëm produktet në draft mund të publikohen.",
+        "message": "Vetëm produktet në skicë mund të publikohen.",
         "error_code": "product_not_draft"
     },
     "product_cannot_archive": {
-        "message": "Vetëm produktet në draft ose aktive mund të arkivohen.",
+        "message": "Vetëm produktet në skicë ose aktive mund të arkivohen.",
         "error_code": "product_cannot_archive"
     },
     "product_not_archived": {
-        "message": "Vetëm produktet e arkivuara mund të kthehen në draft.",
+        "message": "Vetëm produktet e arkivuara mund të kthehen në skicë.",
         "error_code": "product_not_archived"
     },
     "shipping_address_required": {
@@ -879,7 +879,7 @@
         "error_code": "inventory_already_exists"
     },
     "inventory_has_stock": {
-        "message": "Ky rresht stoku ka ende stok ose rezervime. Fshijeni ose zhvendoseni stokun më parë.",
+        "message": "Ky rresht stoku ka ende stok ose rezervime. Çregjistrojeni ose zhvendoseni stokun më parë.",
         "error_code": "inventory_has_stock"
     },
     "warehouse_has_stock": {
@@ -983,7 +983,7 @@
         "error_code": "stock_transfer_same_warehouse"
     },
     "stock_document_not_draft": {
-        "message": "Vetëm një draft mund të ndryshohet, përfundohet ose anulohet.",
+        "message": "Vetëm një skicë mund të ndryshohet, përfundohet ose anulohet.",
         "error_code": "stock_document_not_draft"
     },
     "stock_document_done": {
@@ -1019,7 +1019,7 @@
         "error_code": "odoo_api_key_required"
     },
     "odoo_dataset_not_permitted": {
-        "message": "Nuk mund ta importosh atë grup të dhënash me lejet e tua aktuale.",
+        "message": "Nuk mund ta importoni atë grup të dhënash me lejet tuaja aktuale.",
         "error_code": "odoo_dataset_not_permitted"
     },
     "odoo_signup_role_missing": {
@@ -1207,23 +1207,23 @@
         "error_code": "order_must_be_completed_to_review"
     },
     "promotion_already_stopped": {
-        "message": "Kjo promovim është ndalur tashmë.",
+        "message": "Ky promovim është ndalur tashmë.",
         "error_code": "promotion_already_stopped"
     },
     "promotion_deleted": {
-        "message": "Kjo promovim është fshirë.",
+        "message": "Ky promovim është fshirë.",
         "error_code": "promotion_deleted"
     },
     "promotion_not_pausable": {
-        "message": "Kjo promovim nuk mund të pezullohet në gjendjen aktuale.",
+        "message": "Ky promovim nuk mund të pauzohet në gjendjen aktuale.",
         "error_code": "promotion_not_pausable"
     },
     "promotion_not_resumable": {
-        "message": "Kjo promovim nuk mund të rifillojë në gjendjen aktuale.",
+        "message": "Ky promovim nuk mund të rifillojë në gjendjen aktuale.",
         "error_code": "promotion_not_resumable"
     },
     "connect_account_not_created": {
-        "message": "Nuk ekziston ende një llogari Stripe Connect për këtë ofrues. Nisni fillimisht onboarding-un Connect.",
+        "message": "Nuk ekziston ende një llogari Stripe Connect për këtë ofrues. Nisni fillimisht regjistrimin në Stripe Connect.",
         "error_code": "connect_account_not_created"
     },
     "connect_redirect_urls_not_configured": {
@@ -1263,7 +1263,7 @@
         "error_code": "validation_required"
     },
     "add_on_currency_mismatch": {
-        "message": "Të gjitha shtesat duhet të kenë të njëjtën monedhë si shpallja ose paketa.",
+        "message": "Të gjitha shtesat duhet të kenë të njëjtën monedhë si listimi ose paketa.",
         "error_code": "add_on_currency_mismatch"
     },
     "bid_already_submitted": {
@@ -1303,7 +1303,7 @@
         "error_code": "delivery_attachment_not_found"
     },
     "listing_add_on_not_found": {
-        "message": "Një ose më shumë shtesa të zgjedhura nuk i përkasin kësaj shpalljeje.",
+        "message": "Një ose më shumë shtesa të zgjedhura nuk i përkasin këtij listimi.",
         "error_code": "listing_add_on_not_found"
     },
     "listing_category_parent_cycle": {
@@ -1311,7 +1311,7 @@
         "error_code": "listing_category_parent_cycle"
     },
     "listing_price_required": {
-        "message": "Vendosni çmimin dhe monedhën para se të aktivizoni shpalljen.",
+        "message": "Vendosni çmimin dhe monedhën para se të aktivizoni listimin.",
         "error_code": "listing_price_required"
     },
     "milestone_exceeds_escrow_balance": {
@@ -1339,7 +1339,7 @@
         "error_code": "provider_not_found"
     },
     "task_request_not_found": {
-        "message": "Kërkesa për punë nuk u gjet.",
+        "message": "Kërkesa për detyrë nuk u gjet.",
         "error_code": "task_request_not_found"
     },
     "fiscal_nipt_missing": {
@@ -1355,7 +1355,7 @@
         "error_code": "fiscal_codes_missing"
     },
     "fiscal_urls_missing": {
-        "message": "Konfigurimi fiskal kërkon URL-të e shërbimit të fiskalizimit dhe të self-care.",
+        "message": "Konfigurimi fiskal kërkon URL-të e shërbimit të fiskalizimit dhe të vetëshërbimit.",
         "error_code": "fiscal_urls_missing"
     },
     "fiscal_already_fiscalized": {
@@ -1363,12 +1363,12 @@
         "error_code": "fiscal_already_fiscalized"
     },
     "fiscal_registration_unconfirmed": {
-        "message": "Kjo shitje u dërgua te autoriteti tatimor, por përgjigjja e tij nuk u ruajt, ndaj mund të jetë regjistruar tashmë. Kontrollojeni në portalin e autoritetit tatimor; nuk dërgohet përsëri, që të mos regjistrohet dy herë.",
+        "message": "Kjo shitje u dërgua te autoriteti tatimor, por përgjigja e tij nuk u ruajt, ndaj mund të jetë regjistruar tashmë. Kontrollojeni në portalin e autoritetit tatimor; nuk dërgohet përsëri, që të mos regjistrohet dy herë.",
         "error_code": "fiscal_registration_unconfirmed",
         "status": 409
     },
     "fiscal_not_awaiting_confirmation": {
-        "message": "Kjo shitje nuk pret kontroll në portalin e autoritetit tatimor: i ka kodet fiskale, ose përgjigjja e saj nuk humbi. Ringarkojeni për të parë gjendjen e saj aktuale.",
+        "message": "Kjo shitje nuk pret kontroll në portalin e autoritetit tatimor: i ka kodet fiskale, ose përgjigja e saj nuk humbi. Ringarkojeni për të parë gjendjen e saj aktuale.",
         "error_code": "fiscal_not_awaiting_confirmation",
         "status": 409
     },

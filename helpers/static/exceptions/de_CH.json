@@ -84,7 +84,7 @@
         "error_code": "fiscal_error",
         "extra_messages": {
             "posOrderId": {
-                "message": "POS-Auftrag"
+                "message": "POS-Bestellung"
             }
         }
     },
@@ -93,7 +93,7 @@
         "error_code": "fiscal_einvoice_error",
         "extra_messages": {
             "posOrderId": {
-                "message": "POS-Auftrag"
+                "message": "POS-Bestellung"
             }
         }
     },
@@ -102,7 +102,7 @@
         "error_code": "fiscal_tcr_error",
         "extra_messages": {
             "fiscalConfigId": {
-                "message": "Steuerkonfiguration"
+                "message": "Fiskalkonfiguration"
             }
         }
     },
@@ -116,23 +116,23 @@
         }
     },
     "fiscal_config_missing": {
-        "message": "Aktive Steuerkonfiguration mit Zertifikat nicht gefunden.",
+        "message": "Aktive Fiskalkonfiguration mit Zertifikat nicht gefunden.",
         "error_code": "fiscal_config_missing",
         "extra_messages": {
             "fiscalConfigId": {
-                "message": "Steuerkonfiguration"
+                "message": "Fiskalkonfiguration"
             }
         }
     },
     "pos_order_not_found": {
-        "message": "POS-Auftrag nicht gefunden.",
+        "message": "POS-Bestellung nicht gefunden.",
         "error_code": "pos_order_not_found",
         "extra_messages": {
             "posOrderId": {
-                "message": "POS-Auftrag"
+                "message": "POS-Bestellung"
             },
             "_id": {
-                "message": "POS-Auftrag"
+                "message": "POS-Bestellung"
             }
         }
     },
@@ -1179,11 +1179,11 @@
         "error_code": "only_provider_or_admin_can_reschedule_booking"
     },
     "only_requester_can_accept": {
-        "message": "Nur der Aufgabenantragsteller kann dieses Angebot annehmen.",
+        "message": "Nur der Ersteller der Ausschreibung kann dieses Angebot annehmen.",
         "error_code": "only_requester_can_accept"
     },
     "only_requester_or_bidder_can_reject": {
-        "message": "Nur der Antragsteller oder der Bieter kann dieses Angebot ablehnen.",
+        "message": "Nur der Ersteller der Ausschreibung oder der Bieter kann dieses Angebot ablehnen.",
         "error_code": "only_requester_or_bidder_can_reject"
     },
     "order_already_final": {
@@ -1235,7 +1235,7 @@
         "error_code": "provider_cannot_order_own_listing"
     },
     "provider_availability_end_before_start": {
-        "message": "Jedes Verfügbarkeitsfenster muss nach seinem Beginn enden. Für ein Fenster über Mitternacht enden Sie um 24:00 und beginnen den nächsten Tag um 00:00.",
+        "message": "Jedes Verfügbarkeitsfenster muss nach seinem Beginn enden. Lassen Sie ein Fenster über Mitternacht um 24:00 enden und das nächste am Folgetag um 00:00 beginnen.",
         "error_code": "provider_availability_end_before_start"
     },
     "provider_id_required": {
@@ -1243,15 +1243,15 @@
         "error_code": "provider_id_required"
     },
     "provider_invalid_timezone": {
-        "message": "'{}' ist keine gültige Zeitzone. Verwenden Sie einen Namen wie Europe/Zurich.",
+        "message": "«{}» ist keine gültige Zeitzone. Verwenden Sie einen Namen wie Europe/Zurich.",
         "error_code": "provider_invalid_timezone"
     },
     "task_already_awarded_or_closed": {
-        "message": "Diese Aufgabe wurde bereits vergeben oder geschlossen.",
+        "message": "Diese Ausschreibung wurde bereits vergeben oder geschlossen.",
         "error_code": "task_already_awarded_or_closed"
     },
     "task_request_not_open": {
-        "message": "Diese Aufgabenanfrage ist nicht für Angebote offen.",
+        "message": "Diese Ausschreibung ist nicht für Angebote offen.",
         "error_code": "task_request_not_open"
     },
     "unauthorized": {
@@ -1263,11 +1263,11 @@
         "error_code": "validation_required"
     },
     "add_on_currency_mismatch": {
-        "message": "Alle Zusatzleistungen müssen in derselben Währung wie das Angebot oder Paket bepreist sein.",
+        "message": "Alle Zusatzleistungen müssen in derselben Währung wie das Inserat oder Paket bepreist sein.",
         "error_code": "add_on_currency_mismatch"
     },
     "bid_already_submitted": {
-        "message": "Sie haben bereits ein offenes Angebot für diese Anfrage abgegeben.",
+        "message": "Sie haben bereits ein offenes Angebot für diese Ausschreibung abgegeben.",
         "error_code": "bid_already_submitted"
     },
     "bid_not_pending": {
@@ -1275,7 +1275,7 @@
         "error_code": "bid_not_pending"
     },
     "booking_order_not_active": {
-        "message": "Ein Termin kann nur für einen angenommenen oder laufenden Auftrag gebucht werden.",
+        "message": "Eine Buchung ist nur für einen angenommenen oder laufenden Auftrag möglich.",
         "error_code": "booking_order_not_active"
     },
     "booking_outside_provider_availability": {
@@ -1283,7 +1283,7 @@
         "error_code": "booking_outside_provider_availability"
     },
     "cannot_bid_on_own_task_request": {
-        "message": "Sie können kein Angebot für Ihre eigene Anfrage abgeben.",
+        "message": "Sie können kein Angebot für Ihre eigene Ausschreibung abgeben.",
         "error_code": "cannot_bid_on_own_task_request"
     },
     "cannot_cancel_with_open_dispute": {
@@ -1303,7 +1303,7 @@
         "error_code": "delivery_attachment_not_found"
     },
     "listing_add_on_not_found": {
-        "message": "Mindestens eine gewählte Zusatzleistung gehört nicht zu diesem Angebot.",
+        "message": "Mindestens eine gewählte Zusatzleistung gehört nicht zu diesem Inserat.",
         "error_code": "listing_add_on_not_found"
     },
     "listing_category_parent_cycle": {
@@ -1311,7 +1311,7 @@
         "error_code": "listing_category_parent_cycle"
     },
     "listing_price_required": {
-        "message": "Legen Sie Preis und Währung fest, bevor Sie das Angebot aktivieren.",
+        "message": "Legen Sie Preis und Währung fest, bevor Sie das Inserat aktivieren.",
         "error_code": "listing_price_required"
     },
     "milestone_exceeds_escrow_balance": {
@@ -1339,11 +1339,11 @@
         "error_code": "provider_not_found"
     },
     "task_request_not_found": {
-        "message": "Auftragsanfrage nicht gefunden.",
+        "message": "Ausschreibung nicht gefunden.",
         "error_code": "task_request_not_found"
     },
     "fiscal_nipt_missing": {
-        "message": "Eine Steuernummer (NIPT/NUIS) ist erforderlich: Erfassen Sie sie in der Steuerkonfiguration oder als MWST-Nummer der Firma.",
+        "message": "Eine Steuernummer (NIPT/NUIS) ist erforderlich: Erfassen Sie sie in der Fiskalkonfiguration oder als MWST-Nummer der Firma.",
         "error_code": "fiscal_nipt_missing"
     },
     "fiscal_tcr_not_registered": {
@@ -1351,11 +1351,11 @@
         "error_code": "fiscal_tcr_not_registered"
     },
     "fiscal_codes_missing": {
-        "message": "Die Steuerkonfiguration braucht den Geschäftseinheits-, Software- und Operatorcode.",
+        "message": "Die Fiskalkonfiguration braucht den Geschäftseinheits-, Software- und Operatorcode.",
         "error_code": "fiscal_codes_missing"
     },
     "fiscal_urls_missing": {
-        "message": "Die Steuerkonfiguration braucht die URLs des Fiskalisierungs- und des Self-Care-Dienstes.",
+        "message": "Die Fiskalkonfiguration braucht die URLs des Fiskalisierungs- und des Self-Care-Dienstes.",
         "error_code": "fiscal_urls_missing"
     },
     "fiscal_already_fiscalized": {
@@ -1409,7 +1409,7 @@
         "error_code": "fiscal_order_state_invalid"
     },
     "fiscal_pos_config_missing": {
-        "message": "Die Kasse hat keine Steuerkonfiguration.",
+        "message": "Die Kasse hat keine Fiskalkonfiguration.",
         "error_code": "fiscal_pos_config_missing"
     },
     "fiscal_certificate_invalid": {

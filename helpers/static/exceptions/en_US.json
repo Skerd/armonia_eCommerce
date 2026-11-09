@@ -907,7 +907,7 @@
         "error_code": "product_price_required"
     },
     "fulfillment_quantity_exceeds_order": {
-        "message": "The quantity is more than what is left to fulfil on this order line.",
+        "message": "The quantity is more than what is left to fulfill on this order line.",
         "error_code": "fulfillment_quantity_exceeds_order"
     },
     "order_already_fulfilled": {

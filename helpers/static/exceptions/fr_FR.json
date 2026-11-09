@@ -20,15 +20,15 @@
         "error_code": "max_revisions_reached"
     },
     "milestone_already_released": {
-        "message": "Ce jalon a déjà été libéré.",
+        "message": "Cette étape a déjà été libérée.",
         "error_code": "milestone_already_released"
     },
     "milestone_not_found": {
-        "message": "Jalon introuvable.",
+        "message": "Étape introuvable.",
         "error_code": "milestone_not_found"
     },
     "milestone_total_exceeds_order_amount": {
-        "message": "Le total des montants des jalons dépasse le montant de la commande.",
+        "message": "Le total des montants des étapes dépasse le montant de la commande.",
         "error_code": "milestone_total_exceeds_order_amount"
     },
     "only_customer_can_accept": {
@@ -36,7 +36,7 @@
         "error_code": "only_customer_can_accept"
     },
     "only_customer_can_release_milestone": {
-        "message": "Seul le client peut libérer ce jalon.",
+        "message": "Seul le client peut libérer cette étape.",
         "error_code": "only_customer_can_release_milestone"
     },
     "only_customer_can_request_revision": {
@@ -48,7 +48,7 @@
         "error_code": "only_order_parties_can_access_chat"
     },
     "only_order_parties_can_view_escrow": {
-        "message": "Seules les parties de la commande peuvent consulter les détails de l'entiercement.",
+        "message": "Seules les parties de la commande peuvent consulter les détails du séquestre.",
         "error_code": "only_order_parties_can_view_escrow"
     },
     "only_order_parties_can_view_revisions": {
@@ -60,7 +60,7 @@
         "error_code": "only_provider_can_deliver"
     },
     "order_must_be_in_progress_to_release": {
-        "message": "La commande doit être en cours pour libérer un jalon.",
+        "message": "La commande doit être en cours pour libérer une étape.",
         "error_code": "order_must_be_in_progress_to_release"
     },
     "order_not_found": {
@@ -84,7 +84,7 @@
         "error_code": "fiscal_error",
         "extra_messages": {
             "posOrderId": {
-                "message": "Commande POS"
+                "message": "Commande PDV"
             }
         }
     },
@@ -93,7 +93,7 @@
         "error_code": "fiscal_einvoice_error",
         "extra_messages": {
             "posOrderId": {
-                "message": "Commande POS"
+                "message": "Commande PDV"
             }
         }
     },
@@ -125,37 +125,37 @@
         }
     },
     "pos_order_not_found": {
-        "message": "Commande POS introuvable.",
+        "message": "Commande PDV introuvable.",
         "error_code": "pos_order_not_found",
         "extra_messages": {
             "posOrderId": {
-                "message": "Commande POS"
+                "message": "Commande PDV"
             },
             "_id": {
-                "message": "Commande POS"
+                "message": "Commande PDV"
             }
         }
     },
     "pos_config_not_found": {
-        "message": "Configuration POS introuvable.",
+        "message": "Configuration du point de vente introuvable.",
         "error_code": "pos_config_not_found",
         "extra_messages": {
             "configId": {
-                "message": "Configuration POS"
+                "message": "Configuration du point de vente"
             },
             "config": {
-                "message": "Configuration POS"
+                "message": "Configuration du point de vente"
             },
             "sessionId": {
                 "message": "Session"
             },
             "_id": {
-                "message": "Configuration POS"
+                "message": "Configuration du point de vente"
             }
         }
     },
     "pos_session_not_found": {
-        "message": "Session POS introuvable.",
+        "message": "Session de caisse introuvable.",
         "error_code": "pos_session_not_found",
         "extra_messages": {
             "sessionId": {
@@ -167,7 +167,7 @@
         }
     },
     "pos_session_not_opened": {
-        "message": "La session POS n'est pas ouverte.",
+        "message": "La session de caisse n'est pas ouverte.",
         "error_code": "pos_session_not_opened",
         "extra_messages": {
             "sessionId": {
@@ -182,16 +182,16 @@
         }
     },
     "pos_session_already_open": {
-        "message": "Une session POS est déjà ouverte pour cette configuration.",
+        "message": "Une session de caisse est déjà ouverte pour cette configuration.",
         "error_code": "pos_session_already_open",
         "extra_messages": {
             "configId": {
-                "message": "Configuration POS"
+                "message": "Configuration du point de vente"
             }
         }
     },
     "pos_session_already_closed": {
-        "message": "Cette session POS est déjà clôturée.",
+        "message": "Cette session de caisse est déjà clôturée.",
         "error_code": "pos_session_already_closed",
         "extra_messages": {
             "_id": {
@@ -281,7 +281,7 @@
         }
     },
     "pos_config_warehouse_required": {
-        "message": "Cette configuration POS doit avoir au moins un entrepôt.",
+        "message": "Cette configuration de point de vente doit avoir au moins un entrepôt.",
         "error_code": "pos_config_warehouse_required",
         "extra_messages": {
             "warehouses": {
@@ -290,7 +290,7 @@
         }
     },
     "pos_config_warehouse_inactive": {
-        "message": "Seuls les entrepôts actifs peuvent être affectés à une configuration POS.",
+        "message": "Seuls les entrepôts actifs peuvent être affectés à une configuration de point de vente.",
         "error_code": "pos_config_warehouse_inactive",
         "extra_messages": {
             "warehouses": {
@@ -299,25 +299,25 @@
         }
     },
     "pos_config_paused": {
-        "message": "Cette caisse POS est en pause. La vente est bloquée jusqu'à ce qu'un administrateur la reprenne.",
+        "message": "Cette caisse est en pause. La vente est bloquée jusqu'à ce qu'un administrateur la reprenne.",
         "error_code": "pos_config_paused",
         "extra_messages": {
             "configId": {
-                "message": "Configuration POS"
+                "message": "Configuration du point de vente"
             }
         }
     },
     "pos_config_inactive": {
-        "message": "Cette caisse POS est inactive et ne peut pas être utilisée.",
+        "message": "Cette caisse est inactive et ne peut pas être utilisée.",
         "error_code": "pos_config_inactive",
         "extra_messages": {
             "configId": {
-                "message": "Configuration POS"
+                "message": "Configuration du point de vente"
             }
         }
     },
     "warehouse_in_use_by_pos_config": {
-        "message": "Cet entrepôt est le seul entrepôt d'une configuration POS et ne peut pas être désactivé ou supprimé. Ajoutez d'abord un autre entrepôt à cette configuration POS.",
+        "message": "Cet entrepôt est le seul entrepôt d'une configuration de point de vente et ne peut pas être désactivé ni supprimé. Ajoutez d'abord un autre entrepôt à cette configuration.",
         "error_code": "warehouse_in_use_by_pos_config"
     },
     "pos_insufficient_cash": {
@@ -369,7 +369,7 @@
         }
     },
     "pos_payment_method_last_on_config": {
-        "message": "Impossible de retirer ce mode de paiement car c'est le dernier mode d'une configuration POS.",
+        "message": "Impossible de retirer ce mode de paiement car c'est le dernier mode d'une configuration de point de vente.",
         "error_code": "pos_payment_method_last_on_config",
         "extra_messages": {
             "paymentMethods": {
@@ -468,7 +468,7 @@
         }
     },
     "pos_terminal_amount_invalid": {
-        "message": "Le montant de l'encaissement terminal doit être supérieur à zéro.",
+        "message": "Le montant à débiter sur le terminal doit être supérieur à zéro.",
         "error_code": "pos_terminal_amount_invalid",
         "extra_messages": {
             "amount": {
@@ -513,43 +513,43 @@
         }
     },
     "pos_manager_pin_invalid": {
-        "message": "PIN manager invalide.",
+        "message": "Code PIN du gestionnaire invalide.",
         "error_code": "pos_manager_pin_invalid",
         "extra_messages": {
             "pin": {
-                "message": "PIN"
+                "message": "Code PIN"
             },
             "currentPin": {
-                "message": "PIN actuel"
+                "message": "Code PIN actuel"
             },
             "managerPin": {
-                "message": "PIN manager"
+                "message": "Code PIN du gestionnaire"
             }
         }
     },
     "pos_manager_pin_not_set": {
-        "message": "Le PIN manager n'est pas défini.",
+        "message": "Le code PIN du gestionnaire n'est pas défini.",
         "error_code": "pos_manager_pin_not_set",
         "extra_messages": {
             "pin": {
-                "message": "PIN"
+                "message": "Code PIN"
             },
             "currentPin": {
-                "message": "PIN actuel"
+                "message": "Code PIN actuel"
             }
         }
     },
     "pos_manager_pin_already_set": {
-        "message": "Votre PIN manager est déjà défini. Utilisez plutôt modifier le PIN.",
+        "message": "Votre code PIN de gestionnaire est déjà défini. Utilisez plutôt « Modifier le code PIN ».",
         "error_code": "pos_manager_pin_already_set",
         "extra_messages": {
             "pin": {
-                "message": "PIN"
+                "message": "Code PIN"
             }
         }
     },
     "pos_manager_not_assigned": {
-        "message": "Vous n'êtes pas assigné comme manager sur cette caisse.",
+        "message": "Vous n'êtes pas affecté comme gestionnaire sur cette caisse.",
         "error_code": "pos_manager_not_assigned",
         "extra_messages": {
             "resetCode": {
@@ -558,7 +558,7 @@
         }
     },
     "pos_manager_pin_reset_invalid": {
-        "message": "Ce lien de réinitialisation du PIN manager n'est pas valide.",
+        "message": "Ce lien de réinitialisation du code PIN du gestionnaire n'est pas valide.",
         "error_code": "pos_manager_pin_reset_invalid",
         "extra_messages": {
             "resetCode": {
@@ -567,7 +567,7 @@
         }
     },
     "pos_manager_pin_reset_expired": {
-        "message": "Ce lien de réinitialisation du PIN manager a expiré.",
+        "message": "Ce lien de réinitialisation du code PIN du gestionnaire a expiré.",
         "error_code": "pos_manager_pin_reset_expired",
         "extra_messages": {
             "resetCode": {
@@ -576,7 +576,7 @@
         }
     },
     "pos_manager_pin_reset_already_used": {
-        "message": "Ce lien de réinitialisation du PIN manager a déjà été utilisé.",
+        "message": "Ce lien de réinitialisation du code PIN du gestionnaire a déjà été utilisé.",
         "error_code": "pos_manager_pin_reset_already_used",
         "extra_messages": {
             "resetCode": {
@@ -585,7 +585,7 @@
         }
     },
     "pos_manager_pin_reset_no_email": {
-        "message": "Votre compte n'a pas d'adresse e-mail pour envoyer le lien de réinitialisation du PIN.",
+        "message": "Votre compte n'a pas d'adresse e-mail pour recevoir le lien de réinitialisation du code PIN.",
         "error_code": "pos_manager_pin_reset_no_email"
     },
     "payment_gateway_not_configured": {
@@ -611,7 +611,7 @@
         }
     },
     "inventory_not_found": {
-        "message": "Enregistrement d'inventaire introuvable.",
+        "message": "Ligne de stock introuvable.",
         "error_code": "inventory_not_found"
     },
     "product_category_company_required": {
@@ -667,11 +667,11 @@
         "error_code": "checkout_cart_changed"
     },
     "checkout_expired": {
-        "message": "Cette commande a expiré. Veuillez recommencer.",
+        "message": "Ce paiement a expiré. Veuillez recommencer.",
         "error_code": "checkout_expired"
     },
     "checkout_not_found": {
-        "message": "Commande introuvable ou plus ouverte.",
+        "message": "Paiement introuvable ou plus ouvert.",
         "error_code": "checkout_not_found"
     },
     "code_required": {
@@ -719,7 +719,7 @@
         "error_code": "id_required"
     },
     "idempotency_key_conflict": {
-        "message": "Cette clé de commande appartient à une autre session. Veuillez recommencer.",
+        "message": "Cette clé de paiement appartient à une autre session. Veuillez recommencer le paiement.",
         "error_code": "idempotency_key_conflict"
     },
     "invalid_amount": {
@@ -919,7 +919,7 @@
         "error_code": "variant_combination_exists"
     },
     "bundle_component_invalid": {
-        "message": "Les composants d'un lot doivent être d'autres produits actifs de cette boutique, qui ne sont pas eux-mêmes des lots.",
+        "message": "Les composants d'un pack doivent être d'autres produits actifs de cette boutique, qui ne sont pas eux-mêmes des packs.",
         "error_code": "bundle_component_invalid"
     },
     "category_parent_cycle": {
@@ -995,7 +995,7 @@
         "error_code": "stock_line_duplicate"
     },
     "stock_line_not_tracked": {
-        "message": "Seuls les produits suivis en stock peuvent être transférés ou comptés (un lot passe par ses composants).",
+        "message": "Seuls les produits suivis en stock peuvent être transférés ou comptés (un pack passe par ses composants).",
         "error_code": "stock_line_not_tracked"
     },
     "odoo_connection_missing": {
@@ -1123,19 +1123,19 @@
         "error_code": "only_customer_can_accept_delivery"
     },
     "only_listing_provider_can_create_add_on": {
-        "message": "Seul le prestataire de l'annonce peut créer un complément pour cette annonce.",
+        "message": "Seul le prestataire de l'annonce peut créer un module complémentaire pour cette annonce.",
         "error_code": "only_listing_provider_can_create_add_on"
     },
     "only_listing_provider_can_create_package": {
-        "message": "Seul le prestataire de l'annonce peut créer un forfait pour cette annonce.",
+        "message": "Seul le prestataire de l'annonce peut créer un package pour cette annonce.",
         "error_code": "only_listing_provider_can_create_package"
     },
     "only_listing_provider_can_delete_add_on": {
-        "message": "Seul le prestataire de l'annonce peut supprimer ce complément.",
+        "message": "Seul le prestataire de l'annonce peut supprimer ce module complémentaire.",
         "error_code": "only_listing_provider_can_delete_add_on"
     },
     "only_listing_provider_can_delete_package": {
-        "message": "Seul le prestataire de l'annonce peut supprimer ce forfait.",
+        "message": "Seul le prestataire de l'annonce peut supprimer ce package.",
         "error_code": "only_listing_provider_can_delete_package"
     },
     "only_order_parties_can_create_booking": {
@@ -1183,7 +1183,7 @@
         "error_code": "only_requester_can_accept"
     },
     "only_requester_or_bidder_can_reject": {
-        "message": "Seul le demandeur ou l'offrant peut refuser cette offre.",
+        "message": "Seul le demandeur ou l'auteur de l'offre peut refuser cette offre.",
         "error_code": "only_requester_or_bidder_can_reject"
     },
     "order_already_final": {
@@ -1223,7 +1223,7 @@
         "error_code": "promotion_not_resumable"
     },
     "connect_account_not_created": {
-        "message": "Aucun compte Stripe Connect n'existe encore pour ce prestataire. Commencez d'abord l'onboarding Connect.",
+        "message": "Aucun compte Stripe Connect n'existe encore pour ce prestataire. Commencez d'abord l'inscription Connect.",
         "error_code": "connect_account_not_created"
     },
     "connect_redirect_urls_not_configured": {
@@ -1263,7 +1263,7 @@
         "error_code": "validation_required"
     },
     "add_on_currency_mismatch": {
-        "message": "Toutes les options doivent être dans la même devise que l'annonce ou le forfait.",
+        "message": "Tous les modules complémentaires doivent être tarifés dans la même devise que l'annonce ou le package.",
         "error_code": "add_on_currency_mismatch"
     },
     "bid_already_submitted": {
@@ -1303,7 +1303,7 @@
         "error_code": "delivery_attachment_not_found"
     },
     "listing_add_on_not_found": {
-        "message": "Une ou plusieurs options choisies n'appartiennent pas à cette annonce.",
+        "message": "Un ou plusieurs modules complémentaires choisis n'appartiennent pas à cette annonce.",
         "error_code": "listing_add_on_not_found"
     },
     "listing_category_parent_cycle": {
@@ -1339,7 +1339,7 @@
         "error_code": "provider_not_found"
     },
     "task_request_not_found": {
-        "message": "Demande de travail introuvable.",
+        "message": "Demande de tâche introuvable.",
         "error_code": "task_request_not_found"
     },
     "fiscal_nipt_missing": {

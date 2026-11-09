@@ -20,11 +20,11 @@
         "error_code": "max_revisions_reached"
     },
     "milestone_already_released": {
-        "message": "Questa milestone è già stata sbloccata.",
+        "message": "Questa milestone è già stata rilasciata.",
         "error_code": "milestone_already_released"
     },
     "milestone_not_found": {
-        "message": "Milestone non trovato.",
+        "message": "Milestone non trovata.",
         "error_code": "milestone_not_found"
     },
     "milestone_total_exceeds_order_amount": {
@@ -36,7 +36,7 @@
         "error_code": "only_customer_can_accept"
     },
     "only_customer_can_release_milestone": {
-        "message": "Solo il cliente può sbloccare questa milestone.",
+        "message": "Solo il cliente può rilasciare questa milestone.",
         "error_code": "only_customer_can_release_milestone"
     },
     "only_customer_can_request_revision": {
@@ -48,7 +48,7 @@
         "error_code": "only_order_parties_can_access_chat"
     },
     "only_order_parties_can_view_escrow": {
-        "message": "Solo le parti dell'ordine possono visualizzare i dettagli dell'escrow.",
+        "message": "Solo le parti dell'ordine possono visualizzare i dettagli del deposito a garanzia.",
         "error_code": "only_order_parties_can_view_escrow"
     },
     "only_order_parties_can_view_revisions": {
@@ -60,7 +60,7 @@
         "error_code": "only_provider_can_deliver"
     },
     "order_must_be_in_progress_to_release": {
-        "message": "L'ordine deve essere in corso per sbloccare una milestone.",
+        "message": "L'ordine deve essere in corso per rilasciare una milestone.",
         "error_code": "order_must_be_in_progress_to_release"
     },
     "order_not_found": {
@@ -260,14 +260,14 @@
         }
     },
     "pos_held_not_found": {
-        "message": "Ordine in attesa non trovato.",
+        "message": "Ordine sospeso non trovato.",
         "error_code": "pos_held_not_found",
         "extra_messages": {
             "_id": {
-                "message": "Ordine in attesa"
+                "message": "Ordine sospeso"
             },
             "heldOrderId": {
-                "message": "Ordine in attesa"
+                "message": "Ordine sospeso"
             }
         }
     },
@@ -348,7 +348,7 @@
         }
     },
     "pos_close_held_orders_open": {
-        "message": "Riprendere o scartare gli ordini in attesa prima di chiudere la sessione.",
+        "message": "Riprendere o scartare gli ordini sospesi prima di chiudere la sessione.",
         "error_code": "pos_close_held_orders_open",
         "extra_messages": {
             "_id": {
@@ -513,7 +513,7 @@
         }
     },
     "pos_manager_pin_invalid": {
-        "message": "PIN manager non valido.",
+        "message": "PIN del responsabile non valido.",
         "error_code": "pos_manager_pin_invalid",
         "extra_messages": {
             "pin": {
@@ -523,12 +523,12 @@
                 "message": "PIN attuale"
             },
             "managerPin": {
-                "message": "PIN manager"
+                "message": "PIN del responsabile"
             }
         }
     },
     "pos_manager_pin_not_set": {
-        "message": "Il PIN manager non è impostato.",
+        "message": "Il PIN del responsabile non è impostato.",
         "error_code": "pos_manager_pin_not_set",
         "extra_messages": {
             "pin": {
@@ -540,7 +540,7 @@
         }
     },
     "pos_manager_pin_already_set": {
-        "message": "Il PIN manager è già impostato. Usare invece modifica PIN.",
+        "message": "Il PIN del responsabile è già impostato. Usare invece Cambia PIN.",
         "error_code": "pos_manager_pin_already_set",
         "extra_messages": {
             "pin": {
@@ -549,7 +549,7 @@
         }
     },
     "pos_manager_not_assigned": {
-        "message": "Non si è assegnati come manager su questa cassa.",
+        "message": "Non si è assegnati come responsabile su questa cassa.",
         "error_code": "pos_manager_not_assigned",
         "extra_messages": {
             "resetCode": {
@@ -558,7 +558,7 @@
         }
     },
     "pos_manager_pin_reset_invalid": {
-        "message": "Questo link di reimpostazione del PIN manager non è valido.",
+        "message": "Questo link di reimpostazione del PIN del responsabile non è valido.",
         "error_code": "pos_manager_pin_reset_invalid",
         "extra_messages": {
             "resetCode": {
@@ -567,7 +567,7 @@
         }
     },
     "pos_manager_pin_reset_expired": {
-        "message": "Questo link di reimpostazione del PIN manager è scaduto.",
+        "message": "Questo link di reimpostazione del PIN del responsabile è scaduto.",
         "error_code": "pos_manager_pin_reset_expired",
         "extra_messages": {
             "resetCode": {
@@ -576,7 +576,7 @@
         }
     },
     "pos_manager_pin_reset_already_used": {
-        "message": "Questo link di reimpostazione del PIN manager è già stato utilizzato.",
+        "message": "Questo link di reimpostazione del PIN del responsabile è già stato utilizzato.",
         "error_code": "pos_manager_pin_reset_already_used",
         "extra_messages": {
             "resetCode": {
@@ -651,7 +651,7 @@
         "error_code": "only_admin_can_delete_review"
     },
     "buy_x_get_y_misconfigured": {
-        "message": "Questo sconto «prendi X paghi Y» non è configurato correttamente.",
+        "message": "Questo sconto «compra X prendi Y» non è configurato correttamente.",
         "error_code": "buy_x_get_y_misconfigured"
     },
     "cart_empty": {
@@ -711,7 +711,7 @@
         "error_code": "fulfillment_not_shipped"
     },
     "gift_card_balance_changed": {
-        "message": "Il saldo della gift card è cambiato. Controlla il tuo ordine.",
+        "message": "Il saldo della carta regalo è cambiato. Controlla il tuo ordine.",
         "error_code": "gift_card_balance_changed"
     },
     "id_required": {
@@ -943,7 +943,7 @@
         "error_code": "cart_currency_mismatch"
     },
     "cart_multi_seller_promo": {
-        "message": "I codici sconto e le gift card possono essere usati solo se tutti gli articoli nel carrello provengono dallo stesso venditore.",
+        "message": "I codici sconto e le carte regalo possono essere usati solo se tutti gli articoli nel carrello provengono dallo stesso venditore.",
         "error_code": "cart_multi_seller_promo"
     },
     "gift_card_revoked_by_refund": {
@@ -1035,23 +1035,23 @@
         "error_code": "odoo_import_empty_selection"
     },
     "already_flagged": {
-        "message": "Questa inserzione è già stata segnalata.",
+        "message": "Questo annuncio è già stato segnalato.",
         "error_code": "already_flagged"
     },
     "listing_flag_cannot_dismiss_in_current_status": {
-        "message": "Solo le segnalazioni di inserzione in sospeso possono essere ignorate.",
+        "message": "Solo le segnalazioni di annunci in attesa possono essere ignorate.",
         "error_code": "listing_flag_cannot_dismiss_in_current_status"
     },
     "listing_flag_cannot_edit_in_current_status": {
-        "message": "Solo le segnalazioni di inserzione in sospeso possono essere modificate.",
+        "message": "Solo le segnalazioni di annunci in attesa possono essere modificate.",
         "error_code": "listing_flag_cannot_edit_in_current_status"
     },
     "listing_flag_cannot_resolve_in_current_status": {
-        "message": "Solo le segnalazioni di inserzione in sospeso possono essere risolte.",
+        "message": "Solo le segnalazioni di annunci in attesa possono essere risolte.",
         "error_code": "listing_flag_cannot_resolve_in_current_status"
     },
     "listing_flag_deleted": {
-        "message": "Questa segnalazione di inserzione è stata eliminata.",
+        "message": "Questa segnalazione dell'annuncio è stata eliminata.",
         "error_code": "listing_flag_deleted"
     },
     "bid_not_found_or_already_processed": {
@@ -1103,11 +1103,11 @@
         "error_code": "invalid_start_date"
     },
     "listing_has_no_currency": {
-        "message": "L'inserzione non ha una valuta configurata.",
+        "message": "L'annuncio non ha una valuta configurata.",
         "error_code": "listing_has_no_currency"
     },
     "listing_not_found": {
-        "message": "Inserzione non trovata.",
+        "message": "Annuncio non trovato.",
         "error_code": "listing_not_found"
     },
     "no_pending_delivery": {
@@ -1123,19 +1123,19 @@
         "error_code": "only_customer_can_accept_delivery"
     },
     "only_listing_provider_can_create_add_on": {
-        "message": "Solo il fornitore dell'inserzione può creare un extra per questa inserzione.",
+        "message": "Solo il fornitore dell'annuncio può creare un componente aggiuntivo per questo annuncio.",
         "error_code": "only_listing_provider_can_create_add_on"
     },
     "only_listing_provider_can_create_package": {
-        "message": "Solo il fornitore dell'inserzione può creare un pacchetto per questa inserzione.",
+        "message": "Solo il fornitore dell'annuncio può creare un pacchetto per questo annuncio.",
         "error_code": "only_listing_provider_can_create_package"
     },
     "only_listing_provider_can_delete_add_on": {
-        "message": "Solo il fornitore dell'inserzione può eliminare questo extra.",
+        "message": "Solo il fornitore dell'annuncio può eliminare questo componente aggiuntivo.",
         "error_code": "only_listing_provider_can_delete_add_on"
     },
     "only_listing_provider_can_delete_package": {
-        "message": "Solo il fornitore dell'inserzione può eliminare questo pacchetto.",
+        "message": "Solo il fornitore dell'annuncio può eliminare questo pacchetto.",
         "error_code": "only_listing_provider_can_delete_package"
     },
     "only_order_parties_can_create_booking": {
@@ -1231,7 +1231,7 @@
         "error_code": "connect_redirect_urls_not_configured"
     },
     "provider_cannot_order_own_listing": {
-        "message": "Un fornitore non può ordinare la propria inserzione.",
+        "message": "Un fornitore non può ordinare il proprio annuncio.",
         "error_code": "provider_cannot_order_own_listing"
     },
     "provider_availability_end_before_start": {
@@ -1263,7 +1263,7 @@
         "error_code": "validation_required"
     },
     "add_on_currency_mismatch": {
-        "message": "Tutti i servizi aggiuntivi devono avere la stessa valuta dell'annuncio o del pacchetto.",
+        "message": "Tutti i componenti aggiuntivi devono avere la stessa valuta dell'annuncio o del pacchetto.",
         "error_code": "add_on_currency_mismatch"
     },
     "bid_already_submitted": {
@@ -1287,15 +1287,15 @@
         "error_code": "cannot_bid_on_own_task_request"
     },
     "cannot_cancel_with_open_dispute": {
-        "message": "Questo ordine ha una contestazione aperta. Si risolve tramite la contestazione, non annullando.",
+        "message": "Questo ordine ha una controversia aperta. Si risolve tramite la controversia, non annullando.",
         "error_code": "cannot_cancel_with_open_dispute"
     },
     "cannot_release_with_open_dispute": {
-        "message": "Una milestone non può essere rilasciata finché l'ordine ha una contestazione aperta.",
+        "message": "Una milestone non può essere rilasciata finché l'ordine ha una controversia aperta.",
         "error_code": "cannot_release_with_open_dispute"
     },
     "customer_cannot_cancel_started_order": {
-        "message": "Il lavoro su questo ordine è iniziato. Apri una contestazione se non sei d'accordo con la consegna.",
+        "message": "Il lavoro su questo ordine è iniziato. Apri una controversia se non sei d'accordo con la consegna.",
         "error_code": "customer_cannot_cancel_started_order"
     },
     "delivery_attachment_not_found": {
@@ -1303,7 +1303,7 @@
         "error_code": "delivery_attachment_not_found"
     },
     "listing_add_on_not_found": {
-        "message": "Uno o più servizi aggiuntivi selezionati non appartengono a questo annuncio.",
+        "message": "Uno o più componenti aggiuntivi selezionati non appartengono a questo annuncio.",
         "error_code": "listing_add_on_not_found"
     },
     "listing_category_parent_cycle": {
@@ -1339,7 +1339,7 @@
         "error_code": "provider_not_found"
     },
     "task_request_not_found": {
-        "message": "Richiesta di lavoro non trovata.",
+        "message": "Richiesta di attività non trovata.",
         "error_code": "task_request_not_found"
     },
     "fiscal_nipt_missing": {
@@ -1351,7 +1351,7 @@
         "error_code": "fiscal_tcr_not_registered"
     },
     "fiscal_codes_missing": {
-        "message": "La configurazione fiscale richiede i codici di unità commerciale, software e operatore.",
+        "message": "La configurazione fiscale richiede i codici di unità operativa, software e operatore.",
         "error_code": "fiscal_codes_missing"
     },
     "fiscal_urls_missing": {
