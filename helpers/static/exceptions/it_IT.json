@@ -1372,6 +1372,18 @@
         "message": "Fiscalizza l'ordine prima di registrarne la fattura elettronica.",
         "error_code": "fiscal_einvoice_not_fiscalized"
     },
+    "fiscal_refund_original_not_fiscalized": {
+        "message": "La vendita restituita da questo rimborso non è mai stata registrata presso l'autorità fiscale, quindi il rimborso non può farvi riferimento. Registra prima la vendita, poi il rimborso.",
+        "error_code": "fiscal_refund_original_not_fiscalized"
+    },
+    "fiscal_iic_mismatch": {
+        "message": "L'NSLF registrato per questa vendita non corrisponde alla vendita così come è stata inviata all'autorità fiscale, quindi la sua fattura elettronica non può essere firmata. Controlla i codici registrati dal portale CIS.",
+        "error_code": "fiscal_iic_mismatch"
+    },
+    "fiscal_einvoice_refund_original_missing": {
+        "message": "La vendita restituita da questo rimborso non ha una fattura elettronica registrata, quindi la fattura elettronica del rimborso non può correggerla. Registra prima la fattura elettronica della vendita.",
+        "error_code": "fiscal_einvoice_refund_original_missing"
+    },
     "fiscal_einvoice_too_late": {
         "message": "Una fattura elettronica può essere creata solo entro 48 ore dalla fiscalizzazione.",
         "error_code": "fiscal_einvoice_too_late"

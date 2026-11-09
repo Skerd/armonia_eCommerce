@@ -1372,6 +1372,18 @@
         "message": "Fiskalisieren Sie die Bestellung, bevor Sie ihre E-Rechnung registrieren.",
         "error_code": "fiscal_einvoice_not_fiscalized"
     },
+    "fiscal_refund_original_not_fiscalized": {
+        "message": "Der Verkauf, den diese Rückerstattung zurückgibt, wurde nie bei der Steuerbehörde registriert, daher kann die Rückerstattung nicht auf ihn verweisen. Registrieren Sie zuerst den Verkauf, dann die Rückerstattung.",
+        "error_code": "fiscal_refund_original_not_fiscalized"
+    },
+    "fiscal_iic_mismatch": {
+        "message": "Der für diesen Verkauf erfasste NSLF stimmt nicht mit dem Verkauf überein, wie er an die Steuerbehörde gesendet wurde, daher kann seine E-Rechnung nicht signiert werden. Prüfen Sie die aus dem CIS-Portal erfassten Codes.",
+        "error_code": "fiscal_iic_mismatch"
+    },
+    "fiscal_einvoice_refund_original_missing": {
+        "message": "Der Verkauf, den diese Rückerstattung zurückgibt, hat keine registrierte E-Rechnung, daher kann die E-Rechnung der Rückerstattung ihn nicht korrigieren. Registrieren Sie zuerst die E-Rechnung des Verkaufs.",
+        "error_code": "fiscal_einvoice_refund_original_missing"
+    },
     "fiscal_einvoice_too_late": {
         "message": "Eine E-Rechnung kann nur innerhalb von 48 Stunden nach der Fiskalisierung erstellt werden.",
         "error_code": "fiscal_einvoice_too_late"

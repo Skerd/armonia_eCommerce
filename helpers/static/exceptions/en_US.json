@@ -1372,6 +1372,18 @@
         "message": "Fiscalize the order before registering its e-invoice.",
         "error_code": "fiscal_einvoice_not_fiscalized"
     },
+    "fiscal_refund_original_not_fiscalized": {
+        "message": "The sale this refund returns was never registered with the tax authority, so the refund cannot refer to it. Register the sale first, then the refund.",
+        "error_code": "fiscal_refund_original_not_fiscalized"
+    },
+    "fiscal_iic_mismatch": {
+        "message": "The NSLF recorded for this sale does not match the sale as it was sent to the tax authority, so its e-invoice cannot be signed. Check the codes recorded from the CIS portal.",
+        "error_code": "fiscal_iic_mismatch"
+    },
+    "fiscal_einvoice_refund_original_missing": {
+        "message": "The sale this refund returns has no registered e-invoice, so the refund's e-invoice cannot correct it. Register the sale's e-invoice first.",
+        "error_code": "fiscal_einvoice_refund_original_missing"
+    },
     "fiscal_einvoice_too_late": {
         "message": "An e-invoice can only be created within 48 hours of fiscalization.",
         "error_code": "fiscal_einvoice_too_late"

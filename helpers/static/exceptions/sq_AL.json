@@ -1372,6 +1372,18 @@
         "message": "Fiskalizoni porosinë para se të regjistroni faturën elektronike të saj.",
         "error_code": "fiscal_einvoice_not_fiscalized"
     },
+    "fiscal_refund_original_not_fiscalized": {
+        "message": "Shitja që kthen ky rimbursim nuk është regjistruar kurrë në autoritetin tatimor, prandaj rimbursimi nuk mund t'i referohet. Regjistroni fillimisht shitjen, pastaj rimbursimin.",
+        "error_code": "fiscal_refund_original_not_fiscalized"
+    },
+    "fiscal_iic_mismatch": {
+        "message": "NSLF-ja e regjistruar për këtë shitje nuk përputhet me shitjen siç u dërgua në autoritetin tatimor, prandaj fatura elektronike e saj nuk mund të nënshkruhet. Kontrolloni kodet e regjistruara nga portali i CIS.",
+        "error_code": "fiscal_iic_mismatch"
+    },
+    "fiscal_einvoice_refund_original_missing": {
+        "message": "Shitja që kthen ky rimbursim nuk ka faturë elektronike të regjistruar, prandaj fatura elektronike e rimbursimit nuk mund ta korrigjojë. Regjistroni fillimisht faturën elektronike të shitjes.",
+        "error_code": "fiscal_einvoice_refund_original_missing"
+    },
     "fiscal_einvoice_too_late": {
         "message": "Fatura elektronike mund të krijohet vetëm brenda 48 orëve nga fiskalizimi.",
         "error_code": "fiscal_einvoice_too_late"

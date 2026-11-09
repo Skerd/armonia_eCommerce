@@ -1372,6 +1372,18 @@
         "message": "Fiscalisez la commande avant d'enregistrer sa facture électronique.",
         "error_code": "fiscal_einvoice_not_fiscalized"
     },
+    "fiscal_refund_original_not_fiscalized": {
+        "message": "La vente que ce remboursement restitue n'a jamais été enregistrée auprès de l'administration fiscale, le remboursement ne peut donc pas y faire référence. Enregistrez d'abord la vente, puis le remboursement.",
+        "error_code": "fiscal_refund_original_not_fiscalized"
+    },
+    "fiscal_iic_mismatch": {
+        "message": "Le NSLF enregistré pour cette vente ne correspond pas à la vente telle qu'elle a été envoyée à l'administration fiscale, sa facture électronique ne peut donc pas être signée. Vérifiez les codes relevés sur le portail CIS.",
+        "error_code": "fiscal_iic_mismatch"
+    },
+    "fiscal_einvoice_refund_original_missing": {
+        "message": "La vente que ce remboursement restitue n'a pas de facture électronique enregistrée, la facture électronique du remboursement ne peut donc pas la corriger. Enregistrez d'abord la facture électronique de la vente.",
+        "error_code": "fiscal_einvoice_refund_original_missing"
+    },
     "fiscal_einvoice_too_late": {
         "message": "Une facture électronique ne peut être créée que dans les 48 heures suivant la fiscalisation.",
         "error_code": "fiscal_einvoice_too_late"
