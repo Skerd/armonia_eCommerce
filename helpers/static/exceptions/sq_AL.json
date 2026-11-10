@@ -97,30 +97,12 @@
             }
         }
     },
-    "fiscal_tcr_error": {
-        "message": "Regjistrimi i TCR dështoi: {}",
-        "error_code": "fiscal_tcr_error",
-        "extra_messages": {
-            "fiscalConfigId": {
-                "message": "Konfigurimi fiskal"
-            }
-        }
-    },
     "fiscal_taxpayer_error": {
         "message": "Kërkimi i tatimpaguesit dështoi: {}",
         "error_code": "fiscal_taxpayer_error",
         "extra_messages": {
             "tin": {
                 "message": "NIPT"
-            }
-        }
-    },
-    "fiscal_config_missing": {
-        "message": "Nuk u gjet konfigurim fiskal aktiv me certifikatë.",
-        "error_code": "fiscal_config_missing",
-        "extra_messages": {
-            "fiscalConfigId": {
-                "message": "Konfigurimi fiskal"
             }
         }
     },
@@ -1342,22 +1324,6 @@
         "message": "Kërkesa për detyrë nuk u gjet.",
         "error_code": "task_request_not_found"
     },
-    "fiscal_nipt_missing": {
-        "message": "Kërkohet NIPT/NUIS fiskal: vendoseni te konfigurimi fiskal ose si numër TVSH i kompanisë.",
-        "error_code": "fiscal_nipt_missing"
-    },
-    "fiscal_tcr_not_registered": {
-        "message": "Arka (TCR) nuk është regjistruar ende. Regjistrojeni fillimisht.",
-        "error_code": "fiscal_tcr_not_registered"
-    },
-    "fiscal_codes_missing": {
-        "message": "Konfigurimi fiskal kërkon kodet e njësisë së biznesit, të softuerit dhe të operatorit.",
-        "error_code": "fiscal_codes_missing"
-    },
-    "fiscal_urls_missing": {
-        "message": "Konfigurimi fiskal kërkon URL-të e shërbimit të fiskalizimit dhe të vetëshërbimit.",
-        "error_code": "fiscal_urls_missing"
-    },
     "fiscal_already_fiscalized": {
         "message": "Kjo porosi është fiskalizuar tashmë.",
         "error_code": "fiscal_already_fiscalized"
@@ -1371,14 +1337,6 @@
         "message": "Kjo shitje nuk pret kontroll në portalin e autoritetit tatimor: i ka kodet fiskale, ose përgjigja e saj nuk humbi. Ringarkojeni për të parë gjendjen e saj aktuale.",
         "error_code": "fiscal_not_awaiting_confirmation",
         "status": 409
-    },
-    "fiscal_tcr_fields_missing": {
-        "message": "Për regjistrimin e arkës kërkohen ID-ja e brendshme TCR dhe kodi i mirëmbajtësit.",
-        "error_code": "fiscal_tcr_fields_missing"
-    },
-    "fiscal_tcr_valid_to_required": {
-        "message": "Për përditësimin e një arke të regjistruar kërkohet data e mbarimit (e vlefshme deri më).",
-        "error_code": "fiscal_tcr_valid_to_required"
     },
     "fiscal_einvoice_not_fiscalized": {
         "message": "Fiskalizoni porosinë para se të regjistroni faturën elektronike të saj.",
@@ -1411,14 +1369,5 @@
     "fiscal_pos_config_missing": {
         "message": "Arka nuk ka konfigurim fiskal.",
         "error_code": "fiscal_pos_config_missing"
-    },
-    "fiscal_certificate_invalid": {
-        "message": "Certifikata fiskale nuk mund të lexohet: kontrolloni skedarin e certifikatës dhe fjalëkalimin e saj.",
-        "error_code": "fiscal_certificate_invalid",
-        "extra_messages": {
-            "certificate": {
-                "message": "Certifikata"
-            }
-        }
     }
 }

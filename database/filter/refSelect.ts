@@ -5,7 +5,7 @@ import {registerRefSelects, type RefSelectConfig} from "../../../core/database/f
  * onto objectId filters, and the filter builder renders those as ApiSelect.
  * Keys must match `model("Name")`. User, Currency, Country, State, and City
  * stay in the core registry. Media stays an existence check, not a picker.
- * Gift cards are issued by finance; ecommerce depends on that module.
+ * Gift cards and fiscal configs belong to finance; ecommerce depends on that module.
  */
 export const ECOMMERCE_REF_SELECTS: Record<string, RefSelectConfig> = {
     Booking: {apiUrl: "/api/eCommerceMarketplace/booking/select"},
@@ -14,7 +14,7 @@ export const ECOMMERCE_REF_SELECTS: Record<string, RefSelectConfig> = {
     CustomerGroup: {apiUrl: "/api/eCommerce/customerGroup/select"},
     Discount: {apiUrl: "/api/eCommerce/discount/select"},
     Dispute: {apiUrl: "/api/eCommerceMarketplace/dispute/select"},
-    FiscalConfig: {apiUrl: "/api/eCommerce/fiscalConfig/select"},
+    FiscalConfig: {apiUrl: "/api/finance/fiscalConfig/select"},
     Fulfillment: {apiUrl: "/api/eCommerce/fulfillment/select"},
     GiftCard: {apiUrl: "/api/finance/giftCard/select"},
     Inventory: {apiUrl: "/api/eCommerce/inventory/select"},

@@ -2,7 +2,7 @@ import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../cor
 import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
 import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
 import type {WarehouseSimple} from "../../../../dto/warehouse.dto";
-import type {FiscalConfigSimple} from "../../../../dto/fiscalConfig.dto";
+import type {FiscalConfigSimple} from "../../../../../finance/dto/fiscalConfig.dto";
 
 /** Populated user projection on a POS config manager ref. */
 export type PosConfigManagerUser = {

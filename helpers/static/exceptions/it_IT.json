@@ -97,30 +97,12 @@
             }
         }
     },
-    "fiscal_tcr_error": {
-        "message": "Registrazione TCR non riuscita: {}",
-        "error_code": "fiscal_tcr_error",
-        "extra_messages": {
-            "fiscalConfigId": {
-                "message": "Configurazione fiscale"
-            }
-        }
-    },
     "fiscal_taxpayer_error": {
         "message": "Ricerca del contribuente non riuscita: {}",
         "error_code": "fiscal_taxpayer_error",
         "extra_messages": {
             "tin": {
                 "message": "Codice fiscale"
-            }
-        }
-    },
-    "fiscal_config_missing": {
-        "message": "Configurazione fiscale attiva con certificato non trovata.",
-        "error_code": "fiscal_config_missing",
-        "extra_messages": {
-            "fiscalConfigId": {
-                "message": "Configurazione fiscale"
             }
         }
     },
@@ -1342,22 +1324,6 @@
         "message": "Richiesta di attività non trovata.",
         "error_code": "task_request_not_found"
     },
-    "fiscal_nipt_missing": {
-        "message": "È richiesto un NIPT/NUIS fiscale: impostalo nella configurazione fiscale o come partita IVA dell'azienda.",
-        "error_code": "fiscal_nipt_missing"
-    },
-    "fiscal_tcr_not_registered": {
-        "message": "La cassa (TCR) non è ancora registrata. Registrala prima.",
-        "error_code": "fiscal_tcr_not_registered"
-    },
-    "fiscal_codes_missing": {
-        "message": "La configurazione fiscale richiede i codici di unità operativa, software e operatore.",
-        "error_code": "fiscal_codes_missing"
-    },
-    "fiscal_urls_missing": {
-        "message": "La configurazione fiscale richiede gli URL dei servizi di fiscalizzazione e self-care.",
-        "error_code": "fiscal_urls_missing"
-    },
     "fiscal_already_fiscalized": {
         "message": "Questo ordine è già fiscalizzato.",
         "error_code": "fiscal_already_fiscalized"
@@ -1371,14 +1337,6 @@
         "message": "Questa vendita non è in attesa di una verifica nel portale dell'autorità fiscale: ha i suoi codici fiscali, oppure la sua risposta non è andata persa. Ricaricala per vederne lo stato attuale.",
         "error_code": "fiscal_not_awaiting_confirmation",
         "status": 409
-    },
-    "fiscal_tcr_fields_missing": {
-        "message": "Per registrare la cassa sono richiesti l'ID interno TCR e il codice del manutentore.",
-        "error_code": "fiscal_tcr_fields_missing"
-    },
-    "fiscal_tcr_valid_to_required": {
-        "message": "Per aggiornare una cassa registrata è richiesta una data di fine (valida fino al).",
-        "error_code": "fiscal_tcr_valid_to_required"
     },
     "fiscal_einvoice_not_fiscalized": {
         "message": "Fiscalizza l'ordine prima di registrarne la fattura elettronica.",
@@ -1411,14 +1369,5 @@
     "fiscal_pos_config_missing": {
         "message": "La cassa non ha una configurazione fiscale.",
         "error_code": "fiscal_pos_config_missing"
-    },
-    "fiscal_certificate_invalid": {
-        "message": "Il certificato fiscale non è leggibile: controlla il file del certificato e la sua password.",
-        "error_code": "fiscal_certificate_invalid",
-        "extra_messages": {
-            "certificate": {
-                "message": "Certificato"
-            }
-        }
     }
 }

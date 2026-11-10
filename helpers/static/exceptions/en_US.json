@@ -97,30 +97,12 @@
             }
         }
     },
-    "fiscal_tcr_error": {
-        "message": "TCR registration failed: {}",
-        "error_code": "fiscal_tcr_error",
-        "extra_messages": {
-            "fiscalConfigId": {
-                "message": "Fiscal config"
-            }
-        }
-    },
     "fiscal_taxpayer_error": {
         "message": "Taxpayer lookup failed: {}",
         "error_code": "fiscal_taxpayer_error",
         "extra_messages": {
             "tin": {
                 "message": "TIN"
-            }
-        }
-    },
-    "fiscal_config_missing": {
-        "message": "Active fiscal config with certificate not found.",
-        "error_code": "fiscal_config_missing",
-        "extra_messages": {
-            "fiscalConfigId": {
-                "message": "Fiscal config"
             }
         }
     },
@@ -1342,22 +1324,6 @@
         "message": "Task request not found.",
         "error_code": "task_request_not_found"
     },
-    "fiscal_nipt_missing": {
-        "message": "A fiscal NIPT/NUIS is required: set it on the fiscal config or as the company's VAT number.",
-        "error_code": "fiscal_nipt_missing"
-    },
-    "fiscal_tcr_not_registered": {
-        "message": "The cash register (TCR) is not registered yet. Register it first.",
-        "error_code": "fiscal_tcr_not_registered"
-    },
-    "fiscal_codes_missing": {
-        "message": "The fiscal config needs the business unit, software and operator codes.",
-        "error_code": "fiscal_codes_missing"
-    },
-    "fiscal_urls_missing": {
-        "message": "The fiscal config needs the fiscalization and self-care service URLs.",
-        "error_code": "fiscal_urls_missing"
-    },
     "fiscal_already_fiscalized": {
         "message": "This order is already fiscalized.",
         "error_code": "fiscal_already_fiscalized"
@@ -1371,14 +1337,6 @@
         "message": "This sale is not waiting for a check in the tax authority's portal: it has its fiscal codes, or its answer was not lost. Reload it to see its current state.",
         "error_code": "fiscal_not_awaiting_confirmation",
         "status": 409
-    },
-    "fiscal_tcr_fields_missing": {
-        "message": "The TCR internal id and the maintainer code are required to register the cash register.",
-        "error_code": "fiscal_tcr_fields_missing"
-    },
-    "fiscal_tcr_valid_to_required": {
-        "message": "An end date (valid to) is required to update a registered cash register.",
-        "error_code": "fiscal_tcr_valid_to_required"
     },
     "fiscal_einvoice_not_fiscalized": {
         "message": "Fiscalize the order before registering its e-invoice.",
@@ -1411,14 +1369,5 @@
     "fiscal_pos_config_missing": {
         "message": "The till has no fiscal config.",
         "error_code": "fiscal_pos_config_missing"
-    },
-    "fiscal_certificate_invalid": {
-        "message": "The fiscal certificate cannot be read: check the certificate file and its password.",
-        "error_code": "fiscal_certificate_invalid",
-        "extra_messages": {
-            "certificate": {
-                "message": "Certificate"
-            }
-        }
     }
 }
