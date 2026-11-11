@@ -58,14 +58,17 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
     paymentStatus: "unpaid" | "authorized" | "paid" | "partially_refunded" | "refunded" | "voided";
     fulfillmentStatus: "unfulfilled" | "partially_fulfilled" | "fulfilled" | "returned";
     status: "pending" | "confirmed" | "processing" | "shipped" | "delivered" | "cancelled" | "refunded";
+    /** Each line carries the order's currency, like `items`, so a sheet list shows its amount with it (UX-07). */
     appliedDiscounts?: {
         discount: DiscountSimple;
-        amount: number
+        amount: number;
+        currency?: CurrencySimple;
     }[];
     taxBreakdown?: {
         name: string;
         rate: number;
-        amount: number
+        amount: number;
+        currency?: CurrencySimple;
     }[];
     shippingRate?: {
         name: string;
