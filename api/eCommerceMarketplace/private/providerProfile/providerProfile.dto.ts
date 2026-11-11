@@ -2,6 +2,10 @@ import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../cor
 import type {Media} from "../../../../../core/types";
 import type {SimpleUser} from "../../../../../core/dto/user.dto";
 import type {WeeklyHoursSlot} from "../../../../../core/helpers/weeklyHours.schema-def";
+import type {Listing} from "../listing/listing.dto";
+import type {Order} from "../order/order.dto";
+import type {Bid} from "../bid/bid.dto";
+import type {Review} from "../review/review.dto";
 
 export type ProviderAvailabilitySlot = WeeklyHoursSlot;
 
@@ -30,4 +34,12 @@ export type ProviderProfile = OwnershipData & DeletedData & LifeCycleData & {
     stripePayoutsEnabled?: boolean;
     stripeDetailsSubmitted?: boolean;
     stripeAccountSyncedAt?: string;
+    /**
+     * The provider's records, newest first, on the single read only (provider hub); each list is absent when the
+     * caller may not read that model.
+     */
+    listings?: Listing[];
+    orders?: Order[];
+    bids?: Bid[];
+    reviews?: Review[];
 };

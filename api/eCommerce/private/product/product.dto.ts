@@ -9,6 +9,7 @@ import type {ProductSimple} from "../../../../dto/product.dto";
 import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
 import type {InventorySimple} from "../../../../dto/inventory.dto";
 import type {ProductReviewSimple} from "../../../../dto/productReview.dto";
+import type {ProductOrder} from "../productOrder/productOrder.dto";
 
 export type Product = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
@@ -99,6 +100,11 @@ export type Product = DeletedData & OwnershipData & LifeCycleData & {
     ratingAverage?: number;
     ratingCount?: number;
     reviewCount?: number;
+    /**
+     * The shop orders with this product on a line, newest first, on its single read only (product hub); absent when
+     * the caller may not read orders.
+     */
+    orders?: ProductOrder[];
     // Publishing
     status: "draft" | "active" | "archived";
     publishedAt?: string;

@@ -7,6 +7,7 @@ import type {CitySimple} from "../../../../../core/dto/city.dto";
 import type {SimpleUser} from "../../../../../core/dto/user.dto";
 import type {ListingCategorySimple} from "../../../../dto/listingCategory.dto";
 import type {Bid} from "../bid/bid.dto";
+import type {Order} from "../order/order.dto";
 
 export type TaskRequest = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
@@ -33,6 +34,12 @@ export type TaskRequest = DeletedData & OwnershipData & LifeCycleData & {
     imageGallery?: Media[];
     videoGallery?: Media[];
     bidCount?: number;
+    /**
+     * Its bids and the order it led to, newest first, on the panel single read only (task request hub); each list is
+     * absent when the caller may not read that model.
+     */
+    bids?: Bid[];
+    orders?: Order[];
 };
 
 /** Storefront account view of the caller's own task request; the single route adds its bids. */

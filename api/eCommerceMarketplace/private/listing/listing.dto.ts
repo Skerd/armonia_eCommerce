@@ -9,6 +9,10 @@ import type {ListingCategorySimple} from "../../../../dto/listingCategory.dto";
 import type {PromotionSimple} from "../../../../dto/promotion.dto";
 import type {ListingAddOn} from "../listingAddOn/listingAddOn.dto";
 import type {ListingPackage} from "../listingPackage/listingPackage.dto";
+import type {Order} from "../order/order.dto";
+import type {Booking} from "../booking/booking.dto";
+import type {Review} from "../review/review.dto";
+import type {ListingFlag} from "../listingFlag/listingFlag.dto";
 
 export type Listing = DeletedData & OwnershipData & LifeCycleData & {
     _id: string;
@@ -38,4 +42,13 @@ export type Listing = DeletedData & OwnershipData & LifeCycleData & {
     reviewCount?: number;
     listingAddOns?: ListingAddOn[];
     listingPackages?: ListingPackage[];
+    /**
+     * The listing's records, newest first, on its single read only (listing hub); each list is absent when the caller
+     * may not read that model.
+     */
+    orders?: Order[];
+    bookings?: Booking[];
+    reviews?: Review[];
+    /** Reports against the listing (all for an admin, else the caller's own). */
+    flags?: ListingFlag[];
 };

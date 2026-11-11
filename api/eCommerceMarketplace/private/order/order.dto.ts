@@ -9,6 +9,8 @@ import type {OrderDelivery} from "../orderDelivery/orderDelivery.dto";
 import type {OrderMilestone} from "../orderMilestone/orderMilestone.dto";
 import type {OrderRevision} from "../orderRevision/orderRevision.dto";
 import type {Booking} from "../booking/booking.dto";
+import type {Dispute} from "../dispute/dispute.dto";
+import type {Review} from "../review/review.dto";
 import type {ProviderAvailability} from "../providerProfile/providerProfile.dto";
 
 export type Order = OwnershipData & DeletedData & LifeCycleData & {
@@ -34,6 +36,12 @@ export type Order = OwnershipData & DeletedData & LifeCycleData & {
     milestones?: OrderMilestone[];
     /** Sheet only (single route): the customer's revision requests, newest first. */
     revisions?: OrderRevision[];
+    /** Sheet only (single route): the order's disputes, newest first. */
+    disputes?: Dispute[];
+    /** Sheet only (single route): the provider's scheduled sessions, newest first. */
+    bookings?: Booking[];
+    /** Sheet only (single route): the customer's review. */
+    reviews?: Review[];
 };
 
 export type OrderListResponse = TableResponse<Order>;
