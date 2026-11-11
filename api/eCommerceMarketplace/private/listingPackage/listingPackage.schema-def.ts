@@ -2,7 +2,8 @@ import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/s
 
 const ListingPackagePriceDef = {
     amount: {type: "number", required: true, min: 0},
-    currency: {type: "objectId", required: true},
+    // Empty takes the listing's currency (UX-06); the server always stores one.
+    currency: {type: "objectId", required: false},
 } as const;
 
 export const ListingPackageSchemaDef = {

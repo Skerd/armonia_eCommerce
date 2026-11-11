@@ -1,8 +1,11 @@
+import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
 export type DiscountRef = {_id: string; name: string; title?: string};
 
 export type Discount = DeletedData & OwnershipData & LifeCycleData & {
+    /** The shop currency its amounts are in, added by the route (UX-07). */
+    currency?: CurrencySimple;
     _id: string;
     type: "percentage" | "fixed" | "free_shipping" | "buy_x_get_y";
     title: string;

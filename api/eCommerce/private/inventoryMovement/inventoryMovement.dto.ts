@@ -1,3 +1,4 @@
+import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
 import type {Media} from "../../../../../core/types";
 import {LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 import type {SimpleBlankUser} from "../../../../../core/dto/user.dto";
@@ -10,6 +11,8 @@ import type {InventoryMovementReason} from "./inventoryMovement.schema-def";
 export type {InventoryMovementReason};
 
 export type InventoryMovement = OwnershipData & LifeCycleData & {
+    /** The shop currency its amounts are in, added by the route (UX-07). */
+    currency?: CurrencySimple;
     _id: string;
     inventory?: InventorySimple;
     product: ProductSimple;

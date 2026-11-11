@@ -61,6 +61,8 @@ export type PosOrder = DeletedData & OwnershipData & LifeCycleData & {
     amountPaid: number;
     amountReturn: number;
     discountTotal: number;
+    /** The currency the sale was made in (older sales: the till's currency); every amount above is in it (UX-07). */
+    currency?: CurrencySimple;
     /** The till currency's `decimalPlaces`, where the panel rounds amounts (GLB-08); absent when not loaded. */
     decimalPlaces?: number;
     /** Sum of refund amounts already issued against this sale. */

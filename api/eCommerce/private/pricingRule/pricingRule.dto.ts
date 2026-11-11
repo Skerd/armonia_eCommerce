@@ -1,8 +1,11 @@
+import type {CurrencySimple} from "../../../../../core/dto/currency.dto";
 import type {DeletedData, LifeCycleData, OwnershipData} from "../../../../../core/types/shared.types";
 
 export type PricingRuleRef = {_id: string; name: string; title?: string};
 
 export type PricingRule = DeletedData & OwnershipData & LifeCycleData & {
+    /** The shop currency its amounts are in, added by the route (UX-07). */
+    currency?: CurrencySimple;
     _id: string;
     name: string;
     type: string;
