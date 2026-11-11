@@ -1,6 +1,6 @@
 {
   "eCommerce": {
-    "title": "Dyqani dhe tregu",
+    "title": "Dyqani",
     "codes": {
       "PRODUCT_ORDER_PLACED": {
         "title": "Porosia u bë",
@@ -69,70 +69,6 @@
       "DIGITAL_DELIVERY_READY": {
         "title": "Shkarkimet dixhitale janë gati",
         "message": "Shkarkimet dixhitale janë gati për porosinë {order}"
-      },
-      "TASK_REQUEST_CREATED": {
-        "title": "Kërkesë e re pune që përputhet",
-        "message": "U publikua një kërkesë e re pune që përputhet me shpalljen tuaj: {task}"
-      },
-      "TASK_REQUEST_CLOSED": {
-        "title": "Kërkesa e punës u mbyll",
-        "message": "Kërkesa e punës u mbyll: {task}"
-      },
-      "BID_ACCEPTED": {
-        "title": "Oferta u pranua",
-        "message": "Oferta juaj u pranua për: {task}"
-      },
-      "BID_REJECTED": {
-        "title": "Oferta u refuzua",
-        "message": "Oferta juaj u refuzua për: {task}"
-      },
-      "ORDER_CREATED_FROM_LISTING": {
-        "title": "Porosi e re për shpalljen tuaj",
-        "message": "U mor një porosi e re për shpalljen tuaj: {listing}"
-      },
-      "ORDER_ACCEPTED": {
-        "title": "Porosia e shërbimit u pranua",
-        "message": "Porosia juaj u pranua: {order}"
-      },
-      "ORDER_STARTED": {
-        "title": "Puna filloi",
-        "message": "Puna për porosinë tuaj filloi: {order}"
-      },
-      "ORDER_CANCELLED": {
-        "title": "Porosia e shërbimit u anulua",
-        "message": "Porosia u anulua: {order}"
-      },
-      "ORDER_EXTENDED": {
-        "title": "Afati i dorëzimit u zgjat",
-        "message": "Afati i dorëzimit u zgjat me {days} ditë për porosinë: {order}"
-      },
-      "ORDER_DELIVERY_SUBMITTED": {
-        "title": "Dorëzimi u paraqit",
-        "message": "Dorëzimi u paraqit për porosinë tuaj: {order}. Ju lutemi rishikojeni dhe pranojeni ose kërkoni një rishikim."
-      },
-      "ORDER_DELIVERY_ACCEPTED": {
-        "title": "Dorëzimi u pranua",
-        "message": "Dorëzimi u pranua! Porosia përfundoi: {order}"
-      },
-      "ORDER_REVISION_REQUESTED": {
-        "title": "U kërkua rishikim",
-        "message": "U kërkua rishikim për porosinë: {order}"
-      },
-      "ORDER_MILESTONE_RELEASED": {
-        "title": "Faza u lirua",
-        "message": "Faza \"{milestone}\" u lirua për porosinë: {order}"
-      },
-      "DISPUTE_OPENED": {
-        "title": "Mosmarrëveshja u hap",
-        "message": "U hap një mosmarrëveshje për porosinë: {order}"
-      },
-      "DISPUTE_RESOLVED": {
-        "title": "Mosmarrëveshja u zgjidh",
-        "message": "Mosmarrëveshja për porosinë {order} u zgjidh; porosia përfundoi"
-      },
-      "DISPUTE_CLOSED": {
-        "title": "Mosmarrëveshja u mbyll",
-        "message": "Mosmarrëveshja për porosinë {order} u mbyll; porosia u anulua"
       }
     }
   }

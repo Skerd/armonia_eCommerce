@@ -1,6 +1,6 @@
 {
   "eCommerce": {
-    "title": "Boutique et place de marché",
+    "title": "Boutique",
     "codes": {
       "PRODUCT_ORDER_PLACED": {
         "title": "Commande passée",
@@ -69,70 +69,6 @@
       "DIGITAL_DELIVERY_READY": {
         "title": "Téléchargements numériques prêts",
         "message": "Téléchargements numériques prêts pour la commande {order}"
-      },
-      "TASK_REQUEST_CREATED": {
-        "title": "Nouvelle demande de mission correspondante",
-        "message": "Une nouvelle demande de mission correspondant à votre annonce a été publiée : {task}"
-      },
-      "TASK_REQUEST_CLOSED": {
-        "title": "Demande de mission clôturée",
-        "message": "La demande de mission a été clôturée : {task}"
-      },
-      "BID_ACCEPTED": {
-        "title": "Offre acceptée",
-        "message": "Votre offre a été acceptée pour : {task}"
-      },
-      "BID_REJECTED": {
-        "title": "Offre refusée",
-        "message": "Votre offre a été refusée pour : {task}"
-      },
-      "ORDER_CREATED_FROM_LISTING": {
-        "title": "Nouvelle commande pour votre annonce",
-        "message": "Nouvelle commande reçue pour votre annonce : {listing}"
-      },
-      "ORDER_ACCEPTED": {
-        "title": "Commande de service acceptée",
-        "message": "Votre commande a été acceptée : {order}"
-      },
-      "ORDER_STARTED": {
-        "title": "Travail commencé",
-        "message": "Le travail sur votre commande a commencé : {order}"
-      },
-      "ORDER_CANCELLED": {
-        "title": "Commande de service annulée",
-        "message": "La commande a été annulée : {order}"
-      },
-      "ORDER_EXTENDED": {
-        "title": "Délai de livraison prolongé",
-        "message": "Délai de livraison prolongé de {days} jours pour la commande : {order}"
-      },
-      "ORDER_DELIVERY_SUBMITTED": {
-        "title": "Livraison soumise",
-        "message": "Livraison soumise pour votre commande : {order}. Veuillez la vérifier et l'accepter ou demander une révision."
-      },
-      "ORDER_DELIVERY_ACCEPTED": {
-        "title": "Livraison acceptée",
-        "message": "Livraison acceptée ! Commande terminée : {order}"
-      },
-      "ORDER_REVISION_REQUESTED": {
-        "title": "Révision demandée",
-        "message": "Révision demandée pour la commande : {order}"
-      },
-      "ORDER_MILESTONE_RELEASED": {
-        "title": "Jalon libéré",
-        "message": "Jalon « {milestone} » libéré pour la commande : {order}"
-      },
-      "DISPUTE_OPENED": {
-        "title": "Litige ouvert",
-        "message": "Un litige a été ouvert sur la commande : {order}"
-      },
-      "DISPUTE_RESOLVED": {
-        "title": "Litige résolu",
-        "message": "Le litige sur la commande {order} a été résolu ; la commande est terminée"
-      },
-      "DISPUTE_CLOSED": {
-        "title": "Litige clos",
-        "message": "Le litige sur la commande {order} a été clos ; la commande est annulée"
       }
     }
   }

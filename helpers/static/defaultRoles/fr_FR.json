@@ -1,7 +1,7 @@
 {
   "ecom_store_manager": {
     "name": "Gérant de boutique",
-    "description": "Dirige la boutique : catalogue, prix, commandes, expéditions, retours, stock, caisses et la place de marché."
+    "description": "Dirige la boutique : catalogue, prix, commandes, expéditions, retours, stock et caisses."
   },
   "ecom_warehouse_operator": {
     "name": "Opérateur d'entrepôt",
@@ -33,10 +33,6 @@
   },
   "ecom_analyst": {
     "name": "Analyste boutique",
-    "description": "Accès en lecture seule au catalogue, aux commandes, au stock, aux caisses, à la place de marché et aux données acheteurs. Ne peut rien modifier."
-  },
-  "ecom_marketplace_operator": {
-    "name": "Opérateur de la place de marché",
-    "description": "Dirige la place de marché de services : annonces, demandes de mission, offres, commandes sous séquestre, litiges, avis et profils de prestataires."
+    "description": "Accès en lecture seule au catalogue, aux commandes, au stock, aux caisses et aux données acheteurs. Ne peut rien modifier."
   }
 }

@@ -6,7 +6,7 @@ Enable at runtime via `ENABLED_MODULES` (maestro) or `VITE_ENABLED_MODULES` (sin
 
 ## Scope
 
-Full-featured commerce: catalog, inventory, pricing, orders, fulfillment, payments, returns, CMS/analytics, plus the services marketplace (listings, bids, escrowed orders) under `api/eCommerceMarketplace/`.
+Full-featured commerce: catalog, inventory, pricing, orders, fulfillment, payments, returns, CMS/analytics. The services marketplace is its own module, `armonia/src/modules/marketplace` (D142).
 
 ## Directory layout
 

@@ -1,7 +1,7 @@
 {
   "ecom_store_manager": {
     "name": "Responsabile del negozio",
-    "description": "Gestisce il negozio: catalogo, prezzi, ordini, spedizioni, resi, magazzino, casse e il marketplace."
+    "description": "Gestisce il negozio: catalogo, prezzi, ordini, spedizioni, resi, magazzino e casse."
   },
   "ecom_warehouse_operator": {
     "name": "Operatore di magazzino",
@@ -33,10 +33,6 @@
   },
   "ecom_analyst": {
     "name": "Analista del negozio",
-    "description": "Accesso in sola lettura a catalogo, ordini, scorte, casse, marketplace e dati degli acquirenti. Non può modificare nulla."
-  },
-  "ecom_marketplace_operator": {
-    "name": "Operatore del marketplace",
-    "description": "Gestisce il marketplace dei servizi: annunci, richieste di incarico, offerte, ordini in deposito a garanzia, controversie, recensioni e profili dei fornitori."
+    "description": "Accesso in sola lettura a catalogo, ordini, scorte, casse e dati degli acquirenti. Non può modificare nulla."
   }
 }

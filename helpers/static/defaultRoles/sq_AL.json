@@ -1,7 +1,7 @@
 {
   "ecom_store_manager": {
     "name": "Menaxher i dyqanit",
-    "description": "Drejton dyqanin: katalogun, çmimet, porositë, dërgesat, kthimet, stokun, arkat dhe tregun."
+    "description": "Drejton dyqanin: katalogun, çmimet, porositë, dërgesat, kthimet, stokun dhe arkat."
   },
   "ecom_warehouse_operator": {
     "name": "Operator magazine",
@@ -33,10 +33,6 @@
   },
   "ecom_analyst": {
     "name": "Analist i dyqanit",
-    "description": "Qasje vetëm për lexim në katalog, porosi, stok, arka, treg dhe të dhënat e blerësve. Nuk mund të ndryshojë asgjë."
-  },
-  "ecom_marketplace_operator": {
-    "name": "Operator i tregut",
-    "description": "Drejton tregun e shërbimeve: listimet, kërkesat për punë, ofertat, porositë me garanci, mosmarrëveshjet, vlerësimet dhe profilet e ofruesve."
+    "description": "Qasje vetëm për lexim në katalog, porosi, stok, arka dhe të dhënat e blerësve. Nuk mund të ndryshojë asgjë."
   }
 }

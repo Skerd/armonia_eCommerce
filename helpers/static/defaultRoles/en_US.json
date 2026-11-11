@@ -1,7 +1,7 @@
 {
   "ecom_store_manager": {
     "name": "Store Manager",
-    "description": "Runs the store: catalog, pricing, orders, shipments, returns, stock, tills, and the marketplace."
+    "description": "Runs the store: catalog, pricing, orders, shipments, returns, stock, and tills."
   },
   "ecom_warehouse_operator": {
     "name": "Warehouse Operator",
@@ -33,10 +33,6 @@
   },
   "ecom_analyst": {
     "name": "Store Analyst",
-    "description": "Read-only access across the catalog, orders, stock, tills, marketplace, and buyer records. Cannot change anything."
-  },
-  "ecom_marketplace_operator": {
-    "name": "Marketplace Operator",
-    "description": "Runs the services marketplace: listings, task requests, bids, escrowed orders, disputes, reviews, and provider profiles."
+    "description": "Read-only access across the catalog, orders, stock, tills, and buyer records. Cannot change anything."
   }
 }

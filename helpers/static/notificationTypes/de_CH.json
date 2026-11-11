@@ -1,6 +1,6 @@
 {
   "eCommerce": {
-    "title": "Shop und Marktplatz",
+    "title": "Shop",
     "codes": {
       "PRODUCT_ORDER_PLACED": {
         "title": "Bestellung aufgegeben",
@@ -69,70 +69,6 @@
       "DIGITAL_DELIVERY_READY": {
         "title": "Digitale Downloads bereit",
         "message": "Digitale Downloads für Bestellung {order} bereit"
-      },
-      "TASK_REQUEST_CREATED": {
-        "title": "Neue passende Auftragsanfrage",
-        "message": "Eine neue Auftragsanfrage passend zu Ihrem Angebot wurde veröffentlicht: {task}"
-      },
-      "TASK_REQUEST_CLOSED": {
-        "title": "Auftragsanfrage geschlossen",
-        "message": "Auftragsanfrage wurde geschlossen: {task}"
-      },
-      "BID_ACCEPTED": {
-        "title": "Angebot angenommen",
-        "message": "Ihr Angebot wurde angenommen für: {task}"
-      },
-      "BID_REJECTED": {
-        "title": "Angebot abgelehnt",
-        "message": "Ihr Angebot wurde abgelehnt für: {task}"
-      },
-      "ORDER_CREATED_FROM_LISTING": {
-        "title": "Neuer Auftrag für Ihr Angebot",
-        "message": "Neuer Auftrag für Ihr Angebot eingegangen: {listing}"
-      },
-      "ORDER_ACCEPTED": {
-        "title": "Dienstleistungsauftrag angenommen",
-        "message": "Ihr Auftrag wurde angenommen: {order}"
-      },
-      "ORDER_STARTED": {
-        "title": "Arbeit begonnen",
-        "message": "Die Arbeit an Ihrem Auftrag hat begonnen: {order}"
-      },
-      "ORDER_CANCELLED": {
-        "title": "Dienstleistungsauftrag storniert",
-        "message": "Auftrag wurde storniert: {order}"
-      },
-      "ORDER_EXTENDED": {
-        "title": "Liefertermin verlängert",
-        "message": "Liefertermin um {days} Tage verlängert für Auftrag: {order}"
-      },
-      "ORDER_DELIVERY_SUBMITTED": {
-        "title": "Lieferung eingereicht",
-        "message": "Lieferung für Ihren Auftrag eingereicht: {order}. Bitte prüfen und annehmen oder eine Überarbeitung anfordern."
-      },
-      "ORDER_DELIVERY_ACCEPTED": {
-        "title": "Lieferung angenommen",
-        "message": "Lieferung angenommen! Auftrag abgeschlossen: {order}"
-      },
-      "ORDER_REVISION_REQUESTED": {
-        "title": "Überarbeitung angefordert",
-        "message": "Überarbeitung angefordert für Auftrag: {order}"
-      },
-      "ORDER_MILESTONE_RELEASED": {
-        "title": "Meilenstein freigegeben",
-        "message": "Meilenstein «{milestone}» freigegeben für Auftrag: {order}"
-      },
-      "DISPUTE_OPENED": {
-        "title": "Streitfall eröffnet",
-        "message": "Für den Auftrag wurde ein Streitfall eröffnet: {order}"
-      },
-      "DISPUTE_RESOLVED": {
-        "title": "Streitfall gelöst",
-        "message": "Der Streitfall zum Auftrag {order} wurde gelöst; der Auftrag ist abgeschlossen"
-      },
-      "DISPUTE_CLOSED": {
-        "title": "Streitfall geschlossen",
-        "message": "Der Streitfall zum Auftrag {order} wurde geschlossen; der Auftrag ist storniert"
       }
     }
   }
