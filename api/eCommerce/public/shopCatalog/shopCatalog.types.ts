@@ -4,23 +4,7 @@
  * `/api/auxiliary/public/media/{id}`.
  */
 
-/** Seller company shown on platform (apex) catalog cards and detail. */
-export type ShopSeller = {
-    _id: string;
-    name: string;
-    /** Public media id for the company logo. */
-    logo?: string;
-    siteSlug?: string;
-    siteHost?: string;
-};
-
-/** A price's currency; prices without one are shown as plain numbers. */
-export type ShopCurrency = {
-    _id: string;
-    symbol?: string;
-    abbreviation?: string;
-    decimalPlaces?: number;
-};
+import type {PortalCurrency, PortalSeller} from "../../../../../core/api/portal/public/portal/portal.dto";
 
 export type ShopProductCard = {
     _id: string;
@@ -30,14 +14,14 @@ export type ShopProductCard = {
     price?: number;
     compareAtPrice?: number;
     /** Currency of price and compareAtPrice (variant prices too). */
-    currency?: ShopCurrency;
+    currency?: PortalCurrency;
     mainImage?: string;
     badges?: string[];
     featured?: boolean;
     ratingAverage?: number;
     ratingCount?: number;
     hasVariants?: boolean;
-    seller?: ShopSeller;
+    seller?: PortalSeller;
 };
 
 export type ShopProductVariant = {
@@ -150,7 +134,7 @@ export type ShopConfigResponse = {
     data: {
         mode: ShopConfigMode;
         stripePublishableKey?: string;
-        currency?: ShopCurrency;
+        currency?: PortalCurrency;
         companyName?: string;
         company?: ShopCompany;
     };

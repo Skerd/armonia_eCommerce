@@ -1,4 +1,4 @@
-import type {ShopCurrency} from "../../public/shopCatalog/shopCatalog.types";
+import type {PortalCurrency} from "../../../../../core/api/portal/public/portal/portal.dto";
 
 export type CartItemSnapshot = {
     title: string;
@@ -39,7 +39,7 @@ export type Cart = {
     _id: string;
     items: CartItem[];
     /** The cart's single currency (its first product's); absent when that product has none. */
-    currency?: ShopCurrency;
+    currency?: PortalCurrency;
     subtotal: number;
     discountTotal: number;
     appliedDiscounts?: CartAppliedDiscount[];

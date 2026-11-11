@@ -5,9 +5,7 @@
  */
 
 import type {ListingPricingType} from "../../private/listing/listing.schema-def";
-import type {ShopCurrency, ShopSeller} from "../../../eCommerce/public/shopCatalog/shopCatalog.types";
-
-export type {ShopSeller};
+import type {PortalCurrency, PortalSeller} from "../../../../../core/api/portal/public/portal/portal.dto";
 
 export type ShopPlace = {
     _id: string;
@@ -20,8 +18,6 @@ export type ShopListingLocation = {
     state?: ShopPlace;
     city?: ShopPlace;
 };
-
-export type ShopMarketplaceCurrency = ShopCurrency;
 
 export type ShopListingCategory = {
     _id: string;
@@ -50,7 +46,7 @@ export type ShopListingCard = {
     price?: number;
     /** Lowest price across the base offer and its packages. */
     fromPrice?: number;
-    currency?: ShopMarketplaceCurrency;
+    currency?: PortalCurrency;
     pricingType?: ListingPricingType;
     deliveryDays?: number;
     location?: ShopListingLocation;
@@ -58,7 +54,7 @@ export type ShopListingCard = {
     reviewCount?: number;
     promotion?: ShopListingPromotion;
     packageCount?: number;
-    seller?: ShopSeller;
+    seller?: PortalSeller;
 };
 
 export type ShopListingPackage = {
@@ -66,7 +62,7 @@ export type ShopListingPackage = {
     name: string;
     description?: string;
     price: number;
-    currency?: ShopMarketplaceCurrency;
+    currency?: PortalCurrency;
     deliveryDays: number;
 };
 
@@ -74,7 +70,7 @@ export type ShopListingAddOn = {
     _id: string;
     name: string;
     price: number;
-    currency?: ShopMarketplaceCurrency;
+    currency?: PortalCurrency;
     deliveryDays?: number;
 };
 
