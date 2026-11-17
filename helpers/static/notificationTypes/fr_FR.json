@@ -36,7 +36,8 @@
       },
       "PRODUCT_ORDER_NEW_MERCHANT": {
         "title": "Nouvelle commande (équipe de la boutique)",
-        "message": "Nouvelle commande {order} reçue"
+        "message": "Nouvelle commande {order} reçue",
+        "link": "/eCommerce/productorders?open={orderId}"
       },
       "ABANDONED_CART": {
         "title": "Articles laissés dans le panier",
@@ -48,7 +49,8 @@
       },
       "RETURN_REQUEST_CREATED": {
         "title": "Retour demandé",
-        "message": "Demande de retour pour la commande {order}"
+        "message": "Demande de retour pour la commande {order}",
+        "link": "/eCommerce/returnrequests?open={returnRequestId}"
       },
       "RETURN_REQUEST_APPROVED": {
         "title": "Retour approuvé",
@@ -60,7 +62,8 @@
       },
       "INVENTORY_LOW_STOCK": {
         "title": "Stock bas",
-        "message": "Stock bas : {product} @ {warehouse} ({quantity} restants)"
+        "message": "Stock bas : {product} @ {warehouse} ({quantity} restants)",
+        "link": "/eCommerce/inventories?open={inventoryId}"
       },
       "GIFT_CARD_ISSUED": {
         "title": "Carte cadeau émise",

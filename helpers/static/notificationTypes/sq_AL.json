@@ -36,7 +36,8 @@
       },
       "PRODUCT_ORDER_NEW_MERCHANT": {
         "title": "Porosi e re (stafi i dyqanit)",
-        "message": "U mor porosia e re {order}"
+        "message": "U mor porosia e re {order}",
+        "link": "/eCommerce/productorders?open={orderId}"
       },
       "ABANDONED_CART": {
         "title": "Artikuj të lënë në shportë",
@@ -48,7 +49,8 @@
       },
       "RETURN_REQUEST_CREATED": {
         "title": "U kërkua kthim",
-        "message": "Kërkesë për kthim për porosinë {order}"
+        "message": "Kërkesë për kthim për porosinë {order}",
+        "link": "/eCommerce/returnrequests?open={returnRequestId}"
       },
       "RETURN_REQUEST_APPROVED": {
         "title": "Kthimi u miratua",
@@ -60,7 +62,8 @@
       },
       "INVENTORY_LOW_STOCK": {
         "title": "Stok i ulët",
-        "message": "Stok i ulët: {product} @ {warehouse} (kanë mbetur {quantity})"
+        "message": "Stok i ulët: {product} @ {warehouse} (kanë mbetur {quantity})",
+        "link": "/eCommerce/inventories?open={inventoryId}"
       },
       "GIFT_CARD_ISSUED": {
         "title": "Karta dhuratë u lëshua",
