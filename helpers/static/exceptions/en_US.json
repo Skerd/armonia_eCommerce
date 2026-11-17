@@ -7,10 +7,6 @@
         "message": "Order not found.",
         "error_code": "order_not_found"
     },
-    "customer_address_not_found": {
-        "message": "Address not found.",
-        "error_code": "customer_address_not_found"
-    },
     "saved_search_not_found": {
         "message": "Saved search not found.",
         "error_code": "saved_search_not_found"
@@ -132,15 +128,6 @@
         "extra_messages": {
             "_id": {
                 "message": "Warehouse"
-            }
-        }
-    },
-    "customer_address_already_default": {
-        "message": "This customer address is already the default.",
-        "error_code": "customer_address_already_default",
-        "extra_messages": {
-            "_id": {
-                "message": "Customer address"
             }
         }
     },

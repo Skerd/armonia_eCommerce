@@ -9,7 +9,6 @@ import {registerRefSelects, type RefSelectConfig} from "../../../core/database/f
  */
 export const ECOMMERCE_REF_SELECTS: Record<string, RefSelectConfig> = {
     CmsBlock: {apiUrl: "/api/eCommerce/cmsBlock/select"},
-    CustomerAddress: {apiUrl: "/api/eCommerce/customerAddress/select"},
     CustomerGroup: {apiUrl: "/api/eCommerce/customerGroup/select"},
     Discount: {apiUrl: "/api/eCommerce/discount/select"},
     FiscalConfig: {apiUrl: "/api/finance/fiscalConfig/select"},

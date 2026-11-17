@@ -7,10 +7,6 @@
         "message": "Ordine non trovato.",
         "error_code": "order_not_found"
     },
-    "customer_address_not_found": {
-        "message": "Indirizzo non trovato.",
-        "error_code": "customer_address_not_found"
-    },
     "saved_search_not_found": {
         "message": "Ricerca salvata non trovata.",
         "error_code": "saved_search_not_found"
@@ -132,15 +128,6 @@
         "extra_messages": {
             "_id": {
                 "message": "Magazzino"
-            }
-        }
-    },
-    "customer_address_already_default": {
-        "message": "Questo indirizzo cliente è già quello predefinito.",
-        "error_code": "customer_address_already_default",
-        "extra_messages": {
-            "_id": {
-                "message": "Indirizzo cliente"
             }
         }
     },

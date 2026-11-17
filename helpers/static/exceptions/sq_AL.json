@@ -7,10 +7,6 @@
         "message": "Porosia nuk u gjet.",
         "error_code": "order_not_found"
     },
-    "customer_address_not_found": {
-        "message": "Adresa nuk u gjet.",
-        "error_code": "customer_address_not_found"
-    },
     "saved_search_not_found": {
         "message": "Kërkimi i ruajtur nuk u gjet.",
         "error_code": "saved_search_not_found"
@@ -132,15 +128,6 @@
         "extra_messages": {
             "_id": {
                 "message": "Magazina"
-            }
-        }
-    },
-    "customer_address_already_default": {
-        "message": "Kjo adresë klienti është tashmë e parazgjedhur.",
-        "error_code": "customer_address_already_default",
-        "extra_messages": {
-            "_id": {
-                "message": "Adresa e klientit"
             }
         }
     },

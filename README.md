@@ -30,7 +30,7 @@ eCommerce/
 | `fulfillment` | Fulfillment workflows |
 | `pricingRule` / `discount` | Pricing and promotions |
 | `taxZone` / `shippingZone` | Tax and shipping configuration |
-| `customerGroup` / `customerGroupMember` / `customerAddress` | Customer segmentation and addresses |
+| `customerGroup` / `customerGroupMember` | Customer segmentation (saved addresses are core `userAddress`, D163) |
 | `returnRequest` | Returns and refunds |
 | `cmsBlock` | Content blocks for storefront pages |
 | `savedSearch` | Persisted customer searches |

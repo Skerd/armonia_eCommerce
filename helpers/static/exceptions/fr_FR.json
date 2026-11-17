@@ -7,10 +7,6 @@
         "message": "Commande introuvable.",
         "error_code": "order_not_found"
     },
-    "customer_address_not_found": {
-        "message": "Adresse introuvable.",
-        "error_code": "customer_address_not_found"
-    },
     "saved_search_not_found": {
         "message": "Recherche enregistrée introuvable.",
         "error_code": "saved_search_not_found"
@@ -132,15 +128,6 @@
         "extra_messages": {
             "_id": {
                 "message": "Entrepôt"
-            }
-        }
-    },
-    "customer_address_already_default": {
-        "message": "Cette adresse du client est déjà celle par défaut.",
-        "error_code": "customer_address_already_default",
-        "extra_messages": {
-            "_id": {
-                "message": "Adresse du client"
             }
         }
     },
