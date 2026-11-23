@@ -109,7 +109,14 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
     returnRequests?: ReturnRequest[];
 };
 
+/**
+ * A line of a buyer's order. The buyer's order list (`productOrder/my`) sets `reviewed`: whether the buyer already
+ * reviewed the line's product for this order, so the shop offers the review form only for a line that is not (TD-F147).
+ */
+export type BuyerProductOrderItem = ProductOrderItem & {reviewed?: boolean};
+
 /** A buyer's view of their own order: no staff notes, gateway ids or idempotency key, and a timeline of events only. */
-export type BuyerProductOrder = Omit<ProductOrder, "internalNotes" | "stripePaymentIntentId" | "idempotencyKey" | "paymentTransactions" | "timeline"> & {
+export type BuyerProductOrder = Omit<ProductOrder, "internalNotes" | "stripePaymentIntentId" | "idempotencyKey" | "paymentTransactions" | "timeline" | "items"> & {
+    items?: BuyerProductOrderItem[];
     timeline?: {event: string; timestamp: string}[];
 };
