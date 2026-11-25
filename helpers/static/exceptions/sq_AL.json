@@ -704,6 +704,10 @@
         "message": "Kjo metodë pagese nuk është e disponueshme.",
         "error_code": "payment_method_not_available"
     },
+    "card_refunds_coming_soon": {
+        "message": "Pagesat me kartë vijnë së shpejti: një pagesë me kartë nuk mund të rimbursohet ende këtu.",
+        "error_code": "card_refunds_coming_soon"
+    },
     "payment_method_required": {
         "message": "Ju lutemi zgjidhni një metodë pagese.",
         "error_code": "payment_method_required"

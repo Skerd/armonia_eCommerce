@@ -704,6 +704,10 @@
         "message": "Diese Zahlungsart ist nicht verfügbar.",
         "error_code": "payment_method_not_available"
     },
+    "card_refunds_coming_soon": {
+        "message": "Kartenzahlungen folgen in Kürze: Eine Kartenzahlung kann hier noch nicht erstattet werden.",
+        "error_code": "card_refunds_coming_soon"
+    },
     "payment_method_required": {
         "message": "Bitte wählen Sie eine Zahlungsart.",
         "error_code": "payment_method_required"

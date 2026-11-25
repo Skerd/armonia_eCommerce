@@ -704,6 +704,10 @@
         "message": "This payment method is not available.",
         "error_code": "payment_method_not_available"
     },
+    "card_refunds_coming_soon": {
+        "message": "Card payments are coming soon: a card payment can't be refunded here yet.",
+        "error_code": "card_refunds_coming_soon"
+    },
     "payment_method_required": {
         "message": "Please choose a payment method.",
         "error_code": "payment_method_required"

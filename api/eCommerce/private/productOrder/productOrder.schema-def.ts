@@ -1,4 +1,5 @@
 import type {InferCreateForm, InferEditForm} from "../../../../../core/helpers/schemaDefBuilder";
+import {CHECKOUT_PAYMENT_METHODS} from "../checkout/checkoutPayment.form.validator";
 
 /**
  * Catalog orders are written by checkout, not by a panel form.
@@ -60,6 +61,8 @@ export const ProductOrderSchemaDef = {
     shippingAddress: {type: "embedded", required: true, items: ProductOrderAddressDef},
     billingAddress: {type: "embedded", required: false, items: ProductOrderAddressDef},
     paymentStatus: {type: "enum", required: false, options: productOrderPaymentStatuses},
+    /** How the buyer chose to pay at checkout; absent on till sales and orders paid in full by gift card. */
+    paymentMethod: {type: "enum", required: false, options: CHECKOUT_PAYMENT_METHODS},
     fulfillmentStatus: {type: "enum", required: false, options: productOrderFulfillmentStatuses},
     status: {type: "enum", required: false, options: productOrderStatuses},
     appliedDiscounts: {

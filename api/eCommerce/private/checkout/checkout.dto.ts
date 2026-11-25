@@ -45,6 +45,11 @@ export type Checkout = {
     grandTotal: number;
     currency?: PortalCurrency;
     giftCard?: {code: string; amount: number};
+    /**
+     * The ways this checkout can be paid (D190), on the buyer's checkout routes: a card only while the platform takes
+     * cards, cash on delivery, and a bank transfer only when every seller on it has a bank account to pay into.
+     */
+    paymentMethods?: CheckoutPaymentMethod[];
     paymentMethod?: CheckoutPaymentMethod;
     stripeClientSecret?: string;
     expiresAt?: string;

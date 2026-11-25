@@ -7,6 +7,8 @@ import type {ProductVariantSimple} from "../../../../dto/productVariant.dto";
 import type {DiscountSimple} from "../../../../dto/discount.dto";
 import type {Fulfillment} from "../fulfillment/fulfillment.dto";
 import type {ReturnRequest} from "../returnRequest/returnRequest.dto";
+import type {CheckoutPaymentMethod} from "../checkout/checkout.dto";
+import type {CompanyBankAccount} from "../../../../../core/api/company/private/company/company.dto";
 
 export type ProductOrderItem = {
     _id: string;
@@ -56,6 +58,8 @@ export type ProductOrder = DeletedData & OwnershipData & LifeCycleData & {
     shippingAddress: ProductOrderAddress;
     billingAddress?: ProductOrderAddress;
     paymentStatus: "unpaid" | "authorized" | "paid" | "partially_refunded" | "refunded" | "voided";
+    /** How the buyer chose to pay at checkout; absent on till sales and orders paid in full by gift card. */
+    paymentMethod?: CheckoutPaymentMethod;
     fulfillmentStatus: "unfulfilled" | "partially_fulfilled" | "fulfilled" | "returned";
     status: "pending" | "confirmed" | "processing" | "shipped" | "delivered" | "cancelled" | "refunded";
     /** Each line carries the order's currency, like `items`, so a sheet list shows its amount with it (UX-07). */
@@ -119,4 +123,9 @@ export type BuyerProductOrderItem = ProductOrderItem & {reviewed?: boolean};
 export type BuyerProductOrder = Omit<ProductOrder, "internalNotes" | "stripePaymentIntentId" | "idempotencyKey" | "paymentTransactions" | "timeline" | "items"> & {
     items?: BuyerProductOrderItem[];
     timeline?: {event: string; timestamp: string}[];
+    /**
+     * Where the buyer pays a bank-transfer order (D190): the account of this order's own seller, set while the order
+     * waits for its payment. The order number is the payment reference.
+     */
+    bankTransfer?: CompanyBankAccount;
 };

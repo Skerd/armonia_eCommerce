@@ -704,6 +704,10 @@
         "message": "Questo metodo di pagamento non è disponibile.",
         "error_code": "payment_method_not_available"
     },
+    "card_refunds_coming_soon": {
+        "message": "I pagamenti con carta arriveranno presto: un pagamento con carta non può ancora essere rimborsato qui.",
+        "error_code": "card_refunds_coming_soon"
+    },
     "payment_method_required": {
         "message": "Scegli un metodo di pagamento.",
         "error_code": "payment_method_required"
