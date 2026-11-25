@@ -555,6 +555,11 @@
         "message": "Nur ein Administrator kann eine Produktbewertung löschen.",
         "error_code": "only_admin_can_delete_review"
     },
+    "only_reviewer_can_edit_review": {
+        "message": "Nur der Kunde, der diese Bewertung geschrieben hat, kann sie ändern.",
+        "error_code": "only_reviewer_can_edit_review",
+        "status": 403
+    },
     "buy_x_get_y_misconfigured": {
         "message": "Dieser «Kaufe X, erhalte Y»-Rabatt ist nicht korrekt konfiguriert.",
         "error_code": "buy_x_get_y_misconfigured"

@@ -555,6 +555,11 @@
         "message": "Only an administrator can delete a product review.",
         "error_code": "only_admin_can_delete_review"
     },
+    "only_reviewer_can_edit_review": {
+        "message": "Only the customer who wrote this review can change it.",
+        "error_code": "only_reviewer_can_edit_review",
+        "status": 403
+    },
     "buy_x_get_y_misconfigured": {
         "message": "This buy-X-get-Y discount is not configured correctly.",
         "error_code": "buy_x_get_y_misconfigured"

@@ -555,6 +555,11 @@
         "message": "Seul un administrateur peut supprimer un avis produit.",
         "error_code": "only_admin_can_delete_review"
     },
+    "only_reviewer_can_edit_review": {
+        "message": "Seul le client qui a écrit cet avis peut le modifier.",
+        "error_code": "only_reviewer_can_edit_review",
+        "status": 403
+    },
     "buy_x_get_y_misconfigured": {
         "message": "Cette remise « X achetés, Y offerts » est mal configurée.",
         "error_code": "buy_x_get_y_misconfigured"

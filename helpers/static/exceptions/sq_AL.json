@@ -555,6 +555,11 @@
         "message": "Vetëm një administrator mund të fshijë një vlerësim produkti.",
         "error_code": "only_admin_can_delete_review"
     },
+    "only_reviewer_can_edit_review": {
+        "message": "Vetëm klienti që e shkroi këtë vlerësim mund ta ndryshojë.",
+        "error_code": "only_reviewer_can_edit_review",
+        "status": 403
+    },
     "buy_x_get_y_misconfigured": {
         "message": "Kjo zbritje «bli X merr Y» nuk është konfiguruar saktë.",
         "error_code": "buy_x_get_y_misconfigured"

@@ -555,6 +555,11 @@
         "message": "Solo un amministratore può eliminare una recensione prodotto.",
         "error_code": "only_admin_can_delete_review"
     },
+    "only_reviewer_can_edit_review": {
+        "message": "Solo il cliente che ha scritto questa recensione può modificarla.",
+        "error_code": "only_reviewer_can_edit_review",
+        "status": 403
+    },
     "buy_x_get_y_misconfigured": {
         "message": "Questo sconto «compra X prendi Y» non è configurato correttamente.",
         "error_code": "buy_x_get_y_misconfigured"
