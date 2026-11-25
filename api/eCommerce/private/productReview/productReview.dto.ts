@@ -11,6 +11,8 @@ export type ProductReview = DeletedData & OwnershipData & LifeCycleData & {
     title?: string;
     comment?: string;
     reviewer?: SimpleUser;
+    /** Set when the platform hid the review after a report (D191): gone from the shop and from the product's rating. */
+    hiddenByPlatform?: boolean;
 };
 
 /** Public storefront shape — reviewer reduced to a display name. */
@@ -29,3 +31,6 @@ export type ShopProductReviewsResponse = {
     ratingAverage?: number;
     ratingCount?: number;
 };
+
+/** The kind the platform's report desk knows this review by (the module's `reportables`, D191). */
+export const PRODUCT_REVIEW_REPORT_KIND = "eCommerce.productReview";

@@ -535,10 +535,6 @@
         "message": "Questo prodotto è già stato recensito per questo ordine.",
         "error_code": "product_already_reviewed_for_order"
     },
-    "cannot_restore_product_review_active_exists": {
-        "message": "Impossibile ripristinare questa recensione perché ne esiste già una attiva per lo stesso ordine e prodotto.",
-        "error_code": "cannot_restore_product_review_active_exists"
-    },
     "only_customer_can_review": {
         "message": "Solo il cliente che ha effettuato l'ordine può lasciare una recensione.",
         "error_code": "only_customer_can_review"
@@ -550,10 +546,6 @@
     "product_not_in_order": {
         "message": "Quel prodotto non fa parte di questo ordine.",
         "error_code": "product_not_in_order"
-    },
-    "only_admin_can_delete_review": {
-        "message": "Solo un amministratore può eliminare una recensione prodotto.",
-        "error_code": "only_admin_can_delete_review"
     },
     "only_reviewer_can_edit_review": {
         "message": "Solo il cliente che ha scritto questa recensione può modificarla.",

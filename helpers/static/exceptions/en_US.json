@@ -535,10 +535,6 @@
         "message": "This product has already been reviewed for this order.",
         "error_code": "product_already_reviewed_for_order"
     },
-    "cannot_restore_product_review_active_exists": {
-        "message": "Cannot restore this review because an active review already exists for the same order and product.",
-        "error_code": "cannot_restore_product_review_active_exists"
-    },
     "only_customer_can_review": {
         "message": "Only the customer who placed the order can leave a review.",
         "error_code": "only_customer_can_review"
@@ -550,10 +546,6 @@
     "product_not_in_order": {
         "message": "That product is not part of this order.",
         "error_code": "product_not_in_order"
-    },
-    "only_admin_can_delete_review": {
-        "message": "Only an administrator can delete a product review.",
-        "error_code": "only_admin_can_delete_review"
     },
     "only_reviewer_can_edit_review": {
         "message": "Only the customer who wrote this review can change it.",

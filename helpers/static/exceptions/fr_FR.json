@@ -535,10 +535,6 @@
         "message": "Ce produit a déjà été évalué pour cette commande.",
         "error_code": "product_already_reviewed_for_order"
     },
-    "cannot_restore_product_review_active_exists": {
-        "message": "Impossible de restaurer cet avis car un avis actif existe déjà pour la même commande et le même produit.",
-        "error_code": "cannot_restore_product_review_active_exists"
-    },
     "only_customer_can_review": {
         "message": "Seul le client ayant passé la commande peut laisser un avis.",
         "error_code": "only_customer_can_review"
@@ -550,10 +546,6 @@
     "product_not_in_order": {
         "message": "Ce produit ne fait pas partie de cette commande.",
         "error_code": "product_not_in_order"
-    },
-    "only_admin_can_delete_review": {
-        "message": "Seul un administrateur peut supprimer un avis produit.",
-        "error_code": "only_admin_can_delete_review"
     },
     "only_reviewer_can_edit_review": {
         "message": "Seul le client qui a écrit cet avis peut le modifier.",

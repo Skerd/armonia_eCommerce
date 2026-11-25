@@ -535,10 +535,6 @@
         "message": "Dieses Produkt wurde für diesen Auftrag bereits bewertet.",
         "error_code": "product_already_reviewed_for_order"
     },
-    "cannot_restore_product_review_active_exists": {
-        "message": "Diese Bewertung kann nicht wiederhergestellt werden, weil bereits eine aktive Bewertung für denselben Auftrag und dasselbe Produkt existiert.",
-        "error_code": "cannot_restore_product_review_active_exists"
-    },
     "only_customer_can_review": {
         "message": "Nur der Kunde, der den Auftrag erteilt hat, kann eine Bewertung hinterlassen.",
         "error_code": "only_customer_can_review"
@@ -550,10 +546,6 @@
     "product_not_in_order": {
         "message": "Dieses Produkt ist nicht Teil dieses Auftrags.",
         "error_code": "product_not_in_order"
-    },
-    "only_admin_can_delete_review": {
-        "message": "Nur ein Administrator kann eine Produktbewertung löschen.",
-        "error_code": "only_admin_can_delete_review"
     },
     "only_reviewer_can_edit_review": {
         "message": "Nur der Kunde, der diese Bewertung geschrieben hat, kann sie ändern.",

@@ -535,10 +535,6 @@
         "message": "Ky produkt është vlerësuar tashmë për këtë porosi.",
         "error_code": "product_already_reviewed_for_order"
     },
-    "cannot_restore_product_review_active_exists": {
-        "message": "Nuk mund të rivendoset ky vlerësim sepse ekziston tashmë një vlerësim aktiv për të njëjtën porosi dhe produkt.",
-        "error_code": "cannot_restore_product_review_active_exists"
-    },
     "only_customer_can_review": {
         "message": "Vetëm klienti që bëri porosinë mund të lërë një vlerësim.",
         "error_code": "only_customer_can_review"
@@ -550,10 +546,6 @@
     "product_not_in_order": {
         "message": "Ky produkt nuk është pjesë e kësaj porosie.",
         "error_code": "product_not_in_order"
-    },
-    "only_admin_can_delete_review": {
-        "message": "Vetëm një administrator mund të fshijë një vlerësim produkti.",
-        "error_code": "only_admin_can_delete_review"
     },
     "only_reviewer_can_edit_review": {
         "message": "Vetëm klienti që e shkroi këtë vlerësim mund ta ndryshojë.",

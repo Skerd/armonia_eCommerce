@@ -108,6 +108,8 @@ export type Product = DeletedData & OwnershipData & LifeCycleData & {
     // Publishing
     status: "draft" | "active" | "archived";
     publishedAt?: string;
+    /** Set when the platform hid the product after a report (D191): gone from the portal, the shop and its search. */
+    hiddenByPlatform?: boolean;
     // Legacy attributes / specifications
     attributes?: {
         name: string;
